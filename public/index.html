@@ -1,0 +1,1062 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SonicHive — Premium Acoustic Office Pods | Dubai, UAE</title>
+  <meta name="description" content="Premium soundproof office pods engineered for the Middle East's most demanding workspaces. Silence Booths in Dubai, Qatar, Saudi Arabia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,0.07);--red-b:rgba(212,32,32,0.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,0.09);--card:rgba(0,0,0,0.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{word-spacing:0.15em;background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+
+    /* SCROLL PROGRESS */
+    #pg-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--red),#FF6B6B);z-index:9999;width:0%;border-radius:0 3px 3px 0;transition:width .05s linear}
+
+    /* CURSOR GLOW */
+    #cg{position:fixed;pointer-events:none;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(212,32,32,.055) 0%,transparent 70%);transform:translate(-50%,-50%);z-index:0;opacity:0;transition:opacity .5s;will-change:transform}
+
+    /* SECTION NAV DOTS */
+    #sec-dots{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);z-index:500;display:flex;flex-direction:column;gap:.7rem}
+    .sd{width:7px;height:7px;border-radius:50%;background:rgba(0,0,0,.12);cursor:pointer;transition:all .3s;border:2px solid transparent}
+    .sd.on{background:var(--red);transform:scale(1.5)}
+    @media(max-width:1024px){#sec-dots{display:none}}
+
+    /* REVEAL CLASSES */
+    .r{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .85s cubic-bezier(.22,1,.36,1)}
+    .r.on{opacity:1;transform:none}
+    .rl{opacity:0;transform:translateX(-52px);transition:opacity .8s ease,transform .85s cubic-bezier(.22,1,.36,1)}
+    .rl.on{opacity:1;transform:none}
+    .rr{opacity:0;transform:translateX(52px);transition:opacity .8s ease,transform .85s cubic-bezier(.22,1,.36,1)}
+    .rr.on{opacity:1;transform:none}
+    .rs{opacity:0;transform:scale(.88);transition:opacity .7s ease,transform .7s cubic-bezier(.34,1.56,.64,1)}
+    .rs.on{opacity:1;transform:none}
+    .d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}.d5{transition-delay:.48s}
+
+    .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
+    .s-label::before{content:'';width:22px;height:2px;background:var(--red);border-radius:2px;flex-shrink:0}
+    .s-title{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-bottom:1rem}
+    .s-sub{color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:520px}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .4s,border-color .4s,box-shadow .4s;border-bottom:1px solid transparent}
+    #nav.s{background:rgba(250,250,250,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:var(--border);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+    .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em;color:#FFF;transition:color .3s}
+    #nav.s .logo-t{color:var(--text)}
+    .logo-t em{color:var(--red);font-style:normal}
+    .nav-links{display:flex;gap:1.75rem;align-items:center}
+    .nav-links a{font-size:.875rem;color:#FFF;font-weight:500;position:relative;padding-bottom:2px;transition:color .3s}
+    #nav.s .nav-links a{color:var(--text)}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--red);border-radius:2px;transition:width .25s ease}
+    .nav-links a:hover::after,.nav-links a.cur::after{width:100%}
+    .nav-cta{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);white-space:nowrap;display:inline-block}
+    .nav-cta:hover{transform:scale(1.05) translateY(-1px);box-shadow:0 4px 20px rgba(212,32,32,.4)}
+    /* MEGA MENU */
+    .nav-dd{position:static;display:flex;align-items:center}
+    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:#FFF;font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;position:relative;padding-bottom:2px;transition:color .3s}
+    #nav.s .nd-toggle{color:var(--text)}
+    .nd-chev{transition:transform .25s ease;flex-shrink:0}
+    .nav-dd.open .nd-chev{transform:rotate(180deg)}
+    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
+    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
+    .mega-bg{position:absolute;inset:0;background:transparent}
+    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
+    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+    .mega-all-link{font-size:.76rem;color:rgba(0,0,0,.4);transition:color .2s;display:flex;align-items:center;gap:.35rem}
+    .mega-all-link:hover{color:rgba(0,0,0,.8)}
+    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
+    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
+    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
+    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
+    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
+    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
+    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
+    .mc-svg-w{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+    .mc:hover .mc-svg-w{transform:translateY(-6px) scale(1.05)}
+    .mc-badge{display:inline-block;font-size:.59rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .65rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
+    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
+    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
+    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
+    .mc:hover .mc-link{opacity:1;transform:none}
+    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
+    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(184,134,11,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#D4A020;border:1px solid rgba(184,134,11,.25)}.mc-plus .mc-link{color:#D4A020}
+    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(99,102,241,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#A5B4FC;border:1px solid rgba(99,102,241,.22)}.mc-art .mc-link{color:#A5B4FC}
+    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(20,184,166,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#2DD4BF;border:1px solid rgba(20,184,166,.22)}.mc-home .mc-link{color:#2DD4BF}
+    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
+    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
+    .mf-link:hover{color:rgba(0,0,0,.75)}
+    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
+    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+
+    /* HERO */
+    #hero{position:relative;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#05080F}
+    .h-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;z-index:0}
+    .h-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(to right,rgba(5,8,15,.97) 0%,rgba(5,8,15,.9) 35%,rgba(5,8,15,.35) 65%,rgba(5,8,15,.05) 100%)}
+    .h-orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:2}
+    .h-orb1{width:650px;height:650px;background:rgba(212,32,32,.13);top:-150px;left:-150px;animation:orbF1 9s ease-in-out infinite}
+    .h-orb2{width:420px;height:420px;background:rgba(212,32,32,.07);bottom:5%;left:-80px;animation:orbF2 12s ease-in-out infinite}
+    @keyframes orbF1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,50px) scale(1.06)}}
+    @keyframes orbF2{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-40px) scale(1.1)}}
+    .h-con{position:relative;z-index:10;flex:1;display:flex;align-items:center;padding:7rem 5% 4rem}
+    .h-left{width:52%;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+    .h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,32,32,.15);border:1px solid rgba(212,32,32,.35);border-radius:100px;padding:.4rem 1.1rem;font-size:.72rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:#FF6B6B;margin-bottom:2rem;animation:fsd .8s ease both}
+    @keyframes fsd{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:none}}
+    .h-dot{width:6px;height:6px;border-radius:50%;background:#FF6B6B;animation:blink 2s ease infinite;flex-shrink:0}
+    @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.7)}}
+    .h-h1{font-family:var(--fh);font-size:clamp(2.5rem,4.5vw,5.5rem);font-weight:400;line-height:.95;letter-spacing:-.035em;color:#FFF;margin-bottom:1.75rem;animation:fsu .9s .2s ease both}
+    @keyframes fsu{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+    .h-h1 .ac{color:#FF6B6B;display:block}
+    .h-sub{font-size:clamp(.95rem,1.2vw,1.1rem);color:rgba(255,255,255,.72);max-width:480px;line-height:1.75;margin-bottom:2.5rem;animation:fsu .9s .4s ease both}
+    .h-ctas{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;animation:fsu .9s .6s ease both}
+    .h-stats-row{display:flex;gap:0;align-items:stretch;margin-top:3rem;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;animation:fsu .9s .8s ease both;flex-wrap:wrap;width:100%}
+    .hsr-item{padding:1.1rem 1.75rem;text-align:center;border-right:1px solid rgba(255,255,255,.1);flex:1;min-width:100px}
+    .hsr-item:last-child{border-right:none}
+    .hsr-num{font-family:var(--fh);font-size:1.6rem;font-weight:400;color:#fff;line-height:1}
+    .hsr-num span{color:#FF6B6B}
+    .hsr-lab{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.3rem}
+    .btn-red{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.875rem 2.5rem;font-size:1rem;font-weight:400;cursor:pointer;transition:transform .25s,box-shadow .25s;font-family:var(--fb);display:inline-block;position:relative;overflow:hidden}
+    .btn-red::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .2s}
+    .btn-red:hover{transform:scale(1.05) translateY(-2px);box-shadow:0 8px 32px rgba(212,32,32,.55)}
+    .btn-red:hover::after{opacity:1}
+    .btn-wh{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#FFF;border-radius:100px;padding:.875rem 2.5rem;font-size:1rem;font-weight:500;cursor:pointer;transition:all .25s;font-family:var(--fb);display:inline-block}
+    .btn-wh:hover{background:rgba(255,255,255,.2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .h-scroll{position:absolute;bottom:2.5rem;right:5%;z-index:10;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.45);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;animation:fadeIn 1s 1.2s ease both;cursor:pointer}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .h-bar{width:1px;height:48px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:sp 1.8s ease-in-out infinite}
+    @keyframes sp{0%,100%{opacity:1}50%{opacity:.3}}
+    @media(max-width:1024px){.h-left{width:65%}}
+    @media(max-width:768px){.h-con{padding:6rem 6% 4rem}.h-left{width:100%;align-items:center;text-align:center}.h-ctas{justify-content:center}.hsr-item{padding:.9rem 1.2rem}.hsr-num{font-size:1.35rem}.h-scroll{right:50%;transform:translateX(50%)}}
+
+    /* SCROLL ANIMATION */
+    #sa-section{position:relative;height:450vh;background:#FFF}
+    #sa-sticky{position:sticky;top:68px;height:calc(100vh - 68px);width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#FFF}
+    #sa-bg-layer{position:absolute;inset:0;z-index:0;background:#FFF;transition:background .12s ease}
+    #sa-canvas{display:block;max-width:100%;max-height:calc(100vh - 68px);width:auto;height:auto;position:relative;z-index:1;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)}
+    #sa-loader{position:absolute;inset:0;background:#FFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;z-index:10;transition:opacity .6s}
+    #sa-loader-track{width:180px;height:2px;background:rgba(0,0,0,.1);border-radius:2px;overflow:hidden}
+    #sa-loader-fill{height:100%;background:var(--red);width:0%;border-radius:2px;transition:width .08s linear}
+    #sa-loader p{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.35);font-family:var(--fb)}
+    #sa-hud{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:.75rem;opacity:0;transition:opacity .4s}
+    #sa-hud.vis{opacity:1}
+    #sa-hud-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.35);font-family:var(--fb)}
+    #sa-hud-track{width:100px;height:2px;background:rgba(0,0,0,.1);border-radius:2px;overflow:hidden}
+    #sa-hud-fill{height:100%;background:rgba(0,0,0,.4);width:0%;border-radius:2px}
+    #sa-scroll-hint{position:absolute;bottom:5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:rgba(0,0,0,.35);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;animation:saHintPulse 2s ease-in-out infinite;font-family:var(--fb)}
+    #sa-scroll-hint.gone{opacity:0;pointer-events:none;transition:opacity .4s}
+    @keyframes saHintPulse{0%,100%{opacity:.35}50%{opacity:.7}}
+    #sa-scroll-hint svg{animation:saArrow .9s ease-in-out infinite}
+    @keyframes saArrow{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+    /* TICKER */
+    #ticker-s{background:#0A0A0A;padding:1.2rem 0;overflow:hidden}
+    .tick-t{display:flex;width:max-content;animation:tick 28s linear infinite}
+    .tick-t:hover{animation-play-state:paused}
+    @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .tick-i{display:flex;align-items:center;gap:.9rem;padding:0 2.5rem;white-space:nowrap;font-size:.85rem;color:rgba(255,255,255,.45)}
+    .tick-i strong{color:#FFF;font-family:var(--fh);font-size:1rem;font-weight:400}
+    .tick-sep{color:var(--red);opacity:.6}
+
+    /* SECTION SHARED */
+    .sec-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:4rem;flex-wrap:wrap;gap:1.5rem}
+    .sec-link{font-size:.875rem;font-weight:400;color:var(--red);display:inline-flex;align-items:center;gap:.4rem;transition:gap .2s,transform .2s}
+    .sec-link:hover{gap:.7rem;transform:translateX(3px)}
+
+    /* PRODUCTS TEASER */
+    #products-teaser{padding:7rem 0}
+    .pt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    .pt-card{background:#FFF;border:1px solid var(--border);border-radius:20px;display:flex;flex-direction:row;align-items:stretch;transition:border-color .3s,box-shadow .3s;text-decoration:none;color:inherit;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06),0 8px 32px rgba(0,0,0,.05)}
+    .pt-card:hover{border-color:rgba(0,0,0,.14);box-shadow:0 8px 32px rgba(0,0,0,.1),0 24px 64px rgba(0,0,0,.08)}
+    .pt-left{flex:1;display:flex;flex-direction:column;padding:2rem}
+    .pt-right{width:240px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:1.5rem 1.5rem 1.5rem 0}
+    .pt-pod-wrap{display:flex;flex-direction:column;align-items:center}
+    .pt-pod-wrap img{width:auto;max-height:320px;object-fit:contain;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+    .pt-pod-shadow{width:65%;height:18px;background:radial-gradient(ellipse at center,rgba(0,0,0,.22) 0%,transparent 68%);border-radius:50%;margin-top:2px;transition:width .4s,opacity .4s}
+    .pt-card:hover .pt-pod-wrap img{transform:scale(1.06) translateY(-8px)}
+    .pt-card:hover .pt-pod-shadow{width:50%;opacity:.65}
+    .pt-series{display:flex;align-items:center;gap:.6rem;margin-bottom:1.25rem}
+    .pt-series-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .pt-series-meta{display:flex;flex-direction:column;gap:.35rem}
+    .pt-series-name{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+    .pt-series-line{height:2.5px;border-radius:2px;width:32px}
+    .pt-name{font-family:var(--fh);font-size:1.5rem;font-weight:700;letter-spacing:-.025em;margin-bottom:.4rem}
+    .pt-meta{font-size:.82rem;font-weight:500;margin-bottom:.85rem}
+    .pt-desc{font-size:.875rem;color:var(--muted);line-height:1.7;flex:1;margin-bottom:1.5rem}
+    .pt-btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:500;color:var(--text);border:1.5px solid rgba(0,0,0,.15);border-radius:100px;padding:.55rem 1.25rem;transition:background .22s,color .22s,border-color .22s;align-self:flex-start}
+    .pt-btn svg{transition:transform .22s}
+    .pt-btn:hover{background:#0A0A0F;color:#FFF;border-color:#0A0A0F}
+    .pt-btn:hover svg{transform:translateX(4px)}
+
+    /* STATS COUNTER ROW */
+    #stats-row{padding:5rem 0;background:var(--bg2);position:relative;overflow:hidden}
+    #stats-row::before{content:'';position:absolute;left:-40px;top:50%;transform:translateY(-50%);width:260px;height:260px;background-image:radial-gradient(circle,rgba(212,32,32,.18) 1.5px,transparent 1.5px);background-size:18px 18px;pointer-events:none;opacity:.7}
+    #stats-row::after{content:'';position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:260px;height:260px;background-image:radial-gradient(circle,rgba(212,32,32,.18) 1.5px,transparent 1.5px);background-size:18px 18px;pointer-events:none;opacity:.7}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;position:relative;z-index:1}
+    .stat-item{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2.5rem 1.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.05),0 6px 24px rgba(0,0,0,.04);transition:transform .3s,box-shadow .3s}
+    .stat-item:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.09),0 16px 40px rgba(0,0,0,.06)}
+    .stat-icon{width:58px;height:58px;border-radius:50%;background:rgba(212,32,32,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+    .stat-num{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--text);line-height:1;margin-bottom:.55rem}
+    .stat-lab{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
+    .stat-dash{width:28px;height:3px;background:var(--red);border-radius:2px}
+    @media(max-width:768px){.stats-grid{grid-template-columns:1fr 1fr}}
+
+    /* VALUE PROPS */
+    #value-props{padding:6rem 0;position:relative;overflow:hidden;background-color:var(--bg2);background-image:linear-gradient(to right,rgba(242,243,245,.92) 20%,rgba(242,243,245,.6) 45%,rgba(242,243,245,.15) 70%,transparent 100%),url('images/why-bg.png');background-size:cover;background-position:center}
+    #value-props .wrap{position:relative;z-index:1}
+    .vp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:6rem}
+    .vp-card{background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:16px;padding:1.75rem;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;position:relative;overflow:hidden}
+    .vp-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),#FF6B6B);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+    .vp-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.12)}
+    .vp-card:hover::after{transform:scaleX(1)}
+    .vp-card-top{display:flex;align-items:center;gap:1rem;margin-bottom:1.1rem}
+    .vp-icon{width:44px;height:44px;border-radius:50%;background:rgba(212,32,32,.08);display:flex;align-items:center;justify-content:center;color:var(--red);flex-shrink:0;transition:background .3s}
+    .vp-card:hover .vp-icon{background:rgba(212,32,32,.14)}
+    .vp-metric{display:flex;align-items:baseline;gap:.15rem}
+    .vp-metric-num{font-family:var(--fh);font-size:2.6rem;font-weight:300;color:var(--red);line-height:1}
+    .vp-metric-unit{font-size:.9rem;color:var(--muted);font-weight:400;padding-bottom:.1rem}
+    .vp-divider{width:30px;height:2px;background:var(--red);border-radius:2px;margin-bottom:.75rem}
+    .vp-name{font-family:var(--fh);font-size:1.05rem;font-weight:500;margin-bottom:.5rem}
+    .vp-desc{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+    .vp-lnk{font-size:.8rem;font-weight:400;color:var(--red);display:inline-flex;align-items:center;gap:.35rem;transition:gap .2s}
+    .vp-lnk:hover{gap:.6rem}
+
+    /* PROCESS */
+    #process{background:#0D0D0D;padding:0}
+    .proc-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr}
+    .proc-left{padding:6rem 3rem 6rem 2rem;display:flex;flex-direction:column;justify-content:center}
+    .proc-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-family:var(--fb);margin-bottom:1.5rem}
+    .proc-title{font-family:var(--fh);font-size:clamp(2rem,3vw,3.25rem);font-weight:400;color:#FFF;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.25rem}
+    .proc-desc{font-size:.9rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:2.5rem;max-width:300px}
+    .proc-right{padding:5rem 2rem 5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;border-left:1px solid rgba(255,255,255,.07)}
+    .ps-card{display:flex;flex-direction:column;gap:.75rem}
+    .ps-icon{width:46px;height:46px;border:1.5px solid rgba(212,32,32,.45);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--red);flex-shrink:0;margin-bottom:.25rem}
+    .ps-card-title{font-family:var(--fh);font-size:1rem;font-weight:400;color:#FFF;line-height:1.2}
+    .ps-card-desc{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.65}
+    @media(max-width:1024px){.proc-inner{grid-template-columns:1fr}.proc-right{border-left:none;border-top:1px solid rgba(255,255,255,.07);padding:3rem 2rem 4rem}}
+    @media(max-width:768px){.proc-right{grid-template-columns:1fr}.proc-left{padding:4rem 1.5rem 2rem}}
+
+    /* USE CASE TEASER */
+    #uc-teaser{padding:7rem 0;background:var(--bg2)}
+    .uc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:4rem}
+    .uc-card{border-radius:20px;overflow:hidden;position:relative;aspect-ratio:16/9;cursor:pointer}
+    .uc-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+    .uc-card:hover img{transform:scale(1.07)}
+    .uc-card-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;transition:background .4s}
+    .uc-card:hover .uc-card-ov{background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(212,32,32,.08) 60%,transparent 100%)}
+    .uc-card-tag{font-size:.7rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:.4rem;transform:translateY(6px);transition:transform .3s}
+    .uc-card-title{font-family:var(--fh);font-size:1.2rem;font-weight:400;color:#FFF;transform:translateY(6px);transition:transform .3s .05s}
+    .uc-card:hover .uc-card-tag,.uc-card:hover .uc-card-title{transform:none}
+    .uc-card-arr{position:absolute;top:1.25rem;right:1.25rem;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#FFF;font-size:1rem;opacity:0;transform:scale(.6) rotate(-45deg);transition:all .3s}
+    .uc-card:hover .uc-card-arr{opacity:1;transform:scale(1) rotate(0)}
+    .uc-card.tall{grid-row:span 2;aspect-ratio:auto}
+    .uc-card.tall img{height:100%}
+
+    /* TESTIMONIALS */
+    #testimonials{padding:7rem 0;background:var(--bg2);overflow:hidden}
+    .t-head{margin-bottom:3rem;text-align:center}
+    .t-head-left .s-sub{color:var(--muted);font-size:.95rem;line-height:1.7;max-width:440px;margin-top:.6rem;margin-left:auto;margin-right:auto}
+    .t-track-w{overflow:hidden;width:100%;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+    .t-track{display:flex;gap:1.5rem;width:max-content;animation:tScroll 32s linear infinite;will-change:transform}
+    .t-track:hover{animation-play-state:paused}
+    @keyframes tScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .t-card{width:290px;aspect-ratio:1/1;background:#FFF;border:1px solid var(--border);border-radius:16px;padding:1.3rem 1.5rem;flex-shrink:0;box-shadow:0 2px 16px rgba(0,0,0,.05);position:relative;overflow:hidden}
+    .t-qmark{font-size:3rem;line-height:1;color:var(--red);font-family:Georgia,serif;margin-bottom:.1rem;display:block}
+    .t-stars{color:var(--red);font-size:.78rem;letter-spacing:2px;margin-bottom:.7rem}
+    .t-quote{font-size:.85rem;color:var(--text);line-height:1.7;margin-bottom:1.1rem;font-style:italic}
+    .t-divider{height:1px;background:var(--border);margin-bottom:.9rem}
+    .t-author{display:flex;align-items:center;gap:.7rem}
+    .t-avatar{width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;background:var(--bg3)}
+    .t-name{font-weight:600;font-size:.82rem;color:var(--text)}
+    .t-loc{font-size:.72rem;color:var(--muted);margin-top:.1rem}
+    .t-bg-quote{position:absolute;bottom:-1.5rem;right:1rem;font-size:7rem;line-height:1;color:rgba(212,32,32,.07);font-family:Georgia,serif;pointer-events:none;user-select:none}
+
+    /* CTA STRIP */
+    #cta-strip{padding:7rem 0;background:#0A0A0A;position:relative;overflow:hidden;background-image:url('images/sonichive-office-pods_silence-booth-3.webp');background-size:cover;background-position:center}
+    #cta-strip::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.78),rgba(0,0,0,.88));z-index:0}
+    #cta-strip::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.5),transparent);z-index:1}
+    #cta-strip .wrap{position:relative;z-index:1}
+    .ctas-in{position:relative;text-align:center;max-width:700px;margin:0 auto}
+    .ctas-in h2{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.025em;color:#FFF;margin-bottom:1rem}
+    .ctas-in p{color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:2.5rem;font-size:1.05rem}
+    .ctas-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+    /* CLIENT BANNER */
+    #clients{padding:4rem 0;background:#FFF;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .clients-head{text-align:center;margin-bottom:2.5rem}
+    .clients-label{font-size:.68rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+    .marquee-track{overflow:hidden;width:100%}
+    .marquee-row{display:flex;width:max-content;will-change:transform}
+    .marquee-row.fwd{animation:mFwd 38s linear infinite}
+    .marquee-row.rev{animation:mRev 34s linear infinite}
+    .marquee-row:hover{animation-play-state:paused}
+    @keyframes mFwd{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    @keyframes mRev{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+    .c-chip{display:inline-flex;align-items:center;justify-content:center;width:160px;height:72px;flex-shrink:0;border-right:1px solid rgba(0,0,0,.07);background:#FFF;transition:background .25s}
+    .c-chip:hover{background:#F8F8F8}
+    .c-chip img{height:26px;width:120px;object-fit:contain;filter:grayscale(100%);opacity:.5;transition:filter .3s,opacity .3s}
+    .c-chip:hover img{filter:grayscale(0%);opacity:1}
+
+    /* FOOTER */
+    footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5rem 0 2rem}
+    .foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3.5rem}
+    .foot-brand p{color:rgba(255,255,255,.4);font-size:.9rem;line-height:1.7;margin-top:1rem;max-width:280px}
+    .foot-soc{display:flex;gap:.75rem;margin-top:1.5rem}
+    .soc-a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:400;transition:all .25s;color:rgba(255,255,255,.4)}
+    .soc-a:hover{background:var(--red-d);border-color:var(--red-b);color:var(--red);transform:translateY(-3px)}
+    .foot-col h4{font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem;color:rgba(255,255,255,.9)}
+    .foot-col a{display:block;color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;transition:color .2s,transform .2s;transform-origin:left}
+    .foot-col a:hover{color:#FFF;transform:translateX(4px)}
+    .foot-contact p{color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem}
+    .foot-contact a{color:var(--red);display:inline;margin-bottom:0}
+    .foot-bot{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .foot-bot p{color:rgba(255,255,255,.3);font-size:.8rem}
+    .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
+    .foot-locs span{font-size:.72rem;color:rgba(255,255,255,.35);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.2rem .7rem;transition:all .2s;cursor:default}
+    .foot-locs span:hover{background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
+
+    @media(max-width:1024px){.pt-grid{grid-template-columns:1fr 1fr}.vp-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}}
+    @media(max-width:768px){.nav-links{display:none}.pt-grid{grid-template-columns:1fr;gap:1rem}.vp-grid{grid-template-columns:1fr}.uc-grid{grid-template-columns:1fr}.uc-card.tall{grid-row:auto}.foot-g{grid-template-columns:1fr}#value-props{background-image:linear-gradient(rgba(242,243,245,.93),rgba(242,243,245,.93)),url('images/why-bg.png')}}
+  </style>
+</head>
+<body>
+
+<div id="pg-bar"></div>
+<div id="cg"></div>
+<div id="sec-dots"></div>
+
+<nav id="nav">
+  <div class="nav-i">
+    <a href="index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#FAFAFA"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".55"/></svg>
+      <span class="logo-t">Sonic<em>Hive</em></span>
+    </a>
+    <div class="nav-links">
+      
+      <div class="nav-dd">
+        <button class="nd-toggle">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.png" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="vrt-plus.html" class="mc mc-plus"><div class="mc-img-w"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ SM 1.png" alt="VRT Plus" loading="lazy"></div><div class="mc-name">VRT Plus</div><p class="mc-desc">Enhanced HVAC, premium finishes and superior acoustic performance.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.png" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div></div>
+          
+      </div>
+      <a href="use-cases.html">Use Cases</a>
+        <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Get a Quote →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <img class="h-vid" src="images/hero-bg.png?v=2" alt="" aria-hidden="true">
+  <div class="h-ov"></div>
+  <div class="h-orb h-orb1"></div>
+  <div class="h-orb h-orb2"></div>
+  <div class="h-con">
+    <div class="h-left">
+      <div class="h-badge"><span class="h-dot"></span>Dubai's #1 Acoustic Pod Provider</div>
+      <h1 class="h-h1">Work in Silence.<span class="ac">Lead in Clarity.</span></h1>
+      <p class="h-sub">Premium soundproof office pods engineered for the Middle East's most demanding workspaces. No construction. No noise. Pure focus.</p>
+      <div class="h-ctas">
+        <a href="products.html" class="btn-red">Explore Pods</a>
+        <a href="contact.html" class="btn-wh">Get a Quote</a>
+      </div>
+      <div class="h-stats-row">
+        <div class="hsr-item"><div class="hsr-num">500<span>+</span></div><div class="hsr-lab">Installations</div></div>
+        <div class="hsr-item"><div class="hsr-num">30<span>dB</span></div><div class="hsr-lab">Reduction</div></div>
+        <div class="hsr-item"><div class="hsr-num">100<span>+</span></div><div class="hsr-lab">Clients</div></div>
+        <div class="hsr-item"><div class="hsr-num">5<span>★</span></div><div class="hsr-lab">Rating</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="h-scroll" onclick="document.getElementById('ticker-s').scrollIntoView({behavior:'smooth'})">
+    <span>Scroll</span><div class="h-bar"></div>
+  </div>
+</section>
+
+<!-- SCROLL ANIMATION -->
+<section id="sa-section">
+  <div id="sa-sticky">
+    <div id="sa-loader">
+      <div id="sa-loader-track"><div id="sa-loader-fill"></div></div>
+      <p id="sa-loader-text">Loading…</p>
+    </div>
+    <div id="sa-bg-layer"></div>
+    <canvas id="sa-canvas"></canvas>
+    <div id="sa-hud">
+      <span id="sa-hud-label">Scroll to explore</span>
+      <div id="sa-hud-track"><div id="sa-hud-fill"></div></div>
+    </div>
+    <div id="sa-scroll-hint">
+      <span>Scroll</span>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M3.5 8.5L7 12l3.5-3.5" stroke="rgba(0,0,0,.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div id="ticker-s"><div class="tick-t" id="tick"></div></div>
+
+<!-- PRODUCTS TEASER -->
+<section id="products-teaser">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="rl">
+        <p class="s-label">Our Products</p>
+        <h2 class="s-title">Find Your Perfect Pod</h2>
+        <p class="s-sub">Four distinct product lines — from standard acoustic pods to bespoke designer installations and residential retreats.</p>
+      </div>
+      <a href="products.html" class="sec-link rr">View All Products →</a>
+    </div>
+    <div class="pt-grid">
+
+      <!-- VRT -->
+      <a class="pt-card r d1" href="vrt.html">
+        <div class="pt-left">
+          <div class="pt-series">
+            <div class="pt-series-icon" style="background:rgba(212,32,32,.08)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <div class="pt-series-meta">
+              <span class="pt-series-name" style="color:#D42020">Standard Series</span>
+              <div class="pt-series-line" style="background:#D42020"></div>
+            </div>
+          </div>
+          <div class="pt-name">VRT</div>
+          <div class="pt-meta" style="color:#D42020">1–6 Person · From AED 12,500</div>
+          <p class="pt-desc">The SonicHive signature pod. Plug-and-play soundproofing for any team size, installed in under 2 hours.</p>
+          <span class="pt-btn">Explore Models <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="pt-right">
+          <div class="pt-pod-wrap">
+            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.png" alt="VRT" loading="lazy">
+            <div class="pt-pod-shadow"></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- VRT Plus -->
+      <a class="pt-card r d2" href="vrt-plus.html">
+        <div class="pt-left">
+          <div class="pt-series">
+            <div class="pt-series-icon" style="background:rgba(184,134,11,.1)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A6F08" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="pt-series-meta">
+              <span class="pt-series-name" style="color:#9A6F08">Premium Series</span>
+              <div class="pt-series-line" style="background:#9A6F08"></div>
+            </div>
+          </div>
+          <div class="pt-name">VRT Plus</div>
+          <div class="pt-meta" style="color:#9A6F08">1–6 Person · Enhanced Acoustics</div>
+          <p class="pt-desc">All the VRT performance with upgraded interior finishes, enhanced HVAC, and premium connectivity throughout.</p>
+          <span class="pt-btn">Explore Models <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="pt-right">
+          <div class="pt-pod-wrap">
+            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ SM 1.png" alt="VRT Plus" loading="lazy">
+            <div class="pt-pod-shadow"></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- ART Pod -->
+      <a class="pt-card r d3" href="art-pod.html">
+        <div class="pt-left">
+          <div class="pt-series">
+            <div class="pt-series-icon" style="background:rgba(79,70,229,.08)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+            </div>
+            <div class="pt-series-meta">
+              <span class="pt-series-name" style="color:#4338CA">Designer Series</span>
+              <div class="pt-series-line" style="background:#4338CA"></div>
+            </div>
+          </div>
+          <div class="pt-name">ART Pod</div>
+          <div class="pt-meta" style="color:#4338CA">1–6 Person · Bespoke Design</div>
+          <p class="pt-desc">Architecturally striking pods with bespoke cladding and custom branding. Engineered to make a statement.</p>
+          <span class="pt-btn">Explore Models <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="pt-right">
+          <div class="pt-pod-wrap">
+            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.png" alt="ART Pod" loading="lazy">
+            <div class="pt-pod-shadow"></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Home Pod -->
+      <a class="pt-card r d4" href="home-pod.html">
+        <div class="pt-left">
+          <div class="pt-series">
+            <div class="pt-series-icon" style="background:rgba(13,148,136,.08)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="pt-series-meta">
+              <span class="pt-series-name" style="color:#0F766E">Residential Series</span>
+              <div class="pt-series-line" style="background:#0F766E"></div>
+            </div>
+          </div>
+          <div class="pt-name">Home Pod</div>
+          <div class="pt-meta" style="color:#0F766E">For Home & Studio</div>
+          <p class="pt-desc">The world's most liveable acoustic pod. Purpose-built for home offices, streaming studios, and music practice.</p>
+          <span class="pt-btn">Explore Models <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="pt-right">
+          <div class="pt-pod-wrap">
+            <img src="images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy">
+            <div class="pt-pod-shadow"></div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT BANNER -->
+<section id="clients">
+  <div class="clients-head">
+    <p class="clients-label">Trusted by leading organisations across the region</p>
+  </div>
+  <div class="marquee-track">
+    <div class="marquee-row fwd" id="mRow1"></div>
+  </div>
+  <div class="marquee-track" style="margin-top:.75rem">
+    <div class="marquee-row rev" id="mRow2"></div>
+  </div>
+</section>
+
+<!-- STATS COUNTER ROW -->
+<section id="stats-row">
+  <div class="wrap">
+    <div class="stats-grid">
+
+      <div class="stat-item rs d1">
+        <div class="stat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="stat-num" data-target="500" data-suffix="+">0+</div>
+        <div class="stat-lab">Pod Installations</div>
+        <div class="stat-dash"></div>
+      </div>
+
+      <div class="stat-item rs d2">
+        <div class="stat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="stat-num" data-target="100" data-suffix="+">0+</div>
+        <div class="stat-lab">Corporate Clients</div>
+        <div class="stat-dash"></div>
+      </div>
+
+      <div class="stat-item rs d3">
+        <div class="stat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+        </div>
+        <div class="stat-num" data-target="30" data-suffix="dB">0dB</div>
+        <div class="stat-lab">Sound Reduction</div>
+        <div class="stat-dash"></div>
+      </div>
+
+      <div class="stat-item rs d4">
+        <div class="stat-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="stat-num" data-target="5" data-suffix="+">0+</div>
+        <div class="stat-lab">Countries Served</div>
+        <div class="stat-dash"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPS -->
+<section id="value-props">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="rl">
+        <p class="s-label">Why SonicHive</p>
+        <h2 class="s-title">Built Different.<br>Built <span style="color:var(--red)">Better.</span></h2>
+        <p class="s-sub" style="margin-top:.85rem">SonicHive pods combine cutting-edge acoustic engineering with modern design and effortless installation — so you can focus on what matters.</p>
+      </div>
+    </div>
+    <div class="vp-grid">
+      <div class="vp-card r d1">
+        <div class="vp-card-top">
+          <div class="vp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+          </div>
+          <div class="vp-metric">
+            <span class="vp-metric-num">30</span>
+            <span class="vp-metric-unit">dB</span>
+          </div>
+        </div>
+        <div class="vp-divider"></div>
+        <div class="vp-name">30dB Sound Reduction</div>
+        <p class="vp-desc">Industry-leading acoustic performance backed by Asia's largest acoustic testing lab. Not a marketing claim — a measurable result.</p>
+        <a href="features.html" class="vp-lnk">Learn more →</a>
+      </div>
+      <div class="vp-card r d2">
+        <div class="vp-card-top">
+          <div class="vp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg>
+          </div>
+          <div class="vp-metric">
+            <span class="vp-metric-num">2</span>
+            <span class="vp-metric-unit">h</span>
+          </div>
+        </div>
+        <div class="vp-divider"></div>
+        <div class="vp-name">Installed in 2 Hours</div>
+        <p class="vp-desc">Fully modular, self-contained, plug-and-play. No drilling, no contractors, no downtime. Ready in hours, not weeks.</p>
+        <a href="features.html" class="vp-lnk">Learn more →</a>
+      </div>
+      <div class="vp-card r d3">
+        <div class="vp-card-top">
+          <div class="vp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z"/><path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z"/></svg>
+          </div>
+          <div class="vp-metric">
+            <span class="vp-metric-num" style="font-size:2.6rem">∞</span>
+          </div>
+        </div>
+        <div class="vp-divider"></div>
+        <div class="vp-name">Fully Customizable</div>
+        <p class="vp-desc">Colours, sizes, layouts, finishes — tailored to your brand and workspace. Every pod is designed to belong where it's placed.</p>
+        <a href="features.html" class="vp-lnk">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="process">
+  <div class="proc-inner">
+    <div class="proc-left r">
+      <p class="proc-label">How It Works</p>
+      <h2 class="proc-title">Silence in 4<br>Simple Steps.</h2>
+      <p class="proc-desc">From first enquiry to working in perfect quiet — our process is built for zero disruption to your team.</p>
+      <a href="products.html" class="btn-red">Explore Pods &rarr;</a>
+    </div>
+    <div class="proc-right">
+      <div class="ps-card r">
+        <div class="ps-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="8" height="8" rx="1.5"/><rect x="12" y="2" width="8" height="8" rx="1.5"/><rect x="2" y="12" width="8" height="8" rx="1.5"/><rect x="12" y="12" width="8" height="8" rx="1.5"/>
+          </svg>
+        </div>
+        <div class="ps-card-title">Choose Your Pod</div>
+        <p class="ps-card-desc">Browse our 6-model range and find the perfect fit for your team size and workspace requirements.</p>
+      </div>
+      <div class="ps-card r">
+        <div class="ps-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3l4 4-10 10H5v-4L15 3z"/><path d="M13 5l4 4"/>
+          </svg>
+        </div>
+        <div class="ps-card-title">Customise &amp; Quote</div>
+        <p class="ps-card-desc">Select colours, finishes, and add-ons. Get an instant quote or visit our Downtown Dubai showroom.</p>
+      </div>
+      <div class="ps-card r">
+        <div class="ps-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 15h14l3-5H5L2 4H1"/><circle cx="8" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/>
+          </svg>
+        </div>
+        <div class="ps-card-title">Delivered to You</div>
+        <p class="ps-card-desc">We handle all logistics across the UAE and Middle East. Your pod arrives fully quality-checked.</p>
+      </div>
+      <div class="ps-card r">
+        <div class="ps-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L5 13h7l-3 7 10-11h-7l3-7z"/>
+          </svg>
+        </div>
+        <div class="ps-card-title">Installed in 2 Hours</div>
+        <p class="ps-card-desc">Plug in, power up, and you're done. No drilling, no contractors — just instant acoustic perfection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASE TEASER -->
+<section id="uc-teaser">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="rl">
+        <p class="s-label">Use Cases</p>
+        <h2 class="s-title">A Pod for Every Space</h2>
+      </div>
+      <a href="use-cases.html" class="sec-link rr">See All Use Cases →</a>
+    </div>
+    <div class="uc-grid">
+      <div class="uc-card tall rl">
+        <img src="https://thesonichive.com/wp-content/uploads/2024/10/23-10-2024-18_27_04-1024x517.webp" alt="Corporate Office" loading="lazy">
+        <div class="uc-card-ov">
+          <div class="uc-card-tag">Corporate Office</div>
+          <div class="uc-card-title">Silence Inside the Open Plan</div>
+        </div>
+        <div class="uc-card-arr">↗</div>
+      </div>
+      <div class="uc-card rr">
+        <img src="https://thesonichive.com/wp-content/uploads/2024/10/office-Booth-Sonichive_21-1024x819.webp" alt="Co-Working" loading="lazy">
+        <div class="uc-card-ov">
+          <div class="uc-card-tag">Co-Working Spaces</div>
+          <div class="uc-card-title">Premium Private Zones</div>
+        </div>
+        <div class="uc-card-arr">↗</div>
+      </div>
+      <div class="uc-card rr d2">
+        <img src="https://thesonichive.com/wp-content/uploads/2024/10/Office-pods-for-4-person_Sonichive-2-1024x819.webp" alt="Creative Studios" loading="lazy">
+        <div class="uc-card-ov">
+          <div class="uc-card-tag">Creative Studios</div>
+          <div class="uc-card-title">Record. Create. Perform.</div>
+        </div>
+        <div class="uc-card-arr">↗</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="t-head r">
+      <div class="t-head-left">
+        <p class="s-label">Reviews</p>
+        <h2 class="s-title">Trusted Across the Region</h2>
+        <p class="s-sub">Real stories from real spaces. See why teams and individuals choose SonicHive for focus, privacy, and performance.</p>
+      </div>
+    </div>
+  </div>
+  <div class="t-track-w"><div class="t-track" id="ttrack"></div></div>
+</section>
+
+<!-- CTA STRIP -->
+<section id="cta-strip">
+  <div class="wrap">
+    <div class="ctas-in rs">
+      <p class="s-label" style="color:var(--red);justify-content:center">Get Started Today</p>
+      <h2>Transform Your Workspace.</h2>
+      <p>Visit our Downtown Dubai showroom, get a free consultation, or request a quote online. Our team responds within 2 business hours.</p>
+      <div class="ctas-btns">
+        <a href="contact.html" class="btn-red">Request a Free Quote</a>
+        <a href="https://wa.me/971585550099" target="_blank" class="btn-wh" style="display:inline-flex;align-items:center;gap:.5rem">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-g">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" style="display:inline-flex">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#0A0A0A"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".5"/></svg>
+          <span class="logo-t" style="font-size:1.1rem;color:#FFF">Sonic<em>Hive</em></span>
+        </a>
+        <p>Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the Middle East.</p>
+        <div class="foot-soc">
+          <a class="soc-a" href="https://www.instagram.com/sonichive_?igsh=cWdjN3Ryd3N0ejdq" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a class="soc-a" href="https://www.facebook.com/share/1BwnMVP4BA/" target="_blank" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a class="soc-a" href="https://www.linkedin.com/company/sonichive/" target="_blank" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a class="soc-a" href="https://pin.it/5R68dXkTQ" target="_blank" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a class="soc-a" href="https://youtube.com/@sonichivepods?si=Y5jNiFN95m_dLkNk" target="_blank" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc-a" href="https://www.tiktok.com/@sonichive?_r=1&amp;_t=ZS-92IlD1VKJmi" target="_blank" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9a8.19 8.19 0 0 0 4.79 1.52V7.07a4.85 4.85 0 0 1-1.02-.38z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <a href="vrt.html">VRT</a>
+        <a href="vrt-plus.html">VRT Plus</a>
+        <a href="art-pod.html">ART Pod</a>
+        <a href="home-pod.html">Home Pod</a>
+        <a href="rental-pods.html">Rental Pods</a>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="features.html">Features</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Get a Quote</a>
+        <a href="https://thesonichive.com/blog/" target="_blank">Blog</a>
+      </div>
+      <div class="foot-col foot-contact">
+        <h4>Contact Us</h4>
+        <p><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg> Downtown Dubai, UAE</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg> <a href="tel:+971585550099">+971 58 555 0099</a></p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg> <a href="mailto:info@thesonichive.com">info@thesonichive.com</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <p>© 2025 SonicHive. All rights reserved.</p>
+      <div class="foot-locs"><span>UAE</span><span>Qatar</span><span>Saudi Arabia</span><span>Bahrain</span><span>NZ</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Scroll progress + nav ── */
+const pgBar = document.getElementById('pg-bar');
+const nav   = document.getElementById('nav');
+const hVid  = document.querySelector('.h-vid');
+const hCon  = document.querySelector('.h-con');
+const hOrb1 = document.querySelector('.h-orb1');
+const hOrb2 = document.querySelector('.h-orb2');
+const vh    = () => window.innerHeight;
+
+window.addEventListener('scroll', () => {
+  const dh = document.documentElement;
+  pgBar.style.width = (scrollY / (dh.scrollHeight - dh.clientHeight) * 100) + '%';
+  nav.classList.toggle('s', scrollY > 60);
+  if (scrollY < vh() * 1.2) {
+    const p = scrollY / vh();
+    if (hCon)  hCon.style.transform  = `translateY(${scrollY * 0.22}px)`;
+    if (hVid)  hVid.style.transform  = `translateY(${scrollY * 0.18}px)`;
+    if (hOrb1) hOrb1.style.transform = `translate(${p*30}px,${p*50}px)`;
+    if (hOrb2) hOrb2.style.transform = `translate(${-p*20}px,${p*40}px)`;
+  }
+}, {passive:true});
+
+/* ── Cursor glow ── */
+const cg = document.getElementById('cg');
+let cgOn = false;
+document.addEventListener('mousemove', e => {
+  cg.style.left = e.clientX + 'px';
+  cg.style.top  = e.clientY + 'px';
+  if (!cgOn) { cg.style.opacity = '1'; cgOn = true; }
+}, {passive:true});
+
+/* ── Universal reveal observer ── */
+const revObs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('on'); revObs.unobserve(e.target); }
+}), {threshold: 0.07});
+const observeAll = () =>
+  document.querySelectorAll('.r,.rl,.rr,.rs').forEach(el => {
+    if (!el.classList.contains('on')) revObs.observe(el);
+  });
+observeAll();
+
+/* ── Counter animation ── */
+const countUp = (el, target, suffix, dur = 1800) => {
+  if (el.dataset.counted) return;
+  el.dataset.counted = '1';
+  const t0 = performance.now();
+  const tick = now => {
+    const p = Math.min((now - t0) / dur, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(ease * target) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+const cntObs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) {
+    const n = e.target.querySelector('.stat-num');
+    if (n) countUp(n, +n.dataset.target, n.dataset.suffix || '');
+    cntObs.unobserve(e.target);
+  }
+}), {threshold: 0.5});
+document.querySelectorAll('.stat-item').forEach(el => cntObs.observe(el));
+
+/* ── Process line reveal ── */
+const procSteps = document.getElementById('proc-steps');
+const lineObs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('line-on'); lineObs.unobserve(e.target); }
+}), {threshold: 0.3});
+if (procSteps) lineObs.observe(procSteps);
+
+/* ── Ticker ── */
+const tItems = [
+  {n:'500+',l:'Pod Installations'},{n:'5',l:'Countries'},{n:'30dB',l:'Sound Reduction'},
+  {n:'100+',l:'Corporate Clients'},{n:'2 hrs',l:'Avg. Installation'},{n:'5★',l:'Customer Rating'}
+];
+const mkTick = () => tItems.map(i =>
+  `<div class="tick-i"><strong>${i.n}</strong> ${i.l} <span class="tick-sep">◆</span></div>`).join('');
+document.getElementById('tick').innerHTML = mkTick() + mkTick();
+
+/* ── Client banner ── */
+(function(){
+  const row1 = [
+    {n:'Emirates Group',  url:'https://upload.wikimedia.org/wikipedia/commons/e/e3/Emirates_Group_Logo.svg'},
+    {n:'ADNOC',           url:'https://upload.wikimedia.org/wikipedia/commons/9/9f/Abu_Dhabi_National_Oil_Company_logo.png'},
+    {n:'Emaar',           url:'https://upload.wikimedia.org/wikipedia/commons/f/fd/Emaar_logo.svg'},
+    {n:'Majid Al Futtaim',url:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Majid_Al_Futtaim_logo.svg'},
+    {n:'Mubadala',        url:'https://upload.wikimedia.org/wikipedia/commons/3/3b/Mubadala_Investment_logo.svg'},
+    {n:'DP World',        url:'https://upload.wikimedia.org/wikipedia/commons/2/2d/DP_World_2021_logo.svg'},
+  ];
+  const row2 = [
+    {n:'e&',              url:'https://upload.wikimedia.org/wikipedia/commons/d/d9/Eand_Logo_EN.svg'},
+    {n:'First Abu Dhabi Bank', url:'https://upload.wikimedia.org/wikipedia/commons/2/22/First_Abu_Dhabi_Bank_Logo.svg'},
+    {n:'DEWA',            url:'https://upload.wikimedia.org/wikipedia/commons/d/dd/Logo_of_DEWA.png'},
+    {n:'Aldar',           url:'https://upload.wikimedia.org/wikipedia/commons/6/60/Aldar_Properties_Logo_2016.png'},
+    {n:'Nakheel',         url:'https://upload.wikimedia.org/wikipedia/commons/6/67/Nakheel_logo.svg'},
+    {n:'Gulf Air',        url:'https://upload.wikimedia.org/wikipedia/commons/9/97/Gulf_Air_2018_wordmark.svg'},
+  ];
+  const chip = c => `<span class="c-chip"><img src="${c.url}" alt="${c.n}" loading="lazy"></span>`;
+  const build = (el, clients) => { const h = clients.map(chip).join(''); el.innerHTML = h + h; };
+  build(document.getElementById('mRow1'), row1);
+  build(document.getElementById('mRow2'), row2);
+})();
+
+observeAll();
+
+/* ── Testimonials ── */
+const testis = [
+  {q:'Bought a Home Pod for my Dubai apartment — instant peace even with traffic outside. Totally transformed my remote setup.',n:'Sara A.',l:'Dubai, UAE',av:'https://i.pravatar.cc/60?img=47'},
+  {q:'Installed a meeting pod in our Abu Dhabi office. Team uses it daily for client calls. Soundproofing is superb.',n:'Khaled M.',l:'Abu Dhabi, UAE',av:'https://i.pravatar.cc/60?img=12'},
+  {q:'We put pods in our co-working space. They are constantly booked. The 30 dB reduction is the real deal.',n:'Rayan G.',l:'Riyadh, KSA',av:'https://i.pravatar.cc/60?img=33'},
+  {q:'Our Business Bay office is one giant echo chamber. Three 4-seater pods later — life-savers for our weekly sprints.',n:'Amina R.',l:'Dubai, UAE',av:'https://i.pravatar.cc/60?img=5'},
+  {q:'Ventilation is surprisingly good. Hour-long strategy sessions in the 6-seater and stayed perfectly cool.',n:'Fatima A.',l:'Doha, Qatar',av:'https://i.pravatar.cc/60?img=9'},
+];
+const ttrack = document.getElementById('ttrack');
+const cardHTML = testis.map(t => `
+  <div class="t-card">
+    <span class="t-qmark">&#x201C;</span>
+    <div class="t-stars">★★★★★</div>
+    <p class="t-quote">${t.q}</p>
+    <div class="t-divider"></div>
+    <div class="t-author">
+      <img class="t-avatar" src="${t.av}" alt="${t.n}" loading="lazy">
+      <div><div class="t-name">${t.n}</div><div class="t-loc">${t.l}</div></div>
+    </div>
+    <span class="t-bg-quote">&#x201D;</span>
+  </div>`).join('');
+ttrack.innerHTML = cardHTML + cardHTML;
+
+/* ── Section nav dots ── */
+const sections     = ['hero','sa-section','products-teaser','clients','stats-row','value-props','process','uc-teaser','testimonials','cta-strip'];
+const sectionNames = ['Home','Animation','Products','Stats','Features','Process','Use Cases','Reviews','Contact'];
+const dotsEl = document.getElementById('sec-dots');
+dotsEl.innerHTML = sections.map((s, i) =>
+  `<div class="sd" data-s="${s}" title="${sectionNames[i]}"></div>`).join('');
+const sdObs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting)
+    document.querySelectorAll('.sd').forEach(d => d.classList.toggle('on', d.dataset.s === e.target.id));
+}), {threshold: 0.4});
+sections.forEach(s => { const el = document.getElementById(s); if (el) sdObs.observe(el); });
+document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
+  document.getElementById(d.dataset.s)?.scrollIntoView({behavior:'smooth'})));
+</script>
+
+<script>
+/* ── Scroll Frame Animation ── */
+(function(){
+  const TOTAL = 181;
+  const pad   = n => String(n).padStart(3, '0');
+  const src   = i => 'images/Scroll_animation_frames/ezgif-frame-' + pad(i) + '.png';
+
+  const section    = document.getElementById('sa-section');
+  const canvas     = document.getElementById('sa-canvas');
+  const ctx        = canvas.getContext('2d');
+  const loader     = document.getElementById('sa-loader');
+  const loaderFill = document.getElementById('sa-loader-fill');
+  const loaderTxt  = document.getElementById('sa-loader-text');
+  const hud        = document.getElementById('sa-hud');
+  const hudFill    = document.getElementById('sa-hud-fill');
+  const hint       = document.getElementById('sa-scroll-hint');
+  const bgLayer    = document.getElementById('sa-bg-layer');
+
+  const images = new Array(TOTAL);
+  let loaded = 0, curFrame = -1, rafId = null, ready = false;
+
+  function edgeColor(x) {
+    const mid = Math.floor(canvas.height / 2);
+    const h   = Math.min(40, canvas.height);
+    const y0  = Math.max(0, mid - h / 2);
+    const d   = ctx.getImageData(x, y0, 1, h).data;
+    let r = 0, g = 0, b = 0, n = d.length / 4;
+    for (let i = 0; i < d.length; i += 4) { r += d[i]; g += d[i+1]; b += d[i+2]; }
+    return `rgb(${~~(r/n)},${~~(g/n)},${~~(b/n)})`;
+  }
+
+  function draw(idx) {
+    const img = images[idx];
+    if (!img || !img.complete || idx === curFrame) return;
+    curFrame = idx;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0);
+    const lc = edgeColor(0);
+    const rc = edgeColor(canvas.width - 1);
+    bgLayer.style.background = `linear-gradient(to right,${lc},${lc} 35%,${rc} 65%,${rc})`;
+  }
+
+  function getIdx() {
+    const top   = section.getBoundingClientRect().top;
+    const range = section.offsetHeight - window.innerHeight;
+    const prog  = Math.max(0, Math.min(1, -top / range));
+    return Math.min(TOTAL - 1, Math.floor(prog * TOTAL));
+  }
+
+  function tick() {
+    rafId = null;
+    const idx = getIdx();
+    draw(idx);
+    const pct = idx / (TOTAL - 1) * 100;
+    hudFill.style.width = pct + '%';
+    if (idx > 2) hint.classList.add('gone');
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ready || rafId) return;
+    rafId = requestAnimationFrame(tick);
+  }, { passive: true });
+
+  /* preload all frames */
+  for (let i = 1; i <= TOTAL; i++) {
+    const img = new Image();
+    const fi  = i - 1;
+    img.onload = () => {
+      loaded++;
+      const pct = Math.round(loaded / TOTAL * 100);
+      loaderFill.style.width = pct + '%';
+      loaderTxt.textContent  = 'Loading ' + pct + '%';
+
+      if (loaded === 1) {
+        canvas.width  = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        draw(0);
+      }
+      if (loaded >= Math.ceil(TOTAL * 0.3) && !ready) {
+        ready = true;
+        loader.style.opacity = '0';
+        hud.classList.add('vis');
+        setTimeout(() => { loader.style.display = 'none'; }, 650);
+        tick();
+      }
+    };
+    img.src = src(i);
+    images[fi] = img;
+  }
+})();
+
+/* nav dropdown – click to open, click outside to close */
+(function(){
+  var dd  = document.querySelector('.nav-dd');
+  var btn = document.querySelector('.nd-toggle');
+  if (!dd || !btn) return;
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    dd.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e){ if(!dd.contains(e.target)) dd.classList.remove('open'); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') dd.classList.remove('open'); });
+})();
+</script><script src="popup.js?v=3"></script>
+</body>
+</html>

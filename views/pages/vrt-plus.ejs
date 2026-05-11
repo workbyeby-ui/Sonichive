@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRT Plus Series — SonicHive Premium Acoustic Pods | Dubai</title>
+  <meta name="description" content="SonicHive VRT Plus — premium acoustic pods with enhanced insulation, superior finishes. Solo, Duo, Quartet, Hexa configurations. Dubai UAE.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px;--gold:#B8860B;--gold-d:rgba(184,134,11,.08);--gold-b:rgba(184,134,11,.25)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+    .r{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .75s cubic-bezier(.22,1,.36,1)}
+    .r.on{opacity:1;transform:none}
+    .d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,250,250,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em}
+    .logo-t em{color:var(--red);font-style:normal}
+    .nav-links{display:flex;gap:1.75rem;align-items:center}
+    .nav-links a{font-size:.875rem;color:var(--muted);font-weight:500;transition:color .2s}
+    .nav-links a:hover,.nav-links a.cur{color:var(--text)}
+    .nav-cta{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);white-space:nowrap;display:inline-block}
+    .nav-cta:hover{transform:scale(1.04);box-shadow:0 0 24px rgba(212,32,32,.4)}
+    /* MEGA MENU */
+    .nav-dd{position:static;display:flex;align-items:center}
+    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
+    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:var(--text)}
+    .nd-chev{transition:transform .25s ease;flex-shrink:0}
+    .nav-dd.open .nd-chev{transform:rotate(180deg)}
+    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
+    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
+    .mega-bg{position:absolute;inset:0;background:transparent}
+    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
+    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+    .mega-all-link{font-size:.76rem;color:rgba(0,0,0,.4);transition:color .2s;display:flex;align-items:center;gap:.35rem}
+    .mega-all-link:hover{color:rgba(0,0,0,.8)}
+    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
+    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
+    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
+    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
+    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
+    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
+    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
+    .mc-svg-w{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+    .mc:hover .mc-svg-w{transform:translateY(-6px) scale(1.05)}
+    .mc-badge{display:inline-block;font-size:.59rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .65rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
+    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
+    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
+    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
+    .mc:hover .mc-link{opacity:1;transform:none}
+    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
+    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
+    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
+    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
+    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
+    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
+    .mf-link:hover{color:rgba(0,0,0,.75)}
+    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
+    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+
+    /* SERIES HERO — Premium dark gold tones */
+    .series-hero{padding:8rem 2rem 5.5rem;background:linear-gradient(140deg,#07090F 0%,#0F1118 50%,#1a1200 100%);position:relative;overflow:hidden}
+    .series-hero::before{content:'';position:absolute;top:-200px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(184,134,11,.12),transparent 65%);pointer-events:none}
+    .series-hero::after{content:'';position:absolute;bottom:-180px;left:-60px;width:450px;height:450px;background:radial-gradient(circle,rgba(212,32,32,.07),transparent 65%);pointer-events:none}
+    .hero-in{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+    .series-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(184,134,11,.15);border:1px solid rgba(184,134,11,.3);border-radius:100px;padding:.35rem 1rem;font-size:.7rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:#D4A832;margin-bottom:1.5rem}
+    .s-dot{width:6px;height:6px;border-radius:50%;background:#D4A832;animation:blink 2s infinite;flex-shrink:0}
+    .series-name{font-family:var(--fh);font-size:clamp(3rem,8vw,6.5rem);font-weight:400;letter-spacing:-.04em;color:#FFF;line-height:.92;margin-bottom:.5rem}
+    .series-name sup{font-size:.4em;color:#D4A832;vertical-align:super;letter-spacing:.05em;font-weight:400}
+    .series-tagline{color:rgba(255,255,255,.62);font-size:1.08rem;line-height:1.75;max-width:500px;margin-bottom:3rem}
+    .series-badges{display:flex;gap:2rem;flex-wrap:wrap}
+    .s-badge{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.45);font-size:.82rem}
+
+    /* PREMIUM BANNER */
+    .premium-banner{background:linear-gradient(90deg,rgba(184,134,11,.08),rgba(184,134,11,.04));border:1px solid rgba(184,134,11,.2);border-radius:16px;padding:1.25rem 1.75rem;display:flex;align-items:center;gap:1.5rem;margin-bottom:4rem;flex-wrap:wrap}
+    .pb-icon{width:44px;height:44px;border-radius:12px;background:rgba(184,134,11,.12);border:1px solid rgba(184,134,11,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .pb-text strong{font-family:var(--fh);font-size:1rem;font-weight:400;color:var(--text);display:block;margin-bottom:.2rem}
+    .pb-text span{font-size:.85rem;color:var(--muted);line-height:1.5}
+
+    /* SIZE SECTION */
+    .size-section{padding:6rem 0 7rem}
+    .sec-header{text-align:center;margin-bottom:4rem}
+    .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem;display:flex;align-items:center;justify-content:center;gap:.6rem}
+    .s-label::before,.s-label::after{content:'';flex:1;max-width:40px;height:2px;background:var(--red);border-radius:2px}
+    .s-title{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.75rem);font-weight:400;letter-spacing:-.025em;margin-bottom:.75rem}
+    .s-sub{color:var(--muted);font-size:1rem;line-height:1.7}
+    .size-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    @media(max-width:480px){.size-grid{grid-template-columns:1fr}}
+    .size-card{background:#FFF;border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .25s,transform .3s,box-shadow .3s;display:flex;flex-direction:column;position:relative}
+    .size-card:hover{border-color:rgba(184,134,11,.35);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.09)}
+    .sc-img{height:200px;background:linear-gradient(135deg,#F9F7F0,var(--bg2));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+    .sc-ph{display:flex;flex-direction:column;align-items:center;gap:.65rem;color:var(--muted);opacity:.4}
+    .sc-ph span{font-size:.68rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase}
+    .sc-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+    .sc-cap{display:inline-flex;align-items:center;gap:.35rem;background:rgba(184,134,11,.1);border:1px solid rgba(184,134,11,.25);border-radius:100px;padding:.25rem .75rem;font-size:.68rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.85rem;width:fit-content}
+    .sc-name{font-family:var(--fh);font-size:1.45rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.35rem}
+    .sc-desc{font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.25rem;flex:1}
+    .sc-specs{display:flex;gap:0;margin-bottom:1.4rem;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .sc-spec{flex:1;text-align:center;padding:.65rem .5rem;border-right:1px solid var(--border)}
+    .sc-spec:last-child{border-right:none}
+    .sc-spec strong{font-family:var(--fh);font-size:1rem;font-weight:400;color:var(--text);display:block;line-height:1.1}
+    .sc-spec span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:2px;display:block}
+    .sc-cta{display:block;text-align:center;background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.7rem 1.5rem;font-size:.85rem;font-weight:400;color:var(--text);transition:all .2s}
+    .size-card:hover .sc-cta{background:var(--red);color:#FFF;border-color:var(--red)}
+
+    /* UPGRADE SECTION */
+    .upgrade-sec{padding:5rem 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .upgrade-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    @media(max-width:768px){.upgrade-grid{grid-template-columns:1fr}}
+    .upgrade-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+    .upgrade-label::before{content:'';width:20px;height:2px;background:var(--red);border-radius:2px}
+    .upgrade-title{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;letter-spacing:-.03em;margin-bottom:1.2rem}
+    .upgrade-desc{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:2rem}
+    .upgrade-list{display:flex;flex-direction:column;gap:.85rem}
+    .ul-item{display:flex;align-items:flex-start;gap:.85rem;font-size:.9rem;line-height:1.6}
+    .ul-check{width:20px;height:20px;border-radius:50%;background:var(--red-d);border:1px solid var(--red-b);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .ul-col{display:flex;flex-direction:column;gap:.85rem}
+    .comp-card{background:#FFF;border:1px solid var(--border);border-radius:16px;overflow:hidden}
+    .comp-row{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.25rem;border-bottom:1px solid var(--border);font-size:.85rem}
+    .comp-row:last-child{border-bottom:none}
+    .comp-row span:first-child{color:var(--muted)}
+    .comp-row .v-std{color:var(--muted);font-size:.82rem}
+    .comp-row .v-plus{font-weight:400;color:var(--text)}
+    .comp-head{background:var(--bg2);display:flex;justify-content:flex-end;gap:1rem;padding:.6rem 1.25rem;font-size:.72rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+    .comp-head .ch-plus{color:var(--red)}
+
+    /* CTA */
+    .cta-sec{padding:6rem 0;text-align:center}
+    .cta-title{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.03em;margin-bottom:1rem}
+    .cta-sub{color:var(--muted);font-size:1rem;margin-bottom:2.5rem;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.7}
+    .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-red{background:var(--red);color:#FFF;border-radius:100px;padding:.9rem 2.5rem;font-size:.975rem;font-weight:400;display:inline-block;transition:transform .2s,box-shadow .2s;font-family:var(--fb)}
+    .btn-red:hover{transform:scale(1.04);box-shadow:0 0 32px rgba(212,32,32,.45)}
+    .btn-o{border:1px solid var(--border);color:var(--text);border-radius:100px;padding:.9rem 2.5rem;font-size:.975rem;font-weight:500;display:inline-block;transition:all .2s;font-family:var(--fb)}
+    .btn-o:hover{border-color:var(--red-b);color:var(--red)}
+
+    /* FOOTER */
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 0}
+    .foot-in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .foot-logo{display:flex;align-items:center;gap:8px;font-family:var(--fh);font-weight:400;letter-spacing:-.02em;font-size:1.1rem}
+    .foot-logo em{color:var(--red);font-style:normal}
+    .foot-copy{font-size:.78rem;color:var(--muted)}
+    .foot-links{display:flex;gap:1.5rem}
+    .foot-links a{font-size:.78rem;color:var(--muted);transition:color .2s}
+    .foot-links a:hover{color:var(--text)}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+    </style>
+</head>
+<body>
+
+<%- include('../partials/header', { page: 'vrt-plus' }) %>
+<div id="main-content" tabindex="-1" style="outline:none;position:absolute"></div>
+
+<section class="series-hero">
+  <div class="hero-in">
+    <div class="series-tag"><span class="s-dot"></span>Premium Series</div>
+    <h1 class="series-name">VRT<sup>+</sup></h1>
+    <p class="series-tagline">Everything in the VRT, elevated. Superior acoustic insulation, premium finishes, and enhanced ventilation for the most discerning workspaces.</p>
+    <div class="series-badges">
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 8l2 2 4-4" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Up to 41dB Reduction
+      </div>
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l1.9 3.86 4.26.62-3.08 3 .73 4.24L8 11.1l-3.81 2.02.73-4.24-3.08-3 4.26-.62L8 1.5z" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        Premium Finishes
+      </div>
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="2" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 6h6M5 9h4" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Enhanced Ventilation
+      </div>
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v2M8 12v2M2 8h2M12 8h2" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="8" r="3" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/></svg>
+        3-Year Warranty
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="size-section">
+  <div class="wrap">
+    <div class="sec-header r">
+      <div class="s-label">Choose Your Configuration</div>
+      <h2 class="s-title">VRT Plus — Four Sizes, One Standard</h2>
+      <p class="s-sub">Premium acoustic performance in every configuration. Built for workspaces where quality is non-negotiable.</p>
+    </div>
+
+    <div class="premium-banner r">
+      <div class="pb-icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.4 4.86 5.37.78-3.88 3.78.92 5.34L11 14.26l-4.81 2.5.92-5.34L3.23 7.64l5.37-.78L11 2z" stroke="#B8860B" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="pb-text">
+        <strong>Upgraded from VRT — What's new in Plus?</strong>
+        <span>Thicker acoustic panels (+4dB), brushed aluminium trim, dual-zone lighting, and extended 3-year warranty across all sizes.</span>
+      </div>
+    </div>
+
+    <div class="size-grid">
+
+      <a href="vrt-plus-solo.html" class="size-card r d1">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ S 1.png" alt="VRT Plus Solo" style="width:100%;height:100%;object-fit:contain"></div>
+        <div class="sc-body">
+          <div class="sc-cap">1 Person</div>
+          <div class="sc-name">VRT Plus Solo</div>
+          <div class="sc-desc">Elevated single-occupant pod with enhanced privacy glass and premium interior finish.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>36dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>900mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>160kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vrt-plus-duo.html" class="size-card r d2">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ M 1.png" alt="VRT Plus Duo" style="width:100%;height:100%;object-fit:contain"></div>
+        <div class="sc-body">
+          <div class="sc-cap">2 Persons</div>
+          <div class="sc-name">VRT Plus Duo</div>
+          <div class="sc-desc">Premium two-person pod with dual-zone climate control and upgraded sound masking.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>37dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>1400mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>240kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vrt-plus-quartet.html" class="size-card r d3">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ ML 1.png" alt="VRT Plus Quartet" style="width:100%;height:100%;object-fit:contain"></div>
+        <div class="sc-body">
+          <div class="sc-cap">4 Persons</div>
+          <div class="sc-name">VRT Plus Quartet</div>
+          <div class="sc-desc">Executive meeting room performance in a pod — with 39dB isolation and premium seating options.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>39dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>2000mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>410kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vrt-plus-hexa.html" class="size-card r d4">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ L 1.png" alt="VRT Plus Hexa" style="width:100%;height:100%;object-fit:contain"></div>
+        <div class="sc-body">
+          <div class="sc-cap">6 Persons</div>
+          <div class="sc-name">VRT Plus Hexa</div>
+          <div class="sc-desc">Board-room grade silence for six. The highest-performing acoustic pod in the SonicHive lineup.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>41dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>2800mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>560kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="wrap">
+    <div class="r">
+      <p style="font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem">Step up to Plus</p>
+      <h2 class="cta-title">Ready for Premium Acoustic Performance?</h2>
+      <p class="cta-sub">Our team will walk you through the VRT Plus range and arrange a live demonstration at your premises.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-red">Get a Quote →</a>
+        <a href="vrt.html" class="btn-o">Compare with VRT</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer-mini') %>
+
+<script>
+const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on') }), {threshold:.1});
+document.querySelectorAll('.r').forEach(el => obs.observe(el));
+</script>
+
+<script>
+/* nav dropdown */
+(function(){
+  var dd  = document.querySelector('.nav-dd');
+  var btn = document.querySelector('.nd-toggle');
+  if (!dd || !btn) return;
+  function setOpen(open) {
+    dd.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  }
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    setOpen(!dd.classList.contains('open'));
+  });
+  document.addEventListener('click', function(e){ if(!dd.contains(e.target)) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
+})();
+</script><script src="popup.js?v=3"></script>
+</body>
+</html>

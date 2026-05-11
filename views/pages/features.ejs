@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features & Technology — SonicHive Acoustic Pods</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+    .r{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .r.on{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+    .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem}
+    .s-title{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-bottom:1rem}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,250,250,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+    .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em}
+    .logo-t em{color:var(--red);font-style:normal}
+    .nav-links{display:flex;gap:1.75rem;align-items:center}
+    .nav-links a{font-size:.875rem;color:var(--muted);font-weight:500;transition:color .2s}
+    .nav-links a:hover,.nav-links a.cur{color:var(--text)}
+    .nav-cta{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);white-space:nowrap}
+    .nav-cta:hover{transform:scale(1.04);box-shadow:0 0 24px rgba(212,32,32,.35)}
+
+    /* PAGE HERO */
+    .page-hero{padding:9rem 2rem 6rem;background:var(--bg) url('images/features-hero-bg.png') center/cover no-repeat;position:relative;overflow:hidden}
+    .ph-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;position:relative}
+    .ph-left{position:relative}
+    .ph-label{display:flex;align-items:center;gap:.65rem;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem}
+    .ph-label::before{content:'';width:22px;height:2px;background:var(--red);border-radius:2px;flex-shrink:0}
+    .ph-left h1{font-family:var(--fh);font-size:clamp(2.6rem,4.5vw,4rem);font-weight:700;letter-spacing:-.04em;line-height:1.02;margin-bottom:1.1rem;color:var(--text)}
+    .ph-left h1 em{color:var(--red);font-style:normal;display:block}
+    .ph-hdivider{width:32px;height:3px;background:var(--text);border-radius:2px;margin-bottom:1.5rem;opacity:.25}
+    .ph-left p{color:var(--muted);font-size:.975rem;line-height:1.85;max-width:400px}
+    .ph-wave{position:absolute;bottom:-3.5rem;left:-1.5rem;pointer-events:none;opacity:.9}
+    .ph-right{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .ph-stat{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:1.75rem;transition:box-shadow .3s,border-color .3s}
+    .ph-stat:hover{box-shadow:0 8px 32px rgba(0,0,0,.08);border-color:var(--red-b)}
+    .ph-stat-icon{width:46px;height:46px;border-radius:50%;background:rgba(212,32,32,.08);display:flex;align-items:center;justify-content:center;color:var(--red);margin-bottom:1rem;flex-shrink:0}
+    .ph-stat-n{font-family:var(--fh);font-size:2.6rem;font-weight:400;color:var(--red);line-height:1;margin-bottom:.4rem}
+    .ph-stat-name{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.55rem}
+    .ph-stat-bar{width:22px;height:2px;background:var(--red);border-radius:2px;margin-bottom:.65rem}
+    .ph-stat-l{font-size:.8rem;color:var(--muted);line-height:1.55}
+
+    /* CORE FEATURES */
+    #core{padding:7rem 0;background:var(--bg) url('images/features-hero-bg.png') center/cover no-repeat}
+    .core-head{text-align:center;margin-bottom:3.5rem}
+    .core-label{display:flex;align-items:center;justify-content:center;gap:.75rem;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1.25rem}
+    .core-label::before,.core-label::after{content:'';width:28px;height:2px;background:var(--red);border-radius:2px;flex-shrink:0}
+    .core-head h2{font-family:var(--fh);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:700;letter-spacing:-.035em;line-height:1.05;margin-bottom:1rem}
+    .core-head h2 em{color:var(--red);font-style:normal}
+    .core-head p{color:var(--muted);font-size:1rem;line-height:1.75;max-width:500px;margin:0 auto}
+    .core-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:0}
+    .cf{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:20px;padding:2rem 1.75rem;display:flex;align-items:flex-start;gap:1.4rem;transition:box-shadow .3s,transform .3s;border:1px solid rgba(255,255,255,.8)}
+    .cf:hover{box-shadow:0 14px 44px rgba(0,0,0,.1);transform:translateY(-4px)}
+    .cf-icon-wrap{position:relative;flex-shrink:0;width:76px;height:76px;display:flex;align-items:center;justify-content:center}
+    .cf-icon-circle{width:56px;height:56px;border-radius:50%;background:rgba(212,32,32,.09);display:flex;align-items:center;justify-content:center;color:var(--red);position:relative;z-index:1}
+    .cf-body{flex:1;min-width:0}
+    .cf-n{font-family:var(--fh);font-size:1rem;font-weight:700;margin-bottom:.45rem;color:var(--text)}
+    .cf-bar{width:22px;height:2px;background:var(--red);border-radius:2px;margin-bottom:.65rem}
+    .cf-d{font-size:.84rem;color:var(--muted);line-height:1.72}
+
+    /* ACOUSTIC SCIENCE */
+    #acoustic{padding:7rem 0;background:var(--bg2)}
+    .ac-lay{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .ac-txt h2{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.025em;margin-bottom:1.25rem;line-height:1.05}
+    .ac-txt h2 em{color:var(--red);font-style:normal}
+    .ac-txt p{color:var(--muted);line-height:1.85;font-size:.975rem;margin-bottom:1.25rem}
+    .ac-metrics{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+    .ac-m{background:#FFF;border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color .2s}
+    .ac-m:hover{border-color:var(--red-b)}
+    .ac-m-n{font-family:var(--fh);font-size:2rem;font-weight:400;color:var(--red);line-height:1}
+    .ac-m-l{font-size:.8rem;color:var(--muted);margin-top:.3rem;line-height:1.4}
+    .ac-visual{border-radius:20px;overflow:hidden;position:relative}
+    .ac-visual img{width:100%;height:420px;object-fit:cover}
+    .ac-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-radius:12px;padding:1rem 1.25rem}
+    .ac-badge strong{font-family:var(--fh);font-size:1.5rem;font-weight:400;color:var(--red);display:block;line-height:1}
+    .ac-badge span{font-size:.8rem;color:var(--muted)}
+
+    /* MATERIALS */
+    #materials{padding:7rem 0}
+    .mat-head{text-align:center;margin-bottom:4rem}
+    .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+    .mat-card{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2rem;text-align:center;transition:transform .3s,box-shadow .3s}
+    .mat-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+    .mat-ic{font-size:2.5rem;margin-bottom:1.25rem}
+    .mat-n{font-family:var(--fh);font-size:1rem;font-weight:400;margin-bottom:.5rem}
+    .mat-d{font-size:.875rem;color:var(--muted);line-height:1.65}
+
+    /* INSTALLATION */
+    #installation{padding:7rem 0;background:var(--bg2)}
+    .inst-lay{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    .inst-steps{display:flex;flex-direction:column;gap:0}
+    .inst-step{display:flex;gap:1.5rem;padding:1.75rem 0;border-bottom:1px solid var(--border)}
+    .inst-step:last-child{border-bottom:none}
+    .inst-num{width:40px;height:40px;border-radius:50%;background:var(--red);color:#FFF;font-family:var(--fh);font-weight:400;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
+    .inst-step h3{font-family:var(--fh);font-size:1rem;font-weight:400;margin-bottom:.35rem}
+    .inst-step p{font-size:.875rem;color:var(--muted);line-height:1.65}
+    .inst-right{position:sticky;top:100px}
+    .inst-img{border-radius:20px;overflow:hidden;margin-bottom:1.5rem}
+    .inst-img img{width:100%;height:320px;object-fit:cover}
+    .inst-note{background:#FFF;border:1px solid var(--border);border-radius:16px;padding:1.5rem}
+    .inst-note h4{font-family:var(--fh);font-size:.95rem;font-weight:400;margin-bottom:.5rem}
+    .inst-note p{font-size:.875rem;color:var(--muted);line-height:1.65}
+
+    /* TECH SPECS */
+    #specs{padding:7rem 0}
+    .spec-head{margin-bottom:4rem}
+    .spec-table{width:100%;border-collapse:collapse;border-radius:20px;overflow:hidden;border:1px solid var(--border)}
+    .spec-table th{background:var(--bg3);padding:1.1rem 1.5rem;text-align:left;font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border)}
+    .spec-table td{padding:1rem 1.5rem;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--muted);background:#FFF}
+    .spec-table tr:last-child td{border-bottom:none}
+    .spec-table tr:hover td{background:var(--bg2)}
+    .spec-table .feat-name{font-weight:400;color:var(--text)}
+    .spec-table .chk{color:var(--red);font-weight:400}
+
+    /* CTA */
+    #feat-cta{padding:7rem 0;background:#0A0A0A;position:relative;overflow:hidden}
+    #feat-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(212,32,32,.1),transparent 65%)}
+    .fcta-in{position:relative;text-align:center;max-width:680px;margin:0 auto}
+    .fcta-in h2{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.025em;color:#FFF;margin-bottom:1rem}
+    .fcta-in p{color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:2.5rem}
+    .btn-red{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);display:inline-block}
+    .btn-red:hover{transform:scale(1.04);box-shadow:0 0 28px rgba(212,32,32,.45)}
+    .btn-wh{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#FFF;border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--fb);display:inline-block}
+    .btn-wh:hover{background:rgba(255,255,255,.15)}
+    .btn-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+    /* FOOTER */
+    footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5rem 0 2rem}
+    .foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3.5rem}
+    .foot-brand p{color:rgba(255,255,255,.4);font-size:.9rem;line-height:1.7;margin-top:1rem;max-width:280px}
+    .foot-soc{display:flex;gap:.75rem;margin-top:1.5rem}
+    .soc-a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:400;transition:all .2s;color:rgba(255,255,255,.4)}
+    .soc-a:hover{background:var(--red-d);border-color:var(--red-b);color:var(--red)}
+    .foot-col h4{font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem;color:rgba(255,255,255,.9)}
+    .foot-col a{display:block;color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;transition:color .2s}
+    .foot-col a:hover{color:#FFF}
+    .foot-contact p{color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem}
+    .foot-contact a{color:var(--red);display:inline;margin-bottom:0}
+    .foot-bot{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .foot-bot p{color:rgba(255,255,255,.3);font-size:.8rem}
+    .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
+    .foot-locs span{font-size:.72rem;color:rgba(255,255,255,.35);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.2rem .7rem}
+
+    @media(max-width:1024px){.ph-inner{grid-template-columns:1fr;gap:3rem}.ph-wave{display:none}.ac-lay{grid-template-columns:1fr;gap:3rem}.inst-lay{grid-template-columns:1fr}.inst-right{position:static}.core-grid{grid-template-columns:1fr 1fr}.mat-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.core-grid{grid-template-columns:1fr}.mat-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr}}
+    /* MEGA MENU */
+    .nav-dd{position:static;display:flex;align-items:center}
+    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
+    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:var(--text)}
+    .nd-chev{transition:transform .25s ease;flex-shrink:0}
+    .nav-dd.open .nd-chev{transform:rotate(180deg)}
+    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
+    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
+    .mega-bg{position:absolute;inset:0;background:transparent}
+    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
+    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+    .mega-all-link{font-size:.76rem;color:rgba(0,0,0,.4);transition:color .2s;display:flex;align-items:center;gap:.35rem}
+    .mega-all-link:hover{color:rgba(0,0,0,.8)}
+    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
+    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
+    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
+    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
+    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
+    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
+    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
+    .mc-svg-w{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+    .mc:hover .mc-svg-w{transform:translateY(-6px) scale(1.05)}
+    .mc-badge{display:inline-block;font-size:.59rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .65rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
+    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
+    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
+    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
+    .mc:hover .mc-link{opacity:1;transform:none}
+    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
+    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
+    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
+    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
+    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
+    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
+    .mf-link:hover{color:rgba(0,0,0,.75)}
+    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
+    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+    </style>
+</head>
+<body>
+
+<%- include('../partials/header', { page: 'features' }) %>
+<div id="main-content" tabindex="-1" style="outline:none;position:absolute"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="ph-inner">
+    <div class="ph-left r">
+      <div class="ph-label">Features & Technology</div>
+      <h1>Acoustic Science.<em>Workspace Design.</em></h1>
+      <div class="ph-hdivider"></div>
+      <p>Every SonicHive pod is engineered to deliver genuine, measurable acoustic performance — backed by Asia's largest acoustic testing lab and built for the demands of the modern Middle East workspace.</p>
+      <!-- Decorative wave -->
+      <svg class="ph-wave" width="360" height="170" viewBox="0 0 360 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-10,155 C30,120 70,165 110,130 C150,95 190,155 230,118 C265,85 295,130 340,105" stroke="rgba(212,32,32,0.18)" stroke-width="1.2" fill="none"/>
+        <path d="M-10,145 C30,110 70,155 110,120 C150,85 190,145 230,108 C265,75 295,120 340,95" stroke="rgba(212,32,32,0.15)" stroke-width="1.2" fill="none"/>
+        <path d="M-10,135 C30,100 70,145 110,110 C150,75 190,135 230,98 C265,65 295,110 340,85" stroke="rgba(212,32,32,0.13)" stroke-width="1.1" fill="none"/>
+        <path d="M-10,125 C30,90 70,135 110,100 C150,65 190,125 230,88 C265,55 295,100 340,75" stroke="rgba(212,32,32,0.11)" stroke-width="1.1" fill="none"/>
+        <path d="M-10,115 C30,80 70,125 110,90 C150,55 190,115 230,78 C265,45 295,90 340,65" stroke="rgba(212,32,32,0.09)" stroke-width="1" fill="none"/>
+        <path d="M-10,105 C30,70 70,115 110,80 C150,45 190,105 230,68 C265,35 295,80 340,55" stroke="rgba(212,32,32,0.07)" stroke-width="1" fill="none"/>
+        <path d="M-10,165 C30,130 70,175 110,140 C150,105 190,165 230,128 C265,95 295,140 340,115" stroke="rgba(212,32,32,0.2)" stroke-width="1.3" fill="none"/>
+        <path d="M-10,95 C30,60 70,105 110,70 C150,35 190,95 230,58 C265,25 295,70 340,45" stroke="rgba(212,32,32,0.06)" stroke-width="1" fill="none"/>
+        <path d="M-10,85 C30,50 70,95 110,60 C150,25 190,85 230,48 C265,15 295,60 340,35" stroke="rgba(212,32,32,0.04)" stroke-width="0.9" fill="none"/>
+        <!-- Dot accents -->
+        <circle cx="50" cy="148" r="2" fill="rgba(212,32,32,0.25)"/>
+        <circle cx="130" cy="118" r="1.5" fill="rgba(212,32,32,0.2)"/>
+        <circle cx="210" cy="138" r="2" fill="rgba(212,32,32,0.22)"/>
+        <circle cx="290" cy="108" r="1.5" fill="rgba(212,32,32,0.18)"/>
+        <circle cx="170" cy="90" r="1.5" fill="rgba(212,32,32,0.15)"/>
+        <circle cx="90" cy="100" r="1.5" fill="rgba(212,32,32,0.18)"/>
+        <circle cx="250" cy="78" r="1.5" fill="rgba(212,32,32,0.12)"/>
+      </svg>
+    </div>
+    <div class="ph-right r d2">
+      <div class="ph-stat">
+        <div class="ph-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <div class="ph-stat-n">30dB</div>
+        <div class="ph-stat-name">Noise Reduction</div>
+        <div class="ph-stat-bar"></div>
+        <div class="ph-stat-l">Noise reduction — measured, not estimated</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="ph-stat-n">2 hrs</div>
+        <div class="ph-stat-name">Average Installation</div>
+        <div class="ph-stat-bar"></div>
+        <div class="ph-stat-l">Average installation, zero construction</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="ph-stat-n">100%</div>
+        <div class="ph-stat-name">Modular</div>
+        <div class="ph-stat-bar"></div>
+        <div class="ph-stat-l">Modular — move it, scale it, reconfigure it</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        </div>
+        <div class="ph-stat-n">Zero</div>
+        <div class="ph-stat-name">Permanent Modifications</div>
+        <div class="ph-stat-bar"></div>
+        <div class="ph-stat-l">Permanent modifications to your space</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CORE FEATURES -->
+<section id="core">
+  <div class="wrap">
+    <div class="core-head r">
+      <div class="core-label">Core Features</div>
+      <h2>Six Pillars <em>of Performance</em></h2>
+      <p>Every pod ships with these six capabilities as standard —<br>no optional extras required.</p>
+    </div>
+    <div class="core-grid">
+
+      <div class="cf r d1">
+        <div class="cf-icon-wrap">
+          <svg style="position:absolute;inset:0" viewBox="0 0 76 76" fill="none"><circle cx="38" cy="38" r="36" stroke="rgba(212,32,32,0.18)" stroke-width="1" stroke-dasharray="5 4"/><circle cx="38" cy="38" r="28" stroke="rgba(212,32,32,0.1)" stroke-width="1" stroke-dasharray="3 5"/></svg>
+          <div class="cf-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+        </div>
+        <div class="cf-body">
+          <div class="cf-n">30dB Sound Reduction</div>
+          <div class="cf-bar"></div>
+          <p class="cf-d">Advanced multi-layer acoustic panels absorb and block sound transmission. STC-rated wall assemblies ensure conversations inside stay inside — and noise outside stays out. Independently tested at Asia's largest acoustic lab.</p>
+        </div>
+      </div>
+
+      <div class="cf r d2">
+        <div class="cf-icon-wrap">
+          <svg style="position:absolute;inset:0" viewBox="0 0 76 76" fill="none"><circle cx="38" cy="38" r="36" stroke="rgba(212,32,32,0.18)" stroke-width="1" stroke-dasharray="5 4"/><circle cx="38" cy="38" r="28" stroke="rgba(212,32,32,0.1)" stroke-width="1" stroke-dasharray="3 5"/></svg>
+          <div class="cf-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0-10-10"/><path d="M12 6v6l3 3"/><path d="M2 12a10 10 0 0 0 3 7"/></svg>
+          </div>
+        </div>
+        <div class="cf-body">
+          <div class="cf-n">Smart Ventilation System</div>
+          <div class="cf-bar"></div>
+          <p class="cf-d">Built-in active ventilation continuously circulates fresh air, regulating temperature and CO₂ levels. Designed for sessions lasting hours — not the 15 minutes most pods accommodate before becoming uncomfortably stuffy.</p>
+        </div>
+      </div>
+
+      <div class="cf r d3">
+        <div class="cf-icon-wrap">
+          <svg style="position:absolute;inset:0" viewBox="0 0 76 76" fill="none"><circle cx="38" cy="38" r="36" stroke="rgba(212,32,32,0.18)" stroke-width="1" stroke-dasharray="5 4"/><circle cx="38" cy="38" r="28" stroke="rgba(212,32,32,0.1)" stroke-width="1" stroke-dasharray="3 5"/></svg>
+          <div class="cf-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12h8M12 8v8"/></svg>
+          </div>
+        </div>
+        <div class="cf-body">
+          <div class="cf-n">Eco-Friendly Construction</div>
+          <div class="cf-bar"></div>
+          <p class="cf-d">Manufactured using recycled acoustic panels, low-emission materials, and energy-efficient LED lighting. SonicHive pods reduce environmental impact without compromising on acoustic performance or aesthetic quality.</p>
+        </div>
+      </div>
+
+      <div class="cf r d1">
+        <div class="cf-icon-wrap">
+          <svg style="position:absolute;inset:0" viewBox="0 0 76 76" fill="none"><circle cx="38" cy="38" r="36" stroke="rgba(212,32,32,0.18)" stroke-width="1" stroke-dasharray="5 4"/><circle cx="38" cy="38" r="28" stroke="rgba(212,32,32,0.1)" stroke-width="1" stroke-dasharray="3 5"/></svg>
+          <div class="cf-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+        </div>
+        <div class="cf-body">
+          <div class="cf-n">Plug & Play Setup</div>
+          <div class="cf-bar"></div>
+          <p class="cf-d">Fully self-contained and modular with a uniform fastener system engineered using SolidWorks mechanics modelling. One power connection. No specialist tools. No contractors. Installed by our team in under two hours.</p>
+        </div>
+      </div>
+
+      <div class="cf r d2">
+        <div class="cf-icon-wrap">
+          <svg style="position:absolute;inset:0" viewBox="0 0 76 76" fill="none"><circle cx="38" cy="38" r="36" stroke="rgba(212,32,32,0.18)" stroke-width="1" stroke-dasharray="5 4"/><circle cx="38" cy="38" r="28" stroke="rgba(212,32,32,0.1)" stroke-width="1" stroke-dasharray="3 5"/></svg>
+          <div class="cf-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+        </div>
+        <div class="cf-body">
+          <div class="cf-n">Full Customization</div>
+          <div class="cf-bar"></div>
+          <p class="cf-d">Choose from a wide range of exterior finishes, interior fabrics, glass tints, and accent colours. Brand your pods with custom wraps or colourways. Every pod can be configured to match your office aesthetic precisely.</p>
+        </div>
+      </div>
+
+      <div class="cf r d3">
+        <div class="cf-icon-wrap">
+          <svg style="position:absolute;inset:0" viewBox="0 0 76 76" fill="none"><circle cx="38" cy="38" r="36" stroke="rgba(212,32,32,0.18)" stroke-width="1" stroke-dasharray="5 4"/><circle cx="38" cy="38" r="28" stroke="rgba(212,32,32,0.1)" stroke-width="1" stroke-dasharray="3 5"/></svg>
+          <div class="cf-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+        </div>
+        <div class="cf-body">
+          <div class="cf-n">Privacy & Security</div>
+          <div class="cf-bar"></div>
+          <p class="cf-d">Lockable doors, privacy glass options, and acoustic-grade seals ensure complete confidentiality. Designed for legal, HR, financial, and executive conversations where privacy is not optional — it's essential.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACOUSTIC SCIENCE -->
+<section id="acoustic">
+  <div class="wrap">
+    <div class="ac-lay">
+      <div class="ac-txt r">
+        <p class="s-label">Acoustic Science</p>
+        <h2>The <em>30dB</em> Difference</h2>
+        <p>Sound reduction isn't a feature you can fake. Our pods are engineered with multi-density acoustic foam layers, mass-loaded vinyl barriers, and decoupled wall construction — the same techniques used in professional recording studios.</p>
+        <p>At 30dB of attenuation, a conversation at normal speaking volume inside the pod is reduced to below ambient noise levels outside. That means your confidential calls stay confidential — every time.</p>
+        <p>Every model is tested in a certified acoustic lab before production commences, and every shipment is quality-verified against SonicHive's acoustic performance standards.</p>
+        <div class="ac-metrics">
+          <div class="ac-m"><div class="ac-m-n">30dB</div><div class="ac-m-l">Sound reduction (STC rated)</div></div>
+          <div class="ac-m"><div class="ac-m-n">Asia #1</div><div class="ac-m-l">Largest acoustic testing lab</div></div>
+          <div class="ac-m"><div class="ac-m-n">Multi</div><div class="ac-m-l">Layer acoustic foam system</div></div>
+          <div class="ac-m"><div class="ac-m-n">Sealed</div><div class="ac-m-l">Acoustic-grade door & frame seals</div></div>
+        </div>
+      </div>
+      <div class="ac-visual r d2">
+        <img src="https://thesonichive.com/wp-content/uploads/2024/10/Office-telephone-booth-Sonic-Hive_22-1024x820.webp" alt="SonicHive acoustic pod">
+        <div class="ac-badge"><strong>30dB</strong><span>Noise Reduction</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section id="materials">
+  <div class="wrap">
+    <div class="mat-head r">
+      <p class="s-label">Materials & Build</p>
+      <h2 class="s-title">Built to Last</h2>
+      <p style="color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:520px">Every component is selected for acoustic performance, durability, and sustainability. No compromise.</p>
+    </div>
+    <div class="mat-grid">
+      <div class="mat-card r d1">
+        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"/></svg></div>
+        <div class="mat-n">Acoustic Panel Core</div>
+        <p class="mat-d">Multi-density recycled foam bonded to mass-loaded vinyl. Absorbs broadband frequencies — from low-frequency HVAC rumble to high-frequency speech.</p>
+      </div>
+      <div class="mat-card r d2">
+        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6Zm7.5 0h.008v.008h-.008V6Zm-3.75 0h.008v.008H9V6Z"/></svg></div>
+        <div class="mat-n">Laminated Glass</div>
+        <p class="mat-d">Double-laminated acoustic glass panels in all window sections. Maintains visual openness while delivering acoustic isolation comparable to solid walls.</p>
+      </div>
+      <div class="mat-card r d3">
+        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/></svg></div>
+        <div class="mat-n">Acoustic Door Seals</div>
+        <p class="mat-d">Compression seals on all door edges create an airtight acoustic barrier when closed. The door is where most pods fail — ours are engineered to the same standard as the walls.</p>
+      </div>
+      <div class="mat-card r d4">
+        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.355a3.375 3.375 0 0 1-3 0M12 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg></div>
+        <div class="mat-n">LED Lighting System</div>
+        <p class="mat-d">Dimmable, tunable white LED panels with colour temperature control. Adjustable from warm 2700K to cool 6500K to match any working preference or time of day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALLATION -->
+<section id="installation">
+  <div class="wrap">
+    <div class="inst-lay">
+      <div class="r">
+        <p class="s-label">Installation Process</p>
+        <h2 class="s-title">Up and Running in 2 Hours</h2>
+        <p style="color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:2.5rem">No construction, no permits, no disruption. Here's exactly what happens from order to operational pod.</p>
+        <div class="inst-steps">
+          <div class="inst-step">
+            <div class="inst-num">1</div>
+            <div><h3>Consultation & Space Assessment</h3><p>Our Dubai team assesses your floor plan and recommends the optimal pod model, quantity, and placement for acoustics, ventilation flow, and traffic patterns.</p></div>
+          </div>
+          <div class="inst-step">
+            <div class="inst-num">2</div>
+            <div><h3>Configuration & Order</h3><p>Choose your model, capacity, colour, and any customization options. We handle procurement, logistics, and scheduling — one point of contact throughout.</p></div>
+          </div>
+          <div class="inst-step">
+            <div class="inst-num">3</div>
+            <div><h3>Delivery & Assembly</h3><p>SonicHive's installation team arrives with all components pre-packaged. Assembly requires a standard single power connection only. Average completion time: under 2 hours per pod.</p></div>
+          </div>
+          <div class="inst-step">
+            <div class="inst-num">4</div>
+            <div><h3>Handover & Support</h3><p>We walk your team through operation, ventilation controls, and lighting. Full warranty coverage from day one, with ongoing support from our regional team.</p></div>
+          </div>
+          <div class="inst-step">
+            <div class="inst-num">5</div>
+            <div><h3>Move, Scale, Reconfigure</h3><p>Outgrown your layout? Adding more pods? Moving office? Every SonicHive pod disassembles in the same time it took to install — with zero damage to your space.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="inst-right r d2">
+        <div class="inst-img"><img src="https://thesonichive.com/wp-content/uploads/2024/10/23-10-2024-18_27_04-1024x517.webp" alt="Installation"></div>
+        <div class="inst-note">
+          <h4><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg> What's Included in Every Order</h4>
+          <p>Fully assembled pod, power connection kit, LED lighting system, smart ventilation unit, acoustic seals, full installation by SonicHive team, and 12-month product warranty.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEC TABLE -->
+<section id="specs">
+  <div class="wrap">
+    <div class="spec-head r">
+      <p class="s-label">Technical Specifications</p>
+      <h2 class="s-title">Features Across All Models</h2>
+    </div>
+    <div style="overflow-x:auto">
+    <table class="spec-table r">
+      <thead>
+        <tr><th>Feature</th><th>Solo</th><th>Duo</th><th>Quartet</th><th>Hexa</th><th>Home Pod</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="feat-name">Sound Reduction</td><td>30dB</td><td>30dB</td><td>30dB</td><td>30dB</td><td>30dB+</td></tr>
+        <tr><td class="feat-name">Ventilation System</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">LED Lighting</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">Power Outlets</td><td>2×</td><td>2×</td><td>4×</td><td>6×</td><td>2×</td></tr>
+        <tr><td class="feat-name">USB Charging</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">Acoustic Glass</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">Custom Colours</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">Smart Home Integration</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">Installation Time</td><td>~1 hr</td><td>~1.5 hrs</td><td>~2 hrs</td><td>~2.5 hrs</td><td>~2 hrs</td></tr>
+        <tr><td class="feat-name">Eco-Friendly Materials</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="feat-cta">
+  <div class="wrap">
+    <div class="fcta-in r">
+      <p class="s-label" style="color:var(--red)">Experience It</p>
+      <h2>See the Technology in Person.</h2>
+      <p>Visit our Downtown Dubai showroom. Step inside a pod, hear the difference, and talk to our acoustic engineers. No obligation — just silence.</p>
+      <div class="btn-row">
+        <a href="contact.html" class="btn-red">Book a Showroom Visit</a>
+        <a href="products.html" class="btn-wh">Browse Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer-full') %>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+(function(){
+  var dd=document.querySelector('.nav-dd'),btn=document.querySelector('.nd-toggle');
+  if(!dd||!btn)return;
+  btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
+  document.addEventListener('click',function(){dd.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
+})();
+</script><script src="popup.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About SonicHive — Dubai's Acoustic Pod Pioneers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+    .r{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .r.on{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+    .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem}
+    .s-title{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-bottom:1rem}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,250,250,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+    .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em}
+    .logo-t em{color:var(--red);font-style:normal}
+    .nav-links{display:flex;gap:1.75rem;align-items:center}
+    .nav-links a{font-size:.875rem;color:var(--muted);font-weight:500;transition:color .2s}
+    .nav-links a:hover,.nav-links a.cur{color:var(--text)}
+    .nav-cta{background:var(--red);color:#FFFFFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;font-family:var(--fb)}
+
+    /* HERO */
+    .about-hero{padding:9rem 2rem 6rem;position:relative;overflow:hidden;background:var(--bg2);border-bottom:1px solid var(--border)}
+    .about-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(212,32,32,.05),transparent 60%)}
+    .about-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--red-b),transparent)}
+    .ah-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative}
+    .ah-left .s-label{margin-bottom:.9rem}
+    .ah-left h1{font-family:var(--fh);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:400;letter-spacing:-.04em;line-height:.95;margin-bottom:1.5rem}
+    .ah-left h1 em{color:var(--red);font-style:normal}
+    .ah-left p{color:var(--muted);font-size:1.05rem;line-height:1.8;margin-bottom:2rem}
+    .ah-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+    .ah-stat{padding:1.25rem;background:var(--card);border:1px solid var(--border);border-radius:14px;text-align:center}
+    .ah-stat-n{font-family:var(--fh);font-size:2rem;font-weight:400;color:var(--red);line-height:1}
+    .ah-stat-l{font-size:.78rem;color:var(--muted);margin-top:.35rem;line-height:1.4}
+    .ah-right{position:relative}
+    .about-img-stack{position:relative;height:460px}
+    .aimg-main{position:absolute;top:0;right:0;width:85%;border-radius:20px;overflow:hidden;height:340px}
+    .aimg-main img{width:100%;height:100%;object-fit:cover}
+    .aimg-accent{position:absolute;bottom:0;left:0;width:55%;border-radius:16px;overflow:hidden;height:200px;border:3px solid var(--bg2)}
+    .aimg-accent img{width:100%;height:100%;object-fit:cover}
+    .aimg-badge{position:absolute;top:1.5rem;left:1.5rem;background:rgba(5,8,15,.9);backdrop-filter:blur(10px);border:1px solid var(--red-b);border-radius:12px;padding:.75rem 1rem;font-size:.8rem;font-weight:400;color:var(--red)}
+
+    /* MISSION */
+    #mission{padding:7rem 0}
+    .mission-lay{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+    .mission-txt .s-label{margin-bottom:.9rem}
+    .mission-txt h2{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.025em;margin-bottom:1.25rem;line-height:1.05}
+    .mission-txt p{color:var(--muted);line-height:1.85;font-size:.975rem;margin-bottom:1.25rem}
+    .mission-txt blockquote{border-left:2px solid var(--red);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-family:var(--fh);font-size:1.15rem;font-weight:400;color:var(--text);line-height:1.4}
+    .mission-visual{background:#FFFFFF;border:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,.06);border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:2rem}
+    .mv-item{display:flex;gap:1.25rem;align-items:flex-start}
+    .mv-ic{width:44px;height:44px;border-radius:11px;background:var(--red-d);border:1px solid var(--red-b);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
+    .mv-item h3{font-family:var(--fh);font-size:.95rem;font-weight:400;margin-bottom:.35rem}
+    .mv-item p{font-size:.875rem;color:var(--muted);line-height:1.65}
+
+    /* CLIENTS */
+    #clients{padding:6rem 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .clients-head{text-align:center;margin-bottom:3rem}
+    .clients-head p{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+    .clients-head h2{font-family:var(--fh);font-size:1.5rem;font-weight:400;color:var(--text)}
+    .clients-row{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center}
+    .client-tag{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.65rem 1.5rem;font-size:.8rem;font-weight:400;color:var(--muted);letter-spacing:.04em;transition:all .2s}
+    .client-tag:hover{border-color:var(--red-b);color:var(--text)}
+
+    /* VALUES */
+    #values{padding:7rem 0}
+    .val-head{text-align:center;margin-bottom:4rem}
+    .val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .val-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;transition:border-color .3s,transform .3s}
+    .val-card:hover{border-color:var(--red-b);transform:translateY(-5px)}
+    .val-num{font-family:var(--fh);font-size:3.5rem;font-weight:400;color:var(--red);opacity:.25;line-height:1;margin-bottom:1rem}
+    .val-name{font-family:var(--fh);font-size:1.1rem;font-weight:400;margin-bottom:.65rem}
+    .val-desc{font-size:.9rem;color:var(--muted);line-height:1.7}
+
+    /* JOURNEY TIMELINE */
+    #journey{padding:7rem 0;background:var(--bg2)}
+    .journey-head{margin-bottom:4rem}
+    .timeline{position:relative;padding-left:2rem}
+    .timeline::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--red),rgba(232,160,48,.1))}
+    .tl-item{position:relative;padding-left:2rem;margin-bottom:3rem}
+    .tl-item:last-child{margin-bottom:0}
+    .tl-dot{position:absolute;left:-2rem;top:6px;width:12px;height:12px;border-radius:50%;background:var(--red);border:2px solid var(--bg2);transform:translateX(-50%)}
+    .tl-year{font-size:.72rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:.35rem}
+    .tl-title{font-family:var(--fh);font-size:1.05rem;font-weight:400;margin-bottom:.4rem}
+    .tl-desc{font-size:.9rem;color:var(--muted);line-height:1.65}
+
+    /* CTA */
+    #about-cta{padding:7rem 0;position:relative;overflow:hidden}
+    #about-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(212,32,32,.05),transparent 65%)}
+    .acta-inner{position:relative;text-align:center;max-width:680px;margin:0 auto}
+    .acta-inner h2{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.025em;margin-bottom:1rem}
+    .acta-inner p{color:var(--muted);line-height:1.75;margin-bottom:2.5rem;font-size:1.05rem}
+    .btn-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-g{background:var(--red);color:#FFFFFF;border:none;border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);display:inline-block}
+    .btn-g:hover{transform:scale(1.04);box-shadow:0 0 28px rgba(232,160,48,.45)}
+    .btn-o{background:transparent;border:1px solid var(--border);color:var(--text);border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--fb);display:inline-block}
+    .btn-o:hover{border-color:var(--red-b);color:var(--red)}
+
+    /* FOOTER */
+    footer{background:#0A0A0A;border-top:1px solid var(--border);padding:4.5rem 0 2rem}
+    .foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3.5rem}
+    .foot-brand p{color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:1rem;max-width:280px}
+    .foot-soc{display:flex;gap:.75rem;margin-top:1.5rem}
+    .soc-a{width:44px;height:44px;border-radius:10px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:400;transition:all .2s;color:var(--muted)}
+    .soc-a:hover{background:var(--red-d);border-color:var(--red-b);color:var(--red)}
+    .foot-col h4{font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem}
+    .foot-col a{display:block;color:var(--muted);font-size:.875rem;margin-bottom:.6rem;transition:color .2s}
+    .foot-col a:hover{color:var(--text)}
+    .foot-contact p{color:var(--muted);font-size:.875rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem}
+    .foot-contact a{color:var(--red);display:inline;margin-bottom:0}
+    .foot-bot{border-top:1px solid var(--border);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .foot-bot p{color:var(--muted);font-size:.8rem}
+    .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
+    .foot-locs span{font-size:.72rem;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:100px;padding:.2rem .7rem}
+
+    @media(max-width:1024px){.ah-inner{grid-template-columns:1fr;gap:3rem}.mission-lay{grid-template-columns:1fr;gap:3rem}.val-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.val-grid{grid-template-columns:1fr}.foot-g{grid-template-columns:1fr}.ah-stats{grid-template-columns:1fr 1fr}.about-img-stack{height:280px}.aimg-main{height:240px}.aimg-accent{height:140px}}
+    /* MEGA MENU */
+    .nav-dd{position:static;display:flex;align-items:center}
+    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
+    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:var(--text)}
+    .nd-chev{transition:transform .25s ease;flex-shrink:0}
+    .nav-dd.open .nd-chev{transform:rotate(180deg)}
+    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
+    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
+    .mega-bg{position:absolute;inset:0;background:transparent}
+    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
+    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+    .mega-all-link{font-size:.76rem;color:rgba(0,0,0,.4);transition:color .2s;display:flex;align-items:center;gap:.35rem}
+    .mega-all-link:hover{color:rgba(0,0,0,.8)}
+    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
+    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
+    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
+    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
+    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
+    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
+    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
+    .mc-svg-w{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+    .mc:hover .mc-svg-w{transform:translateY(-6px) scale(1.05)}
+    .mc-badge{display:inline-block;font-size:.59rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .65rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
+    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
+    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
+    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
+    .mc:hover .mc-link{opacity:1;transform:none}
+    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
+    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
+    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
+    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
+    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
+    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
+    .mf-link:hover{color:rgba(0,0,0,.75)}
+    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
+    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+    </style>
+</head>
+<body>
+
+<%- include('../partials/header', { page: 'about' }) %>
+<div id="main-content" tabindex="-1" style="outline:none;position:absolute"></div>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="ah-inner">
+    <div class="ah-left r">
+      <p class="s-label">Our Story</p>
+      <h1>We Built <em>Silence</em> Into a Product.</h1>
+      <p>Born in Dubai. Engineered for the Middle East's most ambitious workspaces. SonicHive set out to solve the one problem that open-plan offices never cracked — giving people a place to think, speak, and meet without the noise of everyone around them.</p>
+      <div class="ah-stats">
+        <div class="ah-stat"><div class="ah-stat-n">500+</div><div class="ah-stat-l">Pods installed across 5 countries</div></div>
+        <div class="ah-stat"><div class="ah-stat-n">100+</div><div class="ah-stat-l">Corporate clients across the region</div></div>
+        <div class="ah-stat"><div class="ah-stat-n">30dB</div><div class="ah-stat-l">Industry-leading noise reduction</div></div>
+      </div>
+    </div>
+    <div class="ah-right r d2">
+      <div class="about-img-stack">
+        <div class="aimg-main">
+          <img src="https://thesonichive.com/wp-content/uploads/2024/10/23-10-2024-18_27_04-1024x517.webp" alt="SonicHive office pods in use">
+        </div>
+        <div class="aimg-accent">
+          <img src="https://thesonichive.com/wp-content/uploads/2024/10/Office-pods-for-4-person_Sonichive-2-1024x819.webp" alt="Quartet pod">
+        </div>
+        <div class="aimg-badge"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg> Downtown Dubai Showroom</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="wrap">
+    <div class="mission-lay">
+      <div class="mission-txt r">
+        <p class="s-label">Our Mission</p>
+        <h2>The Noise Problem Deserves a Real Solution.</h2>
+        <p>Open-plan offices transformed how people work together — but they created a new problem. With nowhere to focus, nowhere to speak privately, and nowhere to meet without disturbing everyone around you, productivity suffers.</p>
+        <p>SonicHive was founded on a simple belief: acoustic privacy shouldn't require permanent construction, massive budgets, or sacrificing your office's design aesthetic. It should be modular, beautiful, and instant.</p>
+        <blockquote>"Silence is not the absence of sound. It's the presence of focus."</blockquote>
+        <p>With the largest acoustic lab in Asia behind our engineering, and a team based in the heart of Dubai, we bring world-class acoustic science to every pod we build.</p>
+      </div>
+      <div class="mission-visual r d2">
+        <div class="mv-item">
+          <div class="mv-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.93 0-5.796-.232-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg></div>
+          <div><h3>Acoustic Lab Engineering</h3><p>Our pods are developed with backing from the largest acoustic testing lab in Asia — ensuring every model delivers genuine, measurable noise reduction.</p></div>
+        </div>
+        <div class="mv-item">
+          <div class="mv-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+          <div><h3>Built for the Middle East</h3><p>Designed for Dubai's climate, aesthetic standards, and business culture. Every pod is engineered to perform in the region's demanding environments.</p></div>
+        </div>
+        <div class="mv-item">
+          <div class="mv-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/></svg></div>
+          <div><h3>Sustainability First</h3><p>We use recycled acoustic panels and sustainable materials throughout our manufacturing — reducing environmental impact without compromising performance.</p></div>
+        </div>
+        <div class="mv-item">
+          <div class="mv-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg></div>
+          <div><h3>Zero Construction Philosophy</h3><p>Every pod is fully modular and self-contained. No drilling, no contractors, no downtime. Installed in hours, not weeks.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section id="clients">
+  <div class="wrap">
+    <div class="clients-head r">
+      <p>Trusted by leading organisations across the Middle East</p>
+      <h2>Our Clients Include</h2>
+    </div>
+    <div class="clients-row r d1">
+      <span class="client-tag">Acer</span>
+      <span class="client-tag">Pepsi</span>
+      <span class="client-tag">Boeing</span>
+      <span class="client-tag">Samsung</span>
+      <span class="client-tag">Standard Chartered</span>
+      <span class="client-tag">Huawei</span>
+      <span class="client-tag">Workspace Downtown</span>
+      <span class="client-tag">+ 90 More</span>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="wrap">
+    <div class="val-head r">
+      <p class="s-label">What Drives Us</p>
+      <h2 class="s-title">Our Core Values</h2>
+    </div>
+    <div class="val-grid">
+      <div class="val-card r d1">
+        <div class="val-num">01</div>
+        <div class="val-name">Performance Without Compromise</div>
+        <p class="val-desc">Every SonicHive pod is tested to deliver genuine acoustic performance — not marketing numbers. 30dB of real, measurable noise reduction in every model.</p>
+      </div>
+      <div class="val-card r d2">
+        <div class="val-num">02</div>
+        <div class="val-name">Design That Earns Its Place</div>
+        <p class="val-desc">Our pods don't fight your office's aesthetic — they elevate it. Clean geometry, premium finishes, and fully customizable colours that suit any workspace.</p>
+      </div>
+      <div class="val-card r d3">
+        <div class="val-num">03</div>
+        <div class="val-name">Simplicity as a Feature</div>
+        <p class="val-desc">No construction. No permits. No downtime. If a solution requires a contractor, we haven't solved the problem. SonicHive installs in hours, not weeks.</p>
+      </div>
+      <div class="val-card r">
+        <div class="val-num">04</div>
+        <div class="val-name">Comfort for Long-Term Use</div>
+        <p class="val-desc">Pods are spaces people spend real time in. Ergonomic design, smart ventilation, and spacious interiors ensure comfort for hours of continuous use.</p>
+      </div>
+      <div class="val-card r d1">
+        <div class="val-num">05</div>
+        <div class="val-name">Sustainability at the Core</div>
+        <p class="val-desc">Built with recycled materials and a low-carbon manufacturing ethos. We believe the best workspace solutions shouldn't cost the environment.</p>
+      </div>
+      <div class="val-card r d2">
+        <div class="val-num">06</div>
+        <div class="val-name">Regional Expertise</div>
+        <p class="val-desc">Headquartered in Dubai with a presence across the GCC and beyond — our team understands the unique demands of Middle East workspaces firsthand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="journey">
+  <div class="wrap">
+    <div class="journey-head r">
+      <p class="s-label">Our Journey</p>
+      <h2 class="s-title">From Dubai to the World</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem">
+      <div class="timeline r">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">Founded</div>
+          <div class="tl-title">SonicHive Launches in Dubai</div>
+          <p class="tl-desc">Founded with a single mission: give Dubai's open-plan offices a premium acoustic solution without construction or disruption.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">Growth</div>
+          <div class="tl-title">First 100 Corporate Clients</div>
+          <p class="tl-desc">Rapid adoption across Dubai's Business Bay and DIFC districts. Clients include global brands across tech, finance, and professional services.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">Regional Expansion</div>
+          <div class="tl-title">Qatar & Saudi Arabia</div>
+          <p class="tl-desc">Expanded into Doha and Riyadh, serving co-working spaces, government entities, and enterprise clients aligned with Vision 2030.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">Global Reach</div>
+          <div class="tl-title">Bahrain & New Zealand</div>
+          <p class="tl-desc">Extended operations into Bahrain's growing fintech hub and New Zealand's progressive workplace market — 5 countries served.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025 & Beyond</div>
+          <div class="tl-title">500+ Pods. New Markets Ahead.</div>
+          <p class="tl-desc">500+ pods installed. New product lines in development. SonicHive continues expanding its acoustic innovation across emerging markets.</p>
+        </div>
+      </div>
+      <div class="r d2" style="display:flex;flex-direction:column;gap:1.5rem;align-self:start">
+        <img src="https://thesonichive.com/wp-content/uploads/2024/10/office-Booth-Sonichive_21-1024x819.webp" alt="SonicHive pod" style="border-radius:16px;width:100%;height:220px;object-fit:cover">
+        <img src="https://thesonichive.com/wp-content/uploads/2024/10/Office-pods-for-4-person_Sonichive-3-1024x819.webp" alt="SonicHive meeting pod" style="border-radius:16px;width:100%;height:220px;object-fit:cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="about-cta">
+  <div class="wrap">
+    <div class="acta-inner r">
+      <p class="s-label">Work With Us</p>
+      <h2>Ready to Experience the Difference?</h2>
+      <p>Visit our Downtown Dubai showroom, request a free consultation, or chat with our team on WhatsApp. We'll help you find the perfect acoustic solution for your space.</p>
+      <div class="btn-row">
+        <a href="contact.html" class="btn-g">Get a Free Quote</a>
+        <a href="products.html" class="btn-o">Explore Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer-full') %>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+(function(){
+  var dd=document.querySelector('.nav-dd'),btn=document.querySelector('.nd-toggle');
+  if(!dd||!btn)return;
+  btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
+  document.addEventListener('click',function(){dd.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
+})();
+</script><script src="popup.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote — SonicHive Dubai</title>
+  <meta name="description" content="Request a free quote for SonicHive acoustic office pods in Dubai, UAE. Soundproof solutions for any workspace — installed in under 2 hours. Serving UAE, Qatar, Saudi Arabia and Bahrain.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+    .r{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .r.on{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,250,250,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+    .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em}
+    .logo-t em{color:var(--red);font-style:normal}
+    .nav-links{display:flex;gap:1.75rem;align-items:center}
+    .nav-links a{font-size:.875rem;color:var(--muted);font-weight:500;transition:color .2s}
+    .nav-links a:hover,.nav-links a.cur{color:var(--text)}
+    .nav-cta{background:var(--red);color:#FFFFFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;font-family:var(--fb)}
+
+    /* HERO */
+    .page-hero{padding:9rem 2rem 5rem;background:var(--bg2);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(212,32,32,.05),transparent 60%)}
+    .ph-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative}
+    .ph-left .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem}
+    .ph-left h1{font-family:var(--fh);font-size:clamp(2.5rem,5vw,4rem);font-weight:400;letter-spacing:-.035em;line-height:1;margin-bottom:1.25rem}
+    .ph-left p{color:var(--muted);font-size:1.05rem;line-height:1.75;margin-bottom:2rem}
+    .contact-pills{display:flex;flex-direction:column;gap:.85rem}
+    .c-pill{display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.2rem;transition:border-color .2s}
+    .c-pill:hover{border-color:var(--red-b)}
+    .c-pill-ic{width:38px;height:38px;border-radius:10px;background:var(--red-d);border:1px solid var(--red-b);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .c-pill-t{font-size:.78rem;color:var(--muted);margin-bottom:.15rem}
+    .c-pill-v{font-size:.9rem;font-weight:400;color:var(--text)}
+    .c-pill-v a{color:var(--red)}
+
+    /* FORM CARD */
+    .form-card{background:#FFFFFF;box-shadow:0 4px 24px rgba(0,0,0,.08);border:1px solid var(--border);border-radius:24px;padding:2.5rem;position:relative;overflow:hidden}
+    .form-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(212,32,32,.06),transparent 70%);pointer-events:none}
+    .form-card h2{font-family:var(--fh);font-size:1.4rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.4rem}
+    .form-card .sub{font-size:.875rem;color:var(--muted);margin-bottom:2rem;line-height:1.6}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .field-g{display:flex;flex-direction:column;gap:.3rem}
+    .field-g label{font-size:.8rem;font-weight:500;color:var(--text);display:block}
+    .field-g .req{color:var(--red);margin-left:.1rem}
+    .form-grid input,.form-grid select,.form-grid textarea{background:#FFFFFF;border:1px solid var(--border);border-radius:10px;padding:.825rem 1.1rem;font-size:.875rem;color:var(--text);font-family:var(--fb);outline:none;transition:border-color .2s,background .2s;width:100%}
+    .form-grid input::placeholder,.form-grid textarea::placeholder{color:var(--muted)}
+    .form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{border-color:var(--red-b);background:rgba(212,32,32,.03)}
+    .form-grid select option{background:#FFFFFF;color:var(--text)}
+    .form-grid textarea{resize:vertical;min-height:100px}
+    .full{grid-column:span 2}
+    .submit-btn{width:100%;grid-column:span 2;background:var(--red);color:#FFFFFF;border:none;border-radius:10px;padding:1rem;font-size:.975rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);margin-top:.5rem;letter-spacing:.02em}
+    .submit-btn:hover{transform:scale(1.02);box-shadow:0 0 28px rgba(212,32,32,.35)}
+    .submit-btn:disabled{opacity:.65;cursor:not-allowed;transform:none;box-shadow:none}
+    .form-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:1rem;line-height:1.5}
+
+    /* LOCATIONS */
+    #locations{padding:7rem 0;background:var(--bg2)}
+    .loc-head{margin-bottom:4rem}
+    .loc-head .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem}
+    .loc-head h2{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;letter-spacing:-.025em}
+    .loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .loc-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2rem;transition:border-color .3s,transform .3s}
+    .loc-card:hover{border-color:var(--red-b);transform:translateY(-4px)}
+    .loc-flag{font-size:2rem;margin-bottom:1rem}
+    .loc-country{font-family:var(--fh);font-size:1.15rem;font-weight:400;margin-bottom:.5rem}
+    .loc-city{font-size:.875rem;color:var(--red);font-weight:400;margin-bottom:.75rem}
+    .loc-detail{font-size:.875rem;color:var(--muted);line-height:1.7}
+    .loc-detail a{color:var(--red)}
+    .loc-card.hq{border-color:var(--red-b);background:var(--red-d)}
+    .loc-hq-badge{font-size:.65rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.2rem .65rem;display:inline-block;margin-bottom:.75rem}
+
+    /* FAQ */
+    #faq{padding:7rem 0}
+    .faq-head{margin-bottom:4rem}
+    .faq-head .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem}
+    .faq-head h2{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;letter-spacing:-.025em}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:20px;overflow:hidden;border:1px solid var(--border)}
+    .faq-item{background:var(--bg);padding:0;border-bottom:1px solid var(--border);cursor:pointer}
+    .faq-item:last-child,.faq-item:nth-last-child(2){border-bottom:none}
+    .faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.75rem;gap:1rem;font-weight:400;font-size:.95rem;transition:color .2s}
+    .faq-q:hover{color:var(--red)}
+    .faq-arrow{font-size:1.2rem;color:var(--muted);transition:transform .3s,color .3s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(45deg);color:var(--red)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;font-size:.9rem;color:var(--muted);line-height:1.75;padding:0 1.75rem}
+    .faq-item.open .faq-a{max-height:300px;padding:0 1.75rem 1.5rem}
+
+    /* FOOTER */
+    footer{background:#0A0A0A;border-top:1px solid var(--border);padding:4.5rem 0 2rem}
+    .foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3.5rem}
+    .foot-brand p{color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:1rem;max-width:280px}
+    .foot-soc{display:flex;gap:.75rem;margin-top:1.5rem}
+    .soc-a{width:44px;height:44px;border-radius:10px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:400;transition:all .2s;color:var(--muted)}
+    .soc-a:hover{background:var(--red-d);border-color:var(--red-b);color:var(--red)}
+    .foot-col h4{font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem}
+    .foot-col a{display:block;color:var(--muted);font-size:.875rem;margin-bottom:.6rem;transition:color .2s}
+    .foot-col a:hover{color:var(--text)}
+    .foot-contact p{color:var(--muted);font-size:.875rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem}
+    .foot-contact a{color:var(--red);display:inline;margin-bottom:0}
+    .foot-bot{border-top:1px solid var(--border);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .foot-bot p{color:var(--muted);font-size:.8rem}
+    .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
+    .foot-locs span{font-size:.72rem;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:100px;padding:.2rem .7rem}
+
+    @media(max-width:900px){.ph-inner{grid-template-columns:1fr}.loc-grid{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}.foot-g{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.form-grid{grid-template-columns:1fr}.full,.submit-btn{grid-column:span 1}.loc-grid{grid-template-columns:1fr}.foot-g{grid-template-columns:1fr}}
+    /* MEGA MENU */
+    .nav-dd{position:static;display:flex;align-items:center}
+    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
+    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:var(--text)}
+    .nd-chev{transition:transform .25s ease;flex-shrink:0}
+    .nav-dd.open .nd-chev{transform:rotate(180deg)}
+    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
+    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
+    .mega-bg{position:absolute;inset:0;background:transparent}
+    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
+    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+    .mega-all-link{font-size:.76rem;color:rgba(0,0,0,.4);transition:color .2s;display:flex;align-items:center;gap:.35rem}
+    .mega-all-link:hover{color:rgba(0,0,0,.8)}
+    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
+    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
+    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
+    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
+    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
+    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
+    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
+    .mc-svg-w{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+    .mc:hover .mc-svg-w{transform:translateY(-6px) scale(1.05)}
+    .mc-badge{display:inline-block;font-size:.59rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .65rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
+    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
+    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
+    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
+    .mc:hover .mc-link{opacity:1;transform:none}
+    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
+    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
+    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
+    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
+    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
+    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
+    .mf-link:hover{color:rgba(0,0,0,.75)}
+    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
+    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+    </style>
+</head>
+<body>
+
+<%- include('../partials/header', { page: 'contact' }) %>
+<main id="main-content" tabindex="-1" style="outline:none">
+
+<div class="page-hero">
+  <div class="ph-inner">
+    <div class="ph-left r">
+      <p class="s-label">Get in Touch</p>
+      <h1>Let's Find Your Perfect Pod.</h1>
+      <p>Tell us about your workspace. Our Dubai team will recommend the ideal configuration and get you a fast, no-obligation quote.</p>
+      <div class="contact-pills">
+        <div class="c-pill">
+          <div class="c-pill-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></div>
+          <div><div class="c-pill-t">Call or WhatsApp</div><div class="c-pill-v"><a href="tel:+971585550099">+971 58 555 0099</a></div></div>
+        </div>
+        <div class="c-pill">
+          <div class="c-pill-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></div>
+          <div><div class="c-pill-t">Email Us</div><div class="c-pill-v"><a href="mailto:info@thesonichive.com">info@thesonichive.com</a></div></div>
+        </div>
+        <div class="c-pill">
+          <div class="c-pill-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div>
+          <div><div class="c-pill-t">Visit Our Showroom</div><div class="c-pill-v">Downtown Dubai, UAE</div></div>
+        </div>
+        <a class="c-pill" href="https://wa.me/971585550099?text=Hi, I'm interested in SonicHive pods." target="_blank" style="text-decoration:none;cursor:pointer">
+          <div class="c-pill-ic" style="background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.3)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div><div class="c-pill-t">Instant Response</div><div class="c-pill-v" style="color:#25D366">Chat on WhatsApp →</div></div>
+        </a>
+      </div>
+    </div>
+    <div class="form-card r d1">
+      <h2>Request a Free Quote</h2>
+      <p class="sub">Fill in your details and we'll get back to you within 2 business hours.</p>
+      <form class="form-grid" id="qform" novalidate>
+        <div class="field-g">
+          <label for="firstName">First Name<span class="req" aria-hidden="true"> *</span></label>
+          <input type="text" id="firstName" name="firstName" autocomplete="given-name" required aria-required="true">
+        </div>
+        <div class="field-g">
+          <label for="lastName">Last Name<span class="req" aria-hidden="true"> *</span></label>
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" required aria-required="true">
+        </div>
+        <div class="field-g full">
+          <label for="email">Email Address<span class="req" aria-hidden="true"> *</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required aria-required="true">
+        </div>
+        <div class="field-g">
+          <label for="phone">Phone / WhatsApp<span class="req" aria-hidden="true"> *</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required aria-required="true">
+        </div>
+        <div class="field-g">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" autocomplete="organization">
+        </div>
+        <div class="field-g full">
+          <label for="interestedIn">Interested In<span class="req" aria-hidden="true"> *</span></label>
+          <select id="interestedIn" name="interestedIn" required aria-required="true">
+            <option value="" disabled selected>Select a product…</option>
+            <option>Solo Silence Booth (1 person)</option>
+            <option>Duo Silence Booth (2 person)</option>
+            <option>Quartet Silence Booth (4 person)</option>
+            <option>Hexa Silence Booth (6 person)</option>
+            <option>Home Pod</option>
+            <option>Rental Pods</option>
+            <option>Multiple Units — Need Consultation</option>
+          </select>
+        </div>
+        <div class="field-g">
+          <label for="quantity">Quantity<span class="req" aria-hidden="true"> *</span></label>
+          <select id="quantity" name="quantity" required aria-required="true">
+            <option value="" disabled selected>Select…</option>
+            <option>1 unit</option><option>2–3 units</option>
+            <option>4–10 units</option><option>10+ units</option>
+          </select>
+        </div>
+        <div class="field-g">
+          <label for="location">Location<span class="req" aria-hidden="true"> *</span></label>
+          <select id="location" name="location" required aria-required="true">
+            <option value="" disabled selected>Select…</option>
+            <option>Dubai</option><option>Abu Dhabi</option><option>Sharjah</option>
+            <option>Ajman</option><option>Ras Al Khaimah</option><option>Qatar</option>
+            <option>Saudi Arabia</option><option>Bahrain</option><option>Other</option>
+          </select>
+        </div>
+        <div id="form-error" role="alert" aria-live="polite" class="full" style="display:none;color:var(--red);font-size:.85rem;padding:.5rem 0"></div>
+        <button type="submit" class="submit-btn full" id="qsubmit">Send Quote Request →</button>
+      </form>
+      <p class="form-note"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg> Your information is confidential and never shared. We'll contact you within 2 business hours.</p>
+    </div>
+  </div>
+</div>
+
+<section id="locations">
+  <div class="wrap">
+    <div class="loc-head r">
+      <p class="s-label">Our Locations</p>
+      <h2>Present Across the Region</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card hq r">
+        <div class="loc-hq-badge">Headquarters</div>
+        <div class="loc-flag" role="img" aria-label="United Arab Emirates flag">🇦🇪</div>
+        <div class="loc-country">United Arab Emirates</div>
+        <div class="loc-city">Downtown Dubai · Abu Dhabi</div>
+        <div class="loc-detail">Showroom open for visits.<br><a href="tel:+971585550099">+971 58 555 0099</a><br><a href="mailto:info@thesonichive.com">info@thesonichive.com</a></div>
+      </div>
+      <div class="loc-card r d1">
+        <div class="loc-flag" role="img" aria-label="Qatar flag">🇶🇦</div>
+        <div class="loc-country">Qatar</div>
+        <div class="loc-city">Doha</div>
+        <div class="loc-detail">Serving Doha's corporate and co-working sectors.<br><a href="https://qatar.thesonichive.com" target="_blank">qatar.thesonichive.com</a></div>
+      </div>
+      <div class="loc-card r d2">
+        <div class="loc-flag" role="img" aria-label="Saudi Arabia flag">🇸🇦</div>
+        <div class="loc-country">Saudi Arabia</div>
+        <div class="loc-city">Riyadh · Jeddah</div>
+        <div class="loc-detail">Supporting Vision 2030 workspace transformation.<br><a href="https://saudi-arabia.thesonichive.com" target="_blank">saudi-arabia.thesonichive.com</a></div>
+      </div>
+      <div class="loc-card r">
+        <div class="loc-flag" role="img" aria-label="Bahrain flag">🇧🇭</div>
+        <div class="loc-country">Bahrain</div>
+        <div class="loc-city">Manama</div>
+        <div class="loc-detail">Acoustic solutions for Bahrain's growing business hub.<br><a href="https://bahrain.thesonichive.com" target="_blank">bahrain.thesonichive.com</a></div>
+      </div>
+      <div class="loc-card r d1">
+        <div class="loc-flag" role="img" aria-label="New Zealand flag">🇳🇿</div>
+        <div class="loc-country">New Zealand</div>
+        <div class="loc-city">Auckland · Wellington</div>
+        <div class="loc-detail">Serving New Zealand's modern office market.<br><a href="https://new-zealand.thesonichive.com" target="_blank">new-zealand.thesonichive.com</a></div>
+      </div>
+      <div class="loc-card r d2" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between">
+        <div>
+          <div style="font-size:1.75rem;margin-bottom:.75rem"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+          <div class="loc-country">Expanding Further</div>
+          <div class="loc-city" style="margin-bottom:.75rem">New markets coming soon</div>
+          <div class="loc-detail">Interested in partnership or distribution in your country? Let's talk.</div>
+        </div>
+        <a href="mailto:info@thesonichive.com" style="margin-top:1.5rem;font-size:.85rem;font-weight:400;color:var(--red)">Enquire About Partnership →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="faq-head r">
+      <p class="s-label">FAQ</p>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-grid" id="faq-grid"></div>
+  </div>
+</section>
+
+</main>
+
+<%- include('../partials/footer-full') %>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+
+const faqs=[
+  {q:'Do the pods need any construction or permanent installation?',a:'No. Our soundproof pods are completely modular and self-contained — plug-and-play for your workspace. No drilling, no contractors, no drama. Install, move, or remove without leaving a trace.'},
+  {q:'How long does installation take?',a:'Most pods are fully installed within 2 hours. Our team handles delivery and setup, so you can focus on your workspace transformation, not logistics.'},
+  {q:'Can SonicHive pods be customized?',a:"Absolutely. You can customize size, layout, colors, and features. Whether you're a startup or a corporate HQ in Dubai, our pods adapt to your brand and functional needs."},
+  {q:'Are the pods ventilated?',a:"Yes — every pod includes a built-in ventilation system that keeps air flowing and temperature balanced. Designed for hours of comfortable use without stuffiness."},
+  {q:'What is the noise reduction level?',a:'Our pods achieve up to 30dB of sound reduction, meeting professional standards for acoustic privacy. This effectively eliminates external distractions and prevents internal conversations from being heard outside.'},
+  {q:'Do you offer rental pods for events?',a:'Yes. We offer rental pods for trade shows, corporate events, and temporary office setups. Delivered, installed, and collected by our team. Contact us for rental pricing.'},
+  {q:'Which spaces are SonicHive pods suitable for?',a:"Corporate offices, co-working spaces, schools, hospitals, retail environments, home offices, airports, and more. Anywhere noise and lack of privacy are a problem, SonicHive is the solution."},
+  {q:'Where is your showroom?',a:'Our main showroom is in Downtown Dubai, UAE. You\'re welcome to visit and experience the pods first-hand. We also have a presence in Qatar, Saudi Arabia, Bahrain, and New Zealand.'},
+];
+document.getElementById('faq-grid').innerHTML=faqs.map((f,i)=>`
+<div class="faq-item r${i>.5?' d1':''}">
+  <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)" type="button">
+    ${f.q}<span class="faq-arrow" aria-hidden="true">+</span>
+  </button>
+  <div class="faq-a" hidden>${f.a}</div>
+</div>`).join('');
+document.querySelectorAll('.r:not(.on)').forEach(el=>obs.observe(el));
+
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var answer=item.querySelector('.faq-a');
+  var open=item.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+  answer.hidden=!open;
+}
+
+document.getElementById('qform').onsubmit=async(e)=>{
+  e.preventDefault();
+  const form=e.target;
+  const b=form.querySelector('.submit-btn');
+  const errBox=document.getElementById('form-error');
+  errBox.style.display='none';
+
+  // Basic client-side validation
+  const required=form.querySelectorAll('[required]');
+  let firstInvalid=null;
+  required.forEach(el=>{
+    if(!el.value.trim()){
+      el.style.borderColor='#D42020';
+      if(!firstInvalid)firstInvalid=el;
+    } else {
+      el.style.borderColor='';
+    }
+  });
+  if(firstInvalid){
+    errBox.textContent='Please fill in all required fields.';
+    errBox.style.display='block';
+    firstInvalid.focus();
+    return;
+  }
+
+  const ogText=b.textContent;
+  b.disabled=true;
+  b.textContent='Sending…';
+
+  const data=Object.fromEntries(new FormData(form).entries());
+  try {
+    const res=await fetch('/api/quote',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)
+    });
+    if(res.ok){
+      b.textContent='✓ Received — we\'ll contact you shortly!';
+      b.style.background='#25D366';
+      setTimeout(()=>{b.textContent=ogText;b.style.background='';b.disabled=false;form.reset();},5000);
+    } else {
+      throw new Error('Server error');
+    }
+  } catch(err){
+    errBox.textContent='Something went wrong. Please try again or email us directly.';
+    errBox.style.display='block';
+    b.textContent=ogText;
+    b.disabled=false;
+  }
+};
+</script>
+
+<script>
+(function(){
+  var dd=document.querySelector('.nav-dd'),btn=document.querySelector('.nd-toggle');
+  if(!dd||!btn)return;
+  btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
+  document.addEventListener('click',function(){dd.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
+})();
+</script><script src="popup.js?v=3"></script>
+</body>
+</html>
