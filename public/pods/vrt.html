@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ART Pod Series — SonicHive Designer Acoustic Pods | Dubai</title>
-  <meta name="description" content="SonicHive ART Pod — where design meets silence. Architectural acoustic pods for premium workspaces. Solo, Duo, Quartet, Hexa. Dubai UAE.">
+  <title>VRT Series — SonicHive Acoustic Office Pods | Dubai</title>
+  <meta name="description" content="SonicHive VRT Series — professional acoustic pods in Solo, Duo, Quartet and Hexa configurations. Up to 36dB noise reduction. Dubai UAE.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -70,25 +70,17 @@
     .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
     .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
 
-    /* SERIES HERO — Dark editorial aesthetic */
-    .series-hero{padding:8rem 2rem 5.5rem;background:linear-gradient(140deg,#07090F 0%,#0B0F14 50%,#0A0A14 100%);position:relative;overflow:hidden}
-    .series-hero::before{content:'';position:absolute;top:-150px;right:-100px;width:700px;height:700px;background:radial-gradient(circle,rgba(90,60,140,.12),transparent 65%);pointer-events:none}
-    .series-hero::after{content:'';position:absolute;bottom:-200px;left:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(212,32,32,.07),transparent 65%);pointer-events:none}
-    .hero-in{max-width:var(--max);margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-    @media(max-width:768px){.hero-in{grid-template-columns:1fr}}
-    .series-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:.35rem 1rem;font-size:.7rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:1.5rem}
-    .s-dot{width:6px;height:6px;border-radius:50%;background:#FFF;animation:blink 2s infinite;flex-shrink:0}
-    .series-name{font-family:var(--fh);font-size:clamp(3rem,7.5vw,6.5rem);font-weight:400;letter-spacing:-.04em;color:#FFF;line-height:.92;margin-bottom:1.2rem}
-    .series-name em{color:#FF6B6B;font-style:normal}
-    .series-tagline{color:rgba(255,255,255,.62);font-size:1.08rem;line-height:1.75;max-width:440px;margin-bottom:2.5rem}
-    .series-badges{display:flex;gap:1.5rem;flex-wrap:wrap}
+    /* SERIES HERO */
+    .series-hero{padding:8rem 2rem 5.5rem;background:linear-gradient(140deg,#07090F 0%,#0F1420 55%,#1a0505 100%);position:relative;overflow:hidden}
+    .series-hero::before{content:'';position:absolute;top:-200px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(212,32,32,.13),transparent 65%);pointer-events:none}
+    .series-hero::after{content:'';position:absolute;bottom:-180px;left:-60px;width:450px;height:450px;background:radial-gradient(circle,rgba(212,32,32,.06),transparent 65%);pointer-events:none}
+    .hero-in{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+    .series-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(212,32,32,.15);border:1px solid rgba(212,32,32,.3);border-radius:100px;padding:.35rem 1rem;font-size:.7rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:#FF6B6B;margin-bottom:1.5rem}
+    .s-dot{width:6px;height:6px;border-radius:50%;background:#FF6B6B;animation:blink 2s infinite;flex-shrink:0}
+    .series-name{font-family:var(--fh);font-size:clamp(3.5rem,8vw,7rem);font-weight:400;letter-spacing:-.04em;color:#FFF;line-height:.92;margin-bottom:1.2rem}
+    .series-tagline{color:rgba(255,255,255,.62);font-size:1.08rem;line-height:1.75;max-width:500px;margin-bottom:3rem}
+    .series-badges{display:flex;gap:2rem;flex-wrap:wrap}
     .s-badge{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.45);font-size:.82rem}
-    .hero-visual{display:flex;flex-direction:column;gap:1rem}
-    .hv-main{height:320px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:20px;display:flex;align-items:center;justify-content:center}
-    .hv-ph{display:flex;flex-direction:column;align-items:center;gap:.75rem;color:rgba(255,255,255,.2)}
-    .hv-ph span{font-size:.68rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase}
-    .hv-tags{display:flex;gap:.65rem;flex-wrap:wrap}
-    .hv-tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:.4rem .9rem;font-size:.72rem;color:rgba(255,255,255,.5)}
 
     /* SIZE SECTION */
     .size-section{padding:6rem 0 7rem}
@@ -99,9 +91,11 @@
     .s-sub{color:var(--muted);font-size:1rem;line-height:1.7}
     .size-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
     @media(max-width:480px){.size-grid{grid-template-columns:1fr}}
+
+    /* SIZE CARD */
     .size-card{background:#FFF;border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .25s,transform .3s,box-shadow .3s;display:flex;flex-direction:column}
     .size-card:hover{border-color:var(--red-b);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.09)}
-    .sc-img{height:200px;background:linear-gradient(135deg,#F0EFF8,var(--bg2));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+    .sc-img{height:200px;background:var(--bg2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
     .sc-ph{display:flex;flex-direction:column;align-items:center;gap:.65rem;color:var(--muted);opacity:.4}
     .sc-ph span{font-size:.68rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase}
     .sc-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
@@ -116,18 +110,17 @@
     .sc-cta{display:block;text-align:center;background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.7rem 1.5rem;font-size:.85rem;font-weight:400;color:var(--text);transition:all .2s}
     .size-card:hover .sc-cta{background:var(--red);color:#FFF;border-color:var(--red)}
 
-    /* DESIGN PHILOSOPHY */
-    .design-sec{padding:5.5rem 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .design-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
-    @media(max-width:768px){.design-grid{grid-template-columns:1fr}}
-    .design-card{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2rem;position:relative;overflow:hidden}
-    .design-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),#FF6B6B)}
-    .dc-num{font-family:var(--fh);font-size:3rem;font-weight:400;color:var(--red-d);line-height:1;margin-bottom:.75rem;letter-spacing:-.04em}
-    .dc-title{font-family:var(--fh);font-size:1.1rem;font-weight:400;margin-bottom:.5rem}
-    .dc-desc{font-size:.85rem;color:var(--muted);line-height:1.65}
+    /* FEATURES STRIP */
+    .feat-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0}
+    .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem}
+    @media(max-width:768px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+    .feat-item{text-align:center}
+    .feat-icon{width:50px;height:50px;border-radius:14px;background:var(--red-d);border:1px solid var(--red-b);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+    .feat-title{font-family:var(--fh);font-size:1rem;font-weight:400;margin-bottom:.4rem}
+    .feat-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
 
     /* CTA */
-    .cta-sec{padding:6rem 0;text-align:center}
+    .cta-sec{padding:6rem 0;text-align:center;background:var(--bg)}
     .cta-title{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.03em;margin-bottom:1rem}
     .cta-sub{color:var(--muted);font-size:1rem;margin-bottom:2.5rem;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.7}
     .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
@@ -151,7 +144,7 @@
 
 <nav id="nav">
   <div class="nav-i">
-    <a href="index.html" class="logo">
+    <a href="../index.html" class="logo">
       <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#FAFAFA"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".55"/></svg>
       <span class="logo-t">Sonic<em>Hive</em></span>
     </a>
@@ -159,48 +152,39 @@
       
       <div class="nav-dd">
         <button class="nd-toggle cur">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.png" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="vrt-plus.html" class="mc mc-plus"><div class="mc-img-w"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ SM 1.png" alt="VRT Plus" loading="lazy"></div><div class="mc-name">VRT Plus</div><p class="mc-desc">Enhanced HVAC, premium finishes and superior acoustic performance.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.png" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="products.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/></svg>All Products</a><div class="mf-sep"></div><a href="rental-pods.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rental Pods</a><a href="contact.html" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div>
+        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.png" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="vrt-plus.html" class="mc mc-plus"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ SM 1.png" alt="VRT Plus" loading="lazy"></div><div class="mc-name">VRT Plus</div><p class="mc-desc">Enhanced HVAC, premium finishes and superior acoustic performance.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.png" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="../images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="../pages/products.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/></svg>All Products</a><div class="mf-sep"></div><a href="../pages/rental-pods.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rental Pods</a><a href="../pages/contact.html" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div>
           
       </div>
-      <a href="use-cases.html">Use Cases</a>
-        <a href="features.html">Features</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="../pages/use-cases.html">Use Cases</a>
+        <a href="../pages/features.html">Features</a>
+      <a href="../pages/about.html">About</a>
+      <a href="../pages/contact.html">Contact</a>
     </div>
-    <a href="contact.html" class="nav-cta">Get a Quote →</a>
+    <a href="../pages/contact.html" class="nav-cta">Get a Quote →</a>
   </div>
 </nav>
 
 <section class="series-hero">
   <div class="hero-in">
-    <div>
-      <div class="series-tag"><span class="s-dot"></span>Designer Series</div>
-      <h1 class="series-name">ART<br><em>Pod.</em></h1>
-      <p class="series-tagline">Architectural acoustic pods for premium workspaces where aesthetics matter as much as performance. Silence never looked so good.</p>
-      <div class="series-badges">
-        <div class="s-badge">
-          <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 8l2 2 4-4" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Up to 38dB Reduction
-        </div>
-        <div class="s-badge">
-          <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l1.9 3.86 4.26.62-3.08 3 .73 4.24L8 11.1l-3.81 2.02.73-4.24-3.08-3 4.26-.62L8 1.5z" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linejoin="round"/></svg>
-          Designer Finishes
-        </div>
-        <div class="s-badge">
-          <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 8h6M8 5v6" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round"/></svg>
-          Customisable Colours
-        </div>
+    <div class="series-tag"><span class="s-dot"></span>Standard Series</div>
+    <h1 class="series-name">VRT.</h1>
+    <p class="series-tagline">Professional acoustic office pods engineered for demanding workspaces. Available in four configurations to match any team size or layout.</p>
+    <div class="series-badges">
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 8l2 2 4-4" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Up to 36dB Reduction
       </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hv-main" style="padding:1rem;overflow:hidden">
-        <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.png" alt="ART Pod" style="width:100%;height:100%;object-fit:contain;max-height:280px">
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="2" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 6h6M5 9h4" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round"/></svg>
+        No Construction Required
       </div>
-      <div class="hv-tags">
-        <span class="hv-tag">Architectural Glass</span>
-        <span class="hv-tag">Custom RAL Colours</span>
-        <span class="hv-tag">Integrated Lighting</span>
-        <span class="hv-tag">Premium Fabric</span>
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v2M8 12v2M2 8h2M12 8h2M4.22 4.22l1.42 1.42M10.36 10.36l1.42 1.42M4.22 11.78l1.42-1.42M10.36 5.64l1.42-1.42" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Dubai &amp; UAE Delivery
+      </div>
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l1.9 3.86 4.26.62-3.08 3 .73 4.24L8 11.1l-3.81 2.02.73-4.24-3.08-3 4.26-.62L8 1.5z" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        2-Year Warranty
       </div>
     </div>
   </div>
@@ -210,74 +194,66 @@
   <div class="wrap">
     <div class="sec-header r">
       <div class="s-label">Choose Your Configuration</div>
-      <h2 class="s-title">ART Pod — Four Sizes, Infinite Possibilities</h2>
-      <p class="s-sub">Each ART Pod can be customised in finish, fabric, and colour to match your interior perfectly.</p>
+      <h2 class="s-title">Find the Right VRT for Your Space</h2>
+      <p class="s-sub">Each size is purpose-built. Select based on team capacity and floor area.</p>
     </div>
     <div class="size-grid">
 
-      <a href="art-pod-solo.html" class="size-card r d1">
-        <div class="sc-img" style="padding:.5rem;overflow:hidden">
-          <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART S 1.png" alt="ART Solo" style="width:100%;height:100%;object-fit:contain">
-        </div>
+      <a href="vrt-solo.html" class="size-card r d1">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT S 1.png" alt="VRT Solo" style="width:100%;height:100%;object-fit:contain"></div>
         <div class="sc-body">
           <div class="sc-cap">1 Person</div>
-          <div class="sc-name">ART Solo</div>
-          <div class="sc-desc">A sculptural single-occupant pod — a statement piece that delivers 34dB of focused silence.</div>
+          <div class="sc-name">VRT Solo</div>
+          <div class="sc-desc">Perfect for private calls, deep focus work, and confidential conversations.</div>
           <div class="sc-specs">
-            <div class="sc-spec"><strong>34dB</strong><span>Reduction</span></div>
-            <div class="sc-spec"><strong>950mm</strong><span>Width</span></div>
-            <div class="sc-spec"><strong>155kg</strong><span>Weight</span></div>
+            <div class="sc-spec"><strong>32dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>900mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>145kg</strong><span>Weight</span></div>
           </div>
           <span class="sc-cta">View Specifications →</span>
         </div>
       </a>
 
-      <a href="art-pod-duo.html" class="size-card r d2">
-        <div class="sc-img" style="padding:.5rem;overflow:hidden">
-          <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART M 1.png" alt="ART Duo" style="width:100%;height:100%;object-fit:contain">
-        </div>
+      <a href="vrt-duo.html" class="size-card r d2">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT M 1.png" alt="VRT Duo" style="width:100%;height:100%;object-fit:contain"></div>
         <div class="sc-body">
           <div class="sc-cap">2 Persons</div>
-          <div class="sc-name">ART Duo</div>
-          <div class="sc-desc">Elegant two-person collaboration space with architectural glass facade and dual-zone seating.</div>
+          <div class="sc-name">VRT Duo</div>
+          <div class="sc-desc">Ideal for one-on-one meetings, collaborative sessions, and team calls.</div>
           <div class="sc-specs">
-            <div class="sc-spec"><strong>35dB</strong><span>Reduction</span></div>
-            <div class="sc-spec"><strong>1500mm</strong><span>Width</span></div>
-            <div class="sc-spec"><strong>235kg</strong><span>Weight</span></div>
+            <div class="sc-spec"><strong>33dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>1400mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>220kg</strong><span>Weight</span></div>
           </div>
           <span class="sc-cta">View Specifications →</span>
         </div>
       </a>
 
-      <a href="art-pod-quartet.html" class="size-card r d3">
-        <div class="sc-img" style="padding:.5rem;overflow:hidden">
-          <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART ML 1.png" alt="ART Quartet" style="width:100%;height:100%;object-fit:contain">
-        </div>
+      <a href="vrt-quartet.html" class="size-card r d3">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT ML 1.png" alt="VRT Quartet" style="width:100%;height:100%;object-fit:contain"></div>
         <div class="sc-body">
           <div class="sc-cap">4 Persons</div>
-          <div class="sc-name">ART Quartet</div>
-          <div class="sc-desc">A showpiece meeting room pod — seamlessly integrates into the most design-conscious offices.</div>
+          <div class="sc-name">VRT Quartet</div>
+          <div class="sc-desc">Spacious enough for small group meetings, workshops, and video conferences.</div>
           <div class="sc-specs">
-            <div class="sc-spec"><strong>36dB</strong><span>Reduction</span></div>
-            <div class="sc-spec"><strong>2100mm</strong><span>Width</span></div>
-            <div class="sc-spec"><strong>400kg</strong><span>Weight</span></div>
+            <div class="sc-spec"><strong>35dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>2000mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>380kg</strong><span>Weight</span></div>
           </div>
           <span class="sc-cta">View Specifications →</span>
         </div>
       </a>
 
-      <a href="art-pod-hexa.html" class="size-card r d4">
-        <div class="sc-img" style="padding:.5rem;overflow:hidden">
-          <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART L 1.png" alt="ART Hexa" style="width:100%;height:100%;object-fit:contain">
-        </div>
+      <a href="vrt-hexa.html" class="size-card r d4">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT L 1.png" alt="VRT Hexa" style="width:100%;height:100%;object-fit:contain"></div>
         <div class="sc-body">
           <div class="sc-cap">6 Persons</div>
-          <div class="sc-name">ART Hexa</div>
-          <div class="sc-desc">The ultimate design statement — a fully-customisable six-person sanctuary of silence.</div>
+          <div class="sc-name">VRT Hexa</div>
+          <div class="sc-desc">Maximum capacity for larger teams, board meetings, and executive sessions.</div>
           <div class="sc-specs">
-            <div class="sc-spec"><strong>38dB</strong><span>Reduction</span></div>
-            <div class="sc-spec"><strong>2900mm</strong><span>Width</span></div>
-            <div class="sc-spec"><strong>540kg</strong><span>Weight</span></div>
+            <div class="sc-spec"><strong>36dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>2800mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>520kg</strong><span>Weight</span></div>
           </div>
           <span class="sc-cta">View Specifications →</span>
         </div>
@@ -287,23 +263,28 @@
   </div>
 </section>
 
-<section class="design-sec">
+<section class="feat-strip">
   <div class="wrap">
-    <div class="design-grid">
-      <div class="design-card r">
-        <div class="dc-num">01</div>
-        <div class="dc-title">Architectural Form</div>
-        <div class="dc-desc">Clean geometric lines informed by contemporary architecture. The ART Pod is designed to be seen, not hidden.</div>
+    <div class="feat-grid">
+      <div class="feat-item r">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3C7.13 3 4 6.13 4 10s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7z" stroke="#D42020" stroke-width="1.5"/><path d="M8 10h6M11 7v6" stroke="#D42020" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="feat-title">Multi-Layer Acoustics</div>
+        <div class="feat-desc">Engineered acoustic panels with STC-rated glazing deliver up to 36dB reduction.</div>
       </div>
-      <div class="design-card r d1">
-        <div class="dc-num">02</div>
-        <div class="dc-title">Custom Finishes</div>
-        <div class="dc-desc">Available in any RAL colour with premium fabric, brushed metal, or matte lacquer finish options.</div>
+      <div class="feat-item r d1">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M4 7h14M4 15h10" stroke="#D42020" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="feat-title">Smart Ventilation</div>
+        <div class="feat-desc">Whisper-quiet HVAC circulation maintains fresh air at under 35dBA ambient noise.</div>
       </div>
-      <div class="design-card r d2">
-        <div class="dc-num">03</div>
-        <div class="dc-title">Precision Engineering</div>
-        <div class="dc-desc">Design never compromises performance. The ART Pod delivers up to 38dB reduction with class-leading ventilation.</div>
+      <div class="feat-item r d2">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="3" stroke="#D42020" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="#D42020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="feat-title">Plug &amp; Play Setup</div>
+        <div class="feat-desc">No construction or structural modifications. Delivered and installed in a single day.</div>
+      </div>
+      <div class="feat-item r d3">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.4 4.86 5.37.78-3.88 3.78.92 5.34L11 14.26l-4.81 2.5.92-5.34L3.23 7.64l5.37-.78L11 2z" stroke="#D42020" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="feat-title">2-Year Warranty</div>
+        <div class="feat-desc">Full parts and labour warranty with priority support across UAE and GCC.</div>
       </div>
     </div>
   </div>
@@ -312,12 +293,12 @@
 <section class="cta-sec">
   <div class="wrap">
     <div class="r">
-      <p style="font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem">Commission your ART Pod</p>
-      <h2 class="cta-title">Design is Personal. Let's Make It Yours.</h2>
-      <p class="cta-sub">Each ART Pod can be configured to your space's palette. Speak to our design team for a custom colour and finish consultation.</p>
+      <p style="font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem">Ready to order?</p>
+      <h2 class="cta-title">Let's Find the Right VRT for Your Space</h2>
+      <p class="cta-sub">Our team will help you choose the ideal configuration and arrange a free on-site assessment across Dubai and UAE.</p>
       <div class="cta-btns">
-        <a href="contact.html" class="btn-red">Start Your Design →</a>
-        <a href="features.html" class="btn-o">Explore Features</a>
+        <a href="../pages/contact.html" class="btn-red">Get a Quote →</a>
+        <a href="../pages/features.html" class="btn-o">Explore Features</a>
       </div>
     </div>
   </div>
@@ -332,7 +313,7 @@
       </div>
       <p class="foot-copy">&copy; 2026 SonicHive. Premium Acoustic Pods, Dubai UAE.</p>
       <div class="foot-links">
-        <a href="contact.html">Contact</a>
+        <a href="../pages/contact.html">Contact</a>
       </div>
     </div>
   </div>
@@ -356,6 +337,6 @@ document.querySelectorAll('.r').forEach(el => obs.observe(el));
   document.addEventListener('click', function(e){ if(!dd.contains(e.target)) dd.classList.remove('open'); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') dd.classList.remove('open'); });
 })();
-</script><script src="popup.js?v=3"></script>
+</script><script src="../popup.js?v=3"></script>
 </body>
 </html>
