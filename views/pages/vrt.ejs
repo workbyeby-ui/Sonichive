@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px;--gold:#B8860B;--gold-d:rgba(184,134,11,.08);--gold-b:rgba(184,134,11,.25)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -64,6 +64,7 @@
     .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
     .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
     .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
+    .mc-vr:hover{background:rgba(37,99,235,.05)}.mc-vr:hover::after{border-color:rgba(37,99,235,.2)}.mc-vr .mc-badge{background:rgba(37,99,235,.1);color:#60A5FA;border:1px solid rgba(37,99,235,.22)}.mc-vr .mc-link{color:#60A5FA}
     .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
     .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
     .mf-link:hover{color:rgba(0,0,0,.75)}
@@ -139,6 +140,21 @@
     .foot-links a{font-size:.78rem;color:var(--muted);transition:color .2s}
     .foot-links a:hover{color:var(--text)}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+
+    /* VRT PLUS SECTION */
+    .plus-section{padding:0 0 7rem}
+    .plus-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;display:flex;align-items:center;justify-content:center;gap:.6rem}
+    .plus-label::before,.plus-label::after{content:'';flex:1;max-width:40px;height:2px;background:var(--gold);border-radius:2px}
+    .plus-card{background:#FFF;border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .25s,transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+    .plus-card:hover{border-color:var(--gold-b);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.09)}
+    .plus-card:hover .sc-cta{background:var(--gold);color:#FFF;border-color:var(--gold)}
+    .plus-cap{display:inline-flex;align-items:center;gap:.35rem;background:var(--gold-d);border:1px solid var(--gold-b);border-radius:100px;padding:.25rem .75rem;font-size:.68rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:#9A6F08;margin-bottom:.85rem;width:fit-content}
+    .plus-banner{background:linear-gradient(90deg,rgba(184,134,11,.07),rgba(184,134,11,.03));border:1px solid rgba(184,134,11,.2);border-radius:16px;padding:1.25rem 1.75rem;display:flex;align-items:center;gap:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+    .pb-icon{width:44px;height:44px;border-radius:12px;background:rgba(184,134,11,.12);border:1px solid rgba(184,134,11,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .pb-text strong{font-family:var(--fh);font-size:1rem;font-weight:400;color:var(--text);display:block;margin-bottom:.2rem}
+    .pb-text span{font-size:.85rem;color:var(--muted);line-height:1.5}
+    .pb-btn{margin-left:auto;background:var(--gold);color:#FFF;border-radius:100px;padding:.55rem 1.25rem;font-size:.8rem;font-weight:400;white-space:nowrap;flex-shrink:0;text-decoration:none;transition:opacity .2s}
+    .pb-btn:hover{opacity:.85}
     </style>
 </head>
 <body>
@@ -236,6 +252,92 @@
             <div class="sc-spec"><strong>36dB</strong><span>Reduction</span></div>
             <div class="sc-spec"><strong>2800mm</strong><span>Width</span></div>
             <div class="sc-spec"><strong>520kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- VRT PLUS SECTION -->
+<section class="plus-section">
+  <div class="wrap">
+    <div class="sec-header r" style="margin-bottom:3rem">
+      <div class="plus-label">Also in this Series</div>
+      <h2 class="s-title">VRT Plus — Premium Upgrade</h2>
+      <p class="s-sub">The same trusted VRT form, elevated. Superior acoustic insulation, premium finishes, and enhanced ventilation for the most discerning workspaces.</p>
+    </div>
+
+    <div class="plus-banner r">
+      <div class="pb-icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.4 4.86 5.37.78-3.88 3.78.92 5.34L11 14.26l-4.81 2.5.92-5.34L3.23 7.64l5.37-.78L11 2z" stroke="#B8860B" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="pb-text">
+        <strong>What's new in VRT Plus?</strong>
+        <span>Thicker acoustic panels (+4dB), brushed aluminium trim, dual-zone lighting, and an extended 3-year warranty across all sizes.</span>
+      </div>
+      <a href="vrt-plus.html" class="pb-btn">View Full VRT Plus Range →</a>
+    </div>
+
+    <div class="size-grid">
+
+      <a href="vrt-plus-solo.html" class="plus-card r d1">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ S 1.png" alt="VRT Plus Solo" style="width:100%;height:100%;object-fit:contain"></div>
+        <div class="sc-body">
+          <div class="plus-cap">1 Person</div>
+          <div class="sc-name">VRT Plus Solo</div>
+          <div class="sc-desc">Elevated single-occupant pod with enhanced privacy glass and premium interior finish.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>36dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>900mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>160kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vrt-plus-duo.html" class="plus-card r d2">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ M 1.png" alt="VRT Plus Duo" style="width:100%;height:100%;object-fit:contain"></div>
+        <div class="sc-body">
+          <div class="plus-cap">2 Persons</div>
+          <div class="sc-name">VRT Plus Duo</div>
+          <div class="sc-desc">Premium two-person pod with dual-zone climate control and upgraded sound masking.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>37dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>1400mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>240kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vrt-plus-quartet.html" class="plus-card r d3">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ ML 1.png" alt="VRT Plus Quartet" style="width:100%;height:100%;object-fit:contain"></div>
+        <div class="sc-body">
+          <div class="plus-cap">4 Persons</div>
+          <div class="sc-name">VRT Plus Quartet</div>
+          <div class="sc-desc">Executive meeting room performance in a pod — with 39dB isolation and premium seating options.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>39dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>2000mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>410kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vrt-plus-hexa.html" class="plus-card r d4">
+        <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ L 1.png" alt="VRT Plus Hexa" style="width:100%;height:100%;object-fit:contain"></div>
+        <div class="sc-body">
+          <div class="plus-cap">6 Persons</div>
+          <div class="sc-name">VRT Plus Hexa</div>
+          <div class="sc-desc">Board-room grade silence for six. The highest-performing acoustic pod in the SonicHive lineup.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>41dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>2800mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>560kg</strong><span>Weight</span></div>
           </div>
           <span class="sc-cta">View Specifications →</span>
         </div>

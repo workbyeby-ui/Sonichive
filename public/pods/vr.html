@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VR Series — SonicHive Acoustic Pods | Dubai</title>
+  <meta name="description" content="SonicHive VR Series — a distinct acoustic pod series in S, M, L and XL sizes with 15+ colour combinations. Dubai UAE.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--blue:#2563EB;--blue-d:rgba(37,99,235,.07);--blue-b:rgba(37,99,235,.22);--red:#D42020;--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{word-spacing:0.15em;background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+    .r{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .75s cubic-bezier(.22,1,.36,1)}
+    .r.on{opacity:1;transform:none}
+    .d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,250,250,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em}
+    .logo-t em{color:var(--red);font-style:normal}
+    .nav-links{display:flex;gap:1.75rem;align-items:center}
+    .nav-links a{font-size:.875rem;color:var(--muted);font-weight:500;transition:color .2s}
+    .nav-links a:hover,.nav-links a.cur{color:var(--text)}
+    .nav-cta{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);white-space:nowrap;display:inline-block}
+    .nav-cta:hover{transform:scale(1.04);box-shadow:0 0 24px rgba(212,32,32,.4)}
+    .nav-dd{position:static;display:flex;align-items:center}
+    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
+    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:var(--text)}
+    .nd-chev{transition:transform .25s ease;flex-shrink:0}
+    .nav-dd.open .nd-chev{transform:rotate(180deg)}
+    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
+    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
+    .mega-bg{position:absolute;inset:0;background:transparent}
+    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
+    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
+    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
+    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
+    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
+    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
+    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
+    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
+    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
+    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
+    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
+    .mc:hover .mc-link{opacity:1;transform:none}
+    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-link{color:#EF5050}
+    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(99,102,241,.2)}.mc-art .mc-link{color:#A5B4FC}
+    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(20,184,166,.2)}.mc-home .mc-link{color:#2DD4BF}
+    .mc-vr:hover{background:rgba(37,99,235,.05)}.mc-vr:hover::after{border-color:rgba(37,99,235,.2)}.mc-vr .mc-link{color:#60A5FA}
+    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
+    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
+    .mf-link:hover{color:rgba(0,0,0,.75)}
+    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
+    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+
+    /* HERO */
+    .series-hero{padding:8rem 2rem 5.5rem;background:linear-gradient(140deg,#030912 0%,#0A1628 55%,#051034 100%);position:relative;overflow:hidden}
+    .series-hero::before{content:'';position:absolute;top:-200px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,.15),transparent 65%);pointer-events:none}
+    .series-hero::after{content:'';position:absolute;bottom:-180px;left:-60px;width:450px;height:450px;background:radial-gradient(circle,rgba(37,99,235,.08),transparent 65%);pointer-events:none}
+    .hero-in{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+    .series-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);border-radius:100px;padding:.35rem 1rem;font-size:.7rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:#93C5FD;margin-bottom:1.5rem}
+    .s-dot{width:6px;height:6px;border-radius:50%;background:#93C5FD;animation:blink 2s infinite;flex-shrink:0}
+    .series-name{font-family:var(--fh);font-size:clamp(3.5rem,8vw,7rem);font-weight:400;letter-spacing:-.04em;color:#FFF;line-height:.92;margin-bottom:1.2rem}
+    .series-tagline{color:rgba(255,255,255,.62);font-size:1.08rem;line-height:1.75;max-width:520px;margin-bottom:3rem}
+    .series-badges{display:flex;gap:2rem;flex-wrap:wrap}
+    .s-badge{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.45);font-size:.82rem}
+
+    /* SIZES */
+    .size-section{padding:6rem 0 7rem}
+    .sec-header{text-align:center;margin-bottom:4rem}
+    .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem;display:flex;align-items:center;justify-content:center;gap:.6rem}
+    .s-label::before,.s-label::after{content:'';flex:1;max-width:40px;height:2px;background:var(--blue);border-radius:2px}
+    .s-title{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.75rem);font-weight:400;letter-spacing:-.025em;margin-bottom:.75rem}
+    .s-sub{color:var(--muted);font-size:1rem;line-height:1.7}
+    .size-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    @media(max-width:480px){.size-grid{grid-template-columns:1fr}}
+    .size-card{background:#FFF;border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:border-color .25s,transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+    .size-card:hover{border-color:var(--blue-b);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.09)}
+    .sc-img{height:220px;background:var(--bg2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+    .sc-img img{height:100%;width:100%;object-fit:contain;padding:.75rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+    .size-card:hover .sc-img img{transform:scale(1.05) translateY(-4px)}
+    .sc-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+    .sc-cap{display:inline-flex;align-items:center;gap:.35rem;background:var(--blue-d);border:1px solid var(--blue-b);border-radius:100px;padding:.25rem .75rem;font-size:.68rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.85rem;width:fit-content}
+    .sc-name{font-family:var(--fh);font-size:1.45rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.35rem}
+    .sc-desc{font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.25rem;flex:1}
+    .sc-specs{display:flex;gap:0;margin-bottom:1.4rem;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .sc-spec{flex:1;text-align:center;padding:.65rem .5rem;border-right:1px solid var(--border)}
+    .sc-spec:last-child{border-right:none}
+    .sc-spec strong{font-family:var(--fh);font-size:1rem;font-weight:400;color:var(--text);display:block;line-height:1.1}
+    .sc-spec span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:2px;display:block}
+    .sc-cta{display:block;text-align:center;background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.7rem 1.5rem;font-size:.85rem;font-weight:400;color:var(--text);transition:all .2s}
+    .size-card:hover .sc-cta{background:var(--blue);color:#FFF;border-color:var(--blue)}
+
+    /* COLOUR */
+    .colour-sec{padding:5rem 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .colour-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    @media(max-width:768px){.colour-grid{grid-template-columns:1fr}}
+    .colour-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+    .colour-label::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+    .colour-title{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;letter-spacing:-.03em;margin-bottom:1.2rem}
+    .colour-desc{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:2rem}
+    .sw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+    .sw-item{display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:var(--muted)}
+    .sw-dot{width:18px;height:18px;border-radius:50%;flex-shrink:0;border:1px solid rgba(0,0,0,.1)}
+    .colour-img{border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#EEF2FF,var(--bg2));display:flex;align-items:center;justify-content:center;min-height:300px;padding:1.5rem}
+    .colour-img img{max-height:260px;width:auto;object-fit:contain;filter:drop-shadow(0 20px 60px rgba(0,0,0,.18))}
+
+    /* FEATURES */
+    .feat-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0}
+    .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem}
+    @media(max-width:768px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+    .feat-item{text-align:center}
+    .feat-icon{width:50px;height:50px;border-radius:14px;background:var(--blue-d);border:1px solid var(--blue-b);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+    .feat-title{font-family:var(--fh);font-size:1rem;font-weight:400;margin-bottom:.4rem}
+    .feat-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
+
+    /* CTA */
+    .cta-sec{padding:6rem 0;text-align:center}
+    .cta-title{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.03em;margin-bottom:1rem}
+    .cta-sub{color:var(--muted);font-size:1rem;margin-bottom:2.5rem;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.7}
+    .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-blue{background:var(--blue);color:#FFF;border-radius:100px;padding:.9rem 2.5rem;font-size:.975rem;font-weight:400;display:inline-block;transition:transform .2s,box-shadow .2s;font-family:var(--fb)}
+    .btn-blue:hover{transform:scale(1.04);box-shadow:0 0 32px rgba(37,99,235,.45)}
+    .btn-o{border:1px solid var(--border);color:var(--text);border-radius:100px;padding:.9rem 2.5rem;font-size:.975rem;font-weight:500;display:inline-block;transition:all .2s;font-family:var(--fb)}
+    .btn-o:hover{border-color:var(--blue-b);color:var(--blue)}
+
+    /* FOOTER */
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 0}
+    .foot-in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .foot-logo{display:flex;align-items:center;gap:8px;font-family:var(--fh);font-weight:400;letter-spacing:-.02em;font-size:1.1rem}
+    .foot-logo em{color:var(--red);font-style:normal}
+    .foot-copy{font-size:.78rem;color:var(--muted)}
+    .foot-links{display:flex;gap:1.5rem}
+    .foot-links a{font-size:.78rem;color:var(--muted);transition:color .2s}
+    .foot-links a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-i">
+    <a href="../index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#FAFAFA"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".55"/></svg>
+      <span class="logo-t">Sonic<em>Hive</em></span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-dd">
+        <button class="nd-toggle cur">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.png" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="vr.html" class="mc mc-vr"><div class="mc-img-w"><img src="VR series/VR S/VR-3D-black0000.png" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series — S, M, L and XL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.png" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="../images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="../pages/products.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/></svg>All Products</a><div class="mf-sep"></div><a href="../pages/rental-pods.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rental Pods</a><a href="../pages/contact.html" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div>
+      </div>
+      <a href="../pages/use-cases.html">Use Cases</a>
+      <a href="../pages/features.html">Features</a>
+      <a href="../pages/about.html">About</a>
+      <a href="../pages/contact.html">Contact</a>
+    </div>
+    <a href="../pages/contact.html" class="nav-cta">Get a Quote →</a>
+  </div>
+</nav>
+
+<section class="series-hero">
+  <div class="hero-in">
+    <div class="series-tag"><span class="s-dot"></span>VR Series</div>
+    <h1 class="series-name">VR.</h1>
+    <p class="series-tagline">A distinct acoustic pod series engineered for flexibility. Available in S, M, L and XL — with over 15 colour combinations to match any workspace.</p>
+    <div class="series-badges">
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 8l2 2 4-4" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Up to 37dB Reduction
+      </div>
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="1.5" width="5" height="5" rx="1" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><rect x="9.5" y="1.5" width="5" height="5" rx="1" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><rect x="1.5" y="9.5" width="5" height="5" rx="1" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><rect x="9.5" y="9.5" width="5" height="5" rx="1" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/></svg>
+        S · M · L · XL Sizes
+      </div>
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><circle cx="8" cy="8" r="6.5" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-dasharray="2 2"/></svg>
+        15+ Colour Combinations
+      </div>
+      <div class="s-badge">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l1.9 3.86 4.26.62-3.08 3 .73 4.24L8 11.1l-3.81 2.02.73-4.24-3.08-3 4.26-.62L8 1.5z" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        2-Year Warranty
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="size-section">
+  <div class="wrap">
+    <div class="sec-header r">
+      <div class="s-label">Choose Your Size</div>
+      <h2 class="s-title">VR — Four Sizes for Every Workspace</h2>
+      <p class="s-sub">From single-person focus pods to six-person conference rooms. Each VR size shares the same modular design language.</p>
+    </div>
+    <div class="size-grid">
+
+      <a href="vr-s.html" class="size-card r d1">
+        <div class="sc-img"><img src="VR series/VR S/VR-3D-black0000.png" alt="VR S"></div>
+        <div class="sc-body">
+          <div class="sc-cap">1 Person</div>
+          <div class="sc-name">VR S</div>
+          <div class="sc-desc">Compact single-person focus pod. Ideal for private calls, confidential conversations and deep work sessions.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>30dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>900mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>140kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vr-m.html" class="size-card r d2">
+        <div class="sc-img"><img src="VR series/VR M/VR-3D-black0010.png" alt="VR M"></div>
+        <div class="sc-body">
+          <div class="sc-cap">2–3 Persons</div>
+          <div class="sc-name">VR M</div>
+          <div class="sc-desc">Mid-size pod for small team meetings, one-on-ones, and collaborative sessions with excellent acoustic isolation.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>33dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>1400mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>210kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vr-l.html" class="size-card r d3">
+        <div class="sc-img"><img src="VR series/VR L/VR-3D-black0025.png" alt="VR L"></div>
+        <div class="sc-body">
+          <div class="sc-cap">4 Persons</div>
+          <div class="sc-name">VR L</div>
+          <div class="sc-desc">Four-person meeting pod — perfect for team huddles, project standups, and focused group work sessions.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>35dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>2000mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>360kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+      <a href="vr-xl.html" class="size-card r d4">
+        <div class="sc-img"><img src="VR series/VR XL/VR-3D-black0030.png" alt="VR XL"></div>
+        <div class="sc-body">
+          <div class="sc-cap">6 Persons</div>
+          <div class="sc-name">VR XL</div>
+          <div class="sc-desc">Full-size conference pod for larger teams, board discussions, and executive sessions requiring total privacy.</div>
+          <div class="sc-specs">
+            <div class="sc-spec"><strong>37dB</strong><span>Reduction</span></div>
+            <div class="sc-spec"><strong>2800mm</strong><span>Width</span></div>
+            <div class="sc-spec"><strong>500kg</strong><span>Weight</span></div>
+          </div>
+          <span class="sc-cta">View Specifications →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="colour-sec">
+  <div class="wrap">
+    <div class="colour-grid">
+      <div class="r">
+        <div class="colour-label">Colour Customisation</div>
+        <h2 class="colour-title">15+ Colour Combinations</h2>
+        <p class="colour-desc">Every VR pod can be specified in your choice of body colour and accent panel colour — creating a look that perfectly fits your brand and workspace aesthetic.</p>
+        <div class="sw-grid">
+          <div class="sw-item"><div class="sw-dot" style="background:#1A1A1A"></div>Black</div>
+          <div class="sw-item"><div class="sw-dot" style="background:#6B7280"></div>Gray</div>
+          <div class="sw-item"><div class="sw-dot" style="background:#FFFFFF;border:1px solid rgba(0,0,0,.15)"></div>White</div>
+          <div class="sw-item"><div class="sw-dot" style="background:#16A34A"></div>Green</div>
+          <div class="sw-item"><div class="sw-dot" style="background:#EA580C"></div>Orange</div>
+          <div class="sw-item"><div class="sw-dot" style="background:#2563EB"></div>Blue Panel</div>
+          <div class="sw-item"><div class="sw-dot" style="background:#EAB308"></div>Yellow Panel</div>
+        </div>
+      </div>
+      <div class="colour-img r d1">
+        <img src="VR series/VR S/VR-3D-Orange-Blue0000.png" alt="VR colour variant — Orange body with Blue panel" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feat-strip">
+  <div class="wrap">
+    <div class="feat-grid">
+      <div class="feat-item r">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3C7.13 3 4 6.13 4 10s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7z" stroke="#2563EB" stroke-width="1.5"/><path d="M8 10h6M11 7v6" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="feat-title">Multi-Layer Acoustics</div>
+        <div class="feat-desc">Engineered acoustic panels with STC-rated glazing deliver up to 37dB noise reduction.</div>
+      </div>
+      <div class="feat-item r d1">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="1.5" stroke="#2563EB" stroke-width="1.5"/><rect x="12" y="2" width="8" height="8" rx="1.5" stroke="#2563EB" stroke-width="1.5"/><rect x="2" y="12" width="8" height="8" rx="1.5" stroke="#2563EB" stroke-width="1.5"/><rect x="12" y="12" width="8" height="8" rx="1.5" stroke="#2563EB" stroke-width="1.5"/></svg></div>
+        <div class="feat-title">Modular Design</div>
+        <div class="feat-desc">Four sizes sharing the same design language and components. Easy to relocate or expand your fleet.</div>
+      </div>
+      <div class="feat-item r d2">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" stroke="#2563EB" stroke-width="1.5"/><circle cx="11" cy="11" r="7.5" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="2.5 2.5"/></svg></div>
+        <div class="feat-title">Full Colour Choice</div>
+        <div class="feat-desc">5 body colours with Blue or Yellow accent panels. Specify the exact look that fits your brand.</div>
+      </div>
+      <div class="feat-item r d3">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M4 7h14M4 15h10" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="feat-title">Smart Ventilation</div>
+        <div class="feat-desc">Whisper-quiet HVAC maintains fresh air at under 35dBA — comfort without compromise.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="wrap">
+    <div class="r">
+      <p style="font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem">Ready to order?</p>
+      <h2 class="cta-title">Let's Find the Right VR for Your Space</h2>
+      <p class="cta-sub">Our team will help you choose the ideal size and colour combination, and arrange a free on-site assessment across Dubai and UAE.</p>
+      <div class="cta-btns">
+        <a href="../pages/contact.html" class="btn-blue">Get a Quote →</a>
+        <a href="../pages/features.html" class="btn-o">Explore Features</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="foot-logo">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#FAFAFA"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".55"/></svg>
+        Sonic<em>Hive</em>
+      </div>
+      <p class="foot-copy">&copy; 2026 SonicHive. Premium Acoustic Pods, Dubai UAE.</p>
+      <div class="foot-links">
+        <a href="../pages/contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on') }), {threshold:.1});
+document.querySelectorAll('.r').forEach(el => obs.observe(el));
+</script>
+<script>
+(function(){
+  var dd=document.querySelector('.nav-dd');
+  var btn=document.querySelector('.nd-toggle');
+  if(!dd||!btn)return;
+  btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target))dd.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
+})();
+</script><script src="../popup.js?v=3"></script>
+</body>
+</html>
