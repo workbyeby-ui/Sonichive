@@ -4,115 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get a Quote — SonicHive Dubai</title>
+  <meta name="description" content="Request a free quote for SonicHive acoustic office pods in Dubai, UAE. Soundproof solutions for any workspace — installed in under 2 hours.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--gold:#D42020;--gold-d:rgba(212,32,32,.07);--gold-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    :root{--bg:#FFFFFF;--bg-gray:#F5F5F7;--bg-dark:#000000;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#1D1D1F;--muted:#6E6E73;--border:rgba(0,0,0,.08);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{word-spacing:0.15em;background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
     a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
-    .r{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .r{opacity:0;transform:translateY(32px);transition:opacity .9s ease,transform .9s cubic-bezier(.22,1,.36,1)}
     .r.on{opacity:1;transform:none}
-    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+    .d1{transition-delay:.08s}.d2{transition-delay:.17s}.d3{transition-delay:.26s}
+    .s-label{font-size:.65rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
 
-    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,250,250,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:transparent;border-bottom:1px solid transparent;transition:background .4s,border-color .4s,box-shadow .4s}
+    #nav.s{background:rgba(250,250,250,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:rgba(0,0,0,.09);box-shadow:0 1px 0 rgba(0,0,0,.06)}
     .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
     .logo{display:flex;align-items:center;gap:10px}
-    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em}
-    .logo-t em{color:var(--gold);font-style:normal}
+    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em;color:#FFF;transition:color .4s}
+    #nav.s .logo-t{color:var(--text)}
+    .logo-t em{color:var(--red);font-style:normal}
     .nav-links{display:flex;gap:1.75rem;align-items:center}
-    .nav-links a{font-size:.875rem;color:var(--muted);font-weight:500;transition:color .2s}
-    .nav-links a:hover,.nav-links a.cur{color:var(--text)}
-    .nav-cta{background:var(--gold);color:#FFFFFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;font-family:var(--fb)}
+    .nav-links a{font-size:.875rem;color:rgba(255,255,255,.7);font-weight:400;transition:color .3s;position:relative;padding-bottom:2px}
+    #nav.s .nav-links a{color:var(--muted)}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--red);transition:width .25s ease}
+    .nav-links a:hover{color:#FFF}
+    #nav.s .nav-links a:hover{color:var(--text)}
+    .nav-links a:hover::after,.nav-links a.cur::after{width:100%}
+    .nav-cta{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);white-space:nowrap;display:inline-block}
+    .nav-cta:hover{transform:scale(1.04);box-shadow:0 0 24px rgba(212,32,32,.4)}
 
     /* HERO */
-    .page-hero{padding:9rem 2rem 5rem;background:var(--bg2);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
-    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(212,32,32,.05),transparent 60%)}
-    .ph-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative}
-    .ph-left .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
-    .ph-left h1{font-family:var(--fh);font-size:clamp(2.5rem,5vw,4rem);font-weight:400;letter-spacing:-.035em;line-height:1;margin-bottom:1.25rem}
-    .ph-left p{color:var(--muted);font-size:1.05rem;line-height:1.75;margin-bottom:2rem}
-    .contact-pills{display:flex;flex-direction:column;gap:.85rem}
-    .c-pill{display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.2rem;transition:border-color .2s}
-    .c-pill:hover{border-color:var(--gold-b)}
-    .c-pill-ic{width:38px;height:38px;border-radius:10px;background:var(--gold-d);border:1px solid var(--gold-b);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-    .c-pill-t{font-size:.78rem;color:var(--muted);margin-bottom:.15rem}
-    .c-pill-v{font-size:.9rem;font-weight:400;color:var(--text)}
-    .c-pill-v a{color:var(--gold)}
+    .contact-hero{background:#000;padding:7rem 0 6rem;position:relative;overflow:hidden}
+    .hero-glow{position:absolute;top:-10%;right:30%;width:900px;height:700px;background:radial-gradient(ellipse,rgba(212,32,32,.11) 0%,transparent 60%);pointer-events:none}
+    .ch-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    .ch-left{padding-top:1.5rem}
+    .ch-eyebrow{font-size:.62rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:2rem;display:flex;align-items:center;gap:.6rem}
+    .ch-eyebrow::before{content:'';width:20px;height:1px;background:var(--red);flex-shrink:0}
+    .ch-left h1{font-size:clamp(3rem,5.5vw,5rem);font-weight:400;letter-spacing:-.04em;line-height:.96;color:#FFF;margin-bottom:1.5rem}
+    .ch-left h1 em{color:var(--red);font-style:normal}
+    .ch-sub{color:rgba(255,255,255,.44);font-size:1.05rem;line-height:1.8;max-width:440px;margin-bottom:2.5rem}
+    .contact-tiles{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    .c-tile{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1.25rem 1.5rem;transition:background .25s,border-color .25s,transform .25s;cursor:pointer;display:flex;align-items:center;gap:.9rem;text-decoration:none}
+    .c-tile:hover{background:rgba(255,255,255,.09);border-color:rgba(212,32,32,.35);transform:translateY(-2px)}
+    .c-tile.c-wa{border-color:rgba(37,211,102,.15)}
+    .c-tile.c-wa:hover{background:rgba(37,211,102,.07);border-color:rgba(37,211,102,.4)}
+    .c-tile-ic{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:rgba(255,255,255,.7)}
+    .c-tile.c-wa .c-tile-ic{background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.25);color:#25D366}
+    .c-tile-label{font-size:.68rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.2rem}
+    .c-tile-val{font-size:.9rem;font-weight:400;color:rgba(255,255,255,.8);line-height:1.3}
+    .c-tile.c-wa .c-tile-val{color:#25D366}
 
     /* FORM CARD */
-    .form-card{background:#FFFFFF;box-shadow:0 4px 24px rgba(0,0,0,.08);border:1px solid var(--border);border-radius:24px;padding:2.5rem;position:relative;overflow:hidden}
-    .form-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(212,32,32,.06),transparent 70%);pointer-events:none}
-    .form-card h2{font-family:var(--fh);font-size:1.4rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.4rem}
-    .form-card .sub{font-size:.875rem;color:var(--muted);margin-bottom:2rem;line-height:1.6}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    .form-grid input,.form-grid select,.form-grid textarea{background:#FFFFFF;border:1px solid var(--border);border-radius:10px;padding:.825rem 1.1rem;font-size:.875rem;color:var(--text);font-family:var(--fb);outline:none;transition:border-color .2s,background .2s;width:100%}
-    .form-grid input::placeholder,.form-grid textarea::placeholder{color:var(--muted)}
-    .form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{border-color:var(--gold-b);background:rgba(212,32,32,.03)}
-    .form-grid select option{background:#FFFFFF;color:var(--text)}
-    .form-grid textarea{resize:vertical;min-height:100px}
+    .form-card{background:#FFF;border-radius:28px;padding:2.75rem;box-shadow:0 40px 100px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.05);position:relative;overflow:hidden}
+    .form-card::before{content:'';position:absolute;top:-80px;right:-80px;width:250px;height:250px;background:radial-gradient(circle,rgba(212,32,32,.05),transparent 70%);pointer-events:none}
+    .form-card-hd{margin-bottom:2rem}
+    .form-card-hd h2{font-size:1.45rem;font-weight:400;letter-spacing:-.03em;color:var(--text);margin-bottom:.4rem}
+    .form-card-hd p{font-size:.875rem;color:var(--muted);line-height:1.6}
+    .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .fl{position:relative}
+    .fl input,.fl select,.fl textarea{width:100%;background:#FAFAFA;border:1.5px solid rgba(0,0,0,.1);border-radius:12px;padding:1.45rem 1.1rem .55rem;height:58px;font-size:.9rem;color:var(--text);font-family:var(--fb);outline:none;transition:border-color .2s,box-shadow .2s,background .2s;-webkit-appearance:none}
+    .fl textarea{height:auto;min-height:110px;padding:1.45rem 1.1rem .75rem;resize:vertical}
+    .fl label{position:absolute;left:1.1rem;top:50%;transform:translateY(-50%);font-size:.875rem;color:var(--muted);pointer-events:none;transition:top .18s ease,font-size .18s ease,color .18s ease;line-height:1}
+    .fl textarea~label{top:1.5rem;transform:none}
+    .fl input:focus,.fl select:focus,.fl textarea:focus{border-color:var(--red);background:#FFF;box-shadow:0 0 0 3px rgba(212,32,32,.09)}
+    .fl input:focus~label,.fl input:not(:placeholder-shown)~label,.fl select:focus~label,.fl select.has-val~label{top:.55rem;transform:none;font-size:.6rem;letter-spacing:.06em;color:var(--red)}
+    .fl textarea:focus~label{top:.55rem;font-size:.6rem;letter-spacing:.06em;color:var(--red)}
+    .fl select option{background:#FFF;color:var(--text)}
     .full{grid-column:span 2}
-    .submit-btn{width:100%;grid-column:span 2;background:var(--gold);color:#FFFFFF;border:none;border-radius:10px;padding:1rem;font-size:.975rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);margin-top:.5rem;letter-spacing:.02em}
-    .submit-btn:hover{transform:scale(1.02);box-shadow:0 0 28px rgba(232,160,48,.45)}
-    .form-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:1rem;line-height:1.5}
+    .req{color:var(--red);margin-left:.15rem}
+    .submit-btn{width:100%;grid-column:span 2;background:var(--red);color:#FFF;border:none;border-radius:100px;padding:1.1rem 2rem;font-size:1rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);margin-top:.5rem;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:.5rem}
+    .submit-btn:hover{transform:scale(1.02);box-shadow:0 0 36px rgba(212,32,32,.4)}
+    .submit-btn:disabled{opacity:.65;cursor:not-allowed;transform:none;box-shadow:none}
+    .form-note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:1rem;line-height:1.6;display:flex;align-items:center;justify-content:center;gap:.4rem}
+    #form-error{color:var(--red);font-size:.8rem;padding:.4rem 0;grid-column:span 2;display:none}
+
+    /* TRUST STRIP */
+    .trust-strip{background:var(--bg-gray);border-top:1px solid rgba(0,0,0,.06)}
+    .trust-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(4,1fr)}
+    .trust-item{text-align:center;padding:2.5rem 1.5rem;position:relative}
+    .trust-item+.trust-item::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);height:36px;width:1px;background:rgba(0,0,0,.08)}
+    .trust-n{font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;color:var(--text);letter-spacing:-.04em;line-height:1;margin-bottom:.4rem}
+    .trust-l{font-size:.72rem;color:var(--muted);letter-spacing:.04em}
 
     /* LOCATIONS */
-    #locations{padding:7rem 0;background:var(--bg2)}
-    .loc-head{margin-bottom:4rem}
-    .loc-head .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
-    .loc-head h2{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;letter-spacing:-.025em}
-    .loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-    .loc-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2rem;transition:border-color .3s,transform .3s}
-    .loc-card:hover{border-color:var(--gold-b);transform:translateY(-4px)}
-    .loc-flag{font-size:2rem;margin-bottom:1rem}
-    .loc-country{font-family:var(--fh);font-size:1.15rem;font-weight:400;margin-bottom:.5rem}
-    .loc-city{font-size:.875rem;color:var(--gold);font-weight:400;margin-bottom:.75rem}
-    .loc-detail{font-size:.875rem;color:var(--muted);line-height:1.7}
-    .loc-detail a{color:var(--gold)}
-    .loc-card.hq{border-color:var(--gold-b);background:var(--gold-d)}
-    .loc-hq-badge{font-size:.65rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:var(--gold-d);border:1px solid var(--gold-b);border-radius:100px;padding:.2rem .65rem;display:inline-block;margin-bottom:.75rem}
+    #locations{padding:8rem 0;background:#FFF}
+    .loc-head{margin-bottom:4.5rem}
+    .loc-head h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.03em;color:var(--text);margin-bottom:0}
+    .loc-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .loc-card{padding:2.5rem;border-top:1px solid rgba(0,0,0,.08);transition:background .3s;position:relative}
+    .loc-card:hover{background:var(--bg-gray)}
+    .loc-card:not(:nth-child(3n)){border-right:1px solid rgba(0,0,0,.08)}
+    .loc-hq-badge{font-size:.58rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.2rem .65rem;display:inline-block;margin-bottom:1rem}
+    .loc-flag{font-size:1.5rem;margin-bottom:.9rem;line-height:1}
+    .loc-country{font-size:1.05rem;font-weight:400;color:var(--text);margin-bottom:.3rem;letter-spacing:-.01em}
+    .loc-city{font-size:.8rem;color:var(--red);font-weight:400;margin-bottom:.85rem;letter-spacing:.02em}
+    .loc-detail{font-size:.84rem;color:var(--muted);line-height:1.75}
+    .loc-detail a{color:var(--red)}
 
     /* FAQ */
-    #faq{padding:7rem 0}
-    .faq-head{margin-bottom:4rem}
-    .faq-head .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
-    .faq-head h2{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;letter-spacing:-.025em}
-    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:20px;overflow:hidden;border:1px solid var(--border)}
-    .faq-item{background:var(--bg);padding:0;border-bottom:1px solid var(--border);cursor:pointer}
-    .faq-item:last-child,.faq-item:nth-last-child(2){border-bottom:none}
-    .faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.75rem;gap:1rem;font-weight:400;font-size:.95rem;transition:color .2s}
-    .faq-q:hover{color:var(--gold)}
-    .faq-arrow{font-size:1.2rem;color:var(--muted);transition:transform .3s,color .3s;flex-shrink:0}
-    .faq-item.open .faq-arrow{transform:rotate(45deg);color:var(--gold)}
-    .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;font-size:.9rem;color:var(--muted);line-height:1.75;padding:0 1.75rem}
-    .faq-item.open .faq-a{max-height:300px;padding:0 1.75rem 1.5rem}
+    #faq{padding:8rem 0;background:var(--bg-gray)}
+    .faq-head{margin-bottom:4.5rem}
+    .faq-head h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.03em;color:var(--text);margin-bottom:0}
+    .faq-list{border-top:1px solid rgba(0,0,0,.08)}
+    .faq-item{border-bottom:1px solid rgba(0,0,0,.08)}
+    .faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 0;background:none;border:none;font-family:var(--fb);font-size:1rem;font-weight:400;color:var(--text);cursor:pointer;gap:2rem;text-align:left;transition:color .2s}
+    .faq-btn:hover{color:var(--red)}
+    .faq-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .25s,border-color .25s}
+    .faq-icon svg{transition:transform .3s ease}
+    .faq-item.open .faq-btn{color:var(--red)}
+    .faq-item.open .faq-icon{background:var(--red);border-color:var(--red)}
+    .faq-item.open .faq-icon svg{transform:rotate(45deg)}
+    .faq-item.open .faq-icon path{stroke:#FFF}
+    .faq-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1)}
+    .faq-item.open .faq-body{max-height:300px}
+    .faq-ans{padding:0 0 1.75rem;font-size:.9rem;color:var(--muted);line-height:1.85;max-width:780px}
 
     /* FOOTER */
-    footer{background:#0A0A0A;border-top:1px solid var(--border);padding:4.5rem 0 2rem}
+    footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5rem 0 2rem}
     .foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3.5rem}
-    .foot-brand p{color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:1rem;max-width:280px}
+    .foot-brand p{color:rgba(255,255,255,.35);font-size:.9rem;line-height:1.7;margin-top:1rem;max-width:280px}
     .foot-soc{display:flex;gap:.75rem;margin-top:1.5rem}
-    .soc-a{width:36px;height:36px;border-radius:8px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:400;transition:all .2s;color:var(--muted)}
-    .soc-a:hover{background:var(--gold-d);border-color:var(--gold-b);color:var(--gold)}
-    .foot-col h4{font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem}
-    .foot-col a{display:block;color:var(--muted);font-size:.875rem;margin-bottom:.6rem;transition:color .2s}
-    .foot-col a:hover{color:var(--text)}
-    .foot-contact p{color:var(--muted);font-size:.875rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem}
-    .foot-contact a{color:var(--gold);display:inline;margin-bottom:0}
-    .foot-bot{border-top:1px solid var(--border);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-    .foot-bot p{color:var(--muted);font-size:.8rem}
+    .soc-a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.75rem;transition:all .2s;color:rgba(255,255,255,.4)}
+    .soc-a:hover{background:var(--red-d);border-color:var(--red-b);color:var(--red)}
+    .foot-col h4{font-family:var(--fh);font-size:.78rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.25rem;color:rgba(255,255,255,.9)}
+    .foot-col a{display:block;color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;transition:color .2s}
+    .foot-col a:hover{color:#FFF}
+    .foot-contact p{color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem}
+    .foot-contact a{color:var(--red);display:inline;margin-bottom:0}
+    .foot-bot{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .foot-bot p{color:rgba(255,255,255,.25);font-size:.8rem}
     .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
-    .foot-locs span{font-size:.72rem;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:100px;padding:.2rem .7rem}
+    .foot-locs span{font-size:.72rem;color:rgba(255,255,255,.3);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.2rem .7rem}
 
-    @media(max-width:900px){.ph-inner{grid-template-columns:1fr}.loc-grid{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}.foot-g{grid-template-columns:1fr 1fr}}
-    @media(max-width:640px){.nav-links{display:none}.form-grid{grid-template-columns:1fr}.full,.submit-btn{grid-column:span 1}.loc-grid{grid-template-columns:1fr}.foot-g{grid-template-columns:1fr}}
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .ch-inner{grid-template-columns:1fr;gap:3.5rem}
+      .trust-inner{grid-template-columns:repeat(2,1fr)}
+      .trust-item:nth-child(3)::before{display:none}
+      .loc-grid{grid-template-columns:1fr 1fr}
+      .loc-card:nth-child(2n){border-right:none}
+      .loc-card:nth-child(3){border-right:none !important}
+      .foot-g{grid-template-columns:1fr 1fr}
+    }
+
     /* MEGA MENU */
     .nav-dd{position:static;display:flex;align-items:center}
-    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
-    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:var(--text)}
+    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:rgba(255,255,255,.7);font-size:.875rem;font-weight:400;border:none;background:none;font-family:var(--fb);padding:0;transition:color .3s;position:relative;padding-bottom:2px}
+    #nav.s .nd-toggle{color:var(--muted)}
+    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:#FFF}
+    #nav.s .nav-dd.open .nd-toggle,#nav.s .nd-toggle:hover{color:var(--text)}
     .nd-chev{transition:transform .25s ease;flex-shrink:0}
     .nav-dd.open .nd-chev{transform:rotate(180deg)}
     .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
@@ -138,100 +184,213 @@
     .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
     .mc:hover .mc-link{opacity:1;transform:none}
     .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
-    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(184,134,11,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#D4A020;border:1px solid rgba(184,134,11,.25)}.mc-plus .mc-link{color:#D4A020}
-    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(99,102,241,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#A5B4FC;border:1px solid rgba(99,102,241,.22)}.mc-art .mc-link{color:#A5B4FC}
-    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(20,184,166,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#2DD4BF;border:1px solid rgba(20,184,166,.22)}.mc-home .mc-link{color:#2DD4BF}
+    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
+    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
+    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
     .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
     .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
     .mf-link:hover{color:rgba(0,0,0,.75)}
     .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
     .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+    .scroll-prog{position:fixed;top:0;left:0;height:2px;background:var(--red);z-index:1100;width:0;pointer-events:none;transition:width .08s linear}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
   </style>
-</head>
+<style id="mobile-nav-fix">
+.nav-ham{display:none;background:none;border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:7px 9px;cursor:pointer;color:#fff;transition:color .3s,border-color .3s;flex-shrink:0;line-height:0}
+#nav.s .nav-ham{color:#0A0A0F;border-color:rgba(0,0,0,.14)}
+.nav-ham svg{display:block;transition:transform .2s}
+.skip-link{position:absolute;top:-100%;left:1rem;z-index:9999;background:#D42020;color:#fff;padding:.5rem 1.25rem;border-radius:0 0 8px 8px;font-size:.85rem;font-weight:600;text-decoration:none;transition:top .15s;outline:none}
+.skip-link:focus{top:0}
+@media(max-width:768px){
+#nav{background:#fafafa!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-bottom:1px solid rgba(0,0,0,.1)!important;box-shadow:0 1px 8px rgba(0,0,0,.08)!important;z-index:9999!important;overflow:visible!important;transform:translateZ(0)!important;-webkit-transform:translateZ(0)!important}
+#nav .logo-t{color:#0A0A0F!important}
+#nav .nav-ham{display:flex!important;align-items:center;justify-content:center;position:absolute!important;top:50%!important;right:1rem!important;margin-top:-18px!important;z-index:10000!important;background:none!important;color:#0A0A0F!important;border-color:rgba(0,0,0,.2)!important}
+#nav .nav-cta{display:none!important}
+#nav .nav-i{padding:.75rem 1.25rem!important;padding-right:3.5rem!important;overflow:visible!important;max-width:100%!important}
+#nav .nav-links{display:none!important;position:fixed!important;top:0!important;left:0!important;width:100vw!important;height:100vh!important;padding:64px 1.25rem 2rem!important;background:#fafafa!important;flex-direction:column!important;z-index:1001!important;overflow-y:auto!important;overflow-x:hidden!important;box-shadow:none!important;border-radius:0!important;transform:none!important}
+#nav .nav-links.open{display:flex!important}
+#nav .nav-links>a{font-size:1rem!important;color:#0A0A0F!important;padding:.85rem 0!important;border-bottom:1px solid rgba(0,0,0,.08)!important;font-weight:400!important;display:block!important;position:static!important;background:none!important;transform:none!important}
+#nav .nav-links>a::after{display:none!important}
+#nav .nav-dd{width:100%!important;position:static!important;display:block!important;transform:none!important}
+#nav .nd-toggle{font-size:1rem!important;color:#0A0A0F!important;padding:.85rem 0!important;border-bottom:1px solid rgba(0,0,0,.08)!important;width:100%!important;display:flex!important;justify-content:space-between!important;align-items:center!important;background:none!important;border-left:none!important;border-right:none!important;border-top:none!important;border-radius:0!important}
+#nav .mega-wrap{display:none!important;position:static!important;top:auto!important;left:auto!important;transform:none!important;width:100%!important;border-radius:12px!important;box-shadow:none!important;border:1px solid rgba(0,0,0,.09)!important;background:#fff!important;overflow:visible!important;opacity:1!important;margin:.4rem 0 .75rem!important;transition:none!important;z-index:auto!important}
+#nav .mega-wrap::before,#nav .mega-wrap::after{display:none!important}
+#nav .mega-bg{display:none!important}
+#nav .nav-dd.open .mega-wrap{display:block!important}
+#nav .mega-head{padding:.5rem 1rem .35rem!important;display:flex!important;align-items:center!important}
+#nav .mega-eye{font-size:.62rem!important;letter-spacing:.1em!important}
+#nav .mega-divider{margin:0!important}
+#nav .mega-grid{display:grid!important;grid-template-columns:1fr!important;gap:0!important;padding:.2rem .5rem .5rem!important}
+#nav .mc{display:grid!important;grid-template-columns:52px 1fr!important;grid-template-rows:auto auto!important;column-gap:.7rem!important;row-gap:.05rem!important;padding:.6rem .5rem!important;border-radius:8px!important;border-bottom:1px solid rgba(0,0,0,.06)!important;background:transparent!important;align-items:center!important;overflow:visible!important;text-decoration:none!important;transform:none!important}
+#nav .mc:last-child{border-bottom:none!important}
+#nav .mc::before,#nav .mc::after{display:none!important}
+#nav .mc-img-w{grid-column:1!important;grid-row:1/3!important;height:44px!important;width:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0!important;background:rgba(0,0,0,.04)!important;border-radius:8px!important;overflow:hidden!important}
+#nav .mc-img-w img{height:38px!important;width:100%!important;object-fit:contain!important;filter:none!important;transform:none!important;transition:none!important}
+#nav .mc-badge{display:none!important}
+#nav .mc-name{grid-column:2!important;grid-row:1!important;font-size:.9rem!important;margin:0!important;line-height:1.25!important;color:#0A0A0F!important}
+#nav .mc-desc{display:none!important}
+#nav .mc-link{grid-column:2!important;grid-row:2!important;font-size:.7rem!important;opacity:1!important;transform:none!important;margin:0!important;display:block!important}
+.wrap{padding:0 1.25rem!important}
+}
+@media(max-width:480px){.wrap{padding:0 1rem!important}}
+</style><style id="contact-mobile-fix">
+@media(max-width:768px){
+  .contact-hero{padding:5rem 0 3rem}
+  .ch-inner{padding:0 1.25rem;gap:2.5rem}
+  .ch-left{padding-top:0}
+  .ch-sub{font-size:.95rem;margin-bottom:1.75rem}
+  .contact-tiles{grid-template-columns:1fr;gap:.6rem}
+  .c-tile{padding:1rem 1.25rem}
+  .form-card{border-radius:18px;padding:1.75rem 1.5rem}
+  .fgrid{grid-template-columns:1fr;gap:.75rem}
+  .full,.submit-btn,#form-error{grid-column:span 1}
+  .fl input,.fl select{height:54px}
+  .trust-inner{grid-template-columns:repeat(2,1fr)}
+  .loc-grid{grid-template-columns:1fr}
+  .loc-card{border-right:none !important}
+  #locations{padding:5rem 0}
+  #faq{padding:5rem 0}
+  .faq-head{margin-bottom:3rem}
+  .loc-head{margin-bottom:3rem}
+  .foot-g{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .contact-hero{padding:4.5rem 0 2.5rem}
+  .ch-inner{padding:0 1rem;gap:2rem}
+  .ch-left h1{font-size:clamp(2.2rem,9vw,3rem)}
+  .form-card{border-radius:14px;padding:1.5rem 1.25rem}
+  .form-card-hd{margin-bottom:1.5rem}
+  .trust-inner{grid-template-columns:1fr}
+  .trust-item+.trust-item::before{display:none}
+  .contact-tiles{gap:.5rem}
+  .submit-btn{padding:.95rem 1.5rem;font-size:.925rem}
+}
+</style></head>
 <body>
 
 <nav id="nav">
   <div class="nav-i">
     <a href="../index.html" class="logo">
-      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#E8A030"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#FAFAFA"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#E8A030" opacity=".55"/></svg>
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#FAFAFA"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".55"/></svg>
       <span class="logo-t">Sonic<em>Hive</em></span>
     </a>
-    <div class="nav-links">
-      
-      <div class="nav-dd"><button class="nd-toggle">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="../pods/vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.png" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/vrt-plus.html" class="mc mc-plus"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ SM 1.png" alt="VRT Plus" loading="lazy"></div><div class="mc-name">VRT Plus</div><p class="mc-desc">Enhanced HVAC, premium finishes and superior acoustic performance.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.png" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="../images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="products.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/></svg>All Products</a><div class="mf-sep"></div><a href="rental-pods.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rental Pods</a><a href="contact.html" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div></div>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-dd"><button class="nd-toggle">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="../pods/vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.png" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/vr.html" class="mc mc-vr"><div class="mc-img-w"><img src="../pods/VR series/VR S/VR-3D-black0000.png" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series — S, M, L and XL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.png" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="../images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="products.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/></svg>All Products</a><div class="mf-sep"></div><a href="rental-pods.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rental Pods</a><a href="contact.html" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div></div>
       <a href="use-cases.html">Use Cases</a>
-        <a href="features.html">Features</a>
+      <a href="features.html">Features</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="cur">Contact</a>
     </div>
     <a href="contact.html" class="nav-cta">Get a Quote →</a>
+    <button class="nav-ham" id="nav-ham" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links"><svg id="ham-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></button>
   </div>
 </nav>
 
-<div class="page-hero">
-  <div class="ph-inner">
-    <div class="ph-left r">
-      <p class="s-label">Get in Touch</p>
-      <h1>Let's Find Your Perfect Pod.</h1>
-      <p>Tell us about your workspace. Our Dubai team will recommend the ideal configuration and get you a fast, no-obligation quote.</p>
-      <div class="contact-pills">
-        <div class="c-pill">
-          <div class="c-pill-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></div>
-          <div><div class="c-pill-t">Call or WhatsApp</div><div class="c-pill-v"><a href="tel:+971585550099">+971 58 555 0099</a></div></div>
+<!-- HERO -->
+<section class="contact-hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="ch-inner">
+    <div class="ch-left r">
+      <p class="ch-eyebrow">Get in Touch</p>
+      <h1>Let's Find Your<br>Perfect <em>Pod.</em></h1>
+      <p class="ch-sub">Tell us about your workspace. Our Dubai team will recommend the ideal configuration and get you a fast, no-obligation quote — within 2 hours.</p>
+      <div class="contact-tiles">
+        <a class="c-tile" href="tel:+971585550099">
+          <div class="c-tile-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:18px;height:18px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></div>
+          <div><div class="c-tile-label">Call Us</div><div class="c-tile-val">+971 58 555 0099</div></div>
+        </a>
+        <a class="c-tile" href="mailto:info@thesonichive.com">
+          <div class="c-tile-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:18px;height:18px"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></div>
+          <div><div class="c-tile-label">Email</div><div class="c-tile-val">info@thesonichive.com</div></div>
+        </a>
+        <div class="c-tile">
+          <div class="c-tile-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:18px;height:18px"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div>
+          <div><div class="c-tile-label">Showroom</div><div class="c-tile-val">Downtown Dubai, UAE</div></div>
         </div>
-        <div class="c-pill">
-          <div class="c-pill-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></div>
-          <div><div class="c-pill-t">Email Us</div><div class="c-pill-v"><a href="mailto:info@thesonichive.com">info@thesonichive.com</a></div></div>
-        </div>
-        <div class="c-pill">
-          <div class="c-pill-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div>
-          <div><div class="c-pill-t">Visit Our Showroom</div><div class="c-pill-v">Downtown Dubai, UAE</div></div>
-        </div>
-        <a class="c-pill" href="https://wa.me/971585550099?text=Hi, I'm interested in SonicHive pods." target="_blank" style="text-decoration:none;cursor:pointer">
-          <div class="c-pill-ic" style="background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.3)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <div><div class="c-pill-t">Instant Response</div><div class="c-pill-v" style="color:#25D366">Chat on WhatsApp →</div></div>
+        <a class="c-tile c-wa" href="https://wa.me/971585550099?text=Hi, I'm interested in SonicHive pods." target="_blank" rel="noopener">
+          <div class="c-tile-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+          <div><div class="c-tile-label">WhatsApp</div><div class="c-tile-val">Chat for instant reply →</div></div>
         </a>
       </div>
     </div>
-    <div class="form-card r d1">
-      <h2>Request a Free Quote</h2>
-      <p class="sub">Fill in your details and we'll get back to you within 2 business hours.</p>
-      <form class="form-grid" id="qform">
-        <input type="text" name="firstName" placeholder="First Name *" required>
-        <input type="text" name="lastName" placeholder="Last Name *" required>
-        <input type="email" name="email" placeholder="Email Address *" required class="full">
-        <input type="tel" name="phone" placeholder="Phone / WhatsApp *" required>
-        <input type="text" name="company" placeholder="Company Name">
-        <select name="interestedIn" class="full" required>
-          <option value="" disabled selected>Interested In...</option>
-          <option>Solo Silence Booth (1 person)</option>
-          <option>Duo Silence Booth (2 person)</option>
-          <option>Quartet Silence Booth (4 person)</option>
-          <option>Hexa Silence Booth (6 person)</option>
-          <option>Home Pod</option>
-          <option>Rental Pods</option>
-          <option>Multiple Units — Need Consultation</option>
-        </select>
-        <select name="quantity" required>
-          <option value="" disabled selected>Quantity</option>
-          <option>1 unit</option><option>2–3 units</option>
-          <option>4–10 units</option><option>10+ units</option>
-        </select>
-        <select name="location" required>
-          <option value="" disabled selected>Location / Emirate</option>
-          <option>Dubai</option><option>Abu Dhabi</option><option>Sharjah</option>
-          <option>Ajman</option><option>Ras Al Khaimah</option><option>Qatar</option>
-          <option>Saudi Arabia</option><option>Bahrain</option><option>Other</option>
-        </select>
-        <button type="submit" class="submit-btn">Send Quote Request →</button>
+
+    <div class="form-card r d2">
+      <div class="form-card-hd">
+        <h2>Request a Free Quote</h2>
+        <p>We'll get back to you within 2 business hours.</p>
+      </div>
+      <form class="fgrid" id="qform" novalidate>
+        <div class="fl full">
+          <input type="text" id="firstName" name="firstName" placeholder=" " autocomplete="name" required>
+          <label for="firstName">Name<span class="req">*</span></label>
+        </div>
+        <div class="fl full">
+          <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required>
+          <label for="email">Email Address<span class="req">*</span></label>
+        </div>
+        <div class="fl">
+          <input type="tel" id="phone" name="phone" placeholder=" " autocomplete="tel" required>
+          <label for="phone">Phone / WhatsApp<span class="req">*</span></label>
+        </div>
+        <div class="fl">
+          <input type="text" id="company" name="company" placeholder=" " autocomplete="organization">
+          <label for="company">Company Name</label>
+        </div>
+        <div class="fl full">
+          <select id="interestedIn" name="interestedIn" required onchange="this.classList.toggle('has-val',this.value!=='')">
+            <option value="" disabled selected></option>
+            <option>Solo Silence Booth (1 person)</option>
+            <option>Duo Silence Booth (2 person)</option>
+            <option>Quartet Silence Booth (4 person)</option>
+            <option>Hexa Silence Booth (6 person)</option>
+            <option>Home Pod</option>
+            <option>Rental Pods</option>
+            <option>Multiple Units — Need Consultation</option>
+          </select>
+          <label for="interestedIn">Interested In<span class="req">*</span></label>
+        </div>
+        <div class="fl">
+          <select id="quantity" name="quantity" required onchange="this.classList.toggle('has-val',this.value!=='')">
+            <option value="" disabled selected></option>
+            <option>1 unit</option><option>2–3 units</option>
+            <option>4–10 units</option><option>10+ units</option>
+          </select>
+          <label for="quantity">Quantity<span class="req">*</span></label>
+        </div>
+        <div class="fl">
+          <select id="location" name="location" required onchange="this.classList.toggle('has-val',this.value!=='')">
+            <option value="" disabled selected></option>
+            <option>Dubai</option><option>Abu Dhabi</option><option>Sharjah</option>
+            <option>Ajman</option><option>Ras Al Khaimah</option><option>Qatar</option>
+            <option>Saudi Arabia</option><option>Bahrain</option><option>Other</option>
+          </select>
+          <label for="location">Location<span class="req">*</span></label>
+        </div>
+        <div id="form-error" role="alert"></div>
+        <button type="submit" class="submit-btn" id="qsubmit">
+          <span id="btn-text">Send Quote Request</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px" id="btn-arrow"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </button>
       </form>
-      <p class="form-note"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg> Your information is confidential and never shared. We'll contact you within 2 business hours.</p>
+      <p class="form-note">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:14px;height:14px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+        Your information is confidential and never shared.
+      </p>
     </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner r">
+    <div class="trust-item"><div class="trust-n">2 hrs</div><div class="trust-l">Average response time</div></div>
+    <div class="trust-item"><div class="trust-n" data-n="500" data-s="+">500+</div><div class="trust-l">Pods installed</div></div>
+    <div class="trust-item"><div class="trust-n" data-n="100" data-s="+">100+</div><div class="trust-l">Corporate clients</div></div>
+    <div class="trust-item"><div class="trust-n" data-n="5" data-s="">5</div><div class="trust-l">Countries served</div></div>
   </div>
 </div>
 
+<!-- LOCATIONS -->
 <section id="locations">
   <div class="wrap">
     <div class="loc-head r">
@@ -239,57 +398,56 @@
       <h2>Present Across the Region</h2>
     </div>
     <div class="loc-grid">
-      <div class="loc-card hq r">
+      <div class="loc-card r">
         <div class="loc-hq-badge">Headquarters</div>
-        <div class="loc-flag">AE</div>
+        <div class="loc-flag">🇦🇪</div>
         <div class="loc-country">United Arab Emirates</div>
         <div class="loc-city">Downtown Dubai · Abu Dhabi</div>
         <div class="loc-detail">Showroom open for visits.<br><a href="tel:+971585550099">+971 58 555 0099</a><br><a href="mailto:info@thesonichive.com">info@thesonichive.com</a></div>
       </div>
       <div class="loc-card r d1">
-        <div class="loc-flag">QA</div>
+        <div class="loc-flag">🇶🇦</div>
         <div class="loc-country">Qatar</div>
         <div class="loc-city">Doha</div>
         <div class="loc-detail">Serving Doha's corporate and co-working sectors.<br><a href="https://qatar.thesonichive.com" target="_blank">qatar.thesonichive.com</a></div>
       </div>
       <div class="loc-card r d2">
-        <div class="loc-flag">SA</div>
+        <div class="loc-flag">🇸🇦</div>
         <div class="loc-country">Saudi Arabia</div>
         <div class="loc-city">Riyadh · Jeddah</div>
         <div class="loc-detail">Supporting Vision 2030 workspace transformation.<br><a href="https://saudi-arabia.thesonichive.com" target="_blank">saudi-arabia.thesonichive.com</a></div>
       </div>
       <div class="loc-card r">
-        <div class="loc-flag">BH</div>
+        <div class="loc-flag">🇧🇭</div>
         <div class="loc-country">Bahrain</div>
         <div class="loc-city">Manama</div>
         <div class="loc-detail">Acoustic solutions for Bahrain's growing business hub.<br><a href="https://bahrain.thesonichive.com" target="_blank">bahrain.thesonichive.com</a></div>
       </div>
       <div class="loc-card r d1">
-        <div class="loc-flag">NZ</div>
+        <div class="loc-flag">🇳🇿</div>
         <div class="loc-country">New Zealand</div>
         <div class="loc-city">Auckland · Wellington</div>
         <div class="loc-detail">Serving New Zealand's modern office market.<br><a href="https://new-zealand.thesonichive.com" target="_blank">new-zealand.thesonichive.com</a></div>
       </div>
-      <div class="loc-card r d2" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between">
-        <div>
-          <div style="font-size:1.75rem;margin-bottom:.75rem"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
-          <div class="loc-country">Expanding Further</div>
-          <div class="loc-city" style="margin-bottom:.75rem">New markets coming soon</div>
-          <div class="loc-detail">Interested in partnership or distribution in your country? Let's talk.</div>
-        </div>
-        <a href="mailto:info@thesonichive.com" style="margin-top:1.5rem;font-size:.85rem;font-weight:400;color:var(--gold)">Enquire About Partnership →</a>
+      <div class="loc-card r d2">
+        <div style="margin-bottom:.9rem"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" style="width:28px;height:28px;color:var(--red)"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+        <div class="loc-country">Expanding Further</div>
+        <div class="loc-city">New markets coming soon</div>
+        <div class="loc-detail" style="margin-bottom:1.5rem">Interested in partnership or distribution in your country?</div>
+        <a href="mailto:info@thesonichive.com" style="font-size:.84rem;font-weight:400;color:var(--red)">Enquire About Partnership →</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FAQ -->
 <section id="faq">
   <div class="wrap">
     <div class="faq-head r">
       <p class="s-label">FAQ</p>
       <h2>Common Questions</h2>
     </div>
-    <div class="faq-grid" id="faq-grid"></div>
+    <div class="faq-list r d1" id="faq-list"></div>
   </div>
 </section>
 
@@ -297,15 +455,15 @@
   <div class="wrap">
     <div class="foot-g">
       <div class="foot-brand">
-        <a href="../index.html" class="logo" style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#E8A030"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#0A0A0A"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#E8A030" opacity=".5"/></svg><span class="logo-t" style="font-size:1.1rem">Sonic<em>Hive</em></span></a>
-        <p>Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity across the Middle East.</p>
+        <a href="../index.html" class="logo" style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#0A0A0A"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".5"/></svg><span class="logo-t" style="font-size:1.1rem">Sonic<em>Hive</em></span></a>
+        <p>Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity across the Middle East and beyond.</p>
         <div class="foot-soc">
           <a class="soc-a" href="https://www.instagram.com/sonichive_?igsh=cWdjN3Ryd3N0ejdq" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
           <a class="soc-a" href="https://www.facebook.com/share/1BwnMVP4BA/" target="_blank" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a class="soc-a" href="https://www.linkedin.com/company/sonichive/" target="_blank" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           <a class="soc-a" href="https://pin.it/5R68dXkTQ" target="_blank" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
           <a class="soc-a" href="https://youtube.com/@sonichivepods?si=Y5jNiFN95m_dLkNk" target="_blank" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
-          <a class="soc-a" href="https://www.tiktok.com/@sonichive?_r=1&amp;_t=ZS-92IlD1VKJmi" target="_blank" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9a8.19 8.19 0 0 0 4.79 1.52V7.07a4.85 4.85 0 0 1-1.02-.38z"/></svg></a>
+          <a class="soc-a" href="https://www.tiktok.com/@sonichive?_r=1&_t=ZS-92IlD1VKJmi" target="_blank" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9a8.19 8.19 0 0 0 4.79 1.52V7.07a4.85 4.85 0 0 1-1.02-.38z"/></svg></a>
         </div>
       </div>
       <div class="foot-col">
@@ -337,6 +495,11 @@
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll('.r').forEach(el=>obs.observe(el));
 
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('s',scrollY>40);
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
 const faqs=[
   {q:'Do the pods need any construction or permanent installation?',a:'No. Our soundproof pods are completely modular and self-contained — plug-and-play for your workspace. No drilling, no contractors, no drama. Install, move, or remove without leaving a trace.'},
   {q:'How long does installation take?',a:'Most pods are fully installed within 2 hours. Our team handles delivery and setup, so you can focus on your workspace transformation, not logistics.'},
@@ -345,54 +508,91 @@ const faqs=[
   {q:'What is the noise reduction level?',a:'Our pods achieve up to 30dB of sound reduction, meeting professional standards for acoustic privacy. This effectively eliminates external distractions and prevents internal conversations from being heard outside.'},
   {q:'Do you offer rental pods for events?',a:'Yes. We offer rental pods for trade shows, corporate events, and temporary office setups. Delivered, installed, and collected by our team. Contact us for rental pricing.'},
   {q:'Which spaces are SonicHive pods suitable for?',a:"Corporate offices, co-working spaces, schools, hospitals, retail environments, home offices, airports, and more. Anywhere noise and lack of privacy are a problem, SonicHive is the solution."},
-  {q:'Where is your showroom?',a:'Our main showroom is in Downtown Dubai, UAE. You\'re welcome to visit and experience the pods first-hand. We also have a presence in Qatar, Saudi Arabia, Bahrain, and New Zealand.'},
+  {q:"Where is your showroom?",a:"Our main showroom is in Downtown Dubai, UAE. You're welcome to visit and experience the pods first-hand. We also have a presence in Qatar, Saudi Arabia, Bahrain, and New Zealand."},
 ];
-document.getElementById('faq-grid').innerHTML=faqs.map((f,i)=>`
-<div class="faq-item r${i>.5?' d1':''}" onclick="this.classList.toggle('open')">
-  <div class="faq-q">${f.q}<span class="faq-arrow">+</span></div>
-  <div class="faq-a">${f.a}</div>
+const plusIcon=`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" style="width:14px;height:14px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>`;
+document.getElementById('faq-list').innerHTML=faqs.map((f,i)=>`
+<div class="faq-item">
+  <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false" type="button">
+    ${f.q}
+    <span class="faq-icon" aria-hidden="true">${plusIcon}</span>
+  </button>
+  <div class="faq-body" hidden><p class="faq-ans">${f.a}</p></div>
 </div>`).join('');
-document.querySelectorAll('.r:not(.on)').forEach(el=>obs.observe(el));
+
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const body=item.querySelector('.faq-body');
+  const open=item.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+  body.hidden=!open;
+}
 
 document.getElementById('qform').onsubmit=async(e)=>{
   e.preventDefault();
-  const b=e.target.querySelector('.submit-btn');
-  const ogText=b.textContent;
-  b.textContent='Sending...';
-  b.style.pointerEvents='none';
-  
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
-  
-  try {
-    const res=await fetch('/api/quote',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(data)
-    });
-    if(res.ok) {
-      b.textContent='✓ Request Received — We\'ll contact you shortly!';
-      b.style.background='#25D366';
-      setTimeout(()=>{b.textContent=ogText;b.style.background='';e.target.reset();b.style.pointerEvents='auto';},5000);
-    } else {
-      throw new Error('Failed to submit');
-    }
-  } catch(err) {
-    b.textContent='Failed. Please try again.';
-    b.style.background='#d42020';
-    setTimeout(()=>{b.textContent=ogText;b.style.background='';b.style.pointerEvents='auto';},5000);
+  const form=e.target;
+  const btn=document.getElementById('qsubmit');
+  const errBox=document.getElementById('form-error');
+  errBox.style.display='none';
+  const required=form.querySelectorAll('[required]');
+  let firstInvalid=null;
+  required.forEach(el=>{
+    if(!el.value.trim()){el.style.borderColor='#D42020';if(!firstInvalid)firstInvalid=el;}
+    else{el.style.borderColor='';}
+  });
+  if(firstInvalid){
+    errBox.textContent='Please fill in all required fields.';
+    errBox.style.display='block';
+    firstInvalid.focus();
+    return;
+  }
+  const ogHtml=btn.innerHTML;
+  btn.disabled=true;
+  btn.innerHTML='<span>Sending…</span>';
+  const data=Object.fromEntries(new FormData(form).entries());
+  try{
+    const res=await fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    if(res.ok){
+      btn.innerHTML='<span>✓ Received — we\'ll contact you shortly!</span>';
+      btn.style.background='#25D366';
+      setTimeout(()=>{btn.innerHTML=ogHtml;btn.style.background='';btn.disabled=false;form.reset();},5000);
+    }else{throw new Error();}
+  }catch(err){
+    errBox.textContent='Something went wrong. Please try again or email us directly.';
+    errBox.style.display='block';
+    btn.innerHTML=ogHtml;
+    btn.disabled=false;
   }
 };
 </script>
-
 <script>
 (function(){
   var dd=document.querySelector('.nav-dd'),btn=document.querySelector('.nd-toggle');
   if(!dd||!btn)return;
   btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
-  document.addEventListener('click',function(){dd.classList.remove('open');});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target))dd.classList.remove('open');});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
 })();
-</script><script src="../popup.js?v=3"></script>
+</script><script>
+(function(){
+  var pr=document.querySelector('.scroll-prog');
+  var glow=document.querySelector('.hero-glow');
+  var _r=null;
+  function tick(){
+    var y=window.scrollY;
+    var total=document.documentElement.scrollHeight-window.innerHeight;
+    pr.style.width=(total>0?y/total*100:0)+'%';
+    if(glow)glow.style.transform='translateX(-50%) translateY('+(y*.28)+'px)';
+    _r=null;
+  }
+  window.addEventListener('scroll',function(){if(!_r)_r=requestAnimationFrame(tick);},{passive:true});
+  tick();
+  function cnt(el,n,s){var t0=performance.now(),d=1500;requestAnimationFrame(function run(t){var p=Math.min((t-t0)/d,1),e=1-Math.pow(1-p,4);el.textContent=Math.round(n*e)+s;if(p<1)requestAnimationFrame(run);});}
+  var cObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cnt(e.target,+e.target.dataset.n,e.target.dataset.s||'');cObs.unobserve(e.target);}});},{threshold:.7});
+  document.querySelectorAll('[data-n]').forEach(function(el){cObs.observe(el);});
+})();
+</script><script src="../popup.js?v=4"></script>
+<script>
+(function(){var ham=document.getElementById('nav-ham');var links=document.getElementById('nav-links');var dd=document.querySelector('.nav-dd');if(!ham||!links)return;function openNav(){links.classList.add('open');ham.setAttribute('aria-expanded','true');ham.setAttribute('aria-label','Close navigation menu');document.body.style.overflow='hidden';ham.style.color='#0A0A0F';ham.style.borderColor='rgba(0,0,0,.18)';ham.querySelector('svg').innerHTML='<path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>';}function closeNav(){links.classList.remove('open');if(dd)dd.classList.remove('open');ham.setAttribute('aria-expanded','false');ham.setAttribute('aria-label','Open navigation menu');document.body.style.overflow='';ham.style.color='';ham.style.borderColor='';ham.querySelector('svg').innerHTML='<path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>';}ham.addEventListener('click',function(){links.classList.contains('open')?closeNav():openNav();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&links.classList.contains('open')){closeNav();ham.focus();}});links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(window.innerWidth<=768)closeNav();});});})()</script>
 </body>
 </html>

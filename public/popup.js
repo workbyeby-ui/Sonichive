@@ -5,7 +5,7 @@
     #qp-overlay.open{opacity:1;pointer-events:auto}
     #qp-backdrop{position:absolute;inset:0;background:rgba(10,10,15,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);pointer-events:none}
     #qp-overlay.open #qp-backdrop{pointer-events:auto}
-    #qp-modal{position:relative;z-index:1;background:#fff;border-radius:24px;width:100%;max-width:560px;box-shadow:0 32px 80px rgba(0,0,0,.22);transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.22,1,.36,1);overflow:hidden}
+    #qp-modal{position:relative;z-index:1;background:#fff;border-radius:24px;width:100%;max-width:560px;max-height:calc(100dvh - 2rem);overflow-y:auto;box-shadow:0 32px 80px rgba(0,0,0,.22);transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.22,1,.36,1)}
     #qp-overlay.open #qp-modal{transform:none}
     #qp-top{background:#0A0A0F;padding:2rem 2rem 1.75rem;position:relative}
     #qp-top-accent{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(212,32,32,.18),transparent 65%);pointer-events:none}
@@ -34,7 +34,20 @@
     #qp-success p{font-size:.9rem;color:#6B7280;line-height:1.65}
     #qp-success .qp-done-btn{display:inline-block;margin-top:1.5rem;background:#D42020;color:#fff;border:none;border-radius:100px;padding:.75rem 2rem;font-size:.875rem;font-weight:600;font-family:'Poppins',sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s}
     #qp-success .qp-done-btn:hover{transform:scale(1.04);box-shadow:0 6px 20px rgba(212,32,32,.4)}
-    @media(max-width:520px){.qp-row{grid-template-columns:1fr}#qp-top,#qp-body{padding-left:1.25rem;padding-right:1.25rem}}
+    @media(max-width:600px){
+      #qp-overlay{align-items:flex-end;padding:0}
+      #qp-modal{border-radius:20px 20px 0 0;max-width:100%;max-height:92dvh;transform:translateY(48px)}
+      #qp-overlay.open #qp-modal{transform:translateY(0)}
+      .qp-row{grid-template-columns:1fr}
+      #qp-top{padding:1.5rem 1.25rem 1.25rem}
+      #qp-logo{margin-bottom:.85rem}
+      #qp-title{font-size:1.2rem}
+      #qp-sub{font-size:.78rem}
+      #qp-body{padding:1.25rem 1.25rem 1.5rem}
+      .qp-field input,.qp-field textarea,.qp-field select{font-size:1rem}
+      #qp-submit{padding:.85rem 2rem;font-size:.9rem}
+      #qp-success{padding:2rem 1.25rem}
+    }
   `;
   const style = document.createElement('style');
   style.textContent = css;

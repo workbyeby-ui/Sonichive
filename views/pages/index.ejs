@@ -11,8 +11,8 @@
   <style>
     :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,0.07);--red-b:rgba(212,32,32,0.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,0.09);--card:rgba(0,0,0,0.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100%}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
@@ -326,7 +326,8 @@
     .foot-locs span:hover{background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
 
     @media(max-width:1024px){.pt-grid{grid-template-columns:1fr 1fr}.vp-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}}
-    @media(max-width:768px){.pt-grid{grid-template-columns:1fr;gap:1rem}.vp-grid{grid-template-columns:1fr}.uc-grid{grid-template-columns:1fr}.uc-card.tall{grid-row:auto}.foot-g{grid-template-columns:1fr}#value-props{background-image:linear-gradient(rgba(242,243,245,.93),rgba(242,243,245,.93)),url('images/why-bg.png')}}
+    @media(max-width:768px){.pt-grid{grid-template-columns:1fr;gap:1rem}.pt-card{flex-direction:column}.pt-right{width:100%;padding:0 1.5rem 1.5rem;justify-content:center}.pt-pod-wrap img{max-height:160px}.pt-pod-shadow{display:none}.vp-grid{grid-template-columns:1fr}.uc-grid{grid-template-columns:1fr}.uc-card.tall{grid-row:auto}.foot-g{grid-template-columns:1fr}#value-props{background-image:linear-gradient(rgba(242,243,245,.93),rgba(242,243,245,.93)),url('images/why-bg.png')}#sa-section{display:none!important}.h-orb{display:none!important}.h-con,.h-vid{transform:none!important}#cg{display:none!important}#sec-dots{display:none!important}.h-badge,.h-h1,.h-sub,.h-ctas,.h-stats-row,.h-scroll{animation:none!important;opacity:1!important;transform:none!important}.h-dot,.h-bar{animation:none!important}.t-track,.marquee-row{will-change:auto!important}.r,.rl,.rr,.rs{opacity:1!important;transform:none!important;transition:none!important}.r.on,.rl.on,.rr.on,.rs.on{opacity:1!important;transform:none!important}}
+    @media(max-width:480px){.h-h1{font-size:clamp(2.2rem,8vw,3.5rem)}.btn-red,.btn-wh{padding:.75rem 1.75rem;font-size:.9rem}.h-stats-row{margin-top:1.5rem}.hsr-num{font-size:1.2rem}.hsr-lab{font-size:.6rem}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
     </style>
 </head>
@@ -762,7 +763,7 @@ window.addEventListener('scroll', () => {
   const dh = document.documentElement;
   pgBar.style.width = (scrollY / (dh.scrollHeight - dh.clientHeight) * 100) + '%';
   nav.classList.toggle('s', scrollY > 60);
-  if (scrollY < vh() * 1.2) {
+  if (scrollY < vh() * 1.2 && window.innerWidth > 768) {
     const p = scrollY / vh();
     if (hCon)  hCon.style.transform  = `translateY(${scrollY * 0.22}px)`;
     if (hVid)  hVid.style.transform  = `translateY(${scrollY * 0.18}px)`;

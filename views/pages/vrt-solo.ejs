@@ -63,6 +63,7 @@
     .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
     .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
     .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
+    .mc-vr:hover{background:rgba(37,99,235,.05)}.mc-vr:hover::after{border-color:rgba(37,99,235,.2)}.mc-vr .mc-badge{background:rgba(37,99,235,.1);color:#60A5FA;border:1px solid rgba(37,99,235,.22)}.mc-vr .mc-link{color:#60A5FA}
     .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
     .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
     .mf-link:hover{color:rgba(0,0,0,.75)}
@@ -78,7 +79,7 @@
     /* PRODUCT HERO */
     #prod-hero{padding:2rem 2rem 6rem;background:#FFF}
     .ph-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-    @media(max-width:768px){.ph-grid{grid-template-columns:1fr}}
+    @media(max-width:768px){.ph-grid{grid-template-columns:1fr;gap:2rem}.ph-img-col{position:static!important}.ph-actions{flex-direction:column;gap:.75rem}.btn-red,.btn-o,.btn-wh{width:100%;text-align:center}#prod-hero{padding:5.5rem 1.25rem 3rem}.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
     .ph-img-col{position:sticky;top:100px}
     .ph-main{border-radius:20px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;min-height:380px;position:relative;overflow:hidden;margin-bottom:.75rem}
     .ph-main::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(212,32,32,.04),transparent 70%);pointer-events:none}
@@ -157,6 +158,7 @@
     .foot-links a{font-size:.78rem;color:var(--muted);transition:color .2s}
     .foot-links a:hover{color:var(--text)}
   .spec-section{padding:3rem 0;background:var(--bg2)}.spec-grid{display:grid;grid-template-columns:3fr 2fr;gap:1.5rem;align-items:start}@media(max-width:900px){.spec-grid{grid-template-columns:1fr}}.spec-card,.feat-card{background:#FFF;border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;box-shadow:0 2px 20px rgba(0,0,0,.06)}.spec-card-hd,.feat-card-hd{font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:1.25rem;padding-bottom:.85rem;border-bottom:1px solid var(--border)}.spec-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}.spec-row:last-child{border-bottom:none}.spec-row-l{display:flex;align-items:center;gap:.65rem;padding:.85rem 1rem .85rem 0;border-right:1px solid var(--border)}.spec-lbl{font-size:.85rem;font-weight:500;color:var(--text)}.spec-row-r{padding:.85rem 0 .85rem 1.2rem;font-size:.85rem;color:var(--text);font-weight:400}.feat-row{display:flex;align-items:flex-start;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--border)}.feat-row:last-child{border-bottom:none}.feat-chk{width:24px;min-width:24px;height:24px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;margin-top:.1rem}.feat-txt{font-size:.875rem;color:var(--text);line-height:1.6;padding-top:.2rem}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+    @media(max-width:480px){.ph-specs-row{flex-wrap:wrap;border-radius:12px}.ph-spec{flex:0 0 50%;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}.ph-spec:nth-child(2){border-right:none}.ph-spec:nth-child(3){border-bottom:none}.ph-spec:last-child{border-right:none;border-bottom:none}.ph-spec strong{font-size:1.2rem}}
     </style>
 </head>
 <body>

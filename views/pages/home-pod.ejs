@@ -161,7 +161,7 @@
     .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
     .foot-locs span{font-size:.72rem;color:rgba(255,255,255,.35);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.2rem .7rem}
     @media(max-width:1024px){.ph-grid{grid-template-columns:1fr;gap:3rem;text-align:center}.ph-img{max-width:400px;margin:0 auto}.ph-specs-row{justify-content:center}.ph-actions{justify-content:center}.ph-desc{margin:0 auto 2.5rem}.prob-lay{grid-template-columns:1fr;gap:3rem}.related-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr 1fr}}
-    @media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.badges-row{gap:1.5rem}.prob-noises{grid-template-columns:1fr}.foot-g{grid-template-columns:1fr}}
+    @media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.badges-row{gap:1.5rem}.prob-noises{grid-template-columns:1fr}.foot-g{grid-template-columns:1fr}#prod-hero{padding:5.5rem 1.25rem 3rem}.ph-grid{gap:2rem}.ph-name{font-size:clamp(2rem,7vw,3.5rem)}.ph-actions{flex-direction:column;gap:.75rem}.btn-red,.btn-wh{text-align:center;width:100%}#problem,#features,#specs,#testimonial,#related,#prod-cta{padding:4.5rem 0}.feat-head{margin-bottom:2.5rem}}
     @media(max-width:520px){.feat-grid{grid-template-columns:1fr}}
     /* MEGA MENU */
     .nav-dd{position:static;display:flex;align-items:center}
@@ -497,7 +497,7 @@ document.querySelectorAll('.r').forEach(el=>obs.observe(el));
   var dd=document.querySelector('.nav-dd'),btn=document.querySelector('.nd-toggle');
   if(!dd||!btn)return;
   btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
-  document.addEventListener('click',function(){dd.classList.remove('open');});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target))dd.classList.remove('open');});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
 })();
 </script><script src="popup.js?v=3"></script>
