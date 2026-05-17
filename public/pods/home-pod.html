@@ -249,10 +249,12 @@
       <span class="logo-t">Sonic<em>Hive</em></span>
     </a>
     <div class="nav-links" id="nav-links">
-      
+      <div class="nav-dd">
+        <button class="nd-toggle cur">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="vr.html" class="mc mc-vr"><div class="mc-img-w"><img src="VR series/VR S/VR-3D-black0000.webp" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series, S, M, L and XL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.webp" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="../images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="../pages/rental-pods.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rental Pods</a><a href="../pages/contact.html" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div>
+      </div>
       <a href="../pages/use-cases.html">Use Cases</a>
-      <a href="../pages/use-cases.html">Use Cases</a>
-        <a href="../pages/features.html">Features</a>
+      <a href="../pages/features.html">Features</a>
       <a href="../pages/about.html">About</a>
       <a href="../pages/contact.html">Contact</a>
     </div>
@@ -568,14 +570,16 @@ document.querySelectorAll('.r').forEach(el=>obs.observe(el));
 
 <script>
 (function(){
-  var dd=document.querySelector('.nav-dd'),btn=document.querySelector('.nd-toggle');
-  if(!dd||!btn)return;
-  btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
-  document.addEventListener('click',function(e){if(!dd.contains(e.target))dd.classList.remove('open');});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
+  document.querySelectorAll('.nav-dd').forEach(function(dd){
+    var btn=dd.querySelector('.nd-toggle');
+    if(!btn)return;
+    btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
+    document.addEventListener('click',function(e){if(!dd.contains(e.target))dd.classList.remove('open');});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
+  });
 })();
 </script><script src="../popup.js?v=4"></script>
 <script>
-(function(){var ham=document.getElementById('nav-ham');var links=document.getElementById('nav-links');var dd=document.querySelector('.nav-dd');if(!ham||!links)return;function openNav(){links.classList.add('open');ham.setAttribute('aria-expanded','true');ham.setAttribute('aria-label','Close navigation menu');document.body.style.overflow='hidden';ham.style.color='#0A0A0F';ham.style.borderColor='rgba(0,0,0,.18)';ham.querySelector('svg').innerHTML='<path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>';}function closeNav(){links.classList.remove('open');if(dd)dd.classList.remove('open');ham.setAttribute('aria-expanded','false');ham.setAttribute('aria-label','Open navigation menu');document.body.style.overflow='';ham.style.color='';ham.style.borderColor='';ham.querySelector('svg').innerHTML='<path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>';}ham.addEventListener('click',function(){links.classList.contains('open')?closeNav():openNav();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&links.classList.contains('open')){closeNav();ham.focus();}});links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(window.innerWidth<=768)closeNav();});});})()</script>
+(function(){var ham=document.getElementById('nav-ham');var links=document.getElementById('nav-links');var dds=document.querySelectorAll('.nav-dd');if(!ham||!links)return;function openNav(){links.classList.add('open');ham.setAttribute('aria-expanded','true');ham.setAttribute('aria-label','Close navigation menu');document.body.style.overflow='hidden';ham.style.color='#0A0A0F';ham.style.borderColor='rgba(0,0,0,.18)';ham.querySelector('svg').innerHTML='<path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>';}function closeNav(){links.classList.remove('open');dds.forEach(function(d){d.classList.remove('open');});ham.setAttribute('aria-expanded','false');ham.setAttribute('aria-label','Open navigation menu');document.body.style.overflow='';ham.style.color='';ham.style.borderColor='';ham.querySelector('svg').innerHTML='<path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>';}ham.addEventListener('click',function(){links.classList.contains('open')?closeNav():openNav();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&links.classList.contains('open')){closeNav();ham.focus();}});links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(window.innerWidth<=768)closeNav();});});})()</script>
 </body>
 </html>
