@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VRT Series — SonicHive Acoustic Office Pods | Dubai</title>
-  <meta name="description" content="SonicHive VRT Series — professional acoustic pods in Solo, Duo, Quartet and Hexa configurations. Up to 36dB noise reduction. Dubai UAE.">
+  <title>VRT Series, SonicHive Acoustic Office Pods | Dubai</title>
+  <meta name="description" content="SonicHive VRT Series, professional acoustic pods in Solo, Duo, Quartet and Hexa configurations. Up to 36dB noise reduction. Dubai UAE.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
   <style>
     :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px;--gold:#B8860B;--gold-d:rgba(184,134,11,.08);--gold-b:rgba(184,134,11,.25)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -155,46 +159,77 @@
     .pb-text span{font-size:.85rem;color:var(--muted);line-height:1.5}
     .pb-btn{margin-left:auto;background:var(--gold);color:#FFF;border-radius:100px;padding:.55rem 1.25rem;font-size:.8rem;font-weight:400;white-space:nowrap;flex-shrink:0;text-decoration:none;transition:opacity .2s}
     .pb-btn:hover{opacity:.85}
+
+    /* VARIANT TABS */
+    .variant-tabs{display:flex;gap:.4rem;background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.3rem;width:fit-content;margin:0 auto 3rem}
+    .vt-btn{border:none;background:none;cursor:pointer;padding:.6rem 1.75rem;border-radius:100px;font-size:.875rem;font-weight:400;font-family:var(--fb);color:var(--muted);transition:all .2s;white-space:nowrap}
+    .vt-btn.active{background:#FFF;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .vt-btn.plus.active{background:linear-gradient(135deg,#2a1f0a,#3d2e10);color:#FFF;box-shadow:0 2px 12px rgba(184,134,11,.35)}
+    .vt-pane{display:none}.vt-pane.active{display:block}
+    .plus-badge{background:linear-gradient(135deg,#D4A020,#B8860B);color:#FFF;font-size:.58rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.14rem .5rem;border-radius:100px;vertical-align:middle;margin-left:.35rem}
+    @media(max-width:480px){.variant-tabs{width:100%;justify-content:center}.vt-btn{padding:.55rem 1.1rem;font-size:.82rem}}
+
+    /* COLOUR OPTIONS */
+    .colors-sec{padding:4rem 0;background:#FFF;border-top:1px solid var(--border)}
+    .colors-grid{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:2rem}
+    .color-swatch{display:flex;flex-direction:column;align-items:center;gap:.65rem;cursor:pointer;transition:transform .2s}
+    .color-swatch:hover{transform:translateY(-4px)}
+    .color-img-w{width:80px;height:80px;border-radius:16px;overflow:hidden;border:2px solid var(--border);background:var(--bg2)}
+    .color-img-w img{width:100%;height:100%;object-fit:cover}
+    .color-lbl{font-size:.68rem;color:var(--muted);text-align:center;letter-spacing:.04em}
+    @media(max-width:480px){.color-img-w{width:68px;height:68px;border-radius:12px}.color-lbl{font-size:.62rem}}
+
+    /* DESIGN SECTION */
+    .design-sec{padding:5.5rem 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .design-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
+    @media(max-width:768px){.design-grid{grid-template-columns:1fr}}
+    .design-card{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2rem;position:relative;overflow:hidden}
+    .design-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),#FF6B6B)}
+    .dc-num{font-family:var(--fh);font-size:3rem;font-weight:400;color:var(--red-d);line-height:1;margin-bottom:.75rem;letter-spacing:-.04em}
+    .dc-title{font-family:var(--fh);font-size:1.1rem;font-weight:400;margin-bottom:.5rem}
+    .dc-desc{font-size:.85rem;color:var(--muted);line-height:1.65}
     </style>
+<style>
+/* Transparent nav over hero — VRT page only */
+@media(min-width:769px){
+  #nav{background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-bottom-color:transparent!important;box-shadow:none!important;transition:background .35s ease,border-bottom-color .35s ease,box-shadow .35s ease}
+  #nav .logo-t{color:#fff!important;transition:color .35s ease}
+  #nav .logo svg polygon:nth-child(2){fill:#fff!important;transition:fill .35s ease}
+  #nav .nav-links a{color:rgba(255,255,255,.85)!important;transition:color .35s ease}
+  #nav .nav-links a:hover,#nav .nav-links a.cur{color:#fff!important}
+  #nav .nd-toggle{color:rgba(255,255,255,.85)!important;transition:color .35s ease}
+  #nav .nd-toggle:hover{color:#fff!important}
+  #nav.s{background:rgba(250,250,250,.96)!important;backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important;border-bottom-color:rgba(0,0,0,.09)!important;box-shadow:none!important}
+  #nav.s .logo-t{color:#0A0A0F!important}
+  #nav.s .logo svg polygon:nth-child(2){fill:#FAFAFA!important}
+  #nav.s .nav-links a{color:#6B7280!important}
+  #nav.s .nav-links a:hover,#nav.s .nav-links a.cur{color:#0A0A0F!important}
+  #nav.s .nd-toggle{color:#6B7280!important}
+  #nav.s .nd-toggle:hover{color:#0A0A0F!important}
+}
+</style>
 </head>
 <body>
 
 <%- include('../partials/header', { page: 'vrt' }) %>
 <div id="main-content" tabindex="-1" style="outline:none;position:absolute"></div>
 
-<section class="series-hero">
-  <div class="hero-in">
-    <div class="series-tag"><span class="s-dot"></span>Standard Series</div>
-    <h1 class="series-name">VRT.</h1>
-    <p class="series-tagline">Professional acoustic office pods engineered for demanding workspaces. Available in four configurations to match any team size or layout.</p>
-    <div class="series-badges">
-      <div class="s-badge">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 8l2 2 4-4" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Up to 36dB Reduction
-      </div>
-      <div class="s-badge">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="2" stroke="rgba(255,255,255,.45)" stroke-width="1.3"/><path d="M5 6h6M5 9h4" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round"/></svg>
-        No Construction Required
-      </div>
-      <div class="s-badge">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v2M8 12v2M2 8h2M12 8h2M4.22 4.22l1.42 1.42M10.36 10.36l1.42 1.42M4.22 11.78l1.42-1.42M10.36 5.64l1.42-1.42" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linecap="round"/></svg>
-        Dubai &amp; UAE Delivery
-      </div>
-      <div class="s-badge">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l1.9 3.86 4.26.62-3.08 3 .73 4.24L8 11.1l-3.81 2.02.73-4.24-3.08-3 4.26-.62L8 1.5z" stroke="rgba(255,255,255,.45)" stroke-width="1.3" stroke-linejoin="round"/></svg>
-        2-Year Warranty
-      </div>
-    </div>
-  </div>
-</section>
+<div id="vrt-hero-root"></div>
 
-<section class="size-section">
+<section class="size-section" id="configurations">
   <div class="wrap">
     <div class="sec-header r">
       <div class="s-label">Choose Your Configuration</div>
-      <h2 class="s-title">Find the Right VRT for Your Space</h2>
-      <p class="s-sub">Each size is purpose-built. Select based on team capacity and floor area.</p>
+      <h2 class="s-title">VRT Series: Four Sizes, Two Variants</h2>
+      <p class="s-sub">Each VRT is purpose-built for team size and acoustic performance. Select based on capacity and floor area.</p>
     </div>
+
+    <div class="variant-tabs r">
+      <button class="vt-btn active" data-tab="tab-vrt">VRT Standard</button>
+      <button class="vt-btn plus" data-tab="tab-plus">VRT+ <span class="plus-badge">PLUS</span></button>
+    </div>
+
+    <div id="tab-vrt" class="vt-pane active">
     <div class="size-grid">
 
       <a href="vrt-solo.html" class="size-card r d1">
@@ -258,117 +293,123 @@
       </a>
 
     </div>
-  </div>
-</section>
-
-<!-- VRT PLUS SECTION -->
-<section class="plus-section">
-  <div class="wrap">
-    <div class="sec-header r" style="margin-bottom:3rem">
-      <div class="plus-label">Also in this Series</div>
-      <h2 class="s-title">VRT Plus — Premium Upgrade</h2>
-      <p class="s-sub">The same trusted VRT form, elevated. Superior acoustic insulation, premium finishes, and enhanced ventilation for the most discerning workspaces.</p>
     </div>
 
-    <div class="plus-banner r">
-      <div class="pb-icon">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.4 4.86 5.37.78-3.88 3.78.92 5.34L11 14.26l-4.81 2.5.92-5.34L3.23 7.64l5.37-.78L11 2z" stroke="#B8860B" stroke-width="1.4" stroke-linejoin="round"/></svg>
+    <div id="tab-plus" class="vt-pane">
+      <div style="text-align:center;margin-bottom:2.5rem">
+        <p style="font-size:.95rem;color:var(--muted);line-height:1.7;max-width:560px;margin:0 auto">VRT+ takes the trusted VRT form further — thicker acoustic panels (+4dB), brushed aluminium trim, dual-zone lighting, and an extended 3-year warranty across all sizes.</p>
       </div>
-      <div class="pb-text">
-        <strong>What's new in VRT Plus?</strong>
-        <span>Thicker acoustic panels (+4dB), brushed aluminium trim, dual-zone lighting, and an extended 3-year warranty across all sizes.</span>
+      <div class="size-grid">
+
+        <a href="vrt-plus-solo.html" class="size-card r d1" style="border-color:rgba(184,134,11,.2)">
+          <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
+            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ S 1.webp" alt="VRT+ Solo" style="width:100%;height:100%;object-fit:contain">
+          </div>
+          <div class="sc-body">
+            <div class="sc-cap" style="background:var(--gold-d);border-color:var(--gold-b);color:#9A6F08">1 Person</div>
+            <div class="sc-name">VRT+ Solo <span class="plus-badge">PLUS</span></div>
+            <div class="sc-desc">Elevated single-occupant pod with enhanced privacy glass and premium interior finish.</div>
+            <div class="sc-specs">
+              <div class="sc-spec"><strong>36dB</strong><span>Reduction</span></div>
+              <div class="sc-spec"><strong>900mm</strong><span>Width</span></div>
+              <div class="sc-spec"><strong>160kg</strong><span>Weight</span></div>
+            </div>
+            <span class="sc-cta" style="background:var(--gold-d);border-color:var(--gold-b)">View Specifications</span>
+          </div>
+        </a>
+
+        <a href="vrt-plus-duo.html" class="size-card r d2" style="border-color:rgba(184,134,11,.2)">
+          <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
+            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ M 1.webp" alt="VRT+ Duo" style="width:100%;height:100%;object-fit:contain">
+          </div>
+          <div class="sc-body">
+            <div class="sc-cap" style="background:var(--gold-d);border-color:var(--gold-b);color:#9A6F08">2 Persons</div>
+            <div class="sc-name">VRT+ Duo <span class="plus-badge">PLUS</span></div>
+            <div class="sc-desc">Premium two-person pod with dual-zone climate control and upgraded sound masking.</div>
+            <div class="sc-specs">
+              <div class="sc-spec"><strong>37dB</strong><span>Reduction</span></div>
+              <div class="sc-spec"><strong>1400mm</strong><span>Width</span></div>
+              <div class="sc-spec"><strong>240kg</strong><span>Weight</span></div>
+            </div>
+            <span class="sc-cta" style="background:var(--gold-d);border-color:var(--gold-b)">View Specifications</span>
+          </div>
+        </a>
+
+        <a href="vrt-plus-quartet.html" class="size-card r d3" style="border-color:rgba(184,134,11,.2)">
+          <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
+            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ ML 1.webp" alt="VRT+ Quartet" style="width:100%;height:100%;object-fit:contain">
+          </div>
+          <div class="sc-body">
+            <div class="sc-cap" style="background:var(--gold-d);border-color:var(--gold-b);color:#9A6F08">4 Persons</div>
+            <div class="sc-name">VRT+ Quartet <span class="plus-badge">PLUS</span></div>
+            <div class="sc-desc">Executive meeting room performance with 39dB isolation and premium seating options.</div>
+            <div class="sc-specs">
+              <div class="sc-spec"><strong>39dB</strong><span>Reduction</span></div>
+              <div class="sc-spec"><strong>2000mm</strong><span>Width</span></div>
+              <div class="sc-spec"><strong>410kg</strong><span>Weight</span></div>
+            </div>
+            <span class="sc-cta" style="background:var(--gold-d);border-color:var(--gold-b)">View Specifications</span>
+          </div>
+        </a>
+
+        <a href="vrt-plus-hexa.html" class="size-card r d4" style="border-color:rgba(184,134,11,.2)">
+          <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
+            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ L 1.webp" alt="VRT+ Hexa" style="width:100%;height:100%;object-fit:contain">
+          </div>
+          <div class="sc-body">
+            <div class="sc-cap" style="background:var(--gold-d);border-color:var(--gold-b);color:#9A6F08">6 Persons</div>
+            <div class="sc-name">VRT+ Hexa <span class="plus-badge">PLUS</span></div>
+            <div class="sc-desc">Board-room grade silence for six. The highest-performing acoustic pod in the SonicHive lineup.</div>
+            <div class="sc-specs">
+              <div class="sc-spec"><strong>41dB</strong><span>Reduction</span></div>
+              <div class="sc-spec"><strong>2800mm</strong><span>Width</span></div>
+              <div class="sc-spec"><strong>560kg</strong><span>Weight</span></div>
+            </div>
+            <span class="sc-cta" style="background:var(--gold-d);border-color:var(--gold-b)">View Specifications</span>
+          </div>
+        </a>
+
       </div>
-      <a href="vrt-plus.html" class="pb-btn">View Full VRT Plus Range →</a>
-    </div>
-
-    <div class="size-grid">
-
-      <a href="vrt-plus-solo.html" class="plus-card r d1">
-        <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ S 1.webp" alt="VRT Plus Solo" style="width:100%;height:100%;object-fit:contain"></div>
-        <div class="sc-body">
-          <div class="plus-cap">1 Person</div>
-          <div class="sc-name">VRT Plus Solo</div>
-          <div class="sc-desc">Elevated single-occupant pod with enhanced privacy glass and premium interior finish.</div>
-          <div class="sc-specs">
-            <div class="sc-spec"><strong>36dB</strong><span>Reduction</span></div>
-            <div class="sc-spec"><strong>900mm</strong><span>Width</span></div>
-            <div class="sc-spec"><strong>160kg</strong><span>Weight</span></div>
-          </div>
-          <span class="sc-cta">View Specifications →</span>
-        </div>
-      </a>
-
-      <a href="vrt-plus-duo.html" class="plus-card r d2">
-        <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ M 1.webp" alt="VRT Plus Duo" style="width:100%;height:100%;object-fit:contain"></div>
-        <div class="sc-body">
-          <div class="plus-cap">2 Persons</div>
-          <div class="sc-name">VRT Plus Duo</div>
-          <div class="sc-desc">Premium two-person pod with dual-zone climate control and upgraded sound masking.</div>
-          <div class="sc-specs">
-            <div class="sc-spec"><strong>37dB</strong><span>Reduction</span></div>
-            <div class="sc-spec"><strong>1400mm</strong><span>Width</span></div>
-            <div class="sc-spec"><strong>240kg</strong><span>Weight</span></div>
-          </div>
-          <span class="sc-cta">View Specifications →</span>
-        </div>
-      </a>
-
-      <a href="vrt-plus-quartet.html" class="plus-card r d3">
-        <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ ML 1.webp" alt="VRT Plus Quartet" style="width:100%;height:100%;object-fit:contain"></div>
-        <div class="sc-body">
-          <div class="plus-cap">4 Persons</div>
-          <div class="sc-name">VRT Plus Quartet</div>
-          <div class="sc-desc">Executive meeting room performance in a pod — with 39dB isolation and premium seating options.</div>
-          <div class="sc-specs">
-            <div class="sc-spec"><strong>39dB</strong><span>Reduction</span></div>
-            <div class="sc-spec"><strong>2000mm</strong><span>Width</span></div>
-            <div class="sc-spec"><strong>410kg</strong><span>Weight</span></div>
-          </div>
-          <span class="sc-cta">View Specifications →</span>
-        </div>
-      </a>
-
-      <a href="vrt-plus-hexa.html" class="plus-card r d4">
-        <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))"><img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ L 1.webp" alt="VRT Plus Hexa" style="width:100%;height:100%;object-fit:contain"></div>
-        <div class="sc-body">
-          <div class="plus-cap">6 Persons</div>
-          <div class="sc-name">VRT Plus Hexa</div>
-          <div class="sc-desc">Board-room grade silence for six. The highest-performing acoustic pod in the SonicHive lineup.</div>
-          <div class="sc-specs">
-            <div class="sc-spec"><strong>41dB</strong><span>Reduction</span></div>
-            <div class="sc-spec"><strong>2800mm</strong><span>Width</span></div>
-            <div class="sc-spec"><strong>560kg</strong><span>Weight</span></div>
-          </div>
-          <span class="sc-cta">View Specifications →</span>
-        </div>
-      </a>
-
     </div>
   </div>
 </section>
 
-<section class="feat-strip">
+<section class="colors-sec">
   <div class="wrap">
-    <div class="feat-grid">
-      <div class="feat-item r">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3C7.13 3 4 6.13 4 10s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7z" stroke="#D42020" stroke-width="1.5"/><path d="M8 10h6M11 7v6" stroke="#D42020" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div class="feat-title">Multi-Layer Acoustics</div>
-        <div class="feat-desc">Engineered acoustic panels with STC-rated glazing deliver up to 36dB reduction.</div>
+    <div class="sec-header r" style="margin-bottom:0">
+      <div class="s-label">Colour Options</div>
+      <h2 class="s-title" style="font-size:clamp(1.6rem,3vw,2.2rem)">7 Standard Finishes Available</h2>
+      <p class="s-sub">All VRT and VRT+ pods are available in any of the colours below, or in any custom RAL colour.</p>
+    </div>
+    <div class="colors-grid r">
+      <div class="color-swatch"><div class="color-img-w"><img src="images/VRT Pod colors- hero/VRT POD-standard.png" alt="Standard" loading="lazy"></div><span class="color-lbl">Standard</span></div>
+      <div class="color-swatch"><div class="color-img-w"><img src="images/VRT Pod colors- hero/VRT POD-black.png" alt="Black" loading="lazy"></div><span class="color-lbl">Black</span></div>
+      <div class="color-swatch"><div class="color-img-w"><img src="images/VRT Pod colors- hero/VRT POD-white.png" alt="White" loading="lazy"></div><span class="color-lbl">White</span></div>
+      <div class="color-swatch"><div class="color-img-w"><img src="images/VRT Pod colors- hero/VRT POD-red.png" alt="Red" loading="lazy"></div><span class="color-lbl">Red</span></div>
+      <div class="color-swatch"><div class="color-img-w"><img src="images/VRT Pod colors- hero/VRT POD-orange.png" alt="Orange" loading="lazy"></div><span class="color-lbl">Orange</span></div>
+      <div class="color-swatch"><div class="color-img-w"><img src="images/VRT Pod colors- hero/VRT POD-light green.png" alt="Light Green" loading="lazy"></div><span class="color-lbl">Light Green</span></div>
+      <div class="color-swatch"><div class="color-img-w"><img src="images/VRT Pod colors- hero/VRT POD-olive green.png" alt="Olive Green" loading="lazy"></div><span class="color-lbl">Olive Green</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="design-sec">
+  <div class="wrap">
+    <div class="design-grid">
+      <div class="design-card r">
+        <div class="dc-num">01</div>
+        <div class="dc-title">Professional Grade Acoustics</div>
+        <div class="dc-desc">Multi-layer acoustic panels with STC-rated glazing deliver up to 36dB noise reduction — the benchmark for professional workplace privacy.</div>
       </div>
-      <div class="feat-item r d1">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M4 7h14M4 15h10" stroke="#D42020" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div class="feat-title">Smart Ventilation</div>
-        <div class="feat-desc">Whisper-quiet HVAC circulation maintains fresh air at under 35dBA ambient noise.</div>
+      <div class="design-card r d1">
+        <div class="dc-num">02</div>
+        <div class="dc-title">Plug &amp; Play Installation</div>
+        <div class="dc-desc">No construction, no permits, no structural modifications. Every VRT pod is delivered and fully installed in a single day.</div>
       </div>
-      <div class="feat-item r d2">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="3" stroke="#D42020" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="#D42020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="feat-title">Plug &amp; Play Setup</div>
-        <div class="feat-desc">No construction or structural modifications. Delivered and installed in a single day.</div>
-      </div>
-      <div class="feat-item r d3">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.4 4.86 5.37.78-3.88 3.78.92 5.34L11 14.26l-4.81 2.5.92-5.34L3.23 7.64l5.37-.78L11 2z" stroke="#D42020" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-        <div class="feat-title">2-Year Warranty</div>
-        <div class="feat-desc">Full parts and labour warranty with priority support across UAE and GCC.</div>
+      <div class="design-card r d2">
+        <div class="dc-num">03</div>
+        <div class="dc-title">Smart Ventilation</div>
+        <div class="dc-desc">Whisper-quiet HVAC circulation maintains fresh air at under 35dBA ambient noise, keeping occupants comfortable hour after hour.</div>
       </div>
     </div>
   </div>
@@ -389,10 +430,227 @@
 </section>
 
 <%- include('../partials/footer-mini') %>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  function update(){nav.classList.toggle('s',window.scrollY>80);}
+  window.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+
+<script type="text/babel" data-presets="typescript,react">
+(function(){
+const { useState, useEffect, useCallback } = React;
+
+const ArrowLeft = ({ size = 24, strokeWidth = 2, className = "", style = {} }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"
+    className={className} style={style} aria-hidden="true">
+    <path d="M19 12H5" /><path d="m12 19-7-7 7-7" />
+  </svg>
+);
+const ArrowRight = ({ size = 24, strokeWidth = 2, className = "", style = {} }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round"
+    className={className} style={style} aria-hidden="true">
+    <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+  </svg>
+);
+
+const IMAGES = [
+  { src: 'images/VRT Pod colors- hero/VRT POD-red.png',         bg: '#B87268', name: 'Brick Red' },
+  { src: 'images/VRT Pod colors- hero/VRT POD-orange.png',      bg: '#E0A584', name: 'Terracotta' },
+  { src: 'images/VRT Pod colors- hero/VRT POD-light green.png', bg: '#CFD19F', name: 'Light Green' },
+  { src: 'images/VRT Pod colors- hero/VRT POD-olive green.png', bg: '#989E80', name: 'Olive Green' },
+  { src: 'images/VRT Pod colors- hero/VRT POD-standard.png',    bg: '#B5A99F', name: 'Standard' },
+  { src: 'images/VRT Pod colors- hero/VRT POD-white.png',       bg: '#E5E5E5', name: 'White' },
+  { src: 'images/VRT Pod colors- hero/VRT POD-black.png',       bg: '#5A5961', name: 'Charcoal' },
+];
+const N = IMAGES.length;
+const EASE = 'cubic-bezier(0.4,0,0.2,1)';
+const DURATION = 650;
+
+const GRAIN_SVG =
+  "data:image/svg+xml;utf8," + encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'>
+      <filter id='n'>
+        <feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/>
+        <feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.08 0'/>
+      </filter>
+      <rect width='100%' height='100%' filter='url(%23n)'/>
+    </svg>`.replace(/#/g, '%23')
+  );
+
+function VRTHero() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth < 640 : false
+  );
+  const [hover, setHover] = useState({ prev: false, next: false, link: false });
+
+  useEffect(() => {
+    IMAGES.forEach((it) => { const i = new Image(); i.src = it.src; });
+  }, []);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  const navigate = useCallback((dir) => {
+    setIsAnimating((animating) => {
+      if (animating) return animating;
+      setActiveIndex((prev) => dir === 'next' ? (prev + 1) % N : (prev + N - 1) % N);
+      window.setTimeout(() => setIsAnimating(false), DURATION);
+      return true;
+    });
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'ArrowRight') navigate('next');
+      else if (e.key === 'ArrowLeft') navigate('prev');
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [navigate]);
+
+  const center = activeIndex;
+  const left   = (activeIndex + N - 1) % N;
+  const right  = (activeIndex + 1) % N;
+  const back   = (activeIndex + 2) % N;
+
+  const getRole = (i) => {
+    if (i === center) return 'center';
+    if (i === left)   return 'left';
+    if (i === right)  return 'right';
+    if (i === back)   return 'back';
+    return 'hidden';
+  };
+
+  const roleStyle = (role) => {
+    const base = {
+      position: 'absolute',
+      aspectRatio: '16 / 9',
+      transition: [
+        `transform ${DURATION}ms ${EASE}`,
+        `filter ${DURATION}ms ${EASE}`,
+        `opacity ${DURATION}ms ${EASE}`,
+        `left ${DURATION}ms ${EASE}`,
+        `bottom ${DURATION}ms ${EASE}`,
+        `width ${DURATION}ms ${EASE}`,
+      ].join(', '),
+      willChange: 'transform, filter, opacity',
+    };
+    if (role === 'center') return { ...base, left: '50%', bottom: isMobile ? '18%' : '-2%', width: isMobile ? '95vw' : '78vw', transform: 'translateX(-50%) scale(1)', filter: 'drop-shadow(0 40px 60px rgba(0,0,0,0.18))', opacity: 1, zIndex: 20 };
+    if (role === 'left')   return { ...base, left: isMobile ? '14%' : '14%', bottom: isMobile ? '28%' : '14%', width: isMobile ? '24vw' : '22vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(2px)', opacity: 0.75, zIndex: 10 };
+    if (role === 'right')  return { ...base, left: isMobile ? '86%' : '86%', bottom: isMobile ? '28%' : '14%', width: isMobile ? '24vw' : '22vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(2px)', opacity: 0.75, zIndex: 10 };
+    if (role === 'back')   return { ...base, left: '50%', bottom: isMobile ? '32%' : '22%', width: isMobile ? '32vw' : '28vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(4px)', opacity: 0.55, zIndex: 5 };
+    return { ...base, left: '50%', bottom: '32%', width: '28vw', transform: 'translateX(-50%) scale(0.6)', filter: 'blur(8px)', opacity: 0, zIndex: 1, pointerEvents: 'none' };
+  };
+
+  const navBtnStyle = (isHover) => ({
+    transform: `scale(${isHover ? 1.08 : 1})`,
+    backgroundColor: isHover ? 'rgba(255,255,255,0.12)' : 'transparent',
+    transition: 'transform 150ms, background-color 150ms',
+  });
+
+  return (
+    <div
+      style={{
+        backgroundColor: IMAGES[activeIndex].bg,
+        transition: `background-color ${DURATION}ms ${EASE}`,
+        fontFamily: 'Inter, sans-serif',
+      }}
+      className="relative w-full overflow-hidden"
+    >
+      <div className="relative w-full" style={{ height: '100vh', overflow: 'hidden' }}>
+
+        {/* Grain overlay */}
+        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 50, opacity: 0.4, backgroundImage: `url("${GRAIN_SVG}")`, backgroundSize: '200px 200px', backgroundRepeat: 'repeat' }} />
+
+        {/* Ghost brand text */}
+        <div className="absolute inset-x-0 flex items-center justify-center pointer-events-none select-none" style={{ zIndex: 2, top: '18%' }}>
+          <span style={{ fontFamily: "'Anton', sans-serif", fontSize: 'clamp(60px, 20vw, 280px)', fontWeight: 900, color: '#ffffff', opacity: 1, lineHeight: 1, textTransform: 'uppercase', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
+            SONICHIVE
+          </span>
+        </div>
+
+        {/* Carousel */}
+        <div className="absolute inset-0" style={{ zIndex: 3 }}>
+          {IMAGES.map((it, i) => (
+            <div key={i} style={roleStyle(getRole(i))}>
+              <img src={it.src} alt={it.name} draggable={false}
+                style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom center', userSelect: 'none', filter: 'brightness(1.15) contrast(1.02) saturate(1.05)' }}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom-left: title + description + nav buttons */}
+        <div className="absolute bottom-6 left-4 sm:bottom-20 sm:left-24" style={{ zIndex: 60, maxWidth: 320 }}>
+          <p className="mb-2 sm:mb-3 text-base sm:text-[22px] font-bold uppercase tracking-widest" style={{ color: '#fff', opacity: 0.95, letterSpacing: '0.02em' }}>
+            VRT / VRT+
+          </p>
+          <p className="hidden sm:block text-xs sm:text-sm mb-4 sm:mb-5" style={{ color: '#fff', opacity: 0.85, lineHeight: 1.6 }}>
+            Acoustic privacy pods engineered for focus, calls and meetings. Premium finish, modular footprint, ready-to-install.
+          </p>
+          <div className="flex items-center gap-3">
+            <button type="button" aria-label="Previous" onClick={() => navigate('prev')}
+              onMouseEnter={() => setHover((h) => ({ ...h, prev: true }))}
+              onMouseLeave={() => setHover((h) => ({ ...h, prev: false }))}
+              className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center"
+              style={{ border: '2px solid #fff', color: '#fff', ...navBtnStyle(hover.prev) }}>
+              <ArrowLeft size={26} strokeWidth={2.25} />
+            </button>
+            <button type="button" aria-label="Next" onClick={() => navigate('next')}
+              onMouseEnter={() => setHover((h) => ({ ...h, next: true }))}
+              onMouseLeave={() => setHover((h) => ({ ...h, next: false }))}
+              className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center"
+              style={{ border: '2px solid #fff', color: '#fff', ...navBtnStyle(hover.next) }}>
+              <ArrowRight size={26} strokeWidth={2.25} />
+            </button>
+          </div>
+        </div>
+
+        {/* Bottom-right: DISCOVER IT */}
+        <a href="#configurations"
+          onMouseEnter={() => setHover((h) => ({ ...h, link: true }))}
+          onMouseLeave={() => setHover((h) => ({ ...h, link: false }))}
+          className="absolute bottom-6 right-4 sm:bottom-20 sm:right-28 flex items-center"
+          style={{ zIndex: 60, fontFamily: "'Anton', sans-serif", fontSize: 'clamp(14px, 2.2vw, 28px)', fontWeight: 400, color: '#fff', opacity: hover.link ? 1 : 0.95, letterSpacing: '-0.02em', lineHeight: 1, textTransform: 'uppercase', textDecoration: 'none', transition: 'opacity 200ms', gap: '0.35em' }}>
+          DISCOVER IT
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2.25} />
+        </a>
+      </div>
+    </div>
+  );
+}
+
+const heroRoot = document.getElementById('vrt-hero-root');
+if (heroRoot) ReactDOM.createRoot(heroRoot).render(<VRTHero />);
+})();
+</script>
 
 <script>
 const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on') }), {threshold:.1});
 document.querySelectorAll('.r').forEach(el => obs.observe(el));
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.vt-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = this.dataset.tab;
+      document.querySelectorAll('.vt-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.vt-pane').forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      document.getElementById(id).classList.add('active');
+    });
+  });
+})();
 </script>
 
 <script>

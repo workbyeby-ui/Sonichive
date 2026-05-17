@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get a Quote — SonicHive Dubai</title>
-  <meta name="description" content="Request a free quote for SonicHive acoustic office pods in Dubai, UAE. Soundproof solutions for any workspace — installed in under 2 hours. Serving UAE, Qatar, Saudi Arabia and Bahrain.">
+  <title>Get a Quote, SonicHive Dubai</title>
+  <meta name="description" content="Request a free quote for SonicHive acoustic office pods in Dubai, UAE. Soundproof solutions for any workspace, installed in under 2 hours. Serving UAE, Qatar, Saudi Arabia and Bahrain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -240,7 +240,7 @@
     <div class="ch-left r">
       <p class="ch-eyebrow">Get in Touch</p>
       <h1>Let's Find Your<br>Perfect <em>Pod.</em></h1>
-      <p class="ch-sub">Tell us about your workspace. Our Dubai team will recommend the ideal configuration and get you a fast, no-obligation quote — within 2 hours.</p>
+      <p class="ch-sub">Tell us about your workspace. Our Dubai team will recommend the ideal configuration and get you a fast, no-obligation quote, within 2 hours.</p>
       <div class="contact-tiles">
         <a class="c-tile" href="tel:+971585550099">
           <div class="c-tile-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:18px;height:18px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></div>
@@ -292,7 +292,7 @@
             <option>Hexa Silence Booth (6 person)</option>
             <option>Home Pod</option>
             <option>Rental Pods</option>
-            <option>Multiple Units — Need Consultation</option>
+            <option>Multiple Units, Need Consultation</option>
           </select>
           <label for="interestedIn">Interested In<span class="req" aria-hidden="true">*</span></label>
         </div>
@@ -410,10 +410,10 @@ window.addEventListener('scroll',onScroll,{passive:true});
 onScroll();
 
 const faqs=[
-  {q:'Do the pods need any construction or permanent installation?',a:'No. Our soundproof pods are completely modular and self-contained — plug-and-play for your workspace. No drilling, no contractors, no drama. Install, move, or remove without leaving a trace.'},
+  {q:'Do the pods need any construction or permanent installation?',a:'No. Our soundproof pods are completely modular and self-contained, plug-and-play for your workspace. No drilling, no contractors, no drama. Install, move, or remove without leaving a trace.'},
   {q:'How long does installation take?',a:'Most pods are fully installed within 2 hours. Our team handles delivery and setup, so you can focus on your workspace transformation, not logistics.'},
   {q:'Can SonicHive pods be customized?',a:"Absolutely. You can customize size, layout, colors, and features. Whether you're a startup or a corporate HQ in Dubai, our pods adapt to your brand and functional needs."},
-  {q:'Are the pods ventilated?',a:"Yes — every pod includes a built-in ventilation system that keeps air flowing and temperature balanced. Designed for hours of comfortable use without stuffiness."},
+  {q:'Are the pods ventilated?',a:"Yes, every pod includes a built-in ventilation system that keeps air flowing and temperature balanced. Designed for hours of comfortable use without stuffiness."},
   {q:'What is the noise reduction level?',a:'Our pods achieve up to 30dB of sound reduction, meeting professional standards for acoustic privacy. This effectively eliminates external distractions and prevents internal conversations from being heard outside.'},
   {q:'Do you offer rental pods for events?',a:'Yes. We offer rental pods for trade shows, corporate events, and temporary office setups. Delivered, installed, and collected by our team. Contact us for rental pricing.'},
   {q:'Which spaces are SonicHive pods suitable for?',a:"Corporate offices, co-working spaces, schools, hospitals, retail environments, home offices, airports, and more. Anywhere noise and lack of privacy are a problem, SonicHive is the solution."},
@@ -463,7 +463,7 @@ document.getElementById('qform').onsubmit=async(e)=>{
   try{
     const res=await fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
     if(res.ok){
-      btn.innerHTML='<span>✓ Received — we\'ll contact you shortly!</span>';
+      btn.innerHTML='<span>✓ Received, we\'ll contact you shortly!</span>';
       btn.style.background='#25D366';
       setTimeout(()=>{btn.innerHTML=ogHtml;btn.style.background='';btn.disabled=false;form.reset();},5000);
     }else{throw new Error('Server error');}

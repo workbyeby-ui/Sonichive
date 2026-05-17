@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Features & Technology — SonicHive Acoustic Pods</title>
+  <title>Features & Technology, SonicHive Acoustic Pods</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -71,70 +71,104 @@
     .cf-bar{width:22px;height:2px;background:var(--red);border-radius:2px;margin-bottom:.65rem}
     .cf-d{font-size:.84rem;color:var(--muted);line-height:1.72}
 
-    /* ACOUSTIC SCIENCE */
-    #acoustic{padding:7rem 0;background:var(--bg2)}
-    .ac-lay{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-    .ac-txt h2{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.025em;margin-bottom:1.25rem;line-height:1.05}
-    .ac-txt h2 em{color:var(--red);font-style:normal}
-    .ac-txt p{color:var(--muted);line-height:1.85;font-size:.975rem;margin-bottom:1.25rem}
-    .ac-metrics{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
-    .ac-m{background:#FFF;border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color .2s}
-    .ac-m:hover{border-color:var(--red-b)}
-    .ac-m-n{font-family:var(--fh);font-size:2rem;font-weight:400;color:var(--red);line-height:1}
-    .ac-m-l{font-size:.8rem;color:var(--muted);margin-top:.3rem;line-height:1.4}
-    .ac-visual{border-radius:20px;overflow:hidden;position:relative}
-    .ac-visual img{width:100%;height:420px;object-fit:cover}
-    .ac-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-radius:12px;padding:1rem 1.25rem}
-    .ac-badge strong{font-family:var(--fh);font-size:1.5rem;font-weight:400;color:var(--red);display:block;line-height:1}
-    .ac-badge span{font-size:.8rem;color:var(--muted)}
+    /* SCROLL ANIMATIONS — extra variants */
+    .r-left{opacity:0;transform:translateX(-36px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
+    .r-right{opacity:0;transform:translateX(36px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
+    .r-scale{opacity:0;transform:scale(.94);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+    .r-left.on,.r-right.on,.r-scale.on{opacity:1;transform:none}
 
-    /* MATERIALS */
-    #materials{padding:7rem 0}
+    /* ACOUSTIC SCIENCE — Apple dark */
+    #acoustic{background:#060606;overflow:hidden;position:relative}
+    .ac-wrap{max-width:var(--max);margin:0 auto;padding:8rem 2rem 0}
+    .ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    .ac-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2rem}
+    .ac-num{font-family:var(--fh);font-size:clamp(5.5rem,12vw,9.5rem);font-weight:300;line-height:.85;letter-spacing:-.04em;color:#FFF;margin-bottom:1.5rem}
+    .ac-num em{color:var(--red);font-style:normal}
+    .ac-subhead{font-family:var(--fh);font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:300;letter-spacing:-.02em;color:rgba(255,255,255,.65);line-height:1.4;margin-bottom:2rem}
+    .ac-body-text p{color:rgba(255,255,255,.38);font-size:.93rem;line-height:1.9;margin-bottom:1rem}
+    .ac-right{position:relative;padding-top:2rem}
+    .ac-img{width:100%;height:560px;object-fit:cover;border-radius:20px 20px 0 0;display:block}
+    .ac-badge{position:absolute;top:4rem;right:2rem;background:rgba(0,0,0,.7);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.25rem 1.5rem;text-align:center}
+    .ac-badge strong{font-family:var(--fh);font-size:2.25rem;font-weight:300;color:var(--red);display:block;line-height:1;letter-spacing:-.03em}
+    .ac-badge span{font-size:.7rem;color:rgba(255,255,255,.38);letter-spacing:.1em;text-transform:uppercase}
+    .ac-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.07);margin-top:5rem}
+    .ac-strip-item{padding:2.5rem 2rem;border-right:1px solid rgba(255,255,255,.07);transition:background .25s}
+    .ac-strip-item:last-child{border-right:none}
+    .ac-strip-item:hover{background:rgba(255,255,255,.02)}
+    .ac-strip-n{font-family:var(--fh);font-size:2rem;font-weight:300;color:#FFF;letter-spacing:-.03em;line-height:1;margin-bottom:.4rem}
+    .ac-strip-l{font-size:.77rem;color:rgba(255,255,255,.32);line-height:1.55}
+
+    /* MATERIALS — Apple dark tile grid */
+    #materials{padding:8rem 0;background:#0A0A0A}
     .mat-head{text-align:center;margin-bottom:4rem}
-    .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
-    .mat-card{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2rem;text-align:center;transition:transform .3s,box-shadow .3s}
-    .mat-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
-    .mat-ic{font-size:2.5rem;margin-bottom:1.25rem}
-    .mat-n{font-family:var(--fh);font-size:1rem;font-weight:400;margin-bottom:.5rem}
-    .mat-d{font-size:.875rem;color:var(--muted);line-height:1.65}
+    .mat-head .s-label{color:rgba(255,255,255,.35)}
+    .mat-head .s-title{color:#FFF}
+    .mat-head p{color:rgba(255,255,255,.38)}
+    .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:24px;overflow:hidden}
+    .mat-card{background:#111;padding:2.5rem 2rem;text-align:left;transition:background .3s;position:relative;overflow:hidden}
+    .mat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.5),transparent);opacity:0;transition:opacity .3s}
+    .mat-card:hover{background:#161616}
+    .mat-card:hover::before{opacity:1}
+    .mat-ic{width:52px;height:52px;border-radius:14px;background:rgba(212,32,32,.1);border:1px solid rgba(212,32,32,.18);display:flex;align-items:center;justify-content:center;color:var(--red);margin-bottom:1.75rem}
+    .mat-n{font-family:var(--fh);font-size:.95rem;font-weight:400;color:#FFF;margin-bottom:.35rem}
+    .mat-bar{width:18px;height:1.5px;background:var(--red);border-radius:2px;margin:.35rem 0 .8rem;opacity:.6}
+    .mat-d{font-size:.83rem;color:rgba(255,255,255,.35);line-height:1.75}
 
-    /* INSTALLATION */
-    #installation{padding:7rem 0;background:var(--bg2)}
-    .inst-lay{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-    .inst-steps{display:flex;flex-direction:column;gap:0}
-    .inst-step{display:flex;gap:1.5rem;padding:1.75rem 0;border-bottom:1px solid var(--border)}
-    .inst-step:last-child{border-bottom:none}
-    .inst-num{width:40px;height:40px;border-radius:50%;background:var(--red);color:#FFF;font-family:var(--fh);font-weight:400;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
-    .inst-step h3{font-family:var(--fh);font-size:1rem;font-weight:400;margin-bottom:.35rem}
-    .inst-step p{font-size:.875rem;color:var(--muted);line-height:1.65}
-    .inst-right{position:sticky;top:100px}
-    .inst-img{border-radius:20px;overflow:hidden;margin-bottom:1.5rem}
-    .inst-img img{width:100%;height:320px;object-fit:cover}
-    .inst-note{background:#FFF;border:1px solid var(--border);border-radius:16px;padding:1.5rem}
-    .inst-note h4{font-family:var(--fh);font-size:.95rem;font-weight:400;margin-bottom:.5rem}
-    .inst-note p{font-size:.875rem;color:var(--muted);line-height:1.65}
+    /* INSTALLATION — Apple numbered flow */
+    #installation{padding:8rem 0;background:#FAFAFA}
+    .inst-hd{text-align:center;margin-bottom:5rem}
+    .inst-hd h2{font-family:var(--fh);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;letter-spacing:-.03em;line-height:1.05;color:var(--text);margin-bottom:.75rem}
+    .inst-hd h2 em{color:var(--red);font-style:normal}
+    .inst-hd p{color:var(--muted);font-size:1rem;line-height:1.75;max-width:460px;margin:0 auto}
+    .inst-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-bottom:4rem}
+    .inst-flow::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.25) 20%,rgba(212,32,32,.25) 80%,transparent);z-index:0}
+    .inst-item{text-align:center;padding:0 .75rem;position:relative;z-index:1}
+    .inst-dot{width:72px;height:72px;border-radius:50%;background:#FFF;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--fh);font-size:1.2rem;font-weight:300;color:var(--text);transition:background .3s,border-color .3s,color .3s;letter-spacing:-.02em;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+    .inst-item:hover .inst-dot{background:var(--red);border-color:var(--red);color:#FFF;box-shadow:0 4px 20px rgba(212,32,32,.3)}
+    .inst-item h3{font-family:var(--fh);font-size:.85rem;font-weight:400;margin-bottom:.5rem;color:var(--text)}
+    .inst-item p{font-size:.77rem;color:var(--muted);line-height:1.65}
+    .inst-bottom{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;margin-top:1rem}
+    .inst-img-big{border-radius:20px;overflow:hidden;position:relative}
+    .inst-img-big img{width:100%;height:380px;object-fit:cover;display:block}
+    .inst-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35),transparent 50%)}
+    .inst-img-caption{position:absolute;bottom:1.75rem;left:1.75rem;color:#FFF}
+    .inst-img-caption strong{font-family:var(--fh);font-size:1.5rem;font-weight:300;letter-spacing:-.02em;display:block;line-height:1}
+    .inst-img-caption span{font-size:.78rem;opacity:.6}
+    .inst-note{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2.25rem;display:flex;flex-direction:column}
+    .inst-note-head{display:flex;align-items:center;gap:.65rem;margin-bottom:1.25rem}
+    .inst-note-head svg{color:var(--red);flex-shrink:0}
+    .inst-note h4{font-family:var(--fh);font-size:1.05rem;font-weight:300;letter-spacing:-.015em;margin:0;color:var(--text)}
+    .inst-note p{font-size:.875rem;color:var(--muted);line-height:1.8;flex:1;margin-bottom:1.5rem}
+    .inst-tags{display:flex;flex-wrap:wrap;gap:.5rem}
+    .inst-tag{font-size:.72rem;color:var(--muted);background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.3rem .9rem}
 
-    /* TECH SPECS */
-    #specs{padding:7rem 0}
-    .spec-head{margin-bottom:4rem}
-    .spec-table{width:100%;border-collapse:collapse;border-radius:20px;overflow:hidden;border:1px solid var(--border)}
-    .spec-table th{background:var(--bg3);padding:1.1rem 1.5rem;text-align:left;font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border)}
-    .spec-table td{padding:1rem 1.5rem;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--muted);background:#FFF}
+    /* TECH SPECS — Apple dark table */
+    #specs{padding:8rem 0;background:#060606}
+    .spec-head{text-align:center;margin-bottom:3.5rem}
+    .spec-head .s-label{color:rgba(255,255,255,.35)}
+    .spec-head .s-title{color:#FFF}
+    .spec-wrap{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .spec-table{width:100%;border-collapse:collapse}
+    .spec-table th{background:rgba(255,255,255,.03);padding:1.2rem 1.5rem;text-align:left;font-family:var(--fh);font-size:.75rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.06)}
+    .spec-table td{padding:1.1rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.05);font-size:.88rem;color:rgba(255,255,255,.4);background:transparent;vertical-align:middle}
     .spec-table tr:last-child td{border-bottom:none}
-    .spec-table tr:hover td{background:var(--bg2)}
-    .spec-table .feat-name{font-weight:400;color:var(--text)}
-    .spec-table .chk{color:var(--red);font-weight:400}
+    .spec-table tr:hover td{background:rgba(255,255,255,.025);color:rgba(255,255,255,.65)}
+    .spec-table .feat-name{font-weight:400;color:rgba(255,255,255,.7)}
+    .spec-chk{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:rgba(212,32,32,.12);border-radius:50%;color:var(--red)}
+    .spec-dash{display:inline-block;width:16px;height:1.5px;background:rgba(255,255,255,.15);border-radius:2px;vertical-align:middle}
 
-    /* CTA */
-    #feat-cta{padding:7rem 0;background:#0A0A0A;position:relative;overflow:hidden}
-    #feat-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(212,32,32,.1),transparent 65%)}
-    .fcta-in{position:relative;text-align:center;max-width:680px;margin:0 auto}
-    .fcta-in h2{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.025em;color:#FFF;margin-bottom:1rem}
-    .fcta-in p{color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:2.5rem}
+    /* CTA — dramatic Apple-style */
+    #feat-cta{padding:10rem 0;background:#000;position:relative;overflow:hidden}
+    #feat-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(212,32,32,.13),transparent 65%);pointer-events:none}
+    #feat-cta::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,255,255,.025) 79px,rgba(255,255,255,.025) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,255,255,.025) 79px,rgba(255,255,255,.025) 80px);pointer-events:none}
+    .fcta-in{position:relative;text-align:center;max-width:680px;margin:0 auto;z-index:1}
+    .fcta-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1.75rem}
+    .fcta-in h2{font-family:var(--fh);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;letter-spacing:-.035em;color:#FFF;margin-bottom:1.25rem;line-height:1.05}
+    .fcta-in p{color:rgba(255,255,255,.38);line-height:1.8;margin-bottom:2.75rem;font-size:.975rem}
     .btn-red{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);display:inline-block}
     .btn-red:hover{transform:scale(1.04);box-shadow:0 0 28px rgba(212,32,32,.45)}
-    .btn-wh{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#FFF;border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--fb);display:inline-block}
-    .btn-wh:hover{background:rgba(255,255,255,.15)}
+    .btn-wh{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:400;cursor:pointer;transition:all .2s;font-family:var(--fb);display:inline-block}
+    .btn-wh:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.2)}
     .btn-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
     /* FOOTER */
@@ -154,8 +188,8 @@
     .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
     .foot-locs span{font-size:.72rem;color:rgba(255,255,255,.35);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.2rem .7rem}
 
-    @media(max-width:1024px){.ph-inner{grid-template-columns:1fr;gap:3rem}.ph-wave{display:none}.ac-lay{grid-template-columns:1fr;gap:3rem}.inst-lay{grid-template-columns:1fr}.inst-right{position:static}.core-grid{grid-template-columns:1fr 1fr}.mat-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr 1fr}}
-    @media(max-width:768px){.nav-links{display:none}.core-grid{grid-template-columns:1fr}.mat-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr}}
+    @media(max-width:1024px){.ph-inner{grid-template-columns:1fr;gap:3rem}.ph-wave{display:none}.ac-grid{grid-template-columns:1fr;gap:3rem}.ac-right{padding-top:0}.ac-img{height:360px;border-radius:16px}.ac-strip{grid-template-columns:repeat(2,1fr)}.ac-strip-item:nth-child(2){border-right:none}.inst-flow{grid-template-columns:repeat(3,1fr)}.inst-flow::before{display:none}.inst-bottom{grid-template-columns:1fr}.inst-img-big img{height:280px}.core-grid{grid-template-columns:1fr 1fr}.mat-grid{grid-template-columns:1fr 1fr;border-radius:16px}.foot-g{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.nav-links{display:none}.core-grid{grid-template-columns:1fr}.mat-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr}.inst-flow{grid-template-columns:repeat(2,1fr)}.ac-num{font-size:clamp(4rem,15vw,7rem)}.ac-strip{grid-template-columns:repeat(2,1fr)}}
     /* MEGA MENU */
     .nav-dd{position:static;display:flex;align-items:center}
     .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
@@ -246,7 +280,7 @@
     </a>
     <div class="nav-links" id="nav-links">
       
-      <div class="nav-dd"><button class="nd-toggle">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="../pods/vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/vr.html" class="mc mc-vr"><div class="mc-img-w"><img src="../pods/VR series/VR S/VR-3D-black0000.webp" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series — S, M, L and XL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.webp" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="../images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="products.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/></svg>All Products</a><div class="mf-sep"></div><a href="rental-pods.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rental Pods</a><a href="contact.html" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div></div>
+      <div class="nav-dd"><button class="nd-toggle">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="../pods/vrt.html" class="mc mc-vrt"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/vr.html" class="mc mc-vr"><div class="mc-img-w"><img src="../pods/VR series/VR S/VR-3D-black0000.webp" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series, S, M, L and XL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/art-pod.html" class="mc mc-art"><div class="mc-img-w"><img src="../images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.webp" alt="ART Pod" loading="lazy"></div><div class="mc-name">ART Pod</div><p class="mc-desc">Architecturally striking pods with bespoke cladding and custom branding.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="../pods/home-pod.html" class="mc mc-home"><div class="mc-img-w"><img src="../images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="rental-pods.html" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rental Pods</a><a href="contact.html" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div></div>
       <a href="use-cases.html">Use Cases</a>
         <a href="features.html">Features</a>
       <a href="about.html">About</a>
@@ -264,7 +298,7 @@
       <div class="ph-label">Features & Technology</div>
       <h1>Acoustic Science.<em>Workspace Design.</em></h1>
       <div class="ph-hdivider"></div>
-      <p>Every SonicHive pod is engineered to deliver genuine, measurable acoustic performance — backed by Asia's largest acoustic testing lab and built for the demands of the modern Middle East workspace.</p>
+      <p>Every SonicHive pod is engineered to deliver genuine, measurable acoustic performance, backed by Asia's largest acoustic testing lab and built for the demands of the modern Middle East workspace.</p>
       <!-- Decorative wave -->
       <svg class="ph-wave" width="360" height="170" viewBox="0 0 360 170" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M-10,155 C30,120 70,165 110,130 C150,95 190,155 230,118 C265,85 295,130 340,105" stroke="rgba(212,32,32,0.18)" stroke-width="1.2" fill="none"/>
@@ -294,7 +328,7 @@
         <div class="ph-stat-n">30dB</div>
         <div class="ph-stat-name">Noise Reduction</div>
         <div class="ph-stat-bar"></div>
-        <div class="ph-stat-l">Noise reduction — measured, not estimated</div>
+        <div class="ph-stat-l">Noise reduction, measured, not estimated</div>
       </div>
       <div class="ph-stat">
         <div class="ph-stat-icon">
@@ -312,7 +346,7 @@
         <div class="ph-stat-n">100%</div>
         <div class="ph-stat-name">Modular</div>
         <div class="ph-stat-bar"></div>
-        <div class="ph-stat-l">Modular — move it, scale it, reconfigure it</div>
+        <div class="ph-stat-l">Modular, move it, scale it, reconfigure it</div>
       </div>
       <div class="ph-stat">
         <div class="ph-stat-icon">
@@ -347,7 +381,7 @@
         <div class="cf-body">
           <div class="cf-n">30dB Sound Reduction</div>
           <div class="cf-bar"></div>
-          <p class="cf-d">Advanced multi-layer acoustic panels absorb and block sound transmission. STC-rated wall assemblies ensure conversations inside stay inside — and noise outside stays out. Independently tested at Asia's largest acoustic lab.</p>
+          <p class="cf-d">Advanced multi-layer acoustic panels absorb and block sound transmission. STC-rated wall assemblies ensure conversations inside stay inside, and noise outside stays out. Independently tested at Asia's largest acoustic lab.</p>
         </div>
       </div>
 
@@ -361,7 +395,7 @@
         <div class="cf-body">
           <div class="cf-n">Smart Ventilation System</div>
           <div class="cf-bar"></div>
-          <p class="cf-d">Built-in active ventilation continuously circulates fresh air, regulating temperature and CO₂ levels. Designed for sessions lasting hours — not the 15 minutes most pods accommodate before becoming uncomfortably stuffy.</p>
+          <p class="cf-d">Built-in active ventilation continuously circulates fresh air, regulating temperature and CO₂ levels. Designed for sessions lasting hours, not the 15 minutes most pods accommodate before becoming uncomfortably stuffy.</p>
         </div>
       </div>
 
@@ -417,7 +451,7 @@
         <div class="cf-body">
           <div class="cf-n">Privacy & Security</div>
           <div class="cf-bar"></div>
-          <p class="cf-d">Lockable doors, privacy glass options, and acoustic-grade seals ensure complete confidentiality. Designed for legal, HR, financial, and executive conversations where privacy is not optional — it's essential.</p>
+          <p class="cf-d">Lockable doors, privacy glass options, and acoustic-grade seals ensure complete confidentiality. Designed for legal, HR, financial, and executive conversations where privacy is not optional, it's essential.</p>
         </div>
       </div>
 
@@ -427,26 +461,31 @@
 
 <!-- ACOUSTIC SCIENCE -->
 <section id="acoustic">
-  <div class="wrap">
-    <div class="ac-lay">
-      <div class="ac-txt r">
-        <p class="s-label">Acoustic Science</p>
-        <h2>The <em>30dB</em> Difference</h2>
-        <p>Sound reduction isn't a feature you can fake. Our pods are engineered with multi-density acoustic foam layers, mass-loaded vinyl barriers, and decoupled wall construction — the same techniques used in professional recording studios.</p>
-        <p>At 30dB of attenuation, a conversation at normal speaking volume inside the pod is reduced to below ambient noise levels outside. That means your confidential calls stay confidential — every time.</p>
-        <p>Every model is tested in a certified acoustic lab before production commences, and every shipment is quality-verified against SonicHive's acoustic performance standards.</p>
-        <div class="ac-metrics">
-          <div class="ac-m"><div class="ac-m-n">30dB</div><div class="ac-m-l">Sound reduction (STC rated)</div></div>
-          <div class="ac-m"><div class="ac-m-n">Asia #1</div><div class="ac-m-l">Largest acoustic testing lab</div></div>
-          <div class="ac-m"><div class="ac-m-n">Multi</div><div class="ac-m-l">Layer acoustic foam system</div></div>
-          <div class="ac-m"><div class="ac-m-n">Sealed</div><div class="ac-m-l">Acoustic-grade door & frame seals</div></div>
+  <div class="ac-wrap">
+    <div class="ac-grid">
+      <div class="r-left">
+        <p class="ac-eyebrow">Acoustic Science</p>
+        <div class="ac-num">30<em>dB</em></div>
+        <p class="ac-subhead">The difference you can hear,<br>and measure.</p>
+        <div class="ac-body-text">
+          <p>Our pods are engineered with multi-density acoustic foam layers, mass-loaded vinyl barriers, and decoupled wall construction — the same techniques used in professional recording studios.</p>
+          <p>At 30dB of attenuation, a conversation at normal speaking volume inside the pod is reduced to below ambient noise levels outside.</p>
         </div>
       </div>
-      <div class="ac-visual r d2">
-        <img src="https://thesonichive.com/wp-content/uploads/2024/10/Office-telephone-booth-Sonic-Hive_22-1024x820.webp" alt="SonicHive acoustic pod">
-        <div class="ac-badge"><strong>30dB</strong><span>Noise Reduction</span></div>
+      <div class="ac-right r-right">
+        <img class="ac-img" src="https://thesonichive.com/wp-content/uploads/2024/10/Office-telephone-booth-Sonic-Hive_22-1024x820.webp" alt="SonicHive acoustic pod interior">
+        <div class="ac-badge">
+          <strong>30dB</strong>
+          <span>Noise Reduction</span>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="ac-strip r">
+    <div class="ac-strip-item d1"><div class="ac-strip-n">30dB</div><div class="ac-strip-l">Sound reduction<br>STC rated</div></div>
+    <div class="ac-strip-item d2"><div class="ac-strip-n">Asia #1</div><div class="ac-strip-l">Largest acoustic<br>testing lab</div></div>
+    <div class="ac-strip-item d3"><div class="ac-strip-n">Multi</div><div class="ac-strip-l">Layer acoustic<br>foam system</div></div>
+    <div class="ac-strip-item d4"><div class="ac-strip-n">Sealed</div><div class="ac-strip-l">Acoustic-grade<br>door & frame seals</div></div>
   </div>
 </section>
 
@@ -456,27 +495,31 @@
     <div class="mat-head r">
       <p class="s-label">Materials & Build</p>
       <h2 class="s-title">Built to Last</h2>
-      <p style="color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:520px">Every component is selected for acoustic performance, durability, and sustainability. No compromise.</p>
+      <p style="color:rgba(255,255,255,.38);font-size:1rem;line-height:1.75;max-width:520px;margin:0 auto">Every component is selected for acoustic performance, durability, and sustainability. No compromise.</p>
     </div>
     <div class="mat-grid">
       <div class="mat-card r d1">
-        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"/></svg></div>
+        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"/></svg></div>
         <div class="mat-n">Acoustic Panel Core</div>
-        <p class="mat-d">Multi-density recycled foam bonded to mass-loaded vinyl. Absorbs broadband frequencies — from low-frequency HVAC rumble to high-frequency speech.</p>
+        <div class="mat-bar"></div>
+        <p class="mat-d">Multi-density recycled foam bonded to mass-loaded vinyl. Absorbs broadband frequencies, from low-frequency HVAC rumble to high-frequency speech.</p>
       </div>
       <div class="mat-card r d2">
-        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6Zm7.5 0h.008v.008h-.008V6Zm-3.75 0h.008v.008H9V6Z"/></svg></div>
+        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6Zm7.5 0h.008v.008h-.008V6Zm-3.75 0h.008v.008H9V6Z"/></svg></div>
         <div class="mat-n">Laminated Glass</div>
+        <div class="mat-bar"></div>
         <p class="mat-d">Double-laminated acoustic glass panels in all window sections. Maintains visual openness while delivering acoustic isolation comparable to solid walls.</p>
       </div>
       <div class="mat-card r d3">
-        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/></svg></div>
+        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/></svg></div>
         <div class="mat-n">Acoustic Door Seals</div>
+        <div class="mat-bar"></div>
         <p class="mat-d">Compression seals on all door edges create an airtight acoustic barrier when closed. The door is where most pods fail — ours are engineered to the same standard as the walls.</p>
       </div>
       <div class="mat-card r d4">
-        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.355a3.375 3.375 0 0 1-3 0M12 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg></div>
+        <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.355a3.375 3.375 0 0 1-3 0M12 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg></div>
         <div class="mat-n">LED Lighting System</div>
+        <div class="mat-bar"></div>
         <p class="mat-d">Dimmable, tunable white LED panels with colour temperature control. Adjustable from warm 2700K to cool 6500K to match any working preference or time of day.</p>
       </div>
     </div>
@@ -486,39 +529,60 @@
 <!-- INSTALLATION -->
 <section id="installation">
   <div class="wrap">
-    <div class="inst-lay">
-      <div class="r">
-        <p class="s-label">Installation Process</p>
-        <h2 class="s-title">Up and Running in 2 Hours</h2>
-        <p style="color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:2.5rem">No construction, no permits, no disruption. Here's exactly what happens from order to operational pod.</p>
-        <div class="inst-steps">
-          <div class="inst-step">
-            <div class="inst-num">1</div>
-            <div><h3>Consultation & Space Assessment</h3><p>Our Dubai team assesses your floor plan and recommends the optimal pod model, quantity, and placement for acoustics, ventilation flow, and traffic patterns.</p></div>
-          </div>
-          <div class="inst-step">
-            <div class="inst-num">2</div>
-            <div><h3>Configuration & Order</h3><p>Choose your model, capacity, colour, and any customization options. We handle procurement, logistics, and scheduling — one point of contact throughout.</p></div>
-          </div>
-          <div class="inst-step">
-            <div class="inst-num">3</div>
-            <div><h3>Delivery & Assembly</h3><p>SonicHive's installation team arrives with all components pre-packaged. Assembly requires a standard single power connection only. Average completion time: under 2 hours per pod.</p></div>
-          </div>
-          <div class="inst-step">
-            <div class="inst-num">4</div>
-            <div><h3>Handover & Support</h3><p>We walk your team through operation, ventilation controls, and lighting. Full warranty coverage from day one, with ongoing support from our regional team.</p></div>
-          </div>
-          <div class="inst-step">
-            <div class="inst-num">5</div>
-            <div><h3>Move, Scale, Reconfigure</h3><p>Outgrown your layout? Adding more pods? Moving office? Every SonicHive pod disassembles in the same time it took to install — with zero damage to your space.</p></div>
-          </div>
+    <div class="inst-hd r">
+      <p class="s-label">Installation Process</p>
+      <h2>Up and Running <em>in 2 Hours</em></h2>
+      <p>No construction, no permits, no disruption. Here's exactly what happens from order to operational pod.</p>
+    </div>
+    <div class="inst-flow">
+      <div class="inst-item r d1">
+        <div class="inst-dot">01</div>
+        <h3>Consultation</h3>
+        <p>Our Dubai team assesses your floor plan and recommends optimal placement for acoustics and traffic flow.</p>
+      </div>
+      <div class="inst-item r d2">
+        <div class="inst-dot">02</div>
+        <h3>Configuration</h3>
+        <p>Choose your model, capacity, colour, and customization. One point of contact throughout.</p>
+      </div>
+      <div class="inst-item r d3">
+        <div class="inst-dot">03</div>
+        <h3>Assembly</h3>
+        <p>Our team arrives with all components pre-packaged. One power connection. Under 2 hours per pod.</p>
+      </div>
+      <div class="inst-item r d4">
+        <div class="inst-dot">04</div>
+        <h3>Handover</h3>
+        <p>We walk your team through operation and controls. Full warranty from day one.</p>
+      </div>
+      <div class="inst-item r d4">
+        <div class="inst-dot">05</div>
+        <h3>Reconfigure</h3>
+        <p>Outgrown your layout? Every SonicHive pod disassembles as fast as it installed, zero damage.</p>
+      </div>
+    </div>
+    <div class="inst-bottom">
+      <div class="inst-img-big r-left">
+        <img src="https://thesonichive.com/wp-content/uploads/2024/10/23-10-2024-18_27_04-1024x517.webp" alt="SonicHive installation">
+        <div class="inst-img-overlay"></div>
+        <div class="inst-img-caption">
+          <strong>~2 Hours</strong>
+          <span>Average install per pod</span>
         </div>
       </div>
-      <div class="inst-right r d2">
-        <div class="inst-img"><img src="https://thesonichive.com/wp-content/uploads/2024/10/23-10-2024-18_27_04-1024x517.webp" alt="Installation"></div>
-        <div class="inst-note">
-          <h4><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg> What's Included in Every Order</h4>
-          <p>Fully assembled pod, power connection kit, LED lighting system, smart ventilation unit, acoustic seals, full installation by SonicHive team, and 12-month product warranty.</p>
+      <div class="inst-note r-right">
+        <div class="inst-note-head">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+          <h4>Everything in Every Order</h4>
+        </div>
+        <p>Fully assembled pod, power connection kit, LED lighting system, smart ventilation unit, acoustic seals, full installation by the SonicHive team, and a 12-month product warranty.</p>
+        <div class="inst-tags">
+          <span class="inst-tag">LED Lighting</span>
+          <span class="inst-tag">Smart Ventilation</span>
+          <span class="inst-tag">Acoustic Seals</span>
+          <span class="inst-tag">Power Kit</span>
+          <span class="inst-tag">12-Month Warranty</span>
+          <span class="inst-tag">Installation Team</span>
         </div>
       </div>
     </div>
@@ -532,24 +596,24 @@
       <p class="s-label">Technical Specifications</p>
       <h2 class="s-title">Features Across All Models</h2>
     </div>
-    <div style="overflow-x:auto">
-    <table class="spec-table r">
+    <div style="overflow-x:auto" class="r d1">
+    <div class="spec-wrap"><table class="spec-table">
       <thead>
         <tr><th>Feature</th><th>Solo</th><th>Duo</th><th>Quartet</th><th>Hexa</th><th>Home Pod</th></tr>
       </thead>
       <tbody>
         <tr><td class="feat-name">Sound Reduction</td><td>30dB</td><td>30dB</td><td>30dB</td><td>30dB</td><td>30dB+</td></tr>
-        <tr><td class="feat-name">Ventilation System</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
-        <tr><td class="feat-name">LED Lighting</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">Ventilation System</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">LED Lighting</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
         <tr><td class="feat-name">Power Outlets</td><td>2×</td><td>2×</td><td>4×</td><td>6×</td><td>2×</td></tr>
-        <tr><td class="feat-name">USB Charging</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
-        <tr><td class="feat-name">Acoustic Glass</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
-        <tr><td class="feat-name">Custom Colours</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
-        <tr><td class="feat-name">Smart Home Integration</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">USB Charging</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Acoustic Glass</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Custom Colours</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Smart Home Integration</td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
         <tr><td class="feat-name">Installation Time</td><td>~1 hr</td><td>~1.5 hrs</td><td>~2 hrs</td><td>~2.5 hrs</td><td>~2 hrs</td></tr>
-        <tr><td class="feat-name">Eco-Friendly Materials</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+        <tr><td class="feat-name">Eco-Friendly Materials</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
       </tbody>
-    </table>
+    </table></div>
     </div>
   </div>
 </section>
@@ -557,13 +621,13 @@
 <!-- CTA -->
 <section id="feat-cta">
   <div class="wrap">
-    <div class="fcta-in r">
-      <p class="s-label" style="color:var(--red)">Experience It</p>
-      <h2>See the Technology in Person.</h2>
-      <p>Visit our Downtown Dubai showroom. Step inside a pod, hear the difference, and talk to our acoustic engineers. No obligation — just silence.</p>
+    <div class="fcta-in r-scale">
+      <p class="fcta-eyebrow">Experience It</p>
+      <h2>See the Technology<br>in Person.</h2>
+      <p>Visit our Downtown Dubai showroom. Step inside a pod, hear the difference, and speak with our acoustic engineers. No obligation — just silence.</p>
       <div class="btn-row">
         <a href="contact.html" class="btn-red">Book a Showroom Visit</a>
-        <a href="products.html" class="btn-wh">Browse Products</a>
+        <a href="use-cases.html" class="btn-wh">Explore Use Cases</a>
       </div>
     </div>
   </div>
@@ -574,7 +638,7 @@
     <div class="foot-g">
       <div class="foot-brand">
         <a href="../index.html" class="logo" style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#0A0A0A"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".5"/></svg><span class="logo-t" style="font-size:1.1rem;color:#FFF">Sonic<em>Hive</em></span></a>
-        <p>Dubai's leading acoustic pod provider — silence, privacy, and productivity across the Middle East.</p>
+        <p>Dubai's leading acoustic pod provider, silence, privacy, and productivity across the Middle East.</p>
         <div class="foot-soc">
           <a class="soc-a" href="https://www.instagram.com/sonichive_?igsh=cWdjN3Ryd3N0ejdq" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
           <a class="soc-a" href="https://www.facebook.com/share/1BwnMVP4BA/" target="_blank" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
@@ -595,7 +659,7 @@
 
 <script>
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+document.querySelectorAll('.r,.r-left,.r-right,.r-scale').forEach(el=>obs.observe(el));
 </script>
 
 <script>
