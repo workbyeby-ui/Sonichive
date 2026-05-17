@@ -64,16 +64,26 @@ img{max-width:100%;display:block}
 .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
 .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
 
+/* ── NAV TRANSPARENT → WHITE (video hero) ── */
+#nav{background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-bottom-color:transparent!important;transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease,box-shadow .4s ease}
+#nav.nav-solid{background:rgba(255,255,255,.97)!important;backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important;border-bottom-color:rgba(0,0,0,.08)!important;box-shadow:0 1px 12px rgba(0,0,0,.06)!important}
+#nav.nav-solid .logo-t{color:#0A0A0A!important}
+#nav.nav-solid .nav-links a{color:rgba(0,0,0,.55)!important}
+#nav.nav-solid .nav-links a:hover,#nav.nav-solid .nav-links a.cur{color:#0A0A0A!important}
+#nav.nav-solid .nd-toggle{color:rgba(0,0,0,.55)!important}
+#nav.nav-solid .nav-dd.open .nd-toggle,#nav.nav-solid .nd-toggle:hover{color:#0A0A0A!important}
+#nav.nav-solid .nav-ham{color:#0A0A0A!important;border-color:rgba(0,0,0,.2)!important}
+@media(max-width:768px){#nav:not(.nav-solid){background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-bottom-color:transparent!important}}
+
 /* ── HERO ── */
-.uc-hero{height:100vh;min-height:680px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 6rem;position:relative;overflow:hidden;background:#fff}
-.hero-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");opacity:.4}
-.hero-radial{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 15% 80%,rgba(212,32,32,.14),transparent 55%),radial-gradient(ellipse 50% 40% at 85% 20%,rgba(212,32,32,.07),transparent 50%)}
-.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%)}
-.hero-inner{max-width:var(--max);margin:0 auto;padding:0 4rem;position:relative;z-index:2}
+.uc-hero{height:100vh;min-height:680px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 6rem;position:relative;overflow:hidden;background:#000}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.08) 100%),linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 55%);z-index:1}
+.hero-inner{max-width:var(--max);margin:0 auto;padding:0 4rem;position:relative;z-index:2;will-change:transform,opacity;text-align:left}
 .hero-eyebrow{font-size:.7rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem;overflow:hidden}
 .hero-eyebrow span{display:block;transform:translateY(110%);transition:transform 1s var(--ease) .15s}
 body.loaded .hero-eyebrow span{transform:translateY(0)}
-.hero-h1{font-size:clamp(3.5rem,7.5vw,8rem);font-weight:300;letter-spacing:-.045em;line-height:.92;margin-bottom:2.25rem}
+.hero-h1{font-size:clamp(1.75rem,5.2vw,5rem);font-weight:300;letter-spacing:-.045em;line-height:1;margin-bottom:2.25rem;color:#fff;white-space:nowrap}
 .hero-line{display:block;overflow:hidden}
 .hero-line span{display:block;transform:translateY(110%);transition:transform 1.1s var(--ease)}
 .hero-line:nth-child(1) span{transition-delay:.25s}
@@ -81,50 +91,39 @@ body.loaded .hero-eyebrow span{transform:translateY(0)}
 .hero-line:nth-child(3) span{transition-delay:.51s}
 body.loaded .hero-line span{transform:translateY(0)}
 .hero-h1 em{color:var(--red);font-style:normal}
-.hero-sub{color:rgba(0,0,0,.5);font-size:1.05rem;line-height:1.8;max-width:500px;opacity:0;transform:translateY(22px);transition:opacity .9s ease .85s,transform .9s var(--ease) .85s}
+.hero-sub{color:rgba(255,255,255,.7);font-size:1.05rem;line-height:1.8;max-width:500px;opacity:0;transform:translateY(22px);transition:opacity .9s ease .85s,transform .9s var(--ease) .85s}
 body.loaded .hero-sub{opacity:1;transform:translateY(0)}
 
 /* Stats strip */
 .hero-stats{display:flex;gap:0;margin-top:3.5rem;opacity:0;transform:translateY(16px);transition:opacity .8s ease 1.05s,transform .8s var(--ease) 1.05s}
 body.loaded .hero-stats{opacity:1;transform:translateY(0)}
-.h-stat{padding:0 2.5rem 0 0;border-right:1px solid rgba(0,0,0,.12);margin-right:2.5rem}
+.h-stat{padding:0 2.5rem 0 0;border-right:1px solid rgba(255,255,255,.2);margin-right:2.5rem}
 .h-stat:last-child{border-right:none}
-.h-stat-n{font-size:1.8rem;font-weight:300;letter-spacing:-.04em;color:#1D1D1F;line-height:1}
-.h-stat-l{font-size:.7rem;color:rgba(0,0,0,.45);letter-spacing:.06em;margin-top:.3rem;text-transform:uppercase}
+.h-stat-n{font-size:1.8rem;font-weight:300;letter-spacing:-.04em;color:#fff;line-height:1}
+.h-stat-l{font-size:.7rem;color:rgba(255,255,255,.5);letter-spacing:.06em;margin-top:.3rem;text-transform:uppercase}
 
 /* Scroll hint */
-.hero-scroll-hint{display:flex;align-items:center;gap:.75rem;position:absolute;bottom:2.5rem;right:4rem;color:rgba(0,0,0,.35);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:0;transition:opacity .8s ease 1.3s}
+.hero-scroll-hint{display:flex;align-items:center;gap:.75rem;position:absolute;bottom:2.5rem;right:4rem;color:rgba(255,255,255,.5);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:0;transition:opacity .8s ease 1.3s}
 body.loaded .hero-scroll-hint{opacity:1}
-.scroll-line{width:36px;height:1px;background:rgba(0,0,0,.12);position:relative;overflow:hidden}
+.scroll-line{width:36px;height:1px;background:rgba(255,255,255,.2);position:relative;overflow:hidden}
 .scroll-line::after{content:'';position:absolute;inset:0;background:var(--red);animation:scan 2.2s ease-in-out infinite 1.5s;transform:translateX(-100%)}
 @keyframes scan{0%{transform:translateX(-100%)}50%{transform:translateX(0)}100%{transform:translateX(100%)}}
 
-/* ── JOURNEY (sticky split) ── */
-.journey{display:grid;grid-template-columns:55% 45%;background:#fff}
-
-/* Left: sticky visual */
-.j-visual{position:sticky;top:0;height:100vh;overflow:hidden}
-.j-images{position:relative;width:100%;height:100%}
-.j-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .9s var(--ease),transform 1.4s var(--ease)}
-.j-img.active{opacity:1;transform:scale(1)}
-.j-vignette{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.08) 0%,transparent 50%),linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 45%),linear-gradient(to bottom,rgba(0,0,0,.35) 0%,transparent 30%);z-index:1}
-.j-caption{position:absolute;bottom:2.25rem;left:2.25rem;z-index:2;font-size:.68rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);transition:opacity .4s ease}
-
-/* Progress rail */
-.j-rail{position:absolute;right:1.75rem;top:50%;transform:translateY(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.5rem}
-.j-dot{width:5px;height:5px;border-radius:50%;background:rgba(0,0,0,.2);cursor:pointer;transition:background .35s ease,transform .35s ease}
-.j-dot.active{background:var(--red);transform:scale(1.6)}
-
-/* Right: scrolling chapters */
-.j-chapters{background:#F5F5F7;border-left:1px solid rgba(0,0,0,.08)}
-
-.chapter{height:100vh;padding:0 4.5rem 0 4rem;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid rgba(0,0,0,.07);position:relative;overflow:hidden}
-.chapter:last-child{border-bottom:none}
-
-/* Ghost number */
-.ch-num{font-size:clamp(4rem,6vw,7rem);font-weight:700;color:rgba(0,0,0,.05);letter-spacing:-.06em;line-height:1;margin-bottom:-1.25rem;font-variant-numeric:tabular-nums;user-select:none;transition:color .6s ease}
-.chapter.active .ch-num{color:rgba(212,32,32,.07)}
-
+/* ── JOURNEY (scroll-paired reveal) ── */
+.journey{background:#fff}
+.uc-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(0,0,0,.07);overflow:hidden;min-height:580px}
+.uc-row:nth-child(even) .uc-img-side{order:2}
+.uc-row:nth-child(even) .uc-text-side{order:1}
+.uc-img-side{position:relative;overflow:hidden}
+.uc-img-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06) translateX(-24px);opacity:0;transition:transform 1.2s var(--ease),opacity 1s ease}
+.uc-row:nth-child(even) .uc-img-side img{transform:scale(1.06) translateX(24px)}
+.uc-img-side::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.1) 0%,transparent 50%),linear-gradient(to top,rgba(0,0,0,.45) 0%,transparent 40%);z-index:1;pointer-events:none}
+.uc-img-num{position:absolute;bottom:1.75rem;left:2rem;font-size:5rem;font-weight:700;color:rgba(255,255,255,.18);letter-spacing:-.06em;line-height:1;z-index:2;user-select:none}
+.uc-text-side{display:flex;flex-direction:column;justify-content:center;padding:5rem 4.5rem 5rem 4rem;background:#F5F5F7;transform:translateX(36px);opacity:0;transition:transform 1.2s var(--ease) .08s,opacity 1s ease .08s}
+.uc-row:nth-child(even) .uc-text-side{transform:translateX(-36px)}
+.uc-row.in-view .uc-img-side img{transform:scale(1) translateX(0);opacity:1}
+.uc-row.in-view .uc-text-side{transform:translateX(0);opacity:1}
+.ch-num{font-size:clamp(3rem,5vw,5rem);font-weight:700;color:rgba(0,0,0,.06);letter-spacing:-.06em;line-height:1;margin-bottom:-.75rem;font-variant-numeric:tabular-nums;user-select:none}
 .ch-tag{font-size:.68rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.65rem}
 .ch-title{font-size:clamp(1.8rem,2.6vw,2.6rem);font-weight:300;letter-spacing:-.035em;line-height:1.05;color:#1D1D1F;margin-bottom:.9rem}
 .ch-desc{color:rgba(0,0,0,.55);font-size:.875rem;line-height:1.75;margin-bottom:1.1rem;max-width:390px}
@@ -137,17 +136,6 @@ body.loaded .hero-scroll-hint{opacity:1}
 .ch-rec strong{color:rgba(0,0,0,.75);font-weight:500}
 .ch-cta{display:inline-flex;align-items:center;gap:.55rem;font-size:.85rem;font-weight:500;color:var(--red);transition:gap .25s ease,opacity .2s}
 .ch-cta:hover{gap:1rem;opacity:.8}
-
-/* Chapter reveal */
-.cr{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
-.chapter.in-view .cr{opacity:1;transform:none}
-.chapter.in-view .cr:nth-child(1){transition-delay:.05s}
-.chapter.in-view .cr:nth-child(2){transition-delay:.12s}
-.chapter.in-view .cr:nth-child(3){transition-delay:.2s}
-.chapter.in-view .cr:nth-child(4){transition-delay:.28s}
-.chapter.in-view .cr:nth-child(5){transition-delay:.36s}
-.chapter.in-view .cr:nth-child(6){transition-delay:.44s}
-.chapter.in-view .cr:nth-child(7){transition-delay:.52s}
 
 /* ── INDUSTRIES ── */
 .industries{background:#FAFAFA;padding:9rem 0;position:relative}
@@ -203,11 +191,15 @@ footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5
 
 /* ── RESPONSIVE ── */
 @media(max-width:1100px){
-  .journey{grid-template-columns:1fr}
-  .j-visual{display:none}
-  .j-chapters{border-left:none;border-top:1px solid rgba(0,0,0,.07)}
-  .chapter{height:auto;min-height:0;padding:5rem 3rem 4rem}
-  .ch-num{font-size:4rem;margin-bottom:-1rem}
+  .uc-row{grid-template-columns:1fr}
+  .uc-row:nth-child(even) .uc-img-side,.uc-row:nth-child(even) .uc-text-side{order:unset}
+  .uc-img-side{min-height:320px}
+  .uc-text-side{padding:4rem 3rem;transform:translateY(24px)}
+  .uc-row:nth-child(even) .uc-text-side{transform:translateY(24px)}
+  .uc-row.in-view .uc-text-side{transform:translateY(0)}
+  .uc-img-side img{transform:scale(1.06) translateY(-10px)}
+  .uc-row:nth-child(even) .uc-img-side img{transform:scale(1.06) translateY(-10px)}
+  .uc-row.in-view .uc-img-side img{transform:scale(1) translateY(0)}
   .ch-desc{max-width:100%}
   .ind-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -219,7 +211,8 @@ footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5
   .hero-stats{flex-wrap:wrap;margin-top:2rem}
   .h-stat{padding:0 1.25rem 0 0;margin-right:1.25rem;margin-bottom:.75rem}
   .hero-scroll-hint{display:none}
-  .chapter{padding:4.5rem 1.5rem 3.5rem}
+  .uc-img-side{min-height:260px}
+  .uc-text-side{padding:3rem 1.75rem}
   .ch-title{font-size:clamp(1.75rem,6vw,2.5rem)}
   .ch-desc{max-width:100%}
   .industries{padding:5rem 0}
@@ -234,7 +227,7 @@ footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5
   .foot-bot{padding-left:1.5rem;padding-right:1.5rem}
 }
 @media(max-width:520px){
-  .hero-h1{font-size:clamp(2.4rem,10vw,3.5rem)}
+  .hero-h1{font-size:clamp(1.5rem,8vw,2.8rem);white-space:normal}
   .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.75rem}
   .h-stat{padding:.75rem;margin:0;border-right:none;background:rgba(0,0,0,.03);border-radius:10px;border-bottom:1px solid rgba(0,0,0,.06)}
   .h-stat:last-child{border-right:none;border-bottom:1px solid rgba(0,0,0,.06)}
@@ -253,17 +246,15 @@ footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="uc-hero">
-  <div class="hero-noise"></div>
-  <div class="hero-radial"></div>
-  <div class="hero-grid-bg" id="hero-grid"></div>
-  <div class="hero-inner">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_171521_25968ba2-b594-4b32-aab7-f6b69398a6fa.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner" id="hero-content">
     <p class="hero-eyebrow"><span>Use Cases</span></p>
     <h1 class="hero-h1">
-      <span class="hero-line"><span>A Pod for</span></span>
-      <span class="hero-line"><span><em>Every</em></span></span>
-      <span class="hero-line"><span>Environment.</span></span>
+      <span class="hero-line"><span>A Pod for <em>Every</em> Environment.</span></span>
     </h1>
-    <p class="hero-sub">From Dubai's corporate towers to hospital consultation rooms, SonicHive pods adapt to wherever silence, privacy, and focus are needed most.</p>
     <div class="hero-stats">
       <div class="h-stat">
         <div class="h-stat-n">30dB</div>
@@ -292,209 +283,202 @@ footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5
 <!-- ═══════════════════ JOURNEY ═══════════════════ -->
 <div class="journey" id="journey">
 
-  <!-- Sticky visual panel (desktop) -->
-  <div class="j-visual">
-    <div class="j-images">
-      <img class="j-img active" data-index="0" loading="eager"
+  <!-- 01 Corporate -->
+  <div class="uc-row" id="corporate">
+    <div class="uc-img-side">
+      <img loading="eager"
         src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"
         alt="Modern corporate office open plan">
-      <img class="j-img" data-index="1" loading="lazy"
-        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2070&auto=format&fit=crop"
-        alt="Co-working shared workspace">
-      <img class="j-img" data-index="2" loading="lazy"
-        src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2070&auto=format&fit=crop"
-        alt="University library study space">
-      <img class="j-img" data-index="3" loading="lazy"
-        src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop"
-        alt="Professional recording studio">
-      <img class="j-img" data-index="4" loading="lazy"
-        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop"
-        alt="Modern healthcare clinic">
-      <img class="j-img" data-index="5" loading="lazy"
-        src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2070&auto=format&fit=crop"
-        alt="Airport transit lounge">
-      <img class="j-img" data-index="6" loading="lazy"
-        src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=2070&auto=format&fit=crop"
-        alt="Clean home office workspace">
+      <span class="uc-img-num">01</span>
     </div>
-    <div class="j-vignette"></div>
-    <div class="j-caption" id="j-caption">Corporate Office</div>
-    <div class="j-rail">
-      <div class="j-dot active" data-idx="0" role="button" aria-label="Go to Corporate Office"></div>
-      <div class="j-dot" data-idx="1" role="button" aria-label="Go to Co-Working"></div>
-      <div class="j-dot" data-idx="2" role="button" aria-label="Go to Education"></div>
-      <div class="j-dot" data-idx="3" role="button" aria-label="Go to Creative Studios"></div>
-      <div class="j-dot" data-idx="4" role="button" aria-label="Go to Healthcare"></div>
-      <div class="j-dot" data-idx="5" role="button" aria-label="Go to Transit"></div>
-      <div class="j-dot" data-idx="6" role="button" aria-label="Go to Home Office"></div>
-    </div>
-  </div>
-
-  <!-- Scrolling chapters -->
-  <div class="j-chapters">
-
-    <!-- 01 Corporate -->
-    <div class="chapter" data-index="0" id="corporate">
-      <div class="ch-num cr">01</div>
-      <p class="ch-tag cr">Corporate Office</p>
-      <h2 class="ch-title cr">Silence Inside<br>the Open Plan.</h2>
-      <p class="ch-desc cr">Open-plan offices transformed collaboration but created a noise problem that no amount of headphones can fully solve. SonicHive pods drop into any floor plan and create instant acoustic zones for work that truly demands silence.</p>
-      <div class="ch-benefits cr">
+    <div class="uc-text-side">
+      <div class="ch-num">01</div>
+      <p class="ch-tag">Corporate Office</p>
+      <h2 class="ch-title">Silence Inside<br>the Open Plan.</h2>
+      <p class="ch-desc">Open-plan offices transformed collaboration but created a noise problem that no amount of headphones can fully solve. SonicHive pods drop into any floor plan and create instant acoustic zones for work that truly demands silence.</p>
+      <div class="ch-benefits">
         <div class="ch-b"><span class="ch-b-dot"></span>Private sales calls and client conversations</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Video conferencing without background noise</div>
         <div class="ch-b"><span class="ch-b-dot"></span>HR discussions and confidential interviews</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Deep focus work sessions</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Team huddles without disturbing the office</div>
       </div>
-      <div class="ch-rec cr">
+      <div class="ch-rec">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         Recommended: <strong>Solo, Duo, Quartet, Hexa</strong>
       </div>
-      <a href="contact.html" class="ch-cta cr">
-        Get a Quote for Your Office
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
+      <a href="contact.html" class="ch-cta">Get a Quote for Your Office <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
     </div>
+  </div>
 
-    <!-- 02 Co-Working -->
-    <div class="chapter" data-index="1" id="coworking">
-      <div class="ch-num cr">02</div>
-      <p class="ch-tag cr">Co-Working Spaces</p>
-      <h2 class="ch-title cr">Premium Zones<br>Members Love.</h2>
-      <p class="ch-desc cr">Co-working spaces that install SonicHive pods see bookings fill immediately. Members pay a premium for bookable acoustic pods, driving revenue per square foot while solving the number-one complaint in shared environments: noise.</p>
-      <div class="ch-benefits cr">
+  <!-- 02 Co-Working -->
+  <div class="uc-row" id="coworking">
+    <div class="uc-img-side">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2070&auto=format&fit=crop"
+        alt="Co-working shared workspace">
+      <span class="uc-img-num">02</span>
+    </div>
+    <div class="uc-text-side">
+      <div class="ch-num">02</div>
+      <p class="ch-tag">Co-Working Spaces</p>
+      <h2 class="ch-title">Premium Zones<br>Members Love.</h2>
+      <p class="ch-desc">Co-working spaces that install SonicHive pods see bookings fill immediately. Members pay a premium for bookable acoustic pods, driving revenue per square foot while solving the number-one complaint in shared environments: noise.</p>
+      <div class="ch-benefits">
         <div class="ch-b"><span class="ch-b-dot"></span>Bookable private booths as a premium perk</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Quiet zones for deep work and long focus sessions</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Private meeting spaces without building new rooms</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Instant differentiation in a crowded market</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Flexible relocation as space layout evolves</div>
       </div>
-      <div class="ch-rec cr">
+      <div class="ch-rec">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         Recommended: <strong>Solo, Duo, Quartet</strong>
       </div>
-      <a href="contact.html" class="ch-cta cr">
-        Enquire for Co-Working
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
+      <a href="contact.html" class="ch-cta">Enquire for Co-Working <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
     </div>
+  </div>
 
-    <!-- 03 Education -->
-    <div class="chapter" data-index="2" id="education">
-      <div class="ch-num cr">03</div>
-      <p class="ch-tag cr">Education</p>
-      <h2 class="ch-title cr">Distraction-Free<br>Learning.</h2>
-      <p class="ch-desc cr">Libraries, language centres, universities, and schools face the same challenge: providing quiet individual spaces in open facilities. SonicHive creates focused environments within existing buildings — no permanent construction needed.</p>
-      <div class="ch-benefits cr">
+  <!-- 03 Education -->
+  <div class="uc-row" id="education">
+    <div class="uc-img-side">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2070&auto=format&fit=crop"
+        alt="University library study space">
+      <span class="uc-img-num">03</span>
+    </div>
+    <div class="uc-text-side">
+      <div class="ch-num">03</div>
+      <p class="ch-tag">Education</p>
+      <h2 class="ch-title">Distraction-Free<br>Learning.</h2>
+      <p class="ch-desc">Libraries, language centres, universities, and schools face the same challenge: providing quiet individual spaces in open facilities. SonicHive creates focused environments within existing buildings — no permanent construction needed.</p>
+      <div class="ch-benefits">
         <div class="ch-b"><span class="ch-b-dot"></span>Library study pods for individual focused work</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Language practice booths for speaking exercises</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Quiet zones in open-plan university campuses</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Individual tutoring and assessment rooms</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Student counselling and welfare conversations</div>
       </div>
-      <div class="ch-rec cr">
+      <div class="ch-rec">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         Recommended: <strong>Solo, Duo</strong>
       </div>
-      <a href="contact.html" class="ch-cta cr">
-        Enquire for Education
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
+      <a href="contact.html" class="ch-cta">Enquire for Education <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
     </div>
+  </div>
 
-    <!-- 04 Creative -->
-    <div class="chapter" data-index="3" id="creative">
-      <div class="ch-num cr">04</div>
-      <p class="ch-tag cr">Creative Studios</p>
-      <h2 class="ch-title cr">Record. Create.<br>Perform.</h2>
-      <p class="ch-desc cr">Professional acoustic isolation without the cost of a studio build-out. SonicHive pods deliver the sound isolation needed for music practice, podcast recording, and content creation — at a fraction of traditional studio construction cost.</p>
-      <div class="ch-benefits cr">
+  <!-- 04 Creative Studios -->
+  <div class="uc-row" id="creative">
+    <div class="uc-img-side">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop"
+        alt="Professional recording studio">
+      <span class="uc-img-num">04</span>
+    </div>
+    <div class="uc-text-side">
+      <div class="ch-num">04</div>
+      <p class="ch-tag">Creative Studios</p>
+      <h2 class="ch-title">Record. Create.<br>Perform.</h2>
+      <p class="ch-desc">Professional acoustic isolation without the cost of a studio build-out. SonicHive pods deliver the sound isolation needed for music practice, podcast recording, and content creation — at a fraction of traditional studio construction cost.</p>
+      <div class="ch-benefits">
         <div class="ch-b"><span class="ch-b-dot"></span>Podcast and voice-over recording</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Music practice and rehearsal</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Video content creation in shared spaces</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Instrument practice without building permits</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Professional audio quality in any environment</div>
       </div>
-      <div class="ch-rec cr">
+      <div class="ch-rec">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         Recommended: <strong>Solo, Duo, Home Pod</strong>
       </div>
-      <a href="contact.html" class="ch-cta cr">
-        Enquire for Creative Use
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
+      <a href="contact.html" class="ch-cta">Enquire for Creative Use <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
     </div>
+  </div>
 
-    <!-- 05 Healthcare -->
-    <div class="chapter" data-index="4" id="healthcare">
-      <div class="ch-num cr">05</div>
-      <p class="ch-tag cr">Healthcare</p>
-      <h2 class="ch-title cr">Privacy Where<br>It Matters Most.</h2>
-      <p class="ch-desc cr">In clinical environments, privacy isn't a preference — it's a requirement. SonicHive pods enable confidential consultations, patient discussions, and telehealth appointments without additional construction. Accessible configurations available.</p>
-      <div class="ch-benefits cr">
+  <!-- 05 Healthcare -->
+  <div class="uc-row" id="healthcare">
+    <div class="uc-img-side">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop"
+        alt="Modern healthcare clinic">
+      <span class="uc-img-num">05</span>
+    </div>
+    <div class="uc-text-side">
+      <div class="ch-num">05</div>
+      <p class="ch-tag">Healthcare</p>
+      <h2 class="ch-title">Privacy Where<br>It Matters Most.</h2>
+      <p class="ch-desc">In clinical environments, privacy isn't a preference — it's a requirement. SonicHive pods enable confidential consultations, patient discussions, and telehealth appointments without additional construction. Accessible configurations available.</p>
+      <div class="ch-benefits">
         <div class="ch-b"><span class="ch-b-dot"></span>Confidential patient consultations</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Telehealth and remote appointment rooms</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Staff counselling and HR conversations</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Private administrative discussions</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Accessible configurations available</div>
       </div>
-      <div class="ch-rec cr">
+      <div class="ch-rec">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         Recommended: <strong>Duo, Quartet</strong>
       </div>
-      <a href="contact.html" class="ch-cta cr">
-        Enquire for Healthcare
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
+      <a href="contact.html" class="ch-cta">Enquire for Healthcare <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
     </div>
+  </div>
 
-    <!-- 06 Transit & Hospitality -->
-    <div class="chapter" data-index="5" id="transit">
-      <div class="ch-num cr">06</div>
-      <p class="ch-tag cr">Transit &amp; Hospitality</p>
-      <h2 class="ch-title cr">Productivity<br>in Transit.</h2>
-      <p class="ch-desc cr">Dubai International Airport, hotel business centres, and transit lounges serve travellers who need to work, not just wait. SonicHive pods transform dwell spaces into genuinely productive environments, increasing satisfaction and revenue per square metre.</p>
-      <div class="ch-benefits cr">
+  <!-- 06 Transit & Hospitality -->
+  <div class="uc-row" id="transit">
+    <div class="uc-img-side">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2070&auto=format&fit=crop"
+        alt="Airport transit lounge">
+      <span class="uc-img-num">06</span>
+    </div>
+    <div class="uc-text-side">
+      <div class="ch-num">06</div>
+      <p class="ch-tag">Transit &amp; Hospitality</p>
+      <h2 class="ch-title">Productivity<br>in Transit.</h2>
+      <p class="ch-desc">Dubai International Airport, hotel business centres, and transit lounges serve travellers who need to work, not just wait. SonicHive pods transform dwell spaces into genuinely productive environments, increasing satisfaction and revenue per square metre.</p>
+      <div class="ch-benefits">
         <div class="ch-b"><span class="ch-b-dot"></span>Airport lounge private work booths</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Hotel business centre quiet zones</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Conference centre breakout pods</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Event spaces with bookable private areas</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Rental pods for temporary deployment</div>
       </div>
-      <div class="ch-rec cr">
+      <div class="ch-rec">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         Recommended: <strong>Solo, Duo, Rental Pods</strong>
       </div>
-      <a href="contact.html" class="ch-cta cr">
-        Enquire for Hospitality
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
+      <a href="contact.html" class="ch-cta">Enquire for Hospitality <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
     </div>
+  </div>
 
-    <!-- 07 Home Office -->
-    <div class="chapter" data-index="6" id="home">
-      <div class="ch-num cr">07</div>
-      <p class="ch-tag cr">Home Office</p>
-      <h2 class="ch-title cr">Remote Work,<br>Reimagined.</h2>
-      <p class="ch-desc cr">The SonicHive Home Pod is engineered for remote workers who need genuine isolation from household noise, traffic, and neighbours. In Dubai, where high-density living is the norm, the Home Pod turns any apartment into a professional workspace.</p>
-      <div class="ch-benefits cr">
+  <!-- 07 Home Office -->
+  <div class="uc-row" id="home">
+    <div class="uc-img-side">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=2070&auto=format&fit=crop"
+        alt="Clean home office workspace">
+      <span class="uc-img-num">07</span>
+    </div>
+    <div class="uc-text-side">
+      <div class="ch-num">07</div>
+      <p class="ch-tag">Home Office</p>
+      <h2 class="ch-title">Remote Work,<br>Reimagined.</h2>
+      <p class="ch-desc">The SonicHive Home Pod is engineered for remote workers who need genuine isolation from household noise, traffic, and neighbours. In Dubai, where high-density living is the norm, the Home Pod turns any apartment into a professional workspace.</p>
+      <div class="ch-benefits">
         <div class="ch-b"><span class="ch-b-dot"></span>Complete isolation from traffic and neighbours</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Professional-grade audio for client calls</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Smart home device integration</div>
         <div class="ch-b"><span class="ch-b-dot"></span>Compact footprint for apartment living</div>
         <div class="ch-b"><span class="ch-b-dot"></span>No building permit or landlord permission required</div>
       </div>
-      <div class="ch-rec cr">
+      <div class="ch-rec">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         Recommended: <strong>Home Pod</strong>
       </div>
-      <a href="contact.html" class="ch-cta cr">
-        Enquire About the Home Pod
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
+      <a href="contact.html" class="ch-cta">Enquire About the Home Pod <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
     </div>
+  </div>
 
-  </div><!-- /j-chapters -->
 </div><!-- /journey -->
 
 <!-- ═══════════════════ INDUSTRIES ═══════════════════ -->
@@ -578,50 +562,34 @@ const revealObs = new IntersectionObserver(entries => {
 }, { threshold: .1 });
 document.querySelectorAll('.r').forEach(el => revealObs.observe(el));
 
-/* ── Journey: chapter switching ── */
-const chapters  = document.querySelectorAll('.chapter');
-const jImgs     = document.querySelectorAll('.j-img');
-const jDots     = document.querySelectorAll('.j-dot');
-const jCaption  = document.getElementById('j-caption');
-
-const captions = [
-  'Corporate Office', 'Co-Working', 'Education',
-  'Creative Studios', 'Healthcare', 'Transit & Hospitality', 'Home Office'
-];
-
-function activateChapter(idx) {
-  jImgs.forEach((img, i)  => img.classList.toggle('active', i === idx));
-  jDots.forEach((dot, i)  => dot.classList.toggle('active', i === idx));
-  if (jCaption) jCaption.textContent = captions[idx];
-}
-
-const chapterObs = new IntersectionObserver(entries => {
+/* ── Journey: scroll-pair reveal ── */
+const ucRows = document.querySelectorAll('.uc-row');
+const rowObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      const idx = parseInt(e.target.dataset.index);
-      activateChapter(idx);
-      e.target.classList.add('in-view', 'active');
+      e.target.classList.add('in-view');
+      rowObs.unobserve(e.target);
     }
   });
-}, { rootMargin: '-49% 0px -49% 0px', threshold: 0 });
+}, { threshold: 0.15 });
+ucRows.forEach(row => rowObs.observe(row));
 
-chapters.forEach(ch => chapterObs.observe(ch));
-
-/* Dot click → scroll to chapter */
-jDots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    const idx = parseInt(dot.dataset.idx);
-    chapters[idx]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
-});
-
-/* ── Hero grid parallax ── */
-const heroGrid = document.getElementById('hero-grid');
-if (heroGrid) {
+/* ── Scroll: nav solid + hero outro ── */
+(function(){
+  const navEl = document.getElementById('nav');
+  const heroC = document.getElementById('hero-content');
+  const heroS = document.querySelector('.uc-hero');
   window.addEventListener('scroll', () => {
-    heroGrid.style.transform = `translateY(${window.scrollY * .25}px)`;
+    const sy = window.scrollY;
+    const heroH = heroS ? heroS.offsetHeight - 80 : window.innerHeight - 80;
+    if (navEl) { sy > heroH ? navEl.classList.add('nav-solid') : navEl.classList.remove('nav-solid'); }
+    if (heroS && heroC) {
+      const progress = Math.min(sy / (heroS.offsetHeight * 0.55), 1);
+      heroC.style.transform = `translateY(${progress * -70}px)`;
+      heroC.style.opacity = Math.max(0, 1 - progress * 2);
+    }
   }, { passive: true });
-}
+})();
 
 /* ── Mega menu ── */
 (function(){
