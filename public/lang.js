@@ -19,12 +19,10 @@
     'Explore Series →': 'استكشف السلسلة →',
     'Plug-and-play soundproofing for any team size. Installed in under 2 hours.': 'عزل صوتي جاهز للتركيب لأي حجم فريق. مُركَّب في أقل من ساعتين.',
     'Enhanced HVAC, premium finishes and superior acoustic performance.': 'تكييف هواء محسّن، تشطيبات فاخرة وأداء صوتي متفوق.',
-    'Architecturally striking pods with bespoke cladding and custom branding.': 'كبائن معمارية مميزة بتكسية مخصصة وهوية بصرية فريدة.',
     'Purpose-built for home offices, streaming studios and music practice.': 'مصممة خصيصاً للمكاتب المنزلية واستوديوهات البث وتدريب الموسيقى.',
     /* Products */
     'VRT': 'VRT',
     'VRT Plus': 'VRT Plus',
-    'ART Pod': 'ART Pod',
     'Home Pod': 'Home Pod',
     /* Capacity cards */
     'Need a Different Capacity?': 'تحتاج إلى سعة مختلفة؟',
@@ -73,10 +71,8 @@
     'Company': 'الشركة',
     'Country': 'الدولة',
     /* Product pages */
-    'Other ART Pod Sizes': 'أحجام ART Pod الأخرى',
     'Other VRT Sizes': 'أحجام VRT الأخرى',
     'Other VRT Plus Sizes': 'أحجام VRT Plus الأخرى',
-    'Explore the full ART Pod designer range — each size shares the same architectural DNA.': 'استكشف المجموعة الكاملة من ART Pod — كل حجم يشترك في نفس الهوية المعمارية.',
     'Explore the full VRT range — each size shares the same acoustic DNA.': 'استكشف المجموعة الكاملة من VRT — كل حجم يشترك في نفس الأداء الصوتي.',
     'Explore the full VRT Plus range — each size shares the same acoustic DNA.': 'استكشف المجموعة الكاملة من VRT Plus — كل حجم يشترك في نفس الأداء الصوتي.',
   };

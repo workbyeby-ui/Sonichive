@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/Faveicon-black.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SonicHive — Premium Acoustic Office Pods | Dubai, UAE</title>
+  <title>SonicHive - Premium Acoustic Office Pods | Dubai, UAE</title>
   <meta name="description" content="Premium soundproof office pods engineered for the Middle East's most demanding workspaces. Silence Booths in Dubai, Qatar, Saudi Arabia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,101 +47,54 @@
     .s-title{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-bottom:1rem}
     .s-sub{color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:520px}
 
-    /* NAV */
-    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .4s,border-color .4s,box-shadow .4s;border-bottom:1px solid transparent}
-    #nav.s{background:rgba(250,250,250,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:var(--border);box-shadow:0 1px 0 rgba(0,0,0,.06)}
-    .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
-    .logo{display:flex;align-items:center;gap:10px}
-    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em;color:#FFF;transition:color .3s}
-    #nav.s .logo-t{color:var(--text)}
-    .logo-t em{color:var(--red);font-style:normal}
-    .nav-links{display:flex;gap:1.75rem;align-items:center}
-    .nav-links a{font-size:.875rem;color:#FFF;font-weight:500;position:relative;padding-bottom:2px;transition:color .3s}
-    #nav.s .nav-links a{color:var(--text)}
-    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--red);border-radius:2px;transition:width .25s ease}
-    .nav-links a:hover::after,.nav-links a.cur::after{width:100%}
-    .nav-cta{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);white-space:nowrap;display:inline-block}
-    .nav-cta:hover{transform:scale(1.05) translateY(-1px);box-shadow:0 4px 20px rgba(212,32,32,.4)}
-    /* MEGA MENU */
-    .nav-dd{position:static;display:flex;align-items:center}
-    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:#FFF;font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;position:relative;padding-bottom:2px;transition:color .3s}
-    #nav.s .nd-toggle{color:var(--text)}
-    .nd-chev{transition:transform .25s ease;flex-shrink:0}
-    .nav-dd.open .nd-chev{transform:rotate(180deg)}
-    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
-    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
-    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
-    .mega-bg{position:absolute;inset:0;background:transparent}
-    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
-    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
-    .mega-all-link{font-size:.76rem;color:rgba(0,0,0,.4);transition:color .2s;display:flex;align-items:center;gap:.35rem}
-    .mega-all-link:hover{color:rgba(0,0,0,.8)}
-    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
-    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
-    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
-    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
-    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
-    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
-    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
-    .mc-svg-w{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
-    .mc:hover .mc-svg-w{transform:translateY(-6px) scale(1.05)}
-    .mc-badge{display:inline-block;font-size:.59rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .65rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
-    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
-    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
-    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
-    .mc:hover .mc-link{opacity:1;transform:none}
-    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
-    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
-    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
-    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
-    .mc-vr:hover{background:rgba(37,99,235,.05)}.mc-vr:hover::after{border-color:rgba(37,99,235,.2)}.mc-vr .mc-badge{background:rgba(37,99,235,.1);color:#60A5FA;border:1px solid rgba(37,99,235,.22)}.mc-vr .mc-link{color:#60A5FA}
-    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
-    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
-    .mf-link:hover{color:rgba(0,0,0,.75)}
-    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
-    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+    
 
     /* HERO */
-    #hero{position:relative;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#05080F}
-    .h-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;z-index:0}
-    .h-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(to right,rgba(5,8,15,.97) 0%,rgba(5,8,15,.9) 35%,rgba(5,8,15,.35) 65%,rgba(5,8,15,.05) 100%)}
-    .h-orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:2}
-    .h-orb1{width:650px;height:650px;background:rgba(212,32,32,.13);top:-150px;left:-150px;animation:orbF1 9s ease-in-out infinite}
-    .h-orb2{width:420px;height:420px;background:rgba(212,32,32,.07);bottom:5%;left:-80px;animation:orbF2 12s ease-in-out infinite}
+    #hero{position:relative;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#FFF}
+    .h-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}
+    .h-ov{display:none}
+    .h-orb{display:none}
     @keyframes orbF1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,50px) scale(1.06)}}
     @keyframes orbF2{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-40px) scale(1.1)}}
     .h-con{position:relative;z-index:10;flex:1;display:flex;align-items:center;padding:7rem 5% 4rem}
     .h-left{width:52%;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
-    .h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,32,32,.15);border:1px solid rgba(212,32,32,.35);border-radius:100px;padding:.4rem 1.1rem;font-size:.72rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:#FF6B6B;margin-bottom:2rem;animation:fsd .8s ease both}
+    .h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.12);border-radius:100px;padding:.4rem 1.1rem;font-size:.72rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:#0A0A0F;margin-bottom:2rem;animation:fsd .8s ease both}
     @keyframes fsd{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:none}}
-    .h-dot{width:6px;height:6px;border-radius:50%;background:#FF6B6B;animation:blink 2s ease infinite;flex-shrink:0}
+    .h-dot{width:6px;height:6px;border-radius:50%;background:#0A0A0F;animation:blink 2s ease infinite;flex-shrink:0}
     @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.7)}}
-    .h-h1{font-family:var(--fh);font-size:clamp(2.5rem,4.5vw,5.5rem);font-weight:400;line-height:.95;letter-spacing:-.035em;color:#FFF;margin-bottom:1.75rem;animation:fsu .9s .2s ease both}
+    .h-h1{font-family:var(--fh);font-size:clamp(2.5rem,4.5vw,5.5rem);font-weight:400;line-height:.95;letter-spacing:-.035em;color:#0A0A0F;margin-bottom:1.75rem;animation:fsu .9s .2s ease both}
     @keyframes fsu{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-    .h-h1 .ac{color:#FF6B6B;display:block}
-    .h-sub{font-size:clamp(.95rem,1.2vw,1.1rem);color:rgba(255,255,255,.72);max-width:480px;line-height:1.75;margin-bottom:2.5rem;animation:fsu .9s .4s ease both}
+    .h-h1 .ac{color:#0A0A0F;display:block}
+    .h-sub{font-size:clamp(.95rem,1.2vw,1.1rem);color:rgba(0,0,0,.55);max-width:480px;line-height:1.75;margin-bottom:2.5rem;animation:fsu .9s .4s ease both}
     .h-ctas{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;animation:fsu .9s .6s ease both}
-    .h-stats-row{display:flex;gap:0;align-items:stretch;margin-top:3rem;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;animation:fsu .9s .8s ease both;flex-wrap:wrap;width:100%}
-    .hsr-item{padding:1.1rem 1.75rem;text-align:center;border-right:1px solid rgba(255,255,255,.1);flex:1;min-width:100px}
+    .h-stats-row{display:flex;gap:0;align-items:stretch;margin-top:3rem;border:1px solid rgba(0,0,0,.1);border-radius:16px;overflow:hidden;animation:fsu .9s .8s ease both;flex-wrap:wrap;width:100%}
+    .hsr-item{padding:1.1rem 1.75rem;text-align:center;border-right:1px solid rgba(0,0,0,.1);flex:1;min-width:100px}
     .hsr-item:last-child{border-right:none}
-    .hsr-num{font-family:var(--fh);font-size:1.6rem;font-weight:400;color:#fff;line-height:1}
-    .hsr-num span{color:#FF6B6B}
-    .hsr-lab{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.3rem}
+    .hsr-num{font-family:var(--fh);font-size:1.6rem;font-weight:400;color:#0A0A0F;line-height:1}
+    .hsr-num span{color:#0A0A0F}
+    .hsr-lab{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.4);margin-top:.3rem}
     .btn-red{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.875rem 2.5rem;font-size:1rem;font-weight:400;cursor:pointer;transition:transform .25s,box-shadow .25s;font-family:var(--fb);display:inline-block;position:relative;overflow:hidden}
     .btn-red::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .2s}
     .btn-red:hover{transform:scale(1.05) translateY(-2px);box-shadow:0 8px 32px rgba(212,32,32,.55)}
     .btn-red:hover::after{opacity:1}
-    .btn-wh{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#FFF;border-radius:100px;padding:.875rem 2.5rem;font-size:1rem;font-weight:500;cursor:pointer;transition:all .25s;font-family:var(--fb);display:inline-block}
-    .btn-wh:hover{background:rgba(255,255,255,.2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
-    .h-scroll{position:absolute;bottom:2.5rem;right:5%;z-index:10;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.45);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;animation:fadeIn 1s 1.2s ease both;cursor:pointer}
+    .btn-wh{background:transparent;border:1px solid rgba(0,0,0,.2);color:#0A0A0F;border-radius:100px;padding:.875rem 2.5rem;font-size:1rem;font-weight:500;cursor:pointer;transition:all .25s;font-family:var(--fb);display:inline-block}
+    .btn-wh:hover{background:rgba(0,0,0,.05);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+    .h-scroll{position:absolute;bottom:2.5rem;right:5%;z-index:10;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(0,0,0,.4);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;animation:fadeIn 1s 1.2s ease both;cursor:pointer}
     @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-    .h-bar{width:1px;height:48px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:sp 1.8s ease-in-out infinite}
+    .h-bar{width:1px;height:48px;background:linear-gradient(to bottom,rgba(0,0,0,.4),transparent);animation:sp 1.8s ease-in-out infinite}
     @keyframes sp{0%,100%{opacity:1}50%{opacity:.3}}
+    /* transparent nav → dark text on light hero */
+    #nav[data-nav="transparent"]:not(.s) .logo-img{filter:brightness(0)!important}
+    #nav[data-nav="transparent"]:not(.s) .nav-links a{color:rgba(0,0,0,.6)!important}
+    #nav[data-nav="transparent"]:not(.s) .nav-links a:hover,#nav[data-nav="transparent"]:not(.s) .nav-links a.cur{color:#0A0A0F!important}
+    #nav[data-nav="transparent"]:not(.s) .nd-toggle{color:rgba(0,0,0,.6)!important}
+    #nav[data-nav="transparent"]:not(.s) .nd-toggle:hover,#nav[data-nav="transparent"]:not(.s) .nav-dd.open .nd-toggle{color:#0A0A0F!important}
+    #nav[data-nav="transparent"]:not(.s) .nav-cta{color:#FFF!important}
     @media(max-width:1024px){.h-left{width:65%}}
-    @media(max-width:768px){#hero{height:100vh;height:100dvh}.h-vid{object-fit:cover;object-position:68% center}.h-ov{background:linear-gradient(to top,rgba(5,8,15,1) 0%,rgba(5,8,15,.95) 28%,rgba(5,8,15,.35) 58%,rgba(5,8,15,0) 100%)}.h-orb{display:none!important}.h-con{padding:0 1.5rem 3rem;align-items:flex-end}.h-left{width:100%;align-items:center;text-align:center}.h-badge{display:none}.h-h1{font-size:clamp(2rem,8vw,2.8rem);margin-bottom:1.25rem;line-height:1.05}.h-sub{display:none}.h-ctas{flex-direction:column;width:100%;gap:.65rem}.btn-red{width:100%;text-align:center;padding:.85rem;font-size:.95rem}.btn-wh{display:none}.h-stats-row{display:none}.h-scroll{display:none}}
+    @media(max-width:768px){#hero{height:100vh;height:100dvh}.h-vid{object-fit:cover;object-position:68% center}.h-ov{display:none!important}.h-orb{display:none!important}.h-con{padding:0 1.5rem 3rem;align-items:flex-end}.h-left{width:100%;align-items:center;text-align:center}.h-badge{display:none}.h-h1{font-size:clamp(2rem,8vw,2.8rem);margin-bottom:1.25rem;line-height:1.05}.h-sub{display:none}.h-ctas{flex-direction:column;width:100%;gap:.65rem}.btn-red{width:100%;text-align:center;padding:.85rem;font-size:.95rem}.btn-wh{display:none}.h-stats-row{display:none}.h-scroll{display:none}}
 
     /* SCROLL ANIMATION */
-    #sa-section{position:relative;height:450vh;background:#FFF}
+    #sa-section{position:relative;height:550vh;background:#FFF}
     #sa-sticky{position:sticky;top:68px;height:calc(100vh - 68px);width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#FFF}
     #sa-bg-layer{position:absolute;inset:0;z-index:0;background:#FFF;transition:background .12s ease}
     #sa-canvas{display:block;max-width:100%;max-height:calc(100vh - 68px);width:auto;height:auto;position:relative;z-index:1;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)}
@@ -160,6 +114,29 @@
     @keyframes saArrow{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
     @media(max-width:768px){#sa-section{height:300vh}#sa-sticky{top:60px;height:calc(100vh - 60px)}#sa-canvas{max-height:calc(100vh - 120px);-webkit-mask-image:none;mask-image:none}#sa-hud{bottom:1.5rem}#sa-scroll-hint{bottom:3rem}}
 
+    /* SA OVERLAY LAYERS - absolute inside sticky so only the canvas is behind the blur */
+    #sa-glass-layer{position:absolute;inset:0;backdrop-filter:blur(26px);-webkit-backdrop-filter:blur(26px);background:rgba(250,250,250,.3);z-index:2;opacity:0;pointer-events:none}
+    #sa-text-layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3;opacity:0;pointer-events:none}
+    .sat-inner{text-align:center}
+    .sat-label{font-size:.72rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;gap:.55rem}
+    .sat-label::before,.sat-label::after{content:'';width:22px;height:2px;background:var(--red);border-radius:2px;flex-shrink:0}
+    .sat-h{font-family:var(--fh);font-size:clamp(2rem,5vw,4rem);font-weight:300;letter-spacing:-.03em;color:var(--text);line-height:1.15}
+    .sat-h strong{font-weight:600;color:var(--red)}
+    /* words: no CSS transition - opacity/transform are scroll-driven */
+    .sa-word{display:inline-block;opacity:0;transform:translateY(50px);will-change:opacity,transform}
+
+    /* SA MOBILE TEXT - inside sticky, hidden on desktop */
+    #sa-mob-text{display:none;flex-shrink:0;width:100%;text-align:center;padding:0.6rem 1.5rem 0.4rem;position:relative;z-index:4}
+    #sa-mob-text .sat-label{font-size:.68rem;margin-bottom:.5rem}
+    #sa-mob-text .sat-h{font-size:clamp(1.7rem,6.5vw,2.4rem);color:var(--text)}
+    @media(max-width:768px){
+      #sa-section{height:300vh}
+      #sa-glass-layer,#sa-text-layer{display:none!important}
+      #sa-mob-text{display:block}
+      #sa-sticky{flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:12vh;gap:4.5rem}
+      #sa-canvas{max-height:calc(58vh - 60px)!important;-webkit-mask-image:none!important;mask-image:none!important}
+    }
+
     /* TICKER */
     #ticker-s{background:#0A0A0A;padding:1.2rem 0;overflow:hidden}
     .tick-t{display:flex;width:max-content;animation:tick 28s linear infinite}
@@ -176,9 +153,9 @@
 
     /* PRODUCTS TEASER */
     #products-teaser{padding:7rem 0}
-    .pt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-    .pt-card{background:#FFF;border:1px solid var(--border);border-radius:20px;display:flex;flex-direction:row;align-items:stretch;transition:border-color .3s,box-shadow .3s;text-decoration:none;color:inherit;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06),0 8px 32px rgba(0,0,0,.05);position:relative}
-    .pt-card:hover{border-color:rgba(0,0,0,.14);box-shadow:0 8px 32px rgba(0,0,0,.1),0 24px 64px rgba(0,0,0,.08)}
+    .pt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem}
+    .pt-card{background:#FAFAFA;border:none;border-radius:30px;display:flex;flex-direction:row;align-items:stretch;transition:box-shadow .3s,transform .3s;text-decoration:none;color:inherit;overflow:hidden;box-shadow:15px 15px 30px #d4d4d4,-15px -15px 30px #ffffff;position:relative}
+    .pt-card:hover{box-shadow:18px 18px 36px #cccccc,-18px -18px 36px #ffffff;transform:translateY(-3px)}
     .pt-left{flex:1;display:flex;flex-direction:column;padding:2rem 2rem 4.5rem}
     .pt-right{width:240px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:1.5rem 1.5rem 1.5rem 0}
     .pt-pod-wrap{display:flex;flex-direction:column;align-items:center}
@@ -204,13 +181,28 @@
     #stats-row::before{content:'';position:absolute;left:-40px;top:50%;transform:translateY(-50%);width:260px;height:260px;background-image:radial-gradient(circle,rgba(212,32,32,.18) 1.5px,transparent 1.5px);background-size:18px 18px;pointer-events:none;opacity:.7}
     #stats-row::after{content:'';position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:260px;height:260px;background-image:radial-gradient(circle,rgba(212,32,32,.18) 1.5px,transparent 1.5px);background-size:18px 18px;pointer-events:none;opacity:.7}
     .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;position:relative;z-index:1}
-    .stat-item{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2.5rem 1.5rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.05),0 6px 24px rgba(0,0,0,.04);transition:transform .3s,box-shadow .3s}
-    .stat-item:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.09),0 16px 40px rgba(0,0,0,.06)}
-    .stat-icon{width:58px;height:58px;border-radius:50%;background:rgba(212,32,32,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
-    .stat-num{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--text);line-height:1;margin-bottom:.55rem}
-    .stat-lab{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
-    .stat-dash{width:28px;height:3px;background:var(--red);border-radius:2px}
-    @media(max-width:768px){.stats-grid{grid-template-columns:1fr 1fr;gap:.75rem}.stat-item{padding:1.25rem .85rem 1rem;border-radius:14px}.stat-icon{width:40px;height:40px;margin-bottom:.85rem}.stat-icon svg{width:18px;height:18px}.stat-num{font-size:clamp(1.5rem,6vw,2rem);margin-bottom:.35rem}.stat-lab{font-size:.6rem;margin-bottom:.65rem}.stat-dash{width:20px;height:2px}}
+    .stat-outer{border-radius:20px;padding:1.5px;background:radial-gradient(circle 230px at 0% 0%,#D42020,#cccccc);position:relative;transition:transform .3s}
+    .stat-outer:hover{transform:translateY(-4px)}
+    @keyframes statDot{0%,100%{top:10%;right:10%}25%{top:10%;right:calc(100% - 32px)}50%{top:calc(100% - 28px);right:calc(100% - 32px)}75%{top:calc(100% - 28px);right:10%}}
+    .stat-dot{width:5px;aspect-ratio:1;position:absolute;background:#D42020;box-shadow:0 0 8px #D42020,0 0 18px rgba(212,32,32,.5);border-radius:100px;z-index:2;right:10%;top:10%;animation:statDot 6s linear infinite;pointer-events:none}
+    .stat-item{background:#fff;border-radius:19px;padding:1.6rem 1.1rem 1.3rem;text-align:center;display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden}
+    .stat-ray{width:160px;height:32px;border-radius:100px;position:absolute;background:rgba(212,32,32,.07);opacity:.6;filter:blur(12px);transform-origin:10%;top:0;left:0;transform:rotate(40deg);pointer-events:none}
+    .stat-line{position:absolute}
+    .stat-topl{top:10%;left:0;right:0;height:1px;background:linear-gradient(90deg,rgba(212,32,32,.18) 0%,rgba(0,0,0,.05) 55%,transparent 100%)}
+    .stat-bottoml{bottom:10%;left:0;right:0;height:1px;background:rgba(0,0,0,.04)}
+    .stat-leftl{left:10%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(212,32,32,.12) 0%,rgba(0,0,0,.04) 55%,transparent 100%)}
+    .stat-rightl{right:10%;top:0;bottom:0;width:1px;background:rgba(0,0,0,.03)}
+    /* per-card patterns */
+    .stats-grid>.stat-outer:nth-child(1) .stat-item{background-color:#fff;background-image:radial-gradient(circle,rgba(212,32,32,.07) 1px,transparent 1px);background-size:18px 18px}
+    .stats-grid>.stat-outer:nth-child(2) .stat-item{background-color:#fff;background-image:repeating-linear-gradient(45deg,rgba(212,32,32,.05) 0,rgba(212,32,32,.05) 1px,transparent 0,transparent 50%);background-size:14px 14px}
+    .stats-grid>.stat-outer:nth-child(3) .stat-item{background-color:#fff;background-image:repeating-linear-gradient(0deg,rgba(212,32,32,.06) 0,rgba(212,32,32,.06) 1px,transparent 0,transparent 14px)}
+    .stats-grid>.stat-outer:nth-child(4) .stat-item{background-color:#fff;background-image:linear-gradient(rgba(212,32,32,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(212,32,32,.05) 1px,transparent 1px);background-size:20px 20px}
+    .stat-icon{width:44px;height:44px;border-radius:50%;background:rgba(212,32,32,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;position:relative;z-index:1}
+    .stat-icon svg{width:18px;height:18px}
+    .stat-num{font-family:var(--fh);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:500;color:var(--text);line-height:1;margin-bottom:.4rem;position:relative;z-index:1}
+    .stat-lab{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem;position:relative;z-index:1}
+    .stat-dash{width:28px;height:3px;background:var(--red);border-radius:2px;position:relative;z-index:1}
+    @media(max-width:768px){.stats-grid{grid-template-columns:1fr 1fr;gap:.75rem}.stat-outer{border-radius:15px}.stat-item{padding:1.25rem .85rem 1rem;border-radius:14px}.stat-icon{width:40px;height:40px;margin-bottom:.85rem}.stat-icon svg{width:18px;height:18px}.stat-num{font-size:clamp(1.2rem,5vw,1.6rem);margin-bottom:.35rem}.stat-lab{font-size:.58rem;margin-bottom:.65rem}.stat-dash{width:20px;height:2px}}
 
     /* VALUE PROPS */
     #value-props{padding:6rem 0;position:relative;overflow:hidden;background-color:var(--bg2);background-image:linear-gradient(to right,rgba(242,243,245,.92) 20%,rgba(242,243,245,.6) 45%,rgba(242,243,245,.15) 70%,transparent 100%),url('images/why-bg.webp');background-size:cover;background-position:center}
@@ -308,26 +300,8 @@
     .c-chip img{height:26px;width:120px;object-fit:contain;filter:grayscale(100%);opacity:.5;transition:filter .3s,opacity .3s}
     .c-chip:hover img{filter:grayscale(0%);opacity:1}
 
-    /* FOOTER */
-    footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5rem 0 2rem}
-    .foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3.5rem}
-    .foot-brand p{color:rgba(255,255,255,.4);font-size:.9rem;line-height:1.7;margin-top:1rem;max-width:280px}
-    .foot-soc{display:flex;gap:.75rem;margin-top:1.5rem}
-    .soc-a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:400;transition:all .25s;color:rgba(255,255,255,.4)}
-    .soc-a:hover{background:var(--red-d);border-color:var(--red-b);color:var(--red);transform:translateY(-3px)}
-    .foot-col h4{font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem;color:rgba(255,255,255,.9)}
-    .foot-col a{display:block;color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;transition:color .2s,transform .2s;transform-origin:left}
-    .foot-col a:hover{color:#FFF;transform:translateX(4px)}
-    .foot-contact p{color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem}
-    .foot-contact a{color:var(--red);display:inline;margin-bottom:0}
-    .foot-bot{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-    .foot-bot p{color:rgba(255,255,255,.3);font-size:.8rem}
-    .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
-    .foot-locs span{font-size:.72rem;color:rgba(255,255,255,.35);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.2rem .7rem;transition:all .2s;cursor:default}
-    .foot-locs span:hover{background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
-
-    @media(max-width:1024px){.pt-grid{grid-template-columns:1fr 1fr}.vp-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}}
-    @media(max-width:768px){.pt-grid{grid-template-columns:1fr;gap:1rem}.pt-card{flex-direction:column}.pt-left{padding-bottom:1.5rem!important}.pt-right{width:100%;padding:0 1.5rem 1rem;justify-content:center}.pt-pod-wrap img{max-height:160px}.pt-pod-shadow{display:none}.pt-btn{position:static!important;margin:0 1.5rem 1.5rem!important;align-self:flex-start}.vp-grid{grid-template-columns:1fr}.uc-grid{grid-template-columns:1fr}.uc-card.tall{grid-row:auto}.foot-g{grid-template-columns:1fr}#value-props{background-image:linear-gradient(rgba(242,243,245,.93),rgba(242,243,245,.93)),url('images/why-bg.webp')}.h-orb{display:none!important}.h-con,.h-vid{transform:none!important}#cg{display:none!important}#sec-dots{display:none!important}.h-badge,.h-h1,.h-sub,.h-ctas,.h-stats-row,.h-scroll{animation:none!important;opacity:1!important;transform:none!important}.h-dot,.h-bar{animation:none!important}.t-track,.marquee-row{will-change:auto!important}.r,.rl,.rr,.rs{opacity:1!important;transform:none!important;transition:none!important}.r.on,.rl.on,.rr.on,.rs.on{opacity:1!important;transform:none!important}}
+    @media(max-width:1024px){.pt-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}.vp-grid{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}}
+    @media(max-width:768px){.pt-grid{grid-template-columns:1fr;gap:1rem}.pt-card{flex-direction:column}.pt-left{padding-bottom:1.5rem!important}.pt-right{width:100%;padding:0 1.5rem 1rem;justify-content:center}.pt-pod-wrap img{max-height:160px}.pt-pod-shadow{display:none}.pt-btn{position:static!important;margin:0 1.5rem 1.5rem!important;align-self:flex-start}.vp-grid{grid-template-columns:1fr}.uc-grid{grid-template-columns:1fr}.uc-card.tall{grid-row:auto}#value-props{background-image:linear-gradient(rgba(242,243,245,.93),rgba(242,243,245,.93)),url('images/why-bg.webp')}.h-orb{display:none!important}.h-con,.h-vid{transform:none!important}#cg{display:none!important}#sec-dots{display:none!important}.h-badge,.h-h1,.h-sub,.h-ctas,.h-stats-row,.h-scroll{animation:none!important;opacity:1!important;transform:none!important}.h-dot,.h-bar{animation:none!important}.t-track,.marquee-row{will-change:auto!important}.r,.rl,.rr,.rs{opacity:1!important;transform:none!important;transition:none!important}.r.on,.rl.on,.rr.on,.rs.on{opacity:1!important;transform:none!important}}
     @media(max-width:480px){.h-h1{font-size:clamp(2.2rem,8vw,3.5rem)}.btn-red,.btn-wh{padding:.75rem 1.75rem;font-size:.9rem}.h-stats-row{margin-top:1.5rem}.hsr-num{font-size:1.2rem}.hsr-lab{font-size:.6rem}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
     </style>
@@ -343,7 +317,7 @@
 
 <!-- HERO -->
 <section id="hero">
-  <img class="h-vid" src="images/hero-bg.webp?v=2" alt="" aria-hidden="true">
+  <img class="h-vid" src="images/Meeting Pods - Hero.png" alt="" aria-hidden="true">
   <div class="h-ov"></div>
   <div class="h-orb h-orb1"></div>
   <div class="h-orb h-orb2"></div>
@@ -357,9 +331,9 @@
         <a href="contact.html" class="btn-wh">Get a Quote</a>
       </div>
       <div class="h-stats-row">
-        <div class="hsr-item"><div class="hsr-num">500<span>+</span></div><div class="hsr-lab">Installations</div></div>
-        <div class="hsr-item"><div class="hsr-num">30<span>dB</span></div><div class="hsr-lab">Reduction</div></div>
-        <div class="hsr-item"><div class="hsr-num">100<span>+</span></div><div class="hsr-lab">Clients</div></div>
+        <div class="hsr-item"><div class="hsr-num">800<span>+</span></div><div class="hsr-lab">Installations</div></div>
+        <div class="hsr-item"><div class="hsr-num">30-35<span>dB</span></div><div class="hsr-lab">Reduction</div></div>
+        <div class="hsr-item"><div class="hsr-num">300<span>+</span></div><div class="hsr-lab">Clients</div></div>
         <div class="hsr-item"><div class="hsr-num">5<span>★</span></div><div class="hsr-lab">Rating</div></div>
       </div>
     </div>
@@ -376,8 +350,24 @@
       <div id="sa-loader-track"><div id="sa-loader-fill"></div></div>
       <p id="sa-loader-text">Loading…</p>
     </div>
+    <!-- mobile-only text header inside sticky -->
+    <div id="sa-mob-text">
+      <p class="sat-label">SonicHive</p>
+      <h2 class="sat-h">Precision Driven<br><strong>Sound</strong> Innovation</h2>
+    </div>
     <div id="sa-bg-layer"></div>
     <canvas id="sa-canvas"></canvas>
+    <!-- desktop scroll-driven overlay layers - absolute inside sticky, canvas is their backdrop -->
+    <div id="sa-glass-layer"></div>
+    <div id="sa-text-layer">
+      <div class="sat-inner">
+        <p class="sat-label" id="sat-lbl">SonicHive</p>
+        <h2 class="sat-h">
+          <span class="sa-word">Precision</span>&thinsp;<span class="sa-word">Driven</span><br>
+          <span class="sa-word"><strong>Sound</strong></span>&thinsp;<span class="sa-word">Innovation</span>
+        </h2>
+      </div>
+    </div>
     <div id="sa-hud">
       <div id="sa-hud-track"><div id="sa-hud-fill"></div></div>
     </div>
@@ -394,7 +384,7 @@
       <div class="rl">
         <p class="s-label">Our Products</p>
         <h2 class="s-title">Find Your Perfect Pod</h2>
-        <p class="s-sub">Four distinct product lines — from standard acoustic pods to bespoke designer installations and residential retreats.</p>
+        <p class="s-sub">Four distinct product lines — from standard acoustic pods to bespoke designer installations, residential retreats, and flexible rentals.</p>
       </div>
       <a href="products.html" class="sec-link rr">View All Products →</a>
     </div>
@@ -413,8 +403,8 @@
             </div>
           </div>
           <div class="pt-name">VRT</div>
-          <div class="pt-meta" style="color:#D42020">1–6 Person · From AED 12,500</div>
-          <p class="pt-desc">The SonicHive signature pod. Plug-and-play soundproofing for any team size, installed in under 2 hours.</p>
+          <div class="pt-meta" style="color:#D42020">1-6 Person - From AED 12,500</div>
+          <p class="pt-desc">The SonicHive signature pod. Plug-and-play soundproofing for any team size.</p>
         </div>
         <div class="pt-right">
           <div class="pt-pod-wrap">
@@ -438,7 +428,7 @@
             </div>
           </div>
           <div class="pt-name">VR</div>
-          <div class="pt-meta" style="color:#1D4ED8">S · M · L · XL · Full Colour Customisation</div>
+          <div class="pt-meta" style="color:#1D4ED8">S - M - L - XL - Full Colour Customisation</div>
           <p class="pt-desc">A distinct acoustic pod series with modular S, M, L and XL configurations. Fully customisable in 15+ colour combinations.</p>
         </div>
         <div class="pt-right">
@@ -450,33 +440,8 @@
         <span class="pt-btn">Explore Models <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
 
-      <!-- ART Pod -->
-      <a class="pt-card r d3" href="art-pod.html">
-        <div class="pt-left">
-          <div class="pt-series">
-            <div class="pt-series-icon" style="background:rgba(79,70,229,.08)">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
-            </div>
-            <div class="pt-series-meta">
-              <span class="pt-series-name" style="color:#4338CA">Designer Series</span>
-              <div class="pt-series-line" style="background:#4338CA"></div>
-            </div>
-          </div>
-          <div class="pt-name">ART Pod</div>
-          <div class="pt-meta" style="color:#4338CA">1–6 Person · Bespoke Design</div>
-          <p class="pt-desc">Architecturally striking pods with bespoke cladding and custom branding. Engineered to make a statement.</p>
-        </div>
-        <div class="pt-right">
-          <div class="pt-pod-wrap">
-            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/ART (with glass at back wall)/ART SM 1.webp" alt="ART Pod" loading="lazy">
-            <div class="pt-pod-shadow"></div>
-          </div>
-        </div>
-        <span class="pt-btn">Explore Models <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
       <!-- Home Pod -->
-      <a class="pt-card r d4" href="home-pod.html">
+      <a class="pt-card r d3" href="home-pod.html">
         <div class="pt-left">
           <div class="pt-series">
             <div class="pt-series-icon" style="background:rgba(13,148,136,.08)">
@@ -498,6 +463,31 @@
           </div>
         </div>
         <span class="pt-btn">Explore Models <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <!-- Rent a Pod -->
+      <a class="pt-card r d4" href="rental-pods.html">
+        <div class="pt-left">
+          <div class="pt-series">
+            <div class="pt-series-icon" style="background:rgba(217,119,6,.1)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="pt-series-meta">
+              <span class="pt-series-name" style="color:#D97706">Rental Service</span>
+              <div class="pt-series-line" style="background:#D97706"></div>
+            </div>
+          </div>
+          <div class="pt-name">Rent a Pod</div>
+          <div class="pt-meta" style="color:#D97706">Events - Trade Shows - Temporary Office</div>
+          <p class="pt-desc">Flexible pod hire delivered and installed across Dubai & UAE. Ideal for exhibitions, events and short-term workspace needs.</p>
+        </div>
+        <div class="pt-right">
+          <div class="pt-pod-wrap">
+            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT M 1.webp" alt="Rent a Pod" loading="lazy">
+            <div class="pt-pod-shadow"></div>
+          </div>
+        </div>
+        <span class="pt-btn">View Rental Options <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
 
     </div>
@@ -522,40 +512,72 @@
   <div class="wrap">
     <div class="stats-grid">
 
-      <div class="stat-item rs d1">
-        <div class="stat-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      <div class="stat-outer rs d1">
+        <div class="stat-dot"></div>
+        <div class="stat-item">
+          <div class="stat-ray"></div>
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <div class="stat-num" data-target="500" data-suffix="+">0+</div>
+          <div class="stat-lab">Pod Installations</div>
+          <div class="stat-dash"></div>
+          <div class="stat-line stat-topl"></div>
+          <div class="stat-line stat-leftl"></div>
+          <div class="stat-line stat-bottoml"></div>
+          <div class="stat-line stat-rightl"></div>
         </div>
-        <div class="stat-num" data-target="500" data-suffix="+">0+</div>
-        <div class="stat-lab">Pod Installations</div>
-        <div class="stat-dash"></div>
       </div>
 
-      <div class="stat-item rs d2">
-        <div class="stat-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="stat-outer rs d2">
+        <div class="stat-dot"></div>
+        <div class="stat-item">
+          <div class="stat-ray"></div>
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="stat-num" data-target="100" data-suffix="+">0+</div>
+          <div class="stat-lab">Corporate Clients</div>
+          <div class="stat-dash"></div>
+          <div class="stat-line stat-topl"></div>
+          <div class="stat-line stat-leftl"></div>
+          <div class="stat-line stat-bottoml"></div>
+          <div class="stat-line stat-rightl"></div>
         </div>
-        <div class="stat-num" data-target="100" data-suffix="+">0+</div>
-        <div class="stat-lab">Corporate Clients</div>
-        <div class="stat-dash"></div>
       </div>
 
-      <div class="stat-item rs d3">
-        <div class="stat-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+      <div class="stat-outer rs d3">
+        <div class="stat-dot"></div>
+        <div class="stat-item">
+          <div class="stat-ray"></div>
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+          </div>
+          <div class="stat-num" data-target="30" data-suffix="dB">0dB</div>
+          <div class="stat-lab">Sound Reduction</div>
+          <div class="stat-dash"></div>
+          <div class="stat-line stat-topl"></div>
+          <div class="stat-line stat-leftl"></div>
+          <div class="stat-line stat-bottoml"></div>
+          <div class="stat-line stat-rightl"></div>
         </div>
-        <div class="stat-num" data-target="30" data-suffix="dB">0dB</div>
-        <div class="stat-lab">Sound Reduction</div>
-        <div class="stat-dash"></div>
       </div>
 
-      <div class="stat-item rs d4">
-        <div class="stat-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <div class="stat-outer rs d4">
+        <div class="stat-dot"></div>
+        <div class="stat-item">
+          <div class="stat-ray"></div>
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="stat-num" data-target="5" data-suffix="+">0+</div>
+          <div class="stat-lab">Countries Served</div>
+          <div class="stat-dash"></div>
+          <div class="stat-line stat-topl"></div>
+          <div class="stat-line stat-leftl"></div>
+          <div class="stat-line stat-bottoml"></div>
+          <div class="stat-line stat-rightl"></div>
         </div>
-        <div class="stat-num" data-target="5" data-suffix="+">0+</div>
-        <div class="stat-lab">Countries Served</div>
-        <div class="stat-dash"></div>
       </div>
 
     </div>
@@ -569,7 +591,7 @@
       <div class="rl">
         <p class="s-label">Why SonicHive</p>
         <h2 class="s-title">Built Different.<br>Built <span style="color:var(--red)">Better.</span></h2>
-        <p class="s-sub" style="margin-top:.85rem">SonicHive pods combine cutting-edge acoustic engineering with modern design and effortless installation — so you can focus on what matters.</p>
+        <p class="s-sub" style="margin-top:.85rem">SonicHive pods combine cutting-edge acoustic engineering with modern design — so you can focus on what matters.</p>
       </div>
     </div>
     <div class="vp-grid">
@@ -599,7 +621,7 @@
           </div>
         </div>
         <div class="vp-divider"></div>
-        <div class="vp-name">Installed in 2 Hours</div>
+        <div class="vp-name">Tool-Free Setup</div>
         <p class="vp-desc">Fully modular, self-contained, plug-and-play. No drilling, no contractors, no downtime. Ready in hours, not weeks.</p>
         <a href="features.html" class="vp-lnk">Learn more →</a>
       </div>
@@ -609,7 +631,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z"/><path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z"/></svg>
           </div>
           <div class="vp-metric">
-            <span class="vp-metric-num" style="font-size:2.6rem">∞</span>
+            <span class="vp-metric-num" style="font-size:2.6rem">8</span>
           </div>
         </div>
         <div class="vp-divider"></div>
@@ -627,7 +649,7 @@
     <div class="proc-left r">
       <p class="proc-label">How It Works</p>
       <h2 class="proc-title">Silence in 4<br>Simple Steps.</h2>
-      <p class="proc-desc">From first enquiry to working in perfect quiet — our process is built for zero disruption to your team.</p>
+      <p class="proc-desc">From first enquiry to working in perfect quiet - our process is built for zero disruption to your team.</p>
       <a href="products.html" class="btn-red">Explore Pods &rarr;</a>
     </div>
     <div class="proc-right">
@@ -664,8 +686,8 @@
             <path d="M13 2L5 13h7l-3 7 10-11h-7l3-7z"/>
           </svg>
         </div>
-        <div class="ps-card-title">Installed in 2 Hours</div>
-        <p class="ps-card-desc">Plug in, power up, and you're done. No drilling, no contractors — just instant acoustic perfection.</p>
+        <div class="ps-card-title">Tool-Free Setup</div>
+        <p class="ps-card-desc">Plug in, power up, and you're done. No drilling, no contractors - just instant acoustic perfection.</p>
       </div>
     </div>
   </div>
@@ -683,28 +705,28 @@
     </div>
     <div class="uc-grid">
       <div class="uc-card tall rl">
-        <img src="https://thesonichive.com/wp-content/uploads/2024/10/23-10-2024-18_27_04-1024x517.webp" alt="Corporate Office" loading="lazy">
+        <img src="/images/Pods/All%20Pods%20Image/VRT%20Large%20Office%20Pods.webp" alt="Corporate Office" loading="lazy">
         <div class="uc-card-ov">
           <div class="uc-card-tag">Corporate Office</div>
           <div class="uc-card-title">Silence Inside the Open Plan</div>
         </div>
-        <div class="uc-card-arr">↗</div>
+        <div class="uc-card-arr">→</div>
       </div>
       <div class="uc-card rr">
-        <img src="https://thesonichive.com/wp-content/uploads/2024/10/office-Booth-Sonichive_21-1024x819.webp" alt="Co-Working" loading="lazy">
+        <img src="/images/Pods/All%20Pods%20Image/office-vr-booth_1777100004941.webp" alt="Co-Working" loading="lazy">
         <div class="uc-card-ov">
           <div class="uc-card-tag">Co-Working Spaces</div>
           <div class="uc-card-title">Premium Private Zones</div>
         </div>
-        <div class="uc-card-arr">↗</div>
+        <div class="uc-card-arr">→</div>
       </div>
       <div class="uc-card rr d2">
-        <img src="https://thesonichive.com/wp-content/uploads/2024/10/Office-pods-for-4-person_Sonichive-2-1024x819.webp" alt="Creative Studios" loading="lazy">
+        <img src="/images/Pods/All%20Pods%20Image/VRT%20Silence%20Pod.webp" alt="Creative Studios" loading="lazy">
         <div class="uc-card-ov">
           <div class="uc-card-tag">Creative Studios</div>
           <div class="uc-card-title">Record. Create. Perform.</div>
         </div>
-        <div class="uc-card-arr">↗</div>
+        <div class="uc-card-arr">→</div>
       </div>
     </div>
   </div>
@@ -746,7 +768,7 @@
 <%- include('../partials/footer-full') %>
 
 <script>
-/* ── Scroll progress + nav ── */
+/* -- Scroll progress + nav -- */
 const pgBar = document.getElementById('pg-bar');
 const nav   = document.getElementById('nav');
 const hVid  = document.querySelector('.h-vid');
@@ -768,7 +790,7 @@ window.addEventListener('scroll', () => {
   }
 }, {passive:true});
 
-/* ── Cursor glow ── */
+/* -- Cursor glow -- */
 const cg = document.getElementById('cg');
 let cgOn = false;
 document.addEventListener('mousemove', e => {
@@ -777,7 +799,7 @@ document.addEventListener('mousemove', e => {
   if (!cgOn) { cg.style.opacity = '1'; cgOn = true; }
 }, {passive:true});
 
-/* ── Universal reveal observer ── */
+/* -- Universal reveal observer -- */
 const revObs = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add('on'); revObs.unobserve(e.target); }
 }), {threshold: 0.07});
@@ -787,7 +809,7 @@ const observeAll = () =>
   });
 observeAll();
 
-/* ── Counter animation ── */
+/* -- Counter animation -- */
 const countUp = (el, target, suffix, dur = 1800) => {
   if (el.dataset.counted) return;
   el.dataset.counted = '1';
@@ -809,23 +831,23 @@ const cntObs = new IntersectionObserver(es => es.forEach(e => {
 }), {threshold: 0.5});
 document.querySelectorAll('.stat-item').forEach(el => cntObs.observe(el));
 
-/* ── Process line reveal ── */
+/* -- Process line reveal -- */
 const procSteps = document.getElementById('proc-steps');
 const lineObs = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add('line-on'); lineObs.unobserve(e.target); }
 }), {threshold: 0.3});
 if (procSteps) lineObs.observe(procSteps);
 
-/* ── Ticker ── */
+/* -- Ticker -- */
 const tItems = [
   {n:'500+',l:'Pod Installations'},{n:'5',l:'Countries'},{n:'30dB',l:'Sound Reduction'},
-  {n:'100+',l:'Corporate Clients'},{n:'2 hrs',l:'Avg. Installation'},{n:'5★',l:'Customer Rating'}
+  {n:'100+',l:'Corporate Clients'},{n:'5?',l:'Customer Rating'}
 ];
 const mkTick = () => tItems.map(i =>
-  `<div class="tick-i"><strong>${i.n}</strong> ${i.l} <span class="tick-sep">◆</span></div>`).join('');
+  `<div class="tick-i"><strong>${i.n}</strong> ${i.l} <span class="tick-sep">·</span></div>`).join('');
 document.getElementById('tick').innerHTML = mkTick() + mkTick();
 
-/* ── Client banner ── */
+/* -- Client banner -- */
 (function(){
   const row1 = [
     {n:'Emirates Group',  url:'https://upload.wikimedia.org/wikipedia/commons/e/e3/Emirates_Group_Logo.svg'},
@@ -851,12 +873,12 @@ document.getElementById('tick').innerHTML = mkTick() + mkTick();
 
 observeAll();
 
-/* ── Testimonials ── */
+/* -- Testimonials -- */
 const testis = [
-  {q:'Bought a Home Pod for my Dubai apartment — instant peace even with traffic outside. Totally transformed my remote setup.',n:'Sara A.',l:'Dubai, UAE',av:'https://i.pravatar.cc/60?img=47'},
+  {q:'Bought a Home Pod for my Dubai apartment - instant peace even with traffic outside. Totally transformed my remote setup.',n:'Sara A.',l:'Dubai, UAE',av:'https://i.pravatar.cc/60?img=47'},
   {q:'Installed a meeting pod in our Abu Dhabi office. Team uses it daily for client calls. Soundproofing is superb.',n:'Khaled M.',l:'Abu Dhabi, UAE',av:'https://i.pravatar.cc/60?img=12'},
   {q:'We put pods in our co-working space. They are constantly booked. The 30 dB reduction is the real deal.',n:'Rayan G.',l:'Riyadh, KSA',av:'https://i.pravatar.cc/60?img=33'},
-  {q:'Our Business Bay office is one giant echo chamber. Three 4-seater pods later — life-savers for our weekly sprints.',n:'Amina R.',l:'Dubai, UAE',av:'https://i.pravatar.cc/60?img=5'},
+  {q:'Our Business Bay office is one giant echo chamber. Three 4-seater pods later - life-savers for our weekly sprints.',n:'Amina R.',l:'Dubai, UAE',av:'https://i.pravatar.cc/60?img=5'},
   {q:'Ventilation is surprisingly good. Hour-long strategy sessions in the 6-seater and stayed perfectly cool.',n:'Fatima A.',l:'Doha, Qatar',av:'https://i.pravatar.cc/60?img=9'},
 ];
 const ttrack = document.getElementById('ttrack');
@@ -874,7 +896,7 @@ const cardHTML = testis.map(t => `
   </div>`).join('');
 ttrack.innerHTML = cardHTML + cardHTML;
 
-/* ── Section nav dots ── */
+/* -- Section nav dots -- */
 const sections     = ['hero','sa-section','products-teaser','clients','stats-row','value-props','process','uc-teaser','testimonials','cta-strip'];
 const sectionNames = ['Home','Animation','Products','Stats','Features','Process','Use Cases','Reviews','Contact'];
 const dotsEl = document.getElementById('sec-dots');
@@ -890,11 +912,14 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
 </script>
 
 <script>
-/* ── Scroll Frame Animation ── */
+/* -- Scroll Frame Animation -- */
 (function(){
   const TOTAL = 181;
-  const pad   = n => String(n).padStart(3, '0');
-  const src   = i => 'images/Scroll_animation_frames/ezgif-frame-' + pad(i) + '.webp';
+  // desktop: 550vh section, animation fills first 450/550 of scroll range = 7/9
+  const ANIM_FRAC = 7 / 9;
+
+  const pad = n => String(n).padStart(3, '0');
+  const src = i => 'images/Scroll_animation_frames/ezgif-frame-' + pad(i) + '.webp';
 
   const section    = document.getElementById('sa-section');
   const canvas     = document.getElementById('sa-canvas');
@@ -906,6 +931,10 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
   const hudFill    = document.getElementById('sa-hud-fill');
   const hint       = document.getElementById('sa-scroll-hint');
   const bgLayer    = document.getElementById('sa-bg-layer');
+  const glassLayer = document.getElementById('sa-glass-layer');
+  const textLayer  = document.getElementById('sa-text-layer');
+  const satLabel   = document.getElementById('sat-lbl');
+  const words      = document.querySelectorAll('.sa-word');
 
   const images = new Array(TOTAL);
   let loaded = 0, curFrame = -1, rafId = null, ready = false;
@@ -931,20 +960,48 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
     bgLayer.style.background = `linear-gradient(to right,${lc},${lc} 35%,${rc} 65%,${rc})`;
   }
 
-  function getIdx() {
-    const top   = section.getBoundingClientRect().top;
-    const range = section.offsetHeight - window.innerHeight;
-    const prog  = Math.max(0, Math.min(1, -top / range));
-    return Math.min(TOTAL - 1, Math.floor(prog * TOTAL));
-  }
+  function clamp(v, lo, hi) { return v < lo ? lo : v > hi ? hi : v; }
 
   function tick() {
     rafId = null;
-    const idx = getIdx();
+    const top   = section.getBoundingClientRect().top;
+    const range = section.offsetHeight - window.innerHeight;
+    const prog  = clamp(-top / range, 0, 1);
+
+    const mobile = window.innerWidth <= 768;
+    const frac   = mobile ? 1.0 : ANIM_FRAC;
+
+    /* -- Phase 1: frame animation -- */
+    const animProg = clamp(prog / frac, 0, 1);
+    const idx      = Math.min(TOTAL - 1, Math.floor(animProg * TOTAL));
     draw(idx);
-    const pct = idx / (TOTAL - 1) * 100;
-    hudFill.style.width = pct + '%';
-    if (idx > 2) hint.classList.add('gone');
+    hudFill.style.width = (idx / (TOTAL - 1) * 100) + '%';
+    if (hint && idx > 2) hint.classList.add('gone');
+
+    if (mobile) return;
+
+    /* -- Phase 2: scroll-driven word reveal (desktop only) -- */
+    const textProg = clamp((prog - frac) / (1 - frac), 0, 1);
+
+    /* glass and text container fade in together at start of text phase */
+    const containerAlpha = clamp(textProg * 6, 0, 1);
+    glassLayer.style.opacity = containerAlpha;
+    textLayer.style.opacity  = containerAlpha;
+
+    /* label slides up first */
+    if (satLabel) {
+      const lp = clamp(textProg * 10, 0, 1);
+      satLabel.style.opacity   = lp;
+      satLabel.style.transform = `translateY(${(1 - lp) * 22}px)`;
+    }
+
+    /* words reveal sequentially - each triggered by scroll, no CSS transition */
+    words.forEach((word, i) => {
+      const wStart = 0.06 + i * 0.23;
+      const wp     = clamp((textProg - wStart) / 0.17, 0, 1);
+      word.style.opacity   = wp;
+      word.style.transform = `translateY(${(1 - wp) * 52}px)`;
+    });
   }
 
   const onScroll = () => { if (!ready || rafId) return; rafId = requestAnimationFrame(tick); };

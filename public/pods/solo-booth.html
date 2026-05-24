@@ -145,6 +145,9 @@
       color: var(--red);
       font-style: normal
     }
+    .logo-img{height:72px;width:auto;display:block;filter:brightness(0) invert(1);transition:filter .4s ease}
+    #nav.s .logo-img{filter:brightness(0)}
+    .foot-logo-img{height:72px;width:auto;display:block;filter:brightness(0) invert(1)}
 
     .nav-links {
       display: flex;
@@ -1063,7 +1066,6 @@
     .mc:hover .mc-link{opacity:1;transform:none}
     .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
     .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(184,134,11,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#D4A020;border:1px solid rgba(184,134,11,.25)}.mc-plus .mc-link{color:#D4A020}
-    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(99,102,241,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#A5B4FC;border:1px solid rgba(99,102,241,.22)}.mc-art .mc-link{color:#A5B4FC}
     .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(20,184,166,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#2DD4BF;border:1px solid rgba(20,184,166,.22)}.mc-home .mc-link{color:#2DD4BF}
     .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
     .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
@@ -1079,7 +1081,8 @@
 .skip-link:focus{top:0}
 @media(max-width:768px){
 #nav{background:#fafafa!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-bottom:1px solid rgba(0,0,0,.1)!important;box-shadow:0 1px 8px rgba(0,0,0,.08)!important;z-index:9999!important;overflow:visible!important;transform:translateZ(0)!important;-webkit-transform:translateZ(0)!important}
-#nav .logo-t{color:#0A0A0F!important}
+#nav .logo-img{filter:brightness(0) invert(1)!important;transition:filter .35s ease!important}
+#nav.s .logo-img{filter:brightness(0)!important}
 #nav .nav-ham{display:flex!important;align-items:center;justify-content:center;position:absolute!important;top:50%!important;right:1rem!important;margin-top:-18px!important;z-index:10000!important;background:none!important;color:#0A0A0F!important;border-color:rgba(0,0,0,.2)!important}
 #nav .nav-cta{display:none!important}
 #nav .nav-i{padding:.75rem 1.25rem!important;padding-right:3.5rem!important;overflow:visible!important;max-width:100%!important}
@@ -1112,29 +1115,25 @@
 </style><style>
 @media(max-width:768px){#prod-hero{padding:5.5rem 1.25rem 3rem!important}.ph-grid{gap:2rem!important}.ph-name{font-size:clamp(2rem,7vw,3.5rem)!important}.ph-actions{flex-direction:column;gap:.75rem}.btn-red,.btn-wh{text-align:center;width:100%}.pf-lay{gap:2rem!important}.pf-img-wrap img{height:280px!important}}
 @media(max-width:520px){.ph-specs-row{gap:1rem}.badges-row{justify-content:flex-start}.badge-item{width:calc(50% - .75rem)}}
-</style></head>
+</style><link rel="stylesheet" href="/css/nav.css">
+</head>
 
 <body>
 
-  <nav id="nav">
+  <nav id="nav" data-nav="transparent">
     <div class="nav-i">
-      <a href="../index.html" class="logo">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
-          <polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020" />
-          <polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#0A0A0A" />
-          <polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".55" />
-        </svg>
-        <span class="logo-t">Sonic<em>Hive</em></span>
+      <a href="/" class="logo">
+        <img src="../images/sonichive%20White%20logo.png" alt="SonicHive" class="logo-img">
       </a>
       <div class="nav-links" id="nav-links">
         
-        <a href="../pages/use-cases.html">Use Cases</a>
-        <a href="../pages/use-cases.html">Use Cases</a>
-        <a href="../pages/features.html">Features</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/contact.html">Contact</a>
+        <a href="/use-cases">Use Cases</a>
+        <a href="/use-cases">Use Cases</a>
+        <a href="/features">Features</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
       </div>
-      <a href="../pages/contact.html" class="nav-cta">Get a Quote →</a>
+      <a href="/contact" class="nav-cta">Get a Quote →</a>
     <button class="nav-ham" id="nav-ham" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links"><svg id="ham-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></button>
     </div>
   </nav>
@@ -1150,7 +1149,7 @@
       </div>
       <div class="ph-info r d2">
         <div class="breadcrumb">
-          <a href="../index.html">Home</a>
+          <a href="/">Home</a>
           <span>›</span>
           <span>Solo Silence Booth</span>
         </div>
@@ -1167,7 +1166,7 @@
           <div class="ph-spec"><strong>∞</strong><span>Colors</span></div>
         </div>
         <div class="ph-actions">
-          <a href="../pages/contact.html" class="btn-red">Get a Quote →</a>
+          <a href="/contact" class="btn-red">Get a Quote →</a>
           <a href="https://wa.me/971585550099?text=Hi, I'm interested in the Solo Silence Booth." target="_blank"
             class="btn-wh">Chat on WhatsApp</a>
         </div>
@@ -1437,7 +1436,7 @@
           <div class="rel-cap">Remote work reimagined</div>
           <p class="rel-desc">Smart home integration and advanced noise cancellation for remote workers in Dubai
             apartments.</p>
-          <a class="rel-link" href="home-pod.html">View Home Pod →</a>
+          <a class="rel-link" href="/home-pod">View Home Pod →</a>
         </div>
       </div>
     </div>
@@ -1452,8 +1451,8 @@
         <p>Our Dubai team will confirm pricing, lead times, and customization options within 2 business hours. Free
           consultation included.</p>
         <div class="btn-row">
-          <a href="../pages/contact.html" class="btn-red">Request a Free Quote</a>
-          <a href="../pages/use-cases.html" class="btn-o">Explore Use Cases</a>
+          <a href="/contact" class="btn-red">Request a Free Quote</a>
+          <a href="/use-cases" class="btn-o">Explore Use Cases</a>
         </div>
       </div>
     </div>
@@ -1463,12 +1462,7 @@
     <div class="wrap">
       <div class="foot-g">
         <div class="foot-brand">
-          <a href="../index.html" class="logo" style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 32 32"
-              fill="none">
-              <polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020" />
-              <polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#0A0A0A" />
-              <polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".5" />
-            </svg><span class="logo-t" style="font-size:1.1rem;color:#FFF">Sonic<em>Hive</em></span></a>
+          <a href="/" class="logo" style="display:inline-flex"><img src="../images/sonichive%20White%20logo.png" alt="SonicHive" class="logo-img foot-logo-img"></a>
           <p>Dubai's leading acoustic pod provider, delivering silence, privacy, and productivity across the Middle
             East.</p>
           <div class="foot-soc">
@@ -1482,18 +1476,17 @@
         </div>
         <div class="foot-col">
           <h4>Products</h4>
-          <a href="vrt.html">VRT</a>
+          <a href="/vrt">VRT</a>
           <a href="vrt-plus.html">VRT Plus</a>
-          <a href="art-pod.html">ART Pod</a>
-          <a href="home-pod.html">Home Pod</a>
-          <a href="../pages/rental-pods.html">Rental Pods</a>
+          <a href="/home-pod">Home Pod</a>
+          <a href="/rental-pods">Rental Pods</a>
         </div>
         <div class="foot-col">
           <h4>Explore</h4>
-          <a href="../pages/use-cases.html">Use Cases</a>
-        <a href="../pages/features.html">Features</a>
-          <a href="../pages/about.html">About Us</a>
-          <a href="../pages/contact.html">Get a Quote</a>
+          <a href="/use-cases">Use Cases</a>
+        <a href="/features">Features</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Get a Quote</a>
         </div>
         <div class="foot-col foot-contact">
           <h4>Contact Us</h4>

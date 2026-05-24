@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/Faveicon-black.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Features & Technology, SonicHive Acoustic Pods</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,17 +22,6 @@
     .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem}
     .s-title{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-bottom:1rem}
 
-    /* NAV */
-    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,250,250,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(0,0,0,.06)}
-    .nav-i{max-width:var(--max);margin:0 auto;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
-    .logo{display:flex;align-items:center;gap:10px}
-    .logo-t{font-family:var(--fh);font-size:1.3rem;font-weight:400;letter-spacing:-.02em}
-    .logo-t em{color:var(--red);font-style:normal}
-    .nav-links{display:flex;gap:1.75rem;align-items:center}
-    .nav-links a{font-size:.875rem;color:var(--muted);font-weight:500;transition:color .2s}
-    .nav-links a:hover,.nav-links a.cur{color:var(--text)}
-    .nav-cta{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.6rem 1.4rem;font-size:.875rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);white-space:nowrap}
-    .nav-cta:hover{transform:scale(1.04);box-shadow:0 0 24px rgba(212,32,32,.35)}
 
     /* PAGE HERO */
     .page-hero{padding:9rem 2rem 6rem;background:var(--bg) url('images/features-hero-bg.webp') center/cover no-repeat;position:relative;overflow:hidden}
@@ -71,50 +61,50 @@
     .cf-bar{width:22px;height:2px;background:var(--red);border-radius:2px;margin-bottom:.65rem}
     .cf-d{font-size:.84rem;color:var(--muted);line-height:1.72}
 
-    /* SCROLL ANIMATIONS — extra variants */
+    /* SCROLL ANIMATIONS - extra variants */
     .r-left{opacity:0;transform:translateX(-36px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
     .r-right{opacity:0;transform:translateX(36px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
     .r-scale{opacity:0;transform:scale(.94);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
     .r-left.on,.r-right.on,.r-scale.on{opacity:1;transform:none}
 
-    /* ACOUSTIC SCIENCE — Apple dark */
-    #acoustic{background:#060606;overflow:hidden;position:relative}
+    /* ACOUSTIC SCIENCE */
+    #acoustic{background:#fff url('images/Site image 1.jpg') calc(100% + 80px) center/auto 85% no-repeat;overflow:hidden;position:relative}
     .ac-wrap{max-width:var(--max);margin:0 auto;padding:8rem 2rem 0}
-    .ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-    .ac-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2rem}
-    .ac-num{font-family:var(--fh);font-size:clamp(5.5rem,12vw,9.5rem);font-weight:300;line-height:.85;letter-spacing:-.04em;color:#FFF;margin-bottom:1.5rem}
+    .ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;min-height:480px}
+    .ac-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);opacity:.75;margin-bottom:2rem}
+    .ac-num{font-family:var(--fh);font-size:clamp(3rem,6vw,5rem);font-weight:300;line-height:.85;letter-spacing:-.04em;color:var(--text);margin-bottom:1.5rem}
     .ac-num em{color:var(--red);font-style:normal}
-    .ac-subhead{font-family:var(--fh);font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:300;letter-spacing:-.02em;color:rgba(255,255,255,.65);line-height:1.4;margin-bottom:2rem}
-    .ac-body-text p{color:rgba(255,255,255,.38);font-size:.93rem;line-height:1.9;margin-bottom:1rem}
+    .ac-subhead{font-family:var(--fh);font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:300;letter-spacing:-.02em;color:var(--muted);line-height:1.4;margin-bottom:2rem}
+    .ac-body-text p{color:var(--muted);font-size:.93rem;line-height:1.9;margin-bottom:1rem}
     .ac-right{position:relative;padding-top:2rem}
     .ac-img{width:100%;height:560px;object-fit:cover;border-radius:20px 20px 0 0;display:block}
-    .ac-badge{position:absolute;top:4rem;right:2rem;background:rgba(0,0,0,.7);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.25rem 1.5rem;text-align:center}
+    .ac-badge{position:absolute;top:4rem;right:2rem;background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border);border-radius:16px;padding:1.25rem 1.5rem;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.1)}
     .ac-badge strong{font-family:var(--fh);font-size:2.25rem;font-weight:300;color:var(--red);display:block;line-height:1;letter-spacing:-.03em}
-    .ac-badge span{font-size:.7rem;color:rgba(255,255,255,.38);letter-spacing:.1em;text-transform:uppercase}
-    .ac-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.07);margin-top:5rem}
-    .ac-strip-item{padding:2.5rem 2rem;border-right:1px solid rgba(255,255,255,.07);transition:background .25s}
+    .ac-badge span{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+    .ac-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);margin-top:5rem}
+    .ac-strip-item{padding:2.5rem 2rem;border-right:1px solid var(--border);transition:background .25s}
     .ac-strip-item:last-child{border-right:none}
-    .ac-strip-item:hover{background:rgba(255,255,255,.02)}
-    .ac-strip-n{font-family:var(--fh);font-size:2rem;font-weight:300;color:#FFF;letter-spacing:-.03em;line-height:1;margin-bottom:.4rem}
-    .ac-strip-l{font-size:.77rem;color:rgba(255,255,255,.32);line-height:1.55}
+    .ac-strip-item:hover{background:rgba(0,0,0,.025)}
+    .ac-strip-n{font-family:var(--fh);font-size:2rem;font-weight:300;color:var(--text);letter-spacing:-.03em;line-height:1;margin-bottom:.4rem}
+    .ac-strip-l{font-size:.77rem;color:var(--muted);line-height:1.55}
 
-    /* MATERIALS — Apple dark tile grid */
-    #materials{padding:8rem 0;background:#0A0A0A}
+    /* MATERIALS */
+    #materials{padding:8rem 0;background:var(--bg)}
     .mat-head{text-align:center;margin-bottom:4rem}
-    .mat-head .s-label{color:rgba(255,255,255,.35)}
-    .mat-head .s-title{color:#FFF}
-    .mat-head p{color:rgba(255,255,255,.38)}
-    .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:24px;overflow:hidden}
-    .mat-card{background:#111;padding:2.5rem 2rem;text-align:left;transition:background .3s;position:relative;overflow:hidden}
-    .mat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.5),transparent);opacity:0;transition:opacity .3s}
-    .mat-card:hover{background:#161616}
+    .mat-head .s-label{color:var(--red)}
+    .mat-head .s-title{color:var(--text)}
+    .mat-head p{color:var(--muted)}
+    .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:24px;overflow:hidden}
+    .mat-card{background:#FFF;padding:2.5rem 2rem;text-align:left;transition:background .3s,box-shadow .3s;position:relative;overflow:hidden}
+    .mat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.5),transparent);opacity:0;transition:opacity .3s}
+    .mat-card:hover{background:var(--bg2)}
     .mat-card:hover::before{opacity:1}
     .mat-ic{width:52px;height:52px;border-radius:14px;background:rgba(212,32,32,.1);border:1px solid rgba(212,32,32,.18);display:flex;align-items:center;justify-content:center;color:var(--red);margin-bottom:1.75rem}
-    .mat-n{font-family:var(--fh);font-size:.95rem;font-weight:400;color:#FFF;margin-bottom:.35rem}
+    .mat-n{font-family:var(--fh);font-size:.95rem;font-weight:400;color:var(--text);margin-bottom:.35rem}
     .mat-bar{width:18px;height:1.5px;background:var(--red);border-radius:2px;margin:.35rem 0 .8rem;opacity:.6}
-    .mat-d{font-size:.83rem;color:rgba(255,255,255,.35);line-height:1.75}
+    .mat-d{font-size:.83rem;color:var(--muted);line-height:1.75}
 
-    /* INSTALLATION — Apple numbered flow */
+    /* INSTALLATION - Apple numbered flow */
     #installation{padding:8rem 0;background:#FAFAFA}
     .inst-hd{text-align:center;margin-bottom:5rem}
     .inst-hd h2{font-family:var(--fh);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;letter-spacing:-.03em;line-height:1.05;color:var(--text);margin-bottom:.75rem}
@@ -142,93 +132,39 @@
     .inst-tags{display:flex;flex-wrap:wrap;gap:.5rem}
     .inst-tag{font-size:.72rem;color:var(--muted);background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.3rem .9rem}
 
-    /* TECH SPECS — Apple dark table */
-    #specs{padding:8rem 0;background:#060606}
+    /* TECH SPECS */
+    #specs{padding:8rem 0;background:var(--bg2)}
     .spec-head{text-align:center;margin-bottom:3.5rem}
-    .spec-head .s-label{color:rgba(255,255,255,.35)}
-    .spec-head .s-title{color:#FFF}
-    .spec-wrap{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .spec-head .s-label{color:var(--red)}
+    .spec-head .s-title{color:var(--text)}
+    .spec-wrap{border-radius:20px;overflow:hidden;border:1px solid var(--border)}
     .spec-table{width:100%;border-collapse:collapse}
-    .spec-table th{background:rgba(255,255,255,.03);padding:1.2rem 1.5rem;text-align:left;font-family:var(--fh);font-size:.75rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.06)}
-    .spec-table td{padding:1.1rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.05);font-size:.88rem;color:rgba(255,255,255,.4);background:transparent;vertical-align:middle}
+    .spec-table th{background:var(--bg3);padding:1.2rem 1.5rem;text-align:left;font-family:var(--fh);font-size:.75rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border)}
+    .spec-table td{padding:1.1rem 1.5rem;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--muted);background:#FFF;vertical-align:middle}
     .spec-table tr:last-child td{border-bottom:none}
-    .spec-table tr:hover td{background:rgba(255,255,255,.025);color:rgba(255,255,255,.65)}
-    .spec-table .feat-name{font-weight:400;color:rgba(255,255,255,.7)}
+    .spec-table tr:hover td{background:var(--bg2);color:var(--text)}
+    .spec-table .feat-name{font-weight:400;color:var(--text)}
     .spec-chk{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:rgba(212,32,32,.12);border-radius:50%;color:var(--red)}
-    .spec-dash{display:inline-block;width:16px;height:1.5px;background:rgba(255,255,255,.15);border-radius:2px;vertical-align:middle}
+    .spec-dash{display:inline-block;width:16px;height:1.5px;background:rgba(0,0,0,.15);border-radius:2px;vertical-align:middle}
 
-    /* CTA — dramatic Apple-style */
-    #feat-cta{padding:10rem 0;background:#000;position:relative;overflow:hidden}
-    #feat-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(212,32,32,.13),transparent 65%);pointer-events:none}
-    #feat-cta::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,255,255,.025) 79px,rgba(255,255,255,.025) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,255,255,.025) 79px,rgba(255,255,255,.025) 80px);pointer-events:none}
+    /* CTA */
+    #feat-cta{padding:10rem 0;background:linear-gradient(135deg,#fff5f5 0%,var(--bg2) 60%,#fff0f0 100%);position:relative;overflow:hidden}
+    #feat-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(212,32,32,.08),transparent 65%);pointer-events:none}
+    #feat-cta::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(0,0,0,.025) 79px,rgba(0,0,0,.025) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(0,0,0,.025) 79px,rgba(0,0,0,.025) 80px);pointer-events:none}
     .fcta-in{position:relative;text-align:center;max-width:680px;margin:0 auto;z-index:1}
     .fcta-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1.75rem}
-    .fcta-in h2{font-family:var(--fh);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;letter-spacing:-.035em;color:#FFF;margin-bottom:1.25rem;line-height:1.05}
-    .fcta-in p{color:rgba(255,255,255,.38);line-height:1.8;margin-bottom:2.75rem;font-size:.975rem}
+    .fcta-in h2{font-family:var(--fh);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;letter-spacing:-.035em;color:var(--text);margin-bottom:1.25rem;line-height:1.05}
+    .fcta-in p{color:var(--muted);line-height:1.8;margin-bottom:2.75rem;font-size:.975rem}
     .btn-red{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);display:inline-block}
     .btn-red:hover{transform:scale(1.04);box-shadow:0 0 28px rgba(212,32,32,.45)}
-    .btn-wh{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:400;cursor:pointer;transition:all .2s;font-family:var(--fb);display:inline-block}
-    .btn-wh:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.2)}
+    .btn-wh{background:#FFF;border:1px solid var(--border);color:var(--text);border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:400;cursor:pointer;transition:all .2s;font-family:var(--fb);display:inline-block}
+    .btn-wh:hover{background:var(--bg2);border-color:rgba(0,0,0,.15)}
     .btn-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
-    /* FOOTER */
-    footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.06);padding:4.5rem 0 2rem}
-    .foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3.5rem}
-    .foot-brand p{color:rgba(255,255,255,.4);font-size:.9rem;line-height:1.7;margin-top:1rem;max-width:280px}
-    .foot-soc{display:flex;gap:.75rem;margin-top:1.5rem}
-    .soc-a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:400;transition:all .2s;color:rgba(255,255,255,.4)}
-    .soc-a:hover{background:var(--red-d);border-color:var(--red-b);color:var(--red)}
-    .foot-col h4{font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem;color:rgba(255,255,255,.9)}
-    .foot-col a{display:block;color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;transition:color .2s}
-    .foot-col a:hover{color:#FFF}
-    .foot-contact p{color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem}
-    .foot-contact a{color:var(--red);display:inline;margin-bottom:0}
-    .foot-bot{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-    .foot-bot p{color:rgba(255,255,255,.3);font-size:.8rem}
-    .foot-locs{display:flex;gap:.6rem;flex-wrap:wrap}
-    .foot-locs span{font-size:.72rem;color:rgba(255,255,255,.35);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.2rem .7rem}
-
-    @media(max-width:1024px){.ph-inner{grid-template-columns:1fr;gap:3rem}.ph-wave{display:none}.ac-grid{grid-template-columns:1fr;gap:3rem}.ac-right{padding-top:0}.ac-img{height:360px;border-radius:16px}.ac-strip{grid-template-columns:repeat(2,1fr)}.ac-strip-item:nth-child(2){border-right:none}.inst-flow{grid-template-columns:repeat(3,1fr)}.inst-flow::before{display:none}.inst-bottom{grid-template-columns:1fr}.inst-img-big img{height:280px}.core-grid{grid-template-columns:1fr 1fr}.mat-grid{grid-template-columns:1fr 1fr;border-radius:16px}.foot-g{grid-template-columns:1fr 1fr}}
-    @media(max-width:768px){.core-grid{grid-template-columns:1fr}.mat-grid{grid-template-columns:1fr 1fr}.foot-g{grid-template-columns:1fr}.page-hero{padding:6rem 2rem 4rem}.ph-right{grid-template-columns:1fr}.inst-flow{grid-template-columns:repeat(2,1fr)}.ac-num{font-size:clamp(4rem,15vw,7rem)}.ac-strip{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:1024px){.ph-inner{grid-template-columns:1fr;gap:3rem}.ph-wave{display:none}.ac-grid{grid-template-columns:1fr;gap:3rem}.ac-right{padding-top:0}.ac-img{height:360px;border-radius:16px}.ac-strip{grid-template-columns:repeat(2,1fr)}.ac-strip-item:nth-child(2){border-right:none}.inst-flow{grid-template-columns:repeat(3,1fr)}.inst-flow::before{display:none}.inst-bottom{grid-template-columns:1fr}.inst-img-big img{height:280px}.core-grid{grid-template-columns:1fr 1fr}.mat-grid{grid-template-columns:1fr 1fr;border-radius:16px}}
+    @media(max-width:768px){.core-grid{grid-template-columns:1fr}.mat-grid{grid-template-columns:1fr 1fr}.page-hero{padding:6rem 2rem 4rem}.ph-right{grid-template-columns:1fr}.inst-flow{grid-template-columns:repeat(2,1fr)}.ac-num{font-size:clamp(4rem,15vw,7rem)}.ac-strip{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.mat-grid{grid-template-columns:1fr}.ph-left h1{font-size:clamp(2.2rem,7vw,3.2rem)}.ph-stat-n{font-size:2rem}.inst-flow{grid-template-columns:1fr 1fr}.ac-strip{grid-template-columns:repeat(2,1fr)}}
-    /* MEGA MENU */
-    .nav-dd{position:static;display:flex;align-items:center}
-    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
-    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:var(--text)}
-    .nd-chev{transition:transform .25s ease;flex-shrink:0}
-    .nav-dd.open .nd-chev{transform:rotate(180deg)}
-    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
-    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
-    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
-    .mega-bg{position:absolute;inset:0;background:transparent}
-    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
-    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
-    .mega-all-link{font-size:.76rem;color:rgba(0,0,0,.4);transition:color .2s;display:flex;align-items:center;gap:.35rem}
-    .mega-all-link:hover{color:rgba(0,0,0,.8)}
-    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
-    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
-    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
-    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
-    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
-    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
-    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
-    .mc-svg-w{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
-    .mc:hover .mc-svg-w{transform:translateY(-6px) scale(1.05)}
-    .mc-badge{display:inline-block;font-size:.59rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .65rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
-    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
-    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
-    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
-    .mc:hover .mc-link{opacity:1;transform:none}
-    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
-    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
-    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
-    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
-    .mc-vr:hover{background:rgba(37,99,235,.05)}.mc-vr:hover::after{border-color:rgba(37,99,235,.2)}.mc-vr .mc-badge{background:rgba(37,99,235,.1);color:#60A5FA;border:1px solid rgba(37,99,235,.22)}.mc-vr .mc-link{color:#60A5FA}
-    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
-    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
-    .mf-link:hover{color:rgba(0,0,0,.75)}
-    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
-    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
+    
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
     </style>
 </head>
@@ -271,19 +207,19 @@
         <div class="ph-stat-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
         </div>
-        <div class="ph-stat-n">30dB</div>
-        <div class="ph-stat-name">Noise Reduction</div>
+        <div class="ph-stat-n">30&plusmn;5</div>
+        <div class="ph-stat-name">dB Noise Reduction</div>
         <div class="ph-stat-bar"></div>
-        <div class="ph-stat-l">Noise reduction, measured, not estimated</div>
+        <div class="ph-stat-l">ISO 23351 tested, not estimated</div>
       </div>
       <div class="ph-stat">
         <div class="ph-stat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <div class="ph-stat-n">2 hrs</div>
-        <div class="ph-stat-name">Average Installation</div>
+        <div class="ph-stat-n">3 Years</div>
+        <div class="ph-stat-name">Warranty</div>
         <div class="ph-stat-bar"></div>
-        <div class="ph-stat-l">Average installation, zero construction</div>
+        <div class="ph-stat-l">Parts &amp; labour warranty on all VRT pods</div>
       </div>
       <div class="ph-stat">
         <div class="ph-stat-icon">
@@ -313,7 +249,7 @@
     <div class="core-head r">
       <div class="core-label">Core Features</div>
       <h2>Six Pillars <em>of Performance</em></h2>
-      <p>Every pod ships with these six capabilities as standard —<br>no optional extras required.</p>
+      <p>Every pod ships with these six capabilities as standard -<br>no optional extras required.</p>
     </div>
     <div class="core-grid">
 
@@ -325,7 +261,7 @@
           </div>
         </div>
         <div class="cf-body">
-          <div class="cf-n">30dB Sound Reduction</div>
+          <div class="cf-n">30&plusmn;5 dB Reduction</div>
           <div class="cf-bar"></div>
           <p class="cf-d">Advanced multi-layer acoustic panels absorb and block sound transmission. STC-rated wall assemblies ensure conversations inside stay inside, and noise outside stays out. Independently tested at Asia's largest acoustic lab.</p>
         </div>
@@ -341,7 +277,7 @@
         <div class="cf-body">
           <div class="cf-n">Smart Ventilation System</div>
           <div class="cf-bar"></div>
-          <p class="cf-d">Built-in active ventilation continuously circulates fresh air, regulating temperature and CO₂ levels. Designed for sessions lasting hours, not the 15 minutes most pods accommodate before becoming uncomfortably stuffy.</p>
+          <p class="cf-d">Built-in active ventilation continuously circulates fresh air, regulating temperature and CO2 levels. Designed for sessions lasting hours, not the 15 minutes most pods accommodate before becoming uncomfortably stuffy.</p>
         </div>
       </div>
 
@@ -369,7 +305,7 @@
         <div class="cf-body">
           <div class="cf-n">Plug & Play Setup</div>
           <div class="cf-bar"></div>
-          <p class="cf-d">Fully self-contained and modular with a uniform fastener system engineered using SolidWorks mechanics modelling. One power connection. No specialist tools. No contractors. Installed by our team in under two hours.</p>
+          <p class="cf-d">Fully self-contained and modular with a uniform fastener system engineered using SolidWorks mechanics modelling. One power connection. No specialist tools. No contractors. Our team handles full setup.</p>
         </div>
       </div>
 
@@ -381,9 +317,9 @@
           </div>
         </div>
         <div class="cf-body">
-          <div class="cf-n">Full Customization</div>
+          <div class="cf-n">7 Colour Options</div>
           <div class="cf-bar"></div>
-          <p class="cf-d">Choose from a wide range of exterior finishes, interior fabrics, glass tints, and accent colours. Brand your pods with custom wraps or colourways. Every pod can be configured to match your office aesthetic precisely.</p>
+          <p class="cf-d">Available in 7 standard colour finishes: Standard, Black, White, Red, Orange, Light Green, and Olive Green. Every finish is produced to the same premium standard, with no compromise on acoustic or build quality.</p>
         </div>
       </div>
 
@@ -411,24 +347,17 @@
     <div class="ac-grid">
       <div class="r-left">
         <p class="ac-eyebrow">Acoustic Science</p>
-        <div class="ac-num">30<em>dB</em></div>
+        <div class="ac-num">30<em>&plusmn;5dB</em></div>
         <p class="ac-subhead">The difference you can hear,<br>and measure.</p>
         <div class="ac-body-text">
-          <p>Our pods are engineered with multi-density acoustic foam layers, mass-loaded vinyl barriers, and decoupled wall construction — the same techniques used in professional recording studios.</p>
-          <p>At 30dB of attenuation, a conversation at normal speaking volume inside the pod is reduced to below ambient noise levels outside.</p>
-        </div>
-      </div>
-      <div class="ac-right r-right">
-        <img class="ac-img" src="https://thesonichive.com/wp-content/uploads/2024/10/Office-telephone-booth-Sonic-Hive_22-1024x820.webp" alt="SonicHive acoustic pod interior">
-        <div class="ac-badge">
-          <strong>30dB</strong>
-          <span>Noise Reduction</span>
+          <p>Our pods are engineered with multi-density acoustic foam layers, mass-loaded vinyl barriers, and decoupled wall construction - the same techniques used in professional recording studios.</p>
+          <p>At 30±5 dB of attenuation (ISO 23351), a conversation at normal speaking volume inside the pod is reduced to below ambient noise levels outside.</p>
         </div>
       </div>
     </div>
   </div>
   <div class="ac-strip r">
-    <div class="ac-strip-item d1"><div class="ac-strip-n">30dB</div><div class="ac-strip-l">Sound reduction<br>STC rated</div></div>
+    <div class="ac-strip-item d1"><div class="ac-strip-n">30&plusmn;5dB</div><div class="ac-strip-l">Sound reduction<br>ISO 23351</div></div>
     <div class="ac-strip-item d2"><div class="ac-strip-n">Asia #1</div><div class="ac-strip-l">Largest acoustic<br>testing lab</div></div>
     <div class="ac-strip-item d3"><div class="ac-strip-n">Multi</div><div class="ac-strip-l">Layer acoustic<br>foam system</div></div>
     <div class="ac-strip-item d4"><div class="ac-strip-n">Sealed</div><div class="ac-strip-l">Acoustic-grade<br>door & frame seals</div></div>
@@ -441,7 +370,7 @@
     <div class="mat-head r">
       <p class="s-label">Materials & Build</p>
       <h2 class="s-title">Built to Last</h2>
-      <p style="color:rgba(255,255,255,.38);font-size:1rem;line-height:1.75;max-width:520px;margin:0 auto">Every component is selected for acoustic performance, durability, and sustainability. No compromise.</p>
+      <p style="color:var(--muted);font-size:1rem;line-height:1.75;max-width:520px;margin:0 auto">Every component is selected for acoustic performance, durability, and sustainability. No compromise.</p>
     </div>
     <div class="mat-grid">
       <div class="mat-card r d1">
@@ -454,19 +383,19 @@
         <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6Zm7.5 0h.008v.008h-.008V6Zm-3.75 0h.008v.008H9V6Z"/></svg></div>
         <div class="mat-n">Laminated Glass</div>
         <div class="mat-bar"></div>
-        <p class="mat-d">Double-laminated acoustic glass panels in all window sections. Maintains visual openness while delivering acoustic isolation comparable to solid walls.</p>
+        <p class="mat-d">3+3 tempered laminated soundproof glass in all window sections. Maintains visual openness while delivering acoustic isolation comparable to solid walls.</p>
       </div>
       <div class="mat-card r d3">
         <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/></svg></div>
         <div class="mat-n">Acoustic Door Seals</div>
         <div class="mat-bar"></div>
-        <p class="mat-d">Compression seals on all door edges create an airtight acoustic barrier when closed. The door is where most pods fail — ours are engineered to the same standard as the walls.</p>
+        <p class="mat-d">Compression seals on all door edges create an airtight acoustic barrier when closed. The door is where most pods fail - ours are engineered to the same standard as the walls.</p>
       </div>
       <div class="mat-card r d4">
         <div class="mat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.355a3.375 3.375 0 0 1-3 0M12 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg></div>
         <div class="mat-n">LED Lighting System</div>
         <div class="mat-bar"></div>
-        <p class="mat-d">Dimmable, tunable white LED panels with colour temperature control. Adjustable from warm 2700K to cool 6500K to match any working preference or time of day.</p>
+        <p class="mat-d">Reading spotlight and LED strip lighting at 4000K–5000K colour temperature. Optimised for focused work with no eye strain across extended sessions.</p>
       </div>
     </div>
   </div>
@@ -477,7 +406,7 @@
   <div class="wrap">
     <div class="inst-hd r">
       <p class="s-label">Installation Process</p>
-      <h2>Up and Running <em>in 2 Hours</em></h2>
+      <h2>Up and Running. <em>No Construction.</em></h2>
       <p>No construction, no permits, no disruption. Here's exactly what happens from order to operational pod.</p>
     </div>
     <div class="inst-flow">
@@ -494,7 +423,7 @@
       <div class="inst-item r d3">
         <div class="inst-dot">03</div>
         <h3>Assembly</h3>
-        <p>Our team arrives with all components pre-packaged. One power connection. Under 2 hours per pod.</p>
+        <p>Our team arrives with all components pre-packaged. One power connection. No tools, no contractors required.</p>
       </div>
       <div class="inst-item r d4">
         <div class="inst-dot">04</div>
@@ -512,8 +441,8 @@
         <img src="https://thesonichive.com/wp-content/uploads/2024/10/23-10-2024-18_27_04-1024x517.webp" alt="SonicHive installation">
         <div class="inst-img-overlay"></div>
         <div class="inst-img-caption">
-          <strong>~2 Hours</strong>
-          <span>Average install per pod</span>
+          <strong>Tool-Free</strong>
+          <span>No drilling, no contractors</span>
         </div>
       </div>
       <div class="inst-note r-right">
@@ -521,14 +450,14 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
           <h4>Everything in Every Order</h4>
         </div>
-        <p>Fully assembled pod, power connection kit, LED lighting system, smart ventilation unit, acoustic seals, full installation by the SonicHive team, and a 12-month product warranty.</p>
+        <p>Fully assembled pod, power connection kit, LED lighting system, smart ventilation unit, acoustic seals, full setup by the SonicHive team, and a 3-year product warranty.</p>
         <div class="inst-tags">
           <span class="inst-tag">LED Lighting</span>
           <span class="inst-tag">Smart Ventilation</span>
           <span class="inst-tag">Acoustic Seals</span>
           <span class="inst-tag">Power Kit</span>
-          <span class="inst-tag">12-Month Warranty</span>
-          <span class="inst-tag">Installation Team</span>
+          <span class="inst-tag">3 Year Warranty</span>
+          <span class="inst-tag">Setup Team</span>
         </div>
       </div>
     </div>
@@ -545,19 +474,21 @@
     <div style="overflow-x:auto" class="r d1">
     <div class="spec-wrap"><table class="spec-table">
       <thead>
-        <tr><th>Feature</th><th>Solo</th><th>Duo</th><th>Quartet</th><th>Hexa</th><th>Home Pod</th></tr>
+        <tr><th>Feature</th><th>VRT</th><th>VRT+</th><th>VR</th><th>Home Pod</th></tr>
       </thead>
       <tbody>
-        <tr><td class="feat-name">Sound Reduction</td><td>30dB</td><td>30dB</td><td>30dB</td><td>30dB</td><td>30dB+</td></tr>
-        <tr><td class="feat-name">Ventilation System</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
-        <tr><td class="feat-name">LED Lighting</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
-        <tr><td class="feat-name">Power Outlets</td><td>2×</td><td>2×</td><td>4×</td><td>6×</td><td>2×</td></tr>
-        <tr><td class="feat-name">USB Charging</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
-        <tr><td class="feat-name">Acoustic Glass</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
-        <tr><td class="feat-name">Custom Colours</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
-        <tr><td class="feat-name">Smart Home Integration</td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
-        <tr><td class="feat-name">Installation Time</td><td>~1 hr</td><td>~1.5 hrs</td><td>~2 hrs</td><td>~2.5 hrs</td><td>~2 hrs</td></tr>
-        <tr><td class="feat-name">Eco-Friendly Materials</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Sound Reduction</td><td>30&plusmn;5 dB</td><td>36&ndash;41 dB</td><td>30&plusmn;5 dB</td><td>30&plusmn;5 dB</td></tr>
+        <tr><td class="feat-name">Ventilation System</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">LED Lighting</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Dual-Zone LED Lighting</td><td><span class="spec-dash"></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td></tr>
+        <tr><td class="feat-name">USB Charging</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Acoustic Glass</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Brushed Aluminium Finish</td><td><span class="spec-dash"></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td></tr>
+        <tr><td class="feat-name">Colour Options</td><td>7 colours</td><td>7 colours</td><td>5 colours</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">AI Digital Matrix</td><td><span class="spec-dash"></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td></tr>
+        <tr><td class="feat-name">Smart Home Integration</td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td><td><span class="spec-dash"></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Eco-Friendly Materials</td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td><td><span class="spec-chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td></tr>
+        <tr><td class="feat-name">Warranty</td><td>3 Years</td><td>3 Years</td><td>3 Years</td><td>3 Years</td></tr>
       </tbody>
     </table></div>
     </div>
@@ -570,7 +501,7 @@
     <div class="fcta-in r-scale">
       <p class="fcta-eyebrow">Experience It</p>
       <h2>See the Technology<br>in Person.</h2>
-      <p>Visit our Downtown Dubai showroom. Step inside a pod, hear the difference, and speak with our acoustic engineers. No obligation — just silence.</p>
+      <p>Visit our Downtown Dubai showroom. Step inside a pod, hear the difference, and speak with our acoustic engineers. No obligation - just silence.</p>
       <div class="btn-row">
         <a href="contact.html" class="btn-red">Book a Showroom Visit</a>
         <a href="use-cases.html" class="btn-wh">Explore Use Cases</a>

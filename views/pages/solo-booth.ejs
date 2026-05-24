@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/Faveicon-black.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solo Silence Booth, SonicHive | 1-Person Acoustic Pod Dubai</title>
   <meta name="description"
@@ -110,7 +111,6 @@
       margin-bottom: 1rem
     }
 
-    /* NAV */
     #nav {
       position: fixed;
       top: 0;
@@ -152,15 +152,12 @@
       align-items: center
     }
 
-    .nav-links a {
       font-size: .875rem;
       color: rgba(255, 255, 255, .5);
       font-weight: 500;
       transition: color .2s
     }
 
-    .nav-links a:hover,
-    .nav-links a.cur {
       color: #FFF
     }
 
@@ -818,116 +815,6 @@
       flex-wrap: wrap
     }
 
-    /* FOOTER */
-    footer {
-      background: #0A0A0A;
-      border-top: 1px solid rgba(255, 255, 255, .06);
-      padding: 4.5rem 0 2rem
-    }
-
-    .foot-g {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1.3fr;
-      gap: 3rem;
-      margin-bottom: 3.5rem
-    }
-
-    .foot-brand p {
-      color: rgba(255, 255, 255, .4);
-      font-size: .9rem;
-      line-height: 1.7;
-      margin-top: 1rem;
-      max-width: 280px
-    }
-
-    .foot-soc {
-      display: flex;
-      gap: .75rem;
-      margin-top: 1.5rem
-    }
-
-    .soc-a {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, .05);
-      border: 1px solid rgba(255, 255, 255, .08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .75rem;
-      font-weight:400;
-      transition: all .2s;
-      color: rgba(255, 255, 255, .4)
-    }
-
-    .soc-a:hover {
-      background: var(--red-d);
-      border-color: var(--red-b);
-      color: var(--red)
-    }
-
-    .foot-col h4 {
-      font-family: var(--fh);
-      font-size: .8rem;
-      font-weight:400;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
-      color: rgba(255, 255, 255, .9)
-    }
-
-    .foot-col a {
-      display: block;
-      color: rgba(255, 255, 255, .4);
-      font-size: .875rem;
-      margin-bottom: .6rem;
-      transition: color .2s
-    }
-
-    .foot-col a:hover {
-      color: #FFF
-    }
-
-    .foot-contact p {
-      color: rgba(255, 255, 255, .4);
-      font-size: .875rem;
-      margin-bottom: .6rem
-    }
-
-    .foot-contact a {
-      color: var(--red)
-    }
-
-    .foot-bot {
-      border-top: 1px solid rgba(255, 255, 255, .06);
-      padding-top: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem
-    }
-
-    .foot-bot p {
-      color: rgba(255, 255, 255, .3);
-      font-size: .8rem
-    }
-
-    .foot-locs {
-      display: flex;
-      gap: .6rem;
-      flex-wrap: wrap
-    }
-
-    .foot-locs span {
-      font-size: .72rem;
-      color: rgba(255, 255, 255, .35);
-      background: rgba(255, 255, 255, .04);
-      border: 1px solid rgba(255, 255, 255, .08);
-      border-radius: 100px;
-      padding: .2rem .7rem
-    }
 
     @media(max-width:1024px) {
       .ph-grid {
@@ -962,10 +849,6 @@
       .related-grid {
         grid-template-columns: 1fr 1fr
       }
-
-      .foot-g {
-        grid-template-columns: 1fr 1fr
-      }
     }
 
     @media(max-width:768px) {
@@ -979,10 +862,6 @@
 
       .badges-row {
         gap: 1.5rem
-      }
-
-      .foot-g {
-        grid-template-columns: 1fr
       }
 
       #prod-hero {
@@ -1041,44 +920,6 @@
         width: calc(50% - .75rem)
       }
     }
-    /* MEGA MENU */
-    .nav-dd{position:static;display:flex;align-items:center}
-    .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted);font-size:.875rem;font-weight:500;border:none;background:none;font-family:var(--fb);padding:0;transition:color .2s;position:relative;padding-bottom:2px}
-    .nav-dd.open .nd-toggle,.nd-toggle:hover{color:var(--text)}
-    .nd-chev{transition:transform .25s ease;flex-shrink:0}
-    .nav-dd.open .nd-chev{transform:rotate(180deg)}
-    .mega-wrap{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-12px);width:min(1080px,calc(100vw - 2rem));background:#FFFFFF;border:1px solid rgba(0,0,0,.09);border-radius:20px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.04),0 20px 50px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.22,1,.36,1);z-index:400}
-    .nav-dd.open .mega-wrap{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
-    .mega-wrap::before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,32,32,.8) 40%,rgba(212,32,32,.9) 50%,rgba(212,32,32,.8) 60%,transparent);z-index:2}
-    .mega-bg{position:absolute;inset:0;background:transparent}
-    .mega-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem .85rem;position:relative;z-index:1}
-    .mega-eye{font-size:.6rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
-    .mega-all-link{font-size:.76rem;color:rgba(0,0,0,.4);transition:color .2s;display:flex;align-items:center;gap:.35rem}
-    .mega-all-link:hover{color:rgba(0,0,0,.8)}
-    .mega-divider{height:1px;background:rgba(0,0,0,.08)}
-    .mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem;position:relative;z-index:1}
-    .mc{display:flex;flex-direction:column;padding:1.3rem 1.2rem 1.4rem;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;transition:background .2s}
-    .mc::after{content:"";position:absolute;inset:0;border-radius:14px;border:1px solid transparent;transition:border-color .2s;pointer-events:none}
-    .mc-img-w{height:160px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:.9rem}
-    .mc-img-w img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.2));transition:transform .35s cubic-bezier(.22,1,.36,1),filter .35s ease}
-    .mc:hover .mc-img-w img{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
-    .mc-svg-w{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;transition:transform .35s cubic-bezier(.22,1,.36,1)}
-    .mc:hover .mc-svg-w{transform:translateY(-6px) scale(1.05)}
-    .mc-badge{display:inline-block;font-size:.59rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .65rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
-    .mc-name{font-size:.95rem;font-weight:400;color:#0A0A0F;letter-spacing:-.01em;margin-bottom:.3rem}
-    .mc-desc{font-size:.71rem;color:rgba(0,0,0,.45);line-height:1.55;flex:1}
-    .mc-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.7rem;font-size:.72rem;font-weight:400;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
-    .mc:hover .mc-link{opacity:1;transform:none}
-    .mc-vrt:hover{background:rgba(212,32,32,.05)}.mc-vrt:hover::after{border-color:rgba(212,32,32,.2)}.mc-vrt .mc-badge{background:rgba(212,32,32,.1);color:#EF5050;border:1px solid rgba(212,32,32,.22)}.mc-vrt .mc-link{color:#EF5050}
-    .mc-plus:hover{background:rgba(184,134,11,.05)}.mc-plus:hover::after{border-color:rgba(146,64,14,.22)}.mc-plus .mc-badge{background:rgba(184,134,11,.1);color:#92400E;border:1px solid rgba(146,64,14,.25)}.mc-plus .mc-link{color:#92400E}
-    .mc-art:hover{background:rgba(99,102,241,.05)}.mc-art:hover::after{border-color:rgba(67,56,202,.2)}.mc-art .mc-badge{background:rgba(99,102,241,.1);color:#4338CA;border:1px solid rgba(67,56,202,.22)}.mc-art .mc-link{color:#4338CA}
-    .mc-home:hover{background:rgba(20,184,166,.05)}.mc-home:hover::after{border-color:rgba(15,118,110,.2)}.mc-home .mc-badge{background:rgba(20,184,166,.1);color:#0F766E;border:1px solid rgba(15,118,110,.22)}.mc-home .mc-link{color:#0F766E}
-    .mc-vr:hover{background:rgba(37,99,235,.05)}.mc-vr:hover::after{border-color:rgba(37,99,235,.2)}.mc-vr .mc-badge{background:rgba(37,99,235,.1);color:#60A5FA;border:1px solid rgba(37,99,235,.22)}.mc-vr .mc-link{color:#60A5FA}
-    .mega-foot{display:flex;align-items:center;gap:1.25rem;padding:.85rem 1.5rem;border-top:1px solid rgba(0,0,0,.08);position:relative;z-index:1}
-    .mf-link{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:rgba(0,0,0,.45);transition:color .2s;text-decoration:none;white-space:nowrap}
-    .mf-link:hover{color:rgba(0,0,0,.75)}
-    .mf-sep{width:1px;height:14px;background:rgba(0,0,0,.1);flex-shrink:0}
-    .mf-cta{color:rgba(212,32,32,.75)!important}.mf-cta:hover{color:#D42020!important}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
     </style>
 </head>
@@ -1100,10 +941,10 @@
       <div class="ph-info r d2">
         <div class="breadcrumb">
           <a href="index.html">Home</a>
-          <span>›</span>
+          <span>★</span>
           <span>Solo Silence Booth</span>
         </div>
-        <div class="ph-tag">⭐ Best Seller · 1 Person</div>
+        <div class="ph-tag">? Best Seller - 1 Person</div>
         <h1 class="ph-name">Solo Silence<br>Booth</h1>
         <div class="ph-cap">Private calls & deep focus, perfected.</div>
         <p class="ph-desc">The ultimate personal sanctuary. Sound-insulated for absolute privacy, ideal for sales
@@ -1112,11 +953,11 @@
         <div class="ph-specs-row">
           <div class="ph-spec"><strong>1</strong><span>Person</span></div>
           <div class="ph-spec"><strong>30dB</strong><span>Reduction</span></div>
-          <div class="ph-spec"><strong>~1 hr</strong><span>Install</span></div>
-          <div class="ph-spec"><strong>∞</strong><span>Colors</span></div>
+          
+          <div class="ph-spec"><strong>5</strong><span>Colours</span></div>
         </div>
         <div class="ph-actions">
-          <a href="contact.html" class="btn-red">Get a Quote →</a>
+          <a href="contact.html" class="btn-red">Get a Quote &#x2192;</a>
           <a href="https://wa.me/971585550099?text=Hi, I'm interested in the Solo Silence Booth." target="_blank"
             class="btn-wh">Chat on WhatsApp</a>
         </div>
@@ -1142,7 +983,7 @@
         </div>
         <div class="badge-item">
           <div class="badge-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"/></svg></div>
-          <div><strong>Fully</strong> Customizable</div>
+          <div><strong>5</strong> Colour Options</div>
         </div>
         <div class="badge-item">
           <div class="badge-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg></div>
@@ -1176,7 +1017,7 @@
           <div class="feat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.651a3.75 3.75 0 0 1 0-5.303m5.304-.001a3.75 3.75 0 0 1 0 5.304m-7.425 2.122a6.75 6.75 0 0 1 0-9.546m9.546.001a6.75 6.75 0 0 1 0 9.545M8.25 15.75l-1.5 1.5M6.75 17.25l-1.5 1.5M15.75 8.25l1.5-1.5M17.25 6.75l1.5-1.5M12 12h.008v.008H12V12Z"/></svg></div>
           <div class="feat-name">Smart Ventilation</div>
           <p class="feat-desc">Active airflow system continuously circulates fresh air. Designed for sessions lasting
-            hours without stuffiness or CO₂ build-up.</p>
+            hours without stuffiness or CO2 build-up.</p>
         </div>
         <div class="feat-card r d3">
           <div class="feat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.355a3.375 3.375 0 0 1-3 0M12 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg></div>
@@ -1186,7 +1027,7 @@
         </div>
         <div class="feat-card r d1">
           <div class="feat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
-          <div class="feat-name">2× Power Outlets + USB</div>
+          <div class="feat-name">2x Power Outlets + USB</div>
           <p class="feat-desc">Built-in power and USB charging keeps your devices running. One external power connection
            , that's all the Solo needs to operate.</p>
         </div>
@@ -1198,9 +1039,8 @@
         </div>
         <div class="feat-card r d3">
           <div class="feat-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"/></svg></div>
-          <div class="feat-name">Fully Customizable</div>
-          <p class="feat-desc">Choose exterior finishes, interior fabrics, glass tints, and accent colours. Custom brand
-            wraps available for corporate deployments.</p>
+          <div class="feat-name">5 Standard Colours</div>
+          <p class="feat-desc">Available in White, Black, Grey, Olive Green, and Orange. Every finish is produced to the same premium acoustic and build standard.</p>
         </div>
       </div>
     </div>
@@ -1287,39 +1127,39 @@
               </tr>
               <tr>
                 <td class="sn">Ventilation</td>
-                <td class="sv chk">✓ Active ventilation system</td>
+                <td class="sv chk">? Active ventilation system</td>
               </tr>
               <tr>
                 <td class="sn">LED Lighting</td>
-                <td class="sv chk">✓ Dimmable, tunable white</td>
+                <td class="sv chk">? Dimmable, tunable white</td>
               </tr>
               <tr>
                 <td class="sn">Power Outlets</td>
-                <td class="sv">2× standard + USB charging</td>
+                <td class="sv">2x standard + USB charging</td>
               </tr>
               <tr>
                 <td class="sn">Acoustic Glass</td>
-                <td class="sv chk">✓ Double-laminated</td>
+                <td class="sv chk">? Double-laminated</td>
               </tr>
               <tr>
-                <td class="sn">Custom Colours</td>
-                <td class="sv chk">✓ Full customization available</td>
+                <td class="sn">Colour Options</td>
+                <td class="sv">White, Black, Grey, Olive Green, Orange</td>
               </tr>
               <tr>
                 <td class="sn">Smart Integration</td>
-                <td class="sv">— (available in Home Pod)</td>
+                <td class="sv">(available in Home Pod)</td>
               </tr>
               <tr>
-                <td class="sn">Installation Time</td>
+                
                 <td class="sv">~1 hour</td>
               </tr>
               <tr>
                 <td class="sn">Lockable Door</td>
-                <td class="sv chk">✓ With privacy seal</td>
+                <td class="sv chk">? With privacy seal</td>
               </tr>
               <tr>
                 <td class="sn">Eco-Friendly Materials</td>
-                <td class="sv chk">✓ Recycled acoustic panels</td>
+                <td class="sv chk">? Recycled acoustic panels</td>
               </tr>
               <tr>
                 <td class="sn">Warranty</td>
@@ -1336,7 +1176,7 @@
   <section id="testimonial">
     <div class="wrap">
       <div class="testi-in r">
-        <div class="testi-stars">★★★★★</div>
+        <div class="testi-stars">?????</div>
         <p class="testi-q">"Bought a Solo for our Business Bay office. Our team uses it constantly for sales calls. The
           soundproofing is genuinely impressive, you can't hear a word from outside. Best workspace investment we made
           this year."</p>
@@ -1365,7 +1205,7 @@
           <div class="rel-cap">One-on-ones & critical discussions</div>
           <p class="rel-desc">Maximum comfort for two. Ideal for confidential meetings and collaborative deep work
             sessions.</p>
-          <a class="rel-link" href="duo-booth.html">View Duo →</a>
+          <a class="rel-link" href="duo-booth.html">View Duo ?</a>
         </div>
         <div class="rel-card r d2">
           <span class="rel-tag">4 Person</span>
@@ -1376,7 +1216,7 @@
           <div class="rel-cap">Team huddles & project sessions</div>
           <p class="rel-desc">The sweet spot for most teams, standups to extended workshops without the open-office
             noise.</p>
-          <a class="rel-link" href="quartet-booth.html">View Quartet →</a>
+          <a class="rel-link" href="quartet-booth.html">View Quartet ?</a>
         </div>
         <div class="rel-card r d3">
           <span class="rel-tag">Home Office</span>
@@ -1386,7 +1226,7 @@
           <div class="rel-cap">Remote work reimagined</div>
           <p class="rel-desc">Smart home integration and advanced noise cancellation for remote workers in Dubai
             apartments.</p>
-          <a class="rel-link" href="home-pod.html">View Home Pod →</a>
+          <a class="rel-link" href="home-pod.html">View Home Pod ?</a>
         </div>
       </div>
     </div>

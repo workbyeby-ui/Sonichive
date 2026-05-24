@@ -61,12 +61,7 @@
         <div id="qp-top">
           <div id="qp-top-accent"></div>
           <div id="qp-logo">
-            <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
-              <polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/>
-              <polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#0A0A0A"/>
-              <polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".55"/>
-            </svg>
-            <span>Sonic<em>Hive</em></span>
+            <img src="/images/sonichive%20White%20logo.png" alt="SonicHive" style="height:48px;width:auto;display:block">
           </div>
           <div id="qp-title">Get a Free Quote</div>
           <div id="qp-sub">Our Dubai team responds within 2 business hours.</div>
@@ -100,9 +95,9 @@
                 <label for="qp-interest">Interested In</label>
                 <select id="qp-interest" name="interest">
                   <option value="">Select a product…</option>
-                  <option>VRT Series</option>
-                  <option>VRT Plus Series</option>
-                  <option>ART Pod Series</option>
+                  <option>VRT</option>
+                  <option>VRT+</option>
+                  <option>VR</option>
                   <option>Home Pod</option>
                   <option>Rental Pods</option>
                 </select>
