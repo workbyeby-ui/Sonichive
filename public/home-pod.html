@@ -180,7 +180,7 @@
 
     /* RESPONSIVE */
     @media(max-width:1024px){.show-grid{grid-template-columns:1fr;gap:3rem}.prob-lay{grid-template-columns:1fr;gap:3rem}.rel-grid{grid-template-columns:1fr 1fr}.hero-inner{grid-template-columns:1fr}.stats-row{flex-wrap:wrap}}
-    @media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.rel-grid{grid-template-columns:1fr}.noise-grid{grid-template-columns:1fr}.hero-h1{font-size:clamp(2.5rem,9vw,3.5rem)}#hero{min-height:100svh}.hero-text{padding-top:8rem}.hero-content{padding-bottom:4rem}#showcase,#problem,#features,#specs,#testimonial,#related,#cta-bottom{padding:5rem 0}.stat-item{border-right:none;border-bottom:1px solid var(--border)}.stat-item:last-child{border-bottom:none}}
+    @media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.rel-grid{grid-template-columns:1fr}.noise-grid{grid-template-columns:1fr}.hero-h1{font-size:clamp(2.5rem,9vw,3.5rem)}#hero{min-height:100svh}.hero-text{padding-top:8rem}.hero-content{padding-bottom:4rem}#showcase,#problem,#features,#specs,#testimonial,#related,#cta-bottom{padding:5rem 0}.stat-item{border-right:none;border-bottom:1px solid var(--border)}.stat-item:last-child{border-bottom:none}.specs-row{flex-wrap:wrap}.ssp{flex:0 0 50%;border-right:none;border-bottom:1px solid var(--border)}.ssp:nth-child(odd){border-right:1px solid var(--border)}.ssp:last-child{border-bottom:none}}
     @media(max-width:520px){.feat-grid{grid-template-columns:1fr}.hero-ctas{flex-direction:column}.btn-teal,.btn-ghost{text-align:center;width:100%}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
   </style>
@@ -932,6 +932,18 @@
 <script>
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+</script>
+<script>
+/* nav dropdown */
+(function(){
+  var dd=document.querySelector('.nav-dd');
+  var btn=document.querySelector('.nd-toggle');
+  if(!dd||!btn)return;
+  function setOpen(open){dd.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open));}
+  btn.addEventListener('click',function(e){e.stopPropagation();setOpen(!dd.classList.contains('open'));});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target))setOpen(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+})();
 </script>
 <script>
 (function(){
