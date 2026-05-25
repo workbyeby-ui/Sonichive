@@ -25,21 +25,15 @@ for (const file of files) {
             views: [path.join(__dirname, 'views')]
         });
 
-        // Write to public directory
-        if (page === 'index') {
-            fs.writeFileSync(path.join(publicDir, 'index.html'), html);
-        } else {
-            // Write explicit .html
-            fs.writeFileSync(path.join(publicDir, `${page}.html`), html);
+        // Fix relative paths for static assets by converting them to absolute paths
+        const fixedHtml = html
+            .replace(/(src|href)="((images|pods|css|js)\/[^"]+)"/g, '$1="/$2"')
+            .replace(/url\(['"]?((images|pods|css)\/[^'"\)]+)['"]?\)/g, 'url(\'/$1\')');
 
-            // Write index.html inside a directory matching the page name for clean URLs
-            const pageDir = path.join(publicDir, page);
-            if (!fs.existsSync(pageDir)) {
-                fs.mkdirSync(pageDir, { recursive: true });
-            }
-            fs.writeFileSync(path.join(pageDir, 'index.html'), html);
-        }
-        console.log(`✓ Built clean URLs for ${page}`);
+        // Write to public directory
+        const outPath = path.join(publicDir, `${page}.html`);
+        fs.writeFileSync(outPath, fixedHtml);
+        console.log(`✓ Built ${page}.html`);
     } catch (err) {
         console.error(`✗ Error building ${page}.html:`, err.message);
     }
