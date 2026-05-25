@@ -30,10 +30,20 @@ for (const file of files) {
             .replace(/(src|href)="((images|pods|css|js)\/[^"]+)"/g, '$1="/$2"')
             .replace(/url\(['"]?((images|pods|css)\/[^'"\)]+)['"]?\)/g, 'url(\'/$1\')');
 
-        // Write to public directory
-        const outPath = path.join(publicDir, `${page}.html`);
-        fs.writeFileSync(outPath, fixedHtml);
-        console.log(`✓ Built ${page}.html`);
+        // Write explicit .html
+        if (page === 'index') {
+            fs.writeFileSync(path.join(publicDir, 'index.html'), fixedHtml);
+        } else {
+            fs.writeFileSync(path.join(publicDir, `${page}.html`), fixedHtml);
+
+            // Write index.html inside a directory matching the page name for clean URLs
+            const pageDir = path.join(publicDir, page);
+            if (!fs.existsSync(pageDir)) {
+                fs.mkdirSync(pageDir, { recursive: true });
+            }
+            fs.writeFileSync(path.join(pageDir, 'index.html'), fixedHtml);
+        }
+        console.log(`✓ Built clean URLs for ${page}`);
     } catch (err) {
         console.error(`✗ Error building ${page}.html:`, err.message);
     }
