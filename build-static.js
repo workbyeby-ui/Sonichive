@@ -25,27 +25,38 @@ for (const file of files) {
             views: [path.join(__dirname, 'views')]
         });
 
-        // Fix relative paths for static assets by converting them to absolute paths
+        // Fix all relative paths to absolute so assets load correctly
+        // even when pages are served from a clean-URL subdirectory (e.g. /vrt/)
         const fixedHtml = html
-            .replace(/(src|href)="((images|pods|css|js)\/[^"]+)"/g, '$1="/$2"')
-            .replace(/url\(['"]?((images|pods|css)\/[^'"\)]+)['"]?\)/g, 'url(\'/$1\')');
+            // 1. Any relative <script src="..."> that doesn't start with / or http
+            //    This catches popup.js?v=3, lang.js, etc.
+            .replace(/(<script\b[^>]*\ssrc=")(?!\/|http)([^"]+)"/gi, '$1/$2"')
+            // 2. React/JS string literal image srcs: src: 'images/...'
+            .replace(/src:\s*'(?!\/|http)((?:images|pods)[^']+)'/g, "src: '/$1'")
+            // 3. Relative .html href links -> absolute (e.g. contact.html, vrt-solo.html)
+            .replace(/href="(?!\/|http|#|mailto:|tel:)([^"]+\.html[^"]*)"/g, 'href="/$1"')
+            // 4. Standard HTML src/href for asset directories (images/, pods/, css/, js/)
+            .replace(/(src|href)="(?!\/)((images|pods|css|js)\/[^"]+)"/g, '$1="/$2"')
+            // 5. CSS url() for asset paths
+            .replace(/url\(['"]?(?!\/)((images|pods|css)\/[^'"\)]+)['"]?\)/g, "url('/$1')");
 
-        // Write explicit .html
+        // Write explicit .html file
         if (page === 'index') {
             fs.writeFileSync(path.join(publicDir, 'index.html'), fixedHtml);
         } else {
             fs.writeFileSync(path.join(publicDir, `${page}.html`), fixedHtml);
 
-            // Write index.html inside a directory matching the page name for clean URLs
+            // Also write index.html inside a named directory for clean URL routing
+            // e.g. /vrt/ -> public/vrt/index.html
             const pageDir = path.join(publicDir, page);
             if (!fs.existsSync(pageDir)) {
                 fs.mkdirSync(pageDir, { recursive: true });
             }
             fs.writeFileSync(path.join(pageDir, 'index.html'), fixedHtml);
         }
-        console.log(`✓ Built clean URLs for ${page}`);
+        console.log(`✓ Built: ${page}`);
     } catch (err) {
-        console.error(`✗ Error building ${page}.html:`, err.message);
+        console.error(`✗ Error building ${page}:`, err.message);
     }
 }
 
