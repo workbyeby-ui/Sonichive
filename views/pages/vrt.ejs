@@ -946,10 +946,10 @@ function VRTHero() {
       ].join(', '),
       willChange: 'transform, filter, opacity',
     };
-    if (role === 'center') return { ...base, left: '50%', bottom: isMobile ? '18%' : '-2%', width: isMobile ? '95vw' : '78vw', transform: 'translateX(-50%) scale(1)', filter: 'drop-shadow(0 40px 60px rgba(0,0,0,0.18))', opacity: 1, zIndex: 20 };
-    if (role === 'left')   return { ...base, left: isMobile ? '14%' : '14%', bottom: isMobile ? '28%' : '14%', width: isMobile ? '24vw' : '22vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(2px)', opacity: 0.75, zIndex: 10 };
-    if (role === 'right')  return { ...base, left: isMobile ? '86%' : '86%', bottom: isMobile ? '28%' : '14%', width: isMobile ? '24vw' : '22vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(2px)', opacity: 0.75, zIndex: 10 };
-    if (role === 'back')   return { ...base, left: '50%', bottom: isMobile ? '32%' : '22%', width: isMobile ? '32vw' : '28vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(4px)', opacity: 0.55, zIndex: 5 };
+    if (role === 'center') return { ...base, left: '50%', bottom: isMobile ? '4%' : '-2%', width: isMobile ? '88vw' : '78vw', transform: 'translateX(-50%) scale(1)', filter: 'drop-shadow(0 40px 60px rgba(0,0,0,0.24))', opacity: 1, zIndex: 20 };
+    if (role === 'left')   return { ...base, left: '14%', bottom: '14%', width: '22vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(2px)', opacity: isMobile ? 0 : 0.75, zIndex: 10, pointerEvents: 'none' };
+    if (role === 'right')  return { ...base, left: '86%', bottom: '14%', width: '22vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(2px)', opacity: isMobile ? 0 : 0.75, zIndex: 10, pointerEvents: 'none' };
+    if (role === 'back')   return { ...base, left: '50%', bottom: '22%', width: '28vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(4px)', opacity: isMobile ? 0 : 0.55, zIndex: 5, pointerEvents: 'none' };
     return { ...base, left: '50%', bottom: '32%', width: '28vw', transform: 'translateX(-50%) scale(0.6)', filter: 'blur(8px)', opacity: 0, zIndex: 1, pointerEvents: 'none' };
   };
 
@@ -993,8 +993,11 @@ function VRTHero() {
 
         {/* Bottom-left: title + description + nav buttons */}
         <div className="absolute bottom-6 left-4 sm:bottom-20 sm:left-24" style={{ zIndex: 60, maxWidth: 320 }}>
-          <p className="mb-2 sm:mb-3 text-base sm:text-[22px] font-bold uppercase tracking-widest" style={{ color: '#fff', opacity: 0.95, letterSpacing: '0.02em' }}>
+          <p className="mb-1 sm:mb-3 text-base sm:text-[22px] font-bold uppercase tracking-widest" style={{ color: '#fff', opacity: 0.95, letterSpacing: '0.02em' }}>
             VRT / VRT+
+          </p>
+          <p className="block sm:hidden text-xs mb-2" style={{ color: '#fff', opacity: 0.6, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500 }}>
+            {IMAGES[center].name}
           </p>
           <p className="hidden sm:block text-xs sm:text-sm mb-4 sm:mb-5" style={{ color: '#fff', opacity: 0.85, lineHeight: 1.6 }}>
             Acoustic privacy pods engineered for focus, calls and meetings. Premium finish, modular footprint.
@@ -1016,6 +1019,18 @@ function VRTHero() {
             </button>
           </div>
         </div>
+
+        {/* Color dots - mobile only, centered bottom */}
+        {isMobile && (
+          <div className="absolute flex items-center justify-center gap-2" style={{ bottom: '1.5rem', left: '50%', transform: 'translateX(-50%)', zIndex: 60 }}>
+            {IMAGES.map((it, i) => (
+              <button key={i} type="button" aria-label={it.name}
+                onClick={() => { if (!isAnimating) { setIsAnimating(true); setActiveIndex(i); window.setTimeout(() => setIsAnimating(false), DURATION); } }}
+                style={{ width: i === center ? '22px' : '8px', height: '8px', borderRadius: '4px', background: i === center ? '#fff' : 'rgba(255,255,255,0.4)', border: 'none', cursor: 'pointer', padding: 0, transition: `width ${DURATION}ms ${EASE}, background ${DURATION}ms ${EASE}` }}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Bottom-right: DISCOVER IT */}
         <a href="#configurations"
