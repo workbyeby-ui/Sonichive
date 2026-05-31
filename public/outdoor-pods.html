@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/webp" href="/images/Faveicon-black.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor Pods, SonicHive | Backyard Silence Booth Dubai</title>
+  <meta name="description" content="SonicHive Backyard Silence Booths — weather-resistant, air-conditioned soundproof pods for outdoor use. Backyards, terraces, courtyards and public spaces. SRPW-L, XL and XXL models.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+    .r{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .r.on{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+    .s-label{font-size:.72rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem}
+    .s-title{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-bottom:1rem}
+
+    /* ── HERO ── */
+    #prod-hero{background:#FFF;min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:8rem 2rem 5rem}
+    #prod-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 50%,rgba(212,32,32,.05),transparent 60%)}
+    .ph-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;position:relative;width:100%}
+    .ph-img-wrap{display:flex;flex-direction:column;gap:1rem}
+    .ph-main-wrap{position:relative;border-radius:20px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:360px}
+    .ph-img-glow{position:absolute;inset:0;background:radial-gradient(circle,rgba(212,32,32,.06),transparent 65%);pointer-events:none;z-index:0}
+    .ph-img{width:82%;object-fit:contain;padding:1.5rem 1rem;transition:opacity .3s,transform .4s;position:relative;z-index:1}
+    .ph-img.fade{opacity:0;transform:scale(.96)}
+    .ph-img:hover{transform:scale(1.04) translateY(-5px)}
+    .ph-thumbs{display:flex;gap:.55rem;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+    .ph-thumbs::-webkit-scrollbar{display:none}
+    .ph-thumb{flex-shrink:0;width:72px;height:72px;border-radius:12px;border:2px solid var(--border);background:#FFF;cursor:pointer;transition:border-color .2s,transform .15s;padding:3px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .ph-thumb img{width:100%;height:100%;object-fit:contain;transition:transform .3s}
+    .ph-thumb:hover{border-color:var(--red-b);transform:translateY(-2px)}
+    .ph-thumb:hover img{transform:scale(1.06)}
+    .ph-thumb.act{border-color:var(--red);box-shadow:0 0 0 3px var(--red-d)}
+    .ph-tlabel{position:absolute;bottom:0;left:0;right:0;font-size:.48rem;font-weight:400;text-align:center;background:rgba(0,0,0,.55);color:#FFF;padding:.2rem 0;letter-spacing:.06em;text-transform:uppercase;pointer-events:none}
+    .ph-color-bar{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;padding:.65rem 1rem;background:#FFF;border:1px solid var(--border);border-radius:12px}
+    .ph-clabel{font-size:.78rem;color:var(--muted);white-space:nowrap;flex-shrink:0}
+    .ph-clabel b{color:var(--text)}
+    .ph-swatches{display:flex;gap:.45rem;align-items:center;flex-wrap:wrap}
+    .sw{width:24px;height:24px;border-radius:50%;cursor:pointer;transition:transform .18s,box-shadow .18s;border:2px solid rgba(0,0,0,.1);flex-shrink:0;outline:none;display:flex;align-items:center;justify-content:center}
+    .sw:hover{transform:scale(1.22)}
+    .sw.act{box-shadow:0 0 0 2px #FFF,0 0 0 4px var(--red);transform:scale(1.12)}
+    .ph-info .breadcrumb{font-size:.75rem;color:var(--muted);margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem}
+    .ph-info .breadcrumb a{color:var(--muted);transition:color .2s}
+    .ph-info .breadcrumb a:hover{color:var(--red)}
+    .ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.35rem 1rem;font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem}
+    .ph-name{font-family:var(--fh);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:400;letter-spacing:-.04em;color:var(--text);line-height:.95;margin-bottom:.75rem}
+    .ph-cap{color:var(--red);font-size:1.1rem;font-weight:400;margin-bottom:1.25rem}
+    .ph-desc{color:var(--muted);font-size:1rem;line-height:1.8;max-width:480px;margin-bottom:2.5rem}
+    .ph-specs-row{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+    .ph-spec{text-align:center}
+    .ph-spec strong{font-family:var(--fh);font-size:1.6rem;font-weight:400;color:var(--text);display:block;line-height:1}
+    .ph-spec span{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:.2rem;display:block}
+    .ph-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn-red{background:var(--red);color:#FFF;border:none;border-radius:100px;padding:.9rem 2.5rem;font-size:.975rem;font-weight:400;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--fb);display:inline-block}
+    .btn-red:hover{transform:scale(1.04);box-shadow:0 0 32px rgba(212,32,32,.45)}
+    .btn-wh{background:transparent;border:1px solid rgba(0,0,0,.15);color:var(--text);border-radius:100px;padding:.9rem 2.5rem;font-size:.975rem;font-weight:500;transition:all .2s;font-family:var(--fb);display:inline-block}
+    .btn-wh:hover{background:var(--bg2);border-color:rgba(0,0,0,.25)}
+    .btn-o{background:transparent;border:1px solid var(--border);color:var(--text);border-radius:100px;padding:.875rem 2.25rem;font-size:.95rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--fb);display:inline-block}
+    .btn-o:hover{border-color:var(--red-b);color:var(--red)}
+
+    /* ── MODEL SELECTOR ── */
+    #model-selector{padding:4rem 0 0;background:#FFF}
+    .ms-tabs{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+    .ms-tab{background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.6rem 1.5rem;font-size:.875rem;font-weight:400;cursor:pointer;transition:all .2s;font-family:var(--fb);color:var(--muted)}
+    .ms-tab.act{background:var(--red);border-color:var(--red);color:#FFF}
+    .ms-tab:hover:not(.act){border-color:var(--red-b);color:var(--red)}
+    .ms-panel{display:none}
+    .ms-panel.act{display:block}
+
+    /* ── BADGES ── */
+    #badges{background:#111;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:2rem 0}
+    .badges-row{display:flex;gap:3rem;align-items:center;justify-content:center;flex-wrap:wrap}
+    .badge-item{display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,.5);font-size:.875rem}
+    .badge-item strong{color:#FFF;font-weight:400}
+    .badge-ic{width:36px;height:36px;border-radius:10px;background:var(--red-d);border:1px solid var(--red-b);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+
+    /* ── FEATURES ── */
+    #features{padding:7rem 0;background:#FFF}
+    .feat-head{text-align:center;margin-bottom:4.5rem}
+    .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+    .feat-card{background:#FFF;border:1px solid var(--border);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+    .feat-card:hover{transform:translateY(-7px);box-shadow:0 24px 56px rgba(0,0,0,.11)}
+    .feat-card-img{height:230px;overflow:hidden;background:var(--bg2);flex-shrink:0}
+    .feat-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+    .feat-card:hover .feat-card-img img{transform:scale(1.06)}
+    .feat-card-body{padding:1.6rem;flex:1;display:flex;flex-direction:column;border-top:1px solid var(--border)}
+    .feat-num{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#16A34A;background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.22);border-radius:100px;padding:.22rem .75rem;display:inline-block;margin-bottom:1rem;align-self:flex-start}
+    .feat-name{font-family:var(--fh);font-size:1rem;font-weight:500;margin-bottom:.55rem;color:var(--text);letter-spacing:-.015em;line-height:1.3}
+    .feat-desc{font-size:.875rem;color:var(--muted);line-height:1.75;flex:1}
+
+    /* ── PERFECT FOR ── */
+    #perfect-for{padding:7rem 0;background:var(--bg2)}
+    .pf-lay{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .pf-txt h2{font-family:var(--fh);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.025em;margin-bottom:1.25rem;line-height:1.05}
+    .pf-txt p{color:var(--muted);line-height:1.85;font-size:.975rem;margin-bottom:1.5rem}
+    .pf-list{display:flex;flex-direction:column;gap:.85rem;margin-top:1rem}
+    .pf-item{display:flex;align-items:flex-start;gap:1rem;background:#FFF;border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;transition:border-color .2s}
+    .pf-item:hover{border-color:var(--red-b)}
+    .pf-item-ic{font-size:1.3rem;flex-shrink:0;margin-top:.05rem}
+    .pf-item h4{font-family:var(--fh);font-size:.9rem;font-weight:400;margin-bottom:.2rem}
+    .pf-item p{font-size:.825rem;color:var(--muted);line-height:1.55}
+    .pf-img-wrap{border-radius:24px;overflow:hidden;position:relative}
+    .pf-img-wrap img{width:100%;height:480px;object-fit:cover;transition:transform .5s}
+    .pf-img-wrap:hover img{transform:scale(1.03)}
+
+    /* ── SPECS ── */
+    #specs{padding:7rem 0}
+    .spec-inner{max-width:var(--max);margin:0 auto}
+    .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+    .spec-col{background:#FFF;border:1px solid var(--border);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .3s,transform .3s}
+    .spec-col:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(0,0,0,.09)}
+    .sc-img{background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem;min-height:200px;border-bottom:1px solid var(--border)}
+    .sc-img img{max-height:180px;width:auto;object-fit:contain;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+    .spec-col:hover .sc-img img{transform:scale(1.06) translateY(-6px)}
+    .sc-head{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:var(--bg2)}
+    .sc-model{font-family:var(--fh);font-size:1rem;font-weight:600;color:var(--text);letter-spacing:-.01em}
+    .sc-pax{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.2rem .7rem;margin-top:.4rem}
+    .sc-table{width:100%;border-collapse:collapse;flex:1}
+    .sc-table td{padding:.75rem 1.25rem;border-bottom:1px solid var(--border);font-size:.82rem;vertical-align:top;line-height:1.45}
+    .sc-table tr:last-child td{border-bottom:none}
+    .sc-table tr:hover td{background:var(--bg2)}
+    .sc-table .sn{color:var(--muted);width:48%}
+    .sc-table .sv{color:var(--text);font-weight:400}
+    .sc-table .chk{color:var(--red);font-weight:400}
+    @media(max-width:1024px){.spec-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.spec-grid{grid-template-columns:1fr}}
+
+    /* ── TESTIMONIAL ── */
+    #testimonial{padding:7rem 0;background:#0A0A0A;position:relative;overflow:hidden}
+    #testimonial::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(212,32,32,.08),transparent 65%)}
+    .testi-in{position:relative;max-width:760px;margin:0 auto;text-align:center}
+    .testi-stars{color:var(--red);font-size:1.1rem;letter-spacing:4px;margin-bottom:2rem}
+    .testi-q{font-family:var(--fh);font-size:clamp(1.25rem,2.5vw,1.75rem);font-weight:400;color:#FFF;line-height:1.5;font-style:italic;margin-bottom:2rem}
+    .testi-name{font-size:.9rem;font-weight:400;color:rgba(255,255,255,.6)}
+    .testi-loc{font-size:.8rem;color:rgba(255,255,255,.35);margin-top:.2rem}
+
+    /* ── RELATED ── */
+    #related{padding:7rem 0;background:var(--bg2)}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+    .rel-card{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2rem;cursor:pointer;transition:transform .3s,border-color .3s,box-shadow .3s;display:flex;flex-direction:column}
+    .rel-card:hover{transform:translateY(-6px);border-color:var(--red-b);box-shadow:0 20px 50px rgba(0,0,0,.1)}
+    .rel-tag{font-size:.7rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--red);background:var(--red-d);border-radius:100px;padding:.25rem .75rem;display:inline-block;margin-bottom:1rem;align-self:flex-start}
+    .rel-img{height:160px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+    .rel-img img{height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 10px 24px rgba(0,0,0,.12));transition:transform .4s}
+    .rel-card:hover .rel-img img{transform:scale(1.06) translateY(-4px)}
+    .rel-name{font-family:var(--fh);font-size:1rem;font-weight:400;margin-bottom:.3rem}
+    .rel-cap{font-size:.78rem;color:var(--red);font-weight:400;margin-bottom:.6rem}
+    .rel-desc{font-size:.85rem;color:var(--muted);line-height:1.6;flex:1}
+    .rel-link{margin-top:1.25rem;font-size:.82rem;font-weight:400;color:var(--text);display:inline-flex;align-items:center;gap:.4rem;transition:gap .2s,color .2s}
+    .rel-link:hover{color:var(--red);gap:.75rem}
+
+    /* ── CTA ── */
+    #prod-cta{padding:7rem 0}
+    .pcta-in{text-align:center;max-width:680px;margin:0 auto}
+    .pcta-in h2{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.025em;margin-bottom:1rem}
+    .pcta-in p{color:var(--muted);line-height:1.75;margin-bottom:2.5rem;font-size:1.05rem}
+    .btn-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){.ph-grid{grid-template-columns:1fr;gap:3rem;text-align:center}.ph-main-wrap{min-height:260px}.ph-specs-row{justify-content:center}.ph-actions{justify-content:center}.ph-desc{margin:0 auto 2.5rem}.pf-lay{grid-template-columns:1fr;gap:3rem}.related-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.feat-card-img{height:180px}.related-grid{grid-template-columns:1fr}.badges-row{gap:1.5rem}#prod-hero{padding:5.5rem 1.25rem 3rem}.ph-grid{gap:2rem}.ph-name{font-size:clamp(2rem,7vw,3.5rem)}.ph-actions{flex-direction:column;gap:.75rem}.btn-red,.btn-wh{text-align:center;width:100%}.pf-lay{gap:2rem}.pf-img-wrap img{height:280px}#features,#perfect-for,#specs,#testimonial,#related,#prod-cta{padding:4.5rem 0}.feat-head{margin-bottom:2.5rem}.ms-tabs{gap:.5rem}}
+    @media(max-width:520px){.feat-grid{grid-template-columns:1fr}.feat-card-img{height:200px}.ph-specs-row{gap:1rem}.badges-row{justify-content:flex-start}.badge-item{width:calc(50% - .75rem)}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+  </style>
+</head>
+<body>
+
+<link rel="stylesheet" href="/css/nav.css">
+<div id="page-loader" aria-hidden="true">
+  <div class="honeycomb">
+    <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div>
+  </div>
+</div>
+<script>
+(function(){
+  function dismissLoader(){
+    var l=document.getElementById('page-loader');
+    if(l)l.classList.add('done');
+  }
+  if(document.readyState==='complete'){
+    setTimeout(dismissLoader,120);
+  } else {
+    window.addEventListener('load',function(){setTimeout(dismissLoader,120);});
+  }
+})();
+</script>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav id="nav" role="navigation" aria-label="Main navigation" data-nav="light">
+  <div class="nav-i">
+    <a href="/" class="logo">
+      <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" class="logo-img">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-dd">
+        <button class="nd-toggle cur" aria-haspopup="true" aria-expanded="false">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="/vrt" class="mc mc-vrt"><div class="mc-img-w"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/vr" class="mc mc-vr"><div class="mc-img-w"><img src="/pods/VR series/VR S/VR-3D-black0000.webp" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series, S, M, L, XL and XXL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/home-pod" class="mc mc-home"><div class="mc-img-w"><img src="/images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/outdoor-pods" class="mc mc-outdoor"><div class="mc-img-w"><img src="/images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp" alt="Outdoor Pods" loading="lazy"></div><div class="mc-name">Outdoor Pods</div><p class="mc-desc">Weather-resistant, air-conditioned backyard silence booths for outdoor spaces.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="/rental-pods" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rent a Pod</a><a href="/contact" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div>
+      </div>
+      <a href="/rental-pods" class="">Rent a Pod</a>
+      <a href="/use-cases" class="">Use Cases</a>
+      <a href="/features" class="">Features</a>
+      <a href="/about" class="">About</a>
+      <a href="/blog" class="">Blog</a>
+      <a href="/contact" class="">Contact</a>
+    </div>
+    <a href="/contact" class="nav-cta">Get a Quote →</a>
+    <button class="nav-ham" id="nav-ham" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+      <svg id="ham-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+<script>
+(function(){
+  var ham=document.getElementById('nav-ham');
+  var links=document.getElementById('nav-links');
+  var dd=document.querySelector('.nav-dd');
+  if(!ham||!links)return;
+  function openNav(){
+    links.classList.add('open');
+    ham.setAttribute('aria-expanded','true');
+    ham.setAttribute('aria-label','Close navigation menu');
+    document.body.style.overflow='hidden';
+    ham.style.color='#0A0A0F';
+    ham.style.borderColor='rgba(0,0,0,.18)';
+    ham.querySelector('svg').innerHTML='<path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>';
+  }
+  function closeNav(){
+    links.classList.remove('open');
+    if(dd)dd.classList.remove('open');
+    ham.setAttribute('aria-expanded','false');
+    ham.setAttribute('aria-label','Open navigation menu');
+    document.body.style.overflow='';
+    ham.style.color='';
+    ham.style.borderColor='';
+    ham.querySelector('svg').innerHTML='<path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>';
+  }
+  ham.addEventListener('click',function(){
+    links.classList.contains('open')?closeNav():openNav();
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&links.classList.contains('open')){closeNav();ham.focus();}
+  });
+  // Close on nav link click (single-page-like navigation)
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){if(window.innerWidth<=768)closeNav();});
+  });
+  // Mega menu toggle
+  var btn=document.querySelector('.nd-toggle');
+  if(btn&&dd){
+    function setOpen(open){
+      dd.classList.toggle('open',open);
+      btn.setAttribute('aria-expanded',String(open));
+    }
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      setOpen(!dd.classList.contains('open'));
+    });
+    document.addEventListener('click',function(e){if(!dd.contains(e.target))setOpen(false);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+  }
+})();
+</script>
+
+<div id="main-content" tabindex="-1" style="outline:none;position:absolute"></div>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="prod-hero">
+  <div class="ph-grid">
+    <div class="ph-img-wrap r">
+      <div class="ph-main-wrap">
+        <div class="ph-img-glow"></div>
+        <img id="pimg" class="ph-img" src="/images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp" alt="Outdoor Backyard Silence Booth — 4 Pax">
+      </div>
+      <div class="ph-thumbs" id="pthumbs">
+        <button class="ph-thumb act" data-src="/images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp"><img src="/images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp" alt="SRPW-L 4 Pax"><span class="ph-tlabel">4 Pax — L</span></button>
+        <button class="ph-thumb" data-src="/images/Pods/OutDoor%20Pods/Outdoor%20Pod%20XL.webp"><img src="/images/Pods/OutDoor%20Pods/Outdoor%20Pod%20XL.webp" alt="SRPW-XL 6 Pax"><span class="ph-tlabel">6 Pax — XL</span></button>
+        <button class="ph-thumb" data-src="/images/Pods/OutDoor%20Pods/Outdoor%20Pod%20XXL.webp"><img src="/images/Pods/OutDoor%20Pods/Outdoor%20Pod%20XXL.webp" alt="SRPW-XXL 8 Pax"><span class="ph-tlabel">8 Pax — XXL</span></button>
+      </div>
+      <div class="ph-color-bar">
+        <span class="ph-clabel">Available finishes:</span>
+        <div class="ph-swatches">
+          <button class="sw act" style="background:#F5F5F5" title="White (S115)"></button>
+          <button class="sw" style="background:#9E9E9E" title="Silver Grey (S235)"></button>
+          <button class="sw" style="background:#D96E2A" title="Orange (S369)"></button>
+          <button class="sw" style="background:#444444" title="Dark Grey (S201)"></button>
+          <button class="sw" style="background:#1A1A1A" title="Black (S211)"></button>
+        </div>
+        <span style="font-size:.72rem;color:var(--muted)">5 standard colours</span>
+      </div>
+    </div>
+
+    <div class="ph-info r d2">
+      <div class="breadcrumb">
+        <a href="/">Home</a> /
+        <a href="/vr">Products</a> /
+        Outdoor Pods
+      </div>
+      <div class="ph-tag">Outdoor · Weatherproof · Air Conditioned</div>
+      <h1 class="ph-name">Backyard<br>Silence Booth</h1>
+      <div class="ph-cap">Purpose-built for outdoor environments. No compromises.</div>
+      <p class="ph-desc">Weather-resistant, air-conditioned soundproof pods engineered for outdoor use — backyards, terraces, commercial courtyards, and public spaces. 15+ years major in acoustic treatment. Available in 3 sizes: 4, 6, and 8 persons.</p>
+      <div class="ph-specs-row">
+        <div class="ph-spec"><strong>30–35 dB</strong><span>Sound Insulation</span></div>
+        <div class="ph-spec"><strong>3 Sizes</strong><span>4 · 6 · 8 Pax</span></div>
+        <div class="ph-spec"><strong>5</strong><span>Colours</span></div>
+        <div class="ph-spec"><strong>E0</strong><span>Certified</span></div>
+      </div>
+      <div class="ph-actions">
+        <a href="/contact.html" class="btn-red">Get a Quote &#x2192;</a>
+        <a href="https://wa.me/971585550099?text=Hi, I'm interested in the Outdoor Backyard Silence Booth." target="_blank" class="btn-wh">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ BADGES ══════════ -->
+<div id="badges">
+  <div class="wrap">
+    <div class="badges-row">
+      <div class="badge-item">
+        <div class="badge-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 .906-7.38 5.25 5.25 0 0 0-10.233-2.33 3 3 0 0 0-4.047 3.51 4.5 4.5 0 0 0-.376 1.7Z"/></svg></div>
+        <div><strong>Grade III</strong> Waterproof</div>
+      </div>
+      <div class="badge-item">
+        <div class="badge-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/></svg></div>
+        <div><strong>Thermal</strong> Insulated</div>
+      </div>
+      <div class="badge-item">
+        <div class="badge-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.651a3.75 3.75 0 0 1 0-5.303m5.304-.001a3.75 3.75 0 0 1 0 5.304m-7.425 2.122a6.75 6.75 0 0 1 0-9.546m9.546.001a6.75 6.75 0 0 1 0 9.545M8.25 15.75l-1.5 1.5M6.75 17.25l-1.5 1.5M15.75 8.25l1.5-1.5M17.25 6.75l1.5-1.5M12 12h.008v.008H12V12Z"/></svg></div>
+        <div><strong>Air</strong> Conditioned</div>
+      </div>
+      <div class="badge-item">
+        <div class="badge-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 0 1 21.75 8.25Z"/></svg></div>
+        <div><strong>Smart</strong> Access Control</div>
+      </div>
+      <div class="badge-item">
+        <div class="badge-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg></div>
+        <div><strong>100–240V</strong> Power Supply</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ FEATURES ══════════ -->
+<section id="features">
+  <div class="wrap">
+    <div class="feat-head r">
+      <p class="s-label">Built for the Outdoors</p>
+      <h2 class="s-title">Engineered to Withstand. Designed to Perform.</h2>
+      <p style="color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:560px;margin:0 auto">Every system inside the Backyard Silence Booth is purpose-built for outdoor environments where standard pods simply can't survive.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card r d1">
+        <div class="feat-card-img">
+          <img src="/images/Pods/OutDoor%20Pods/Featuers/feat-waterproof.webp" alt="Grade III Waterproof" loading="lazy">
+        </div>
+        <div class="feat-card-body">
+          <span class="feat-num">01</span>
+          <div class="feat-name">Grade III Waterproof</div>
+          <p class="feat-desc">Carbon plastic composite panels, aviation-grade aluminium framing, and tempered glass with hermetic seals at every joint create a double anti-leaching structure against extreme weather.</p>
+        </div>
+      </div>
+      <div class="feat-card r d2">
+        <div class="feat-card-img">
+          <img src="/images/Pods/OutDoor%20Pods/Featuers/feat-thermal.webp" alt="Thermal Insulation" loading="lazy">
+        </div>
+        <div class="feat-card-body">
+          <span class="feat-num">02</span>
+          <div class="feat-name">Thermal Insulation</div>
+          <p class="feat-desc">The carbon plastic composite panel resists water, UV, acid, salt, and corrosion with zero emission and fire resistance. Hollow glass construction delivers superior heat preservation year-round.</p>
+        </div>
+      </div>
+      <div class="feat-card r d3">
+        <div class="feat-card-img">
+          <img src="/images/Pods/OutDoor%20Pods/Featuers/feat-ac.webp" alt="Integrated Air Conditioning" loading="lazy">
+        </div>
+        <div class="feat-card-body">
+          <span class="feat-num">03</span>
+          <div class="feat-name">Integrated Air Conditioning</div>
+          <p class="feat-desc">L and XL models feature a top-mounted integrated A/C — 2,500W cooling capacity, 350 m³/h airflow, R32 eco-friendly refrigerant. XXL uses a split household unit. Range: 15°C–30°C.</p>
+        </div>
+      </div>
+      <div class="feat-card r d1">
+        <div class="feat-card-img">
+          <img src="/images/Pods/OutDoor%20Pods/Featuers/feat-pod.webp" alt="Low Voltage Protection" loading="lazy">
+        </div>
+        <div class="feat-card-body">
+          <span class="feat-num">04</span>
+          <div class="feat-name">Low Voltage Protection</div>
+          <p class="feat-desc">Battery consumption detection system prevents excessive discharge. When voltage hits the protection threshold the A/C auto-shuts down, requiring a manual restart once power recovers.</p>
+        </div>
+      </div>
+      <div class="feat-card r d2">
+        <div class="feat-card-img">
+          <img src="/images/Pods/OutDoor%20Pods/Featuers/feat-garden.webp" alt="Smart Access Control" loading="lazy">
+        </div>
+        <div class="feat-card-body">
+          <span class="feat-num">05</span>
+          <div class="feat-name">Smart Access Control</div>
+          <p class="feat-desc">Enter via card, QR code, app control, or face scan. Surpasses 85% of market suppliers in management efficiency. Privacy curtains included as standard.</p>
+        </div>
+      </div>
+      <div class="feat-card r d3">
+        <div class="feat-card-img">
+          <img src="/images/Pods/OutDoor%20Pods/Featuers/feat-lighting.webp" alt="Modular Installation" loading="lazy">
+        </div>
+        <div class="feat-card-body">
+          <span class="feat-num">06</span>
+          <div class="feat-name">Modular Installation</div>
+          <p class="feat-desc">Panel system follows a step-by-step sequence: floor → wall → glass → furniture. No heavy tools required on-site. Choose disassembled or assembled packing before production.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PERFECT FOR ══════════ -->
+<section id="perfect-for">
+  <div class="wrap">
+    <div class="pf-lay">
+      <div class="pf-txt r">
+        <p class="s-label">Perfect For</p>
+        <h2>From Backyard<br>to Business Courtyard.</h2>
+        <p>The Backyard Silence Booth thrives wherever indoor pods cannot go — fully outdoor, fully functional, zero compromise on acoustic performance or comfort.</p>
+        <div class="pf-list">
+          <div class="pf-item">
+            <div class="pf-item-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12 11.204 3.045c.209-.222.572-.222.792 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg></div>
+            <div><h4>Home Backyard & Garden</h4><p>A permanent private office in your garden — soundproof, air-conditioned, and all-weather ready.</p></div>
+          </div>
+          <div class="pf-item">
+            <div class="pf-item-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+            <div><h4>Hotel & Resort Terraces</h4><p>Offer guests private work pods without sacrificing outdoor ambience or reconfiguring permanent architecture.</p></div>
+          </div>
+          <div class="pf-item">
+            <div class="pf-item-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21 8.954 15l3.792 3.792a1.5 1.5 0 0 0 2.121 0L21.75 12m-9 3.75 2.25-2.25"/></svg></div>
+            <div><h4>Commercial Courtyards</h4><p>Deploy meeting pods in outdoor corporate campuses, co-working terraces, or business parks with zero structural works.</p></div>
+          </div>
+          <div class="pf-item">
+            <div class="pf-item-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg></div>
+            <div><h4>Public Spaces & Events</h4><p>Weatherproof pods for airports, exhibitions, outdoor festivals and public venues requiring temporary private meeting spaces.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="r d2">
+        <div class="pf-img-wrap">
+          <img src="/images/Pods/OutDoor%20Pods/outdoor-booth-1-1152x1536.webp" alt="Outdoor Silence Booth in use">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SPECIFICATIONS ══════════ -->
+<section id="specs">
+  <div class="wrap">
+    <div class="spec-inner">
+      <div class="r" style="margin-bottom:0">
+        <p class="s-label">Specifications</p>
+        <h2 class="s-title">Choose Your Size</h2>
+        <p style="color:var(--muted);font-size:.975rem;line-height:1.75;max-width:540px">Three models to match your space and team size — all sharing the same outdoor-grade engineering.</p>
+      </div>
+
+      <div class="spec-grid">
+
+        <!-- ── SRPW-L ── -->
+        <div class="spec-col r d1">
+          <div class="sc-img">
+            <img src="/images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp" alt="SRPW-L 4 Pax Outdoor Pod" loading="lazy">
+          </div>
+          <div class="sc-head">
+            <div class="sc-model">SRPW-L</div>
+            <div class="sc-pax">4 Person</div>
+          </div>
+          <table class="sc-table">
+            <tbody>
+              <tr><td class="sn">External Dimensions</td><td class="sv">W2200 × D1586 × H2300 mm</td></tr>
+              <tr><td class="sn">Internal Dimensions</td><td class="sv">W2040 × D1540 × H2140 mm</td></tr>
+              <tr><td class="sn">Gross / Net Weight</td><td class="sv">707 kg / 642 kg</td></tr>
+              <tr><td class="sn">Sound Insulation (Rw)</td><td class="sv chk">&#10003; 30.6 dB</td></tr>
+              <tr><td class="sn">Reverberation (RT20)</td><td class="sv">0.13 s @ 1kHz</td></tr>
+              <tr><td class="sn">BTU</td><td class="sv">8,532 BTU</td></tr>
+              <tr><td class="sn">A/C Type</td><td class="sv">Top-mounted integrated</td></tr>
+              <tr><td class="sn">Cooling / Power</td><td class="sv">2,500 W / 500 W · 24 V</td></tr>
+              <tr><td class="sn">Refrigerant</td><td class="sv">R134a / R32</td></tr>
+              <tr><td class="sn">Temp. Range</td><td class="sv">15°C – 30°C</td></tr>
+              <tr><td class="sn">Desk</td><td class="sv">1000 × 550 × 760 mm</td></tr>
+              <tr><td class="sn">Sofa</td><td class="sv">1350 × 600 × 660 mm</td></tr>
+              <tr><td class="sn">Power Supply</td><td class="sv">100–240 V adaptable</td></tr>
+              <tr><td class="sn">Lighting</td><td class="sv">4000K / 750 Lux</td></tr>
+              <tr><td class="sn">Waterproof</td><td class="sv chk">&#10003; Grade III</td></tr>
+              <tr><td class="sn">Certification</td><td class="sv chk">&#10003; E0 grade</td></tr>
+              <tr><td class="sn">Smart Entry</td><td class="sv chk">&#10003; Card / QR / App / Face</td></tr>
+              <tr><td class="sn">Colours</td><td class="sv">White · Grey · Orange · Dark Grey · Black</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ── SRPW-XL ── -->
+        <div class="spec-col r d2">
+          <div class="sc-img">
+            <img src="/images/Pods/OutDoor%20Pods/Outdoor%20Pod%20XL.webp" alt="SRPW-XL 6 Pax Outdoor Pod" loading="lazy">
+          </div>
+          <div class="sc-head">
+            <div class="sc-model">SRPW-XL</div>
+            <div class="sc-pax">6 Person</div>
+          </div>
+          <table class="sc-table">
+            <tbody>
+              <tr><td class="sn">External Dimensions</td><td class="sv">W2200 × D2186 × H2300 mm</td></tr>
+              <tr><td class="sn">Internal Dimensions</td><td class="sv">W2040 × D2140 × H2140 mm</td></tr>
+              <tr><td class="sn">Gross / Net Weight</td><td class="sv">830 kg / 761 kg</td></tr>
+              <tr><td class="sn">Sound Insulation (Rw)</td><td class="sv chk">&#10003; 32.5 dB</td></tr>
+              <tr><td class="sn">Reverberation (RT20)</td><td class="sv">—</td></tr>
+              <tr><td class="sn">BTU</td><td class="sv">8,532 BTU</td></tr>
+              <tr><td class="sn">A/C Type</td><td class="sv">Top-mounted integrated</td></tr>
+              <tr><td class="sn">Cooling / Power</td><td class="sv">2,500 W / 500 W · 24 V</td></tr>
+              <tr><td class="sn">Refrigerant</td><td class="sv">R134a / R32</td></tr>
+              <tr><td class="sn">Temp. Range</td><td class="sv">15°C – 30°C</td></tr>
+              <tr><td class="sn">Desk</td><td class="sv">1700 × 700 × 760 mm</td></tr>
+              <tr><td class="sn">Sofa</td><td class="sv">1800 × 550 × 650 mm</td></tr>
+              <tr><td class="sn">Power Supply</td><td class="sv">100–240 V adaptable</td></tr>
+              <tr><td class="sn">Lighting</td><td class="sv">4000K / 750 Lux</td></tr>
+              <tr><td class="sn">Waterproof</td><td class="sv chk">&#10003; Grade III</td></tr>
+              <tr><td class="sn">Certification</td><td class="sv chk">&#10003; E0 grade</td></tr>
+              <tr><td class="sn">Smart Entry</td><td class="sv chk">&#10003; Card / QR / App / Face</td></tr>
+              <tr><td class="sn">Colours</td><td class="sv">White · Grey · Orange · Dark Grey · Black</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ── SRPW-XXL ── -->
+        <div class="spec-col r d3">
+          <div class="sc-img">
+            <img src="/images/Pods/OutDoor%20Pods/Outdoor%20Pod%20XXL.webp" alt="SRPW-XXL 8 Pax Outdoor Pod" loading="lazy">
+          </div>
+          <div class="sc-head">
+            <div class="sc-model">SRPW-XXL</div>
+            <div class="sc-pax">8 Person</div>
+          </div>
+          <table class="sc-table">
+            <tbody>
+              <tr><td class="sn">External Dimensions</td><td class="sv">W3000 × D4286 × H2300 mm</td></tr>
+              <tr><td class="sn">Internal Dimensions</td><td class="sv">W2840 × D4240 × H2140 mm</td></tr>
+              <tr><td class="sn">Gross / Net Weight</td><td class="sv">1,590 kg / 1,460 kg</td></tr>
+              <tr><td class="sn">Sound Insulation (Rw)</td><td class="sv chk">&#10003; 34.7 dB</td></tr>
+              <tr><td class="sn">Reverberation (RT20)</td><td class="sv">—</td></tr>
+              <tr><td class="sn">BTU</td><td class="sv">8,562 BTU</td></tr>
+              <tr><td class="sn">A/C Type</td><td class="sv">Split household unit</td></tr>
+              <tr><td class="sn">Cooling / Power</td><td class="sv">—</td></tr>
+              <tr><td class="sn">Refrigerant</td><td class="sv">R134a / R32</td></tr>
+              <tr><td class="sn">Temp. Range</td><td class="sv">15°C – 30°C</td></tr>
+              <tr><td class="sn">Desk</td><td class="sv">3000 × 800 × 760 mm</td></tr>
+              <tr><td class="sn">Chair (×6)</td><td class="sv">675 × 655 × 820 mm</td></tr>
+              <tr><td class="sn">Power Supply</td><td class="sv">100–240 V adaptable</td></tr>
+              <tr><td class="sn">Lighting</td><td class="sv">4000K / 750 Lux</td></tr>
+              <tr><td class="sn">Waterproof</td><td class="sv chk">&#10003; Grade III</td></tr>
+              <tr><td class="sn">Certification</td><td class="sv chk">&#10003; E0 grade</td></tr>
+              <tr><td class="sn">Smart Entry</td><td class="sv chk">&#10003; Card / QR / App / Face</td></tr>
+              <tr><td class="sn">Colours</td><td class="sv">White · Grey · Orange · Dark Grey · Black</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIAL ══════════ -->
+<section id="testimonial">
+  <div class="wrap">
+    <div class="testi-in r">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-q">"We installed two Backyard Silence Booths in our resort courtyard. Guests can now take private calls and hold meetings completely outdoors. The acoustic performance held up through summer — nobody inside can hear what's outside and vice versa."</p>
+      <div class="testi-name">Khalid Al Mansouri, Operations Director</div>
+      <div class="testi-loc">Dubai, UAE</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ RELATED ══════════ -->
+<section id="related">
+  <div class="wrap">
+    <div class="r">
+      <p class="s-label">Explore More</p>
+      <h2 class="s-title">Looking for Indoor Pods?</h2>
+      <p style="color:var(--muted);font-size:1rem;line-height:1.75;max-width:480px">Explore the full SonicHive indoor lineup — from single-person booths to boardroom pods.</p>
+    </div>
+    <div class="related-grid">
+      <div class="rel-card r d1">
+        <span class="rel-tag">VRT Series</span>
+        <div class="rel-img"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div>
+        <div class="rel-name">VRT Series</div>
+        <div class="rel-cap">Plug-and-play office soundproofing</div>
+        <p class="rel-desc">Installed in under 2 hours. The go-to indoor pod for teams of any size — solo to boardroom.</p>
+        <a class="rel-link" href="/vrt.html">View VRT &#x2192;</a>
+      </div>
+      <div class="rel-card r d2">
+        <span class="rel-tag">VR Series</span>
+        <div class="rel-img"><img src="/pods/VR series/VR S/VR-3D-black0000.webp" alt="VR Series" loading="lazy"></div>
+        <div class="rel-name">VR Series</div>
+        <div class="rel-cap">Full colour customisation</div>
+        <p class="rel-desc">S, M, L, XL and XXL sizes with premium finishes and full colour customisation for distinctive spaces.</p>
+        <a class="rel-link" href="/vr.html">View VR &#x2192;</a>
+      </div>
+      <div class="rel-card r d3">
+        <span class="rel-tag">Home Pod</span>
+        <div class="rel-img"><img src="/images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div>
+        <div class="rel-name">Home Pod</div>
+        <div class="rel-cap">Purpose-built for home offices</div>
+        <p class="rel-desc">Streaming studios, music practice, and home office work — designed for residential interiors.</p>
+        <a class="rel-link" href="/home-pod.html">View Home Pod &#x2192;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section id="prod-cta">
+  <div class="wrap">
+    <div class="pcta-in r">
+      <p class="s-label">Ready to Order?</p>
+      <h2>Get Your Outdoor Pod Quote Today.</h2>
+      <p>Tell us your space dimensions and model preference and our Dubai team will respond within 2 business hours with pricing and lead times.</p>
+      <div class="btn-row">
+        <a href="/contact.html" class="btn-red">Request a Free Quote</a>
+        <a href="/use-cases.html" class="btn-o">Explore Use Cases</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* -- FOOTER (self-contained) -- */
+  footer .wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  footer {
+    background: #0A0A0A;
+    border-top: 1px solid rgba(255,255,255,.06);
+    padding: 5rem 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -60px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(212,32,32,.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* Tagline strip */
+  .foot-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.75rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    margin-bottom: 3.5rem;
+  }
+
+  .foot-top-tag {
+    font-family: var(--fh, 'Poppins', sans-serif);
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    font-weight: 400;
+    letter-spacing: -.04em;
+    color: rgba(255,255,255,.88);
+    line-height: 1.1;
+    max-width: 560px;
+  }
+
+  .foot-top-tag em {
+    color: #D42020;
+    font-style: normal;
+  }
+
+  .foot-top-cta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    background: rgba(212,32,32,.08);
+    border: 1px solid rgba(212,32,32,.22);
+    color: #D42020;
+    border-radius: 100px;
+    padding: .6rem 1.5rem;
+    font-size: .85rem;
+    font-weight: 500;
+    font-family: var(--fh, 'Poppins', sans-serif);
+    text-decoration: none;
+    transition: transform 160ms cubic-bezier(0.23,1,0.32,1),
+                background 160ms ease-out,
+                box-shadow 160ms ease-out,
+                border-color 160ms ease-out;
+    white-space: nowrap;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .foot-top-cta:hover {
+      background: rgba(212,32,32,.14);
+      border-color: rgba(212,32,32,.35);
+      box-shadow: 0 0 24px rgba(212,32,32,.14);
+    }
+  }
+
+  .foot-top-cta:active {
+    transform: scale(0.97);
+  }
+
+  /* Main grid */
+  .foot-g {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .foot-brand p {
+    color: rgba(255,255,255,.35);
+    font-size: .875rem;
+    line-height: 1.75;
+    margin-top: 1.25rem;
+    max-width: 260px;
+  }
+
+  /* Social links */
+  .foot-soc {
+    display: flex;
+    gap: .45rem;
+    margin-top: 1.75rem;
+    flex-wrap: wrap;
+  }
+
+  .soc-a {
+    width: 35px;
+    height: 35px;
+    border-radius: 9px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,.3);
+    transition: transform 150ms cubic-bezier(0.23,1,0.32,1),
+                background 150ms ease-out,
+                border-color 150ms ease-out,
+                color 150ms ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .soc-a:hover {
+      background: rgba(212,32,32,.1);
+      border-color: rgba(212,32,32,.25);
+      color: #D42020;
+    }
+  }
+
+  .soc-a:active {
+    transform: scale(0.88);
+  }
+
+  /* Nav columns */
+  .foot-col h4 {
+    font-family: var(--fh, 'Poppins', sans-serif);
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,.42);
+  }
+
+  .foot-col a {
+    display: block;
+    color: rgba(255,255,255,.3);
+    font-size: .875rem;
+    margin-bottom: .65rem;
+    transition: color 150ms ease-out,
+                transform 180ms cubic-bezier(0.23,1,0.32,1);
+    transform-origin: left;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .foot-col a:hover {
+      color: rgba(255,255,255,.88);
+      transform: translateX(5px);
+    }
+  }
+
+  /* Contact column */
+  .foot-contact p {
+    color: rgba(255,255,255,.35);
+    font-size: .875rem;
+    margin-bottom: .65rem;
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    line-height: 1.55;
+  }
+
+  .foot-contact a {
+    color: #D42020;
+    display: inline;
+    margin-bottom: 0;
+    transform: none !important;
+    transition: color 150ms ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .foot-contact a:hover {
+      color: #FF5252;
+    }
+  }
+
+  /* Bottom bar */
+  .foot-bot {
+    border-top: 1px solid rgba(255,255,255,.06);
+    padding: 1.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .foot-bot p {
+    color: rgba(255,255,255,.22);
+    font-size: .78rem;
+  }
+
+  .foot-locs {
+    display: flex;
+    gap: .35rem;
+    flex-wrap: wrap;
+  }
+
+  .foot-locs span {
+    font-size: .69rem;
+    color: rgba(255,255,255,.28);
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 100px;
+    padding: .18rem .6rem;
+    cursor: default;
+    letter-spacing: .04em;
+    transition: background 150ms ease-out,
+                color 150ms ease-out,
+                border-color 150ms ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .foot-locs span:hover {
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.55);
+      border-color: rgba(255,255,255,.12);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .foot-g { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    footer { padding-top: 3.5rem; }
+    .foot-g { grid-template-columns: 1fr; gap: 2rem; }
+    .foot-top { padding-bottom: 2.5rem; margin-bottom: 2.5rem; }
+    .foot-top-tag { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+  }
+</style>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+
+    <!-- Tagline -->
+    <div class="foot-top">
+      <h2 class="foot-top-tag">Built for <em>silence.</em><br>Designed to perform.</h2>
+      <a href="/contact.html" class="foot-top-cta">
+        Get a Quote
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Columns -->
+    <div class="foot-g">
+      <div class="foot-brand">
+        <a href="/index.html" class="logo" style="display:inline-flex">
+          <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" style="height:72px;width:auto;display:block;filter:brightness(0) invert(1)">
+        </a>
+        <p>Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the Middle East.</p>
+        <div class="foot-soc">
+          <a class="soc-a" href="https://www.instagram.com/sonichive_?igsh=cWdjN3Ryd3N0ejdq" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a class="soc-a" href="https://www.facebook.com/share/1BwnMVP4BA/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a class="soc-a" href="https://www.linkedin.com/company/sonichive/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a class="soc-a" href="https://pin.it/5R68dXkTQ" target="_blank" rel="noopener" aria-label="Pinterest"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a class="soc-a" href="https://youtube.com/@sonichivepods?si=Y5jNiFN95m_dLkNk" target="_blank" rel="noopener" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc-a" href="https://www.tiktok.com/@sonichive?_r=1&amp;_t=ZS-92IlD1VKJmi" target="_blank" rel="noopener" aria-label="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9a8.19 8.19 0 0 0 4.79 1.52V7.07a4.85 4.85 0 0 1-1.02-.38z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <a href="/vrt.html">VRT</a>
+        <a href="/vr">VR</a>
+        <a href="/home-pod.html">Home Pod</a>
+        <a href="/outdoor-pods.html">Outdoor Pods</a>
+        <a href="/rental-pods.html">Rental Pods</a>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="/use-cases.html">Use Cases</a>
+        <a href="/features.html">Features</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Get a Quote</a>
+        <a href="/blog.html">Blog</a>
+      </div>
+      <div class="foot-col foot-contact">
+        <h4>Contact Us</h4>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0;margin-top:2px"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          Downtown Dubai, UAE
+        </p>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0;margin-top:2px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+          <a href="tel:+971585550099">+971 58 555 0099</a>
+        </p>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0;margin-top:2px"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+          <a href="mailto:info@thesonichive.com">info@thesonichive.com</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="foot-bot">
+      <p>&copy; 2025 SonicHive. All rights reserved.</p>
+      <div class="foot-locs"><span>UAE</span><span>Qatar</span><span>Saudi Arabia</span><span>Bahrain</span><span>NZ</span></div>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+</script>
+
+<!-- Product image gallery -->
+<script>
+(function(){
+  var pimg=document.getElementById('pimg');
+  if(!pimg)return;
+  var thumbs=document.querySelectorAll('#pthumbs .ph-thumb');
+  var swatches=document.querySelectorAll('.ph-swatches .sw');
+
+  function applyImg(src){
+    pimg.classList.add('fade');
+    setTimeout(function(){pimg.src=src;pimg.classList.remove('fade');},220);
+  }
+
+  thumbs.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      thumbs.forEach(function(t){t.classList.remove('act');});
+      btn.classList.add('act');
+      applyImg(btn.dataset.src);
+    });
+  });
+
+  swatches.forEach(function(sw){
+    sw.addEventListener('click',function(){
+      swatches.forEach(function(s){s.classList.remove('act');});
+      sw.classList.add('act');
+    });
+  });
+})();
+</script>
+
+<script src="/popup.js?v=3"></script>
+</body>
+</html>

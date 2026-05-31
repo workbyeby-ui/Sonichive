@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="images/Faveicon-black.png">
+  <link rel="icon" type="image/webp" href="images/Faveicon-black.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SonicHive - Premium Acoustic Office Pods | Dubai, UAE</title>
   <meta name="description" content="Premium soundproof office pods engineered for the Middle East's most demanding workspaces. Silence Booths in Dubai, Qatar, Saudi Arabia.">
@@ -91,7 +91,7 @@
     #nav[data-nav="transparent"]:not(.s) .nd-toggle:hover,#nav[data-nav="transparent"]:not(.s) .nav-dd.open .nd-toggle{color:#0A0A0F!important}
     #nav[data-nav="transparent"]:not(.s) .nav-cta{color:#FFF!important}
     @media(max-width:1024px){.h-left{width:65%}}
-    @media(max-width:768px){#hero{height:100vh;height:100dvh}.h-vid{object-fit:cover;object-position:68% center}.h-ov{display:none!important}.h-orb{display:none!important}.h-con{padding:0 1.5rem 3rem;align-items:flex-end}.h-left{width:100%;align-items:center;text-align:center}.h-badge{display:none}.h-h1{font-size:clamp(2rem,8vw,2.8rem);margin-bottom:1.25rem;line-height:1.05}.h-sub{display:none}.h-ctas{flex-direction:column;width:100%;gap:.65rem}.btn-red{width:100%;text-align:center;padding:.85rem;font-size:.95rem}.btn-wh{display:none}.h-stats-row{display:none}.h-scroll{display:none}}
+    @media(max-width:768px){#hero{height:100vh;height:100dvh}.h-vid{object-fit:cover;object-position:center center}.h-ov{display:none!important}.h-orb{display:none!important}.h-con{padding:0 1.5rem 3rem;align-items:flex-end}.h-left{width:100%;align-items:center;text-align:center}.h-badge{display:none}.h-h1{font-size:clamp(2rem,8vw,2.8rem);margin-bottom:1.25rem;line-height:1.05}.h-sub{display:none}.h-ctas{flex-direction:column;width:100%;gap:.65rem}.btn-red{width:100%;text-align:center;padding:.85rem;font-size:.95rem}.btn-wh{display:none}.h-stats-row{display:none}.h-scroll{display:none}}
 
     /* SCROLL ANIMATION */
     #sa-section{position:relative;height:550vh;background:#FFF}
@@ -283,6 +283,8 @@
     .ctas-in h2{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.025em;color:#FFF;margin-bottom:1rem}
     .ctas-in p{color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:2.5rem;font-size:1.05rem}
     .ctas-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    #cta-strip .btn-wh{color:#fff;border-color:rgba(255,255,255,.35)}
+    #cta-strip .btn-wh:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6);box-shadow:0 8px 24px rgba(0,0,0,.3)}
 
     /* CLIENT BANNER */
     #clients{padding:4rem 0;background:#FFF;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -290,14 +292,14 @@
     .clients-label{font-size:.68rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35)}
     .marquee-track{overflow:hidden;width:100%}
     .marquee-row{display:flex;width:max-content;will-change:transform}
-    .marquee-row.fwd{animation:mFwd 38s linear infinite}
-    .marquee-row.rev{animation:mRev 34s linear infinite}
+    .marquee-row.fwd{animation:mFwd 36s linear infinite}
+    .marquee-row.rev{animation:mRev 32s linear infinite}
     .marquee-row:hover{animation-play-state:paused}
-    @keyframes mFwd{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    @keyframes mRev{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
-    .c-chip{display:inline-flex;align-items:center;justify-content:center;width:160px;height:72px;flex-shrink:0;border-right:1px solid rgba(0,0,0,.07);background:#FFF;transition:background .25s}
+    @keyframes mFwd{0%{transform:translateX(0)}100%{transform:translateX(-25%)}}
+    @keyframes mRev{0%{transform:translateX(-25%)}100%{transform:translateX(0)}}
+    .c-chip{display:inline-flex;align-items:center;justify-content:center;width:180px;height:80px;flex-shrink:0;border-right:1px solid rgba(0,0,0,.07);background:#FFF;transition:background .25s}
     .c-chip:hover{background:#F8F8F8}
-    .c-chip img{height:26px;width:120px;object-fit:contain;filter:grayscale(100%);opacity:.5;transition:filter .3s,opacity .3s}
+    .c-chip img{height:36px;width:148px;object-fit:contain;filter:grayscale(100%);opacity:.55;transition:filter .3s,opacity .3s}
     .c-chip:hover img{filter:grayscale(0%);opacity:1}
 
     @media(max-width:1024px){.pt-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}.vp-grid{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}}
@@ -317,13 +319,13 @@
 
 <!-- HERO -->
 <section id="hero">
-  <img class="h-vid" src="images/Meeting Pods - Hero.png" alt="" aria-hidden="true">
+  <img class="h-vid" src="images/Meeting Pods - Hero.webp" alt="" aria-hidden="true">
   <div class="h-ov"></div>
   <div class="h-orb h-orb1"></div>
   <div class="h-orb h-orb2"></div>
   <div class="h-con">
     <div class="h-left">
-      <div class="h-badge"><span class="h-dot"></span>Dubai's #1 Acoustic Pod Provider</div>
+      <div class="h-badge"><span class="h-dot"></span>Asia's #1 Acoustic Pod Provider</div>
       <h1 class="h-h1">Work in Silence.<span class="ac">Lead in Clarity.</span></h1>
       <p class="h-sub">Premium soundproof office pods engineered for the Middle East's most demanding workspaces. No construction. No noise. Pure focus.</p>
       <div class="h-ctas">
@@ -384,7 +386,7 @@
       <div class="rl">
         <p class="s-label">Our Products</p>
         <h2 class="s-title">Find Your Perfect Pod</h2>
-        <p class="s-sub">Four distinct product lines — from standard acoustic pods to bespoke designer installations, residential retreats, and flexible rentals.</p>
+        <p class="s-sub">Five distinct product lines — from standard acoustic pods to bespoke designer installations, residential retreats, outdoor booths, and flexible rentals.</p>
       </div>
       <a href="products.html" class="sec-link rr">View All Products →</a>
     </div>
@@ -394,16 +396,13 @@
       <a class="pt-card r d1" href="vrt.html">
         <div class="pt-left">
           <div class="pt-series">
-            <div class="pt-series-icon" style="background:rgba(212,32,32,.08)">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            </div>
             <div class="pt-series-meta">
-              <span class="pt-series-name" style="color:#D42020">Standard Series</span>
+              <span class="pt-series-name" style="color:#D42020">Premium Collection</span>
               <div class="pt-series-line" style="background:#D42020"></div>
             </div>
           </div>
-          <div class="pt-name">VRT</div>
-          <div class="pt-meta" style="color:#D42020">1-6 Person - From AED 12,500</div>
+          <div class="pt-name">VRT / VRT+</div>
+          <div class="pt-meta" style="color:#D42020">1-6 Person</div>
           <p class="pt-desc">The SonicHive signature pod. Plug-and-play soundproofing for any team size.</p>
         </div>
         <div class="pt-right">
@@ -416,20 +415,17 @@
       </a>
 
       <!-- VR -->
-      <a class="pt-card r d2" href="pods/vr.html">
+      <a class="pt-card r d2" href="/vr">
         <div class="pt-left">
           <div class="pt-series">
-            <div class="pt-series-icon" style="background:rgba(37,99,235,.1)">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="2" width="9" height="9" rx="1.5"/><rect x="2" y="13" width="9" height="9" rx="1.5"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></svg>
-            </div>
             <div class="pt-series-meta">
-              <span class="pt-series-name" style="color:#1D4ED8">VR Series</span>
+              <span class="pt-series-name" style="color:#1D4ED8">Standard Series</span>
               <div class="pt-series-line" style="background:#1D4ED8"></div>
             </div>
           </div>
           <div class="pt-name">VR</div>
-          <div class="pt-meta" style="color:#1D4ED8">S - M - L - XL - Full Colour Customisation</div>
-          <p class="pt-desc">A distinct acoustic pod series with modular S, M, L and XL configurations. Fully customisable in 15+ colour combinations.</p>
+          <div class="pt-meta" style="color:#1D4ED8">S · M · L · XL · XXL</div>
+          <p class="pt-desc">A distinct acoustic pod series with modular S, M, L, XL and XXL configurations for any team size.</p>
         </div>
         <div class="pt-right">
           <div class="pt-pod-wrap">
@@ -444,17 +440,14 @@
       <a class="pt-card r d3" href="home-pod.html">
         <div class="pt-left">
           <div class="pt-series">
-            <div class="pt-series-icon" style="background:rgba(13,148,136,.08)">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
             <div class="pt-series-meta">
               <span class="pt-series-name" style="color:#0F766E">Residential Series</span>
               <div class="pt-series-line" style="background:#0F766E"></div>
             </div>
           </div>
           <div class="pt-name">Home Pod</div>
-          <div class="pt-meta" style="color:#0F766E">For Home & Studio</div>
-          <p class="pt-desc">The world's most liveable acoustic pod. Purpose-built for home offices, streaming studios, and music practice.</p>
+          <div class="pt-meta" style="color:#0F766E">For Home</div>
+          <p class="pt-desc">The world's most liveable acoustic pod. Purpose-built for home offices and focused remote work.</p>
         </div>
         <div class="pt-right">
           <div class="pt-pod-wrap">
@@ -465,29 +458,44 @@
         <span class="pt-btn">Explore Models <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
 
-      <!-- Rent a Pod -->
-      <a class="pt-card r d4" href="rental-pods.html">
+      <!-- Outdoor Pods -->
+      <a class="pt-card r d4" href="outdoor-pods.html">
         <div class="pt-left">
           <div class="pt-series">
-            <div class="pt-series-icon" style="background:rgba(217,119,6,.1)">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
             <div class="pt-series-meta">
-              <span class="pt-series-name" style="color:#D97706">Rental Service</span>
-              <div class="pt-series-line" style="background:#D97706"></div>
+              <span class="pt-series-name" style="color:#16A34A">Outdoor Series</span>
+              <div class="pt-series-line" style="background:#16A34A"></div>
             </div>
           </div>
-          <div class="pt-name">Rent a Pod</div>
-          <div class="pt-meta" style="color:#D97706">Events - Trade Shows - Temporary Office</div>
-          <p class="pt-desc">Flexible pod hire delivered and installed across Dubai & UAE. Ideal for exhibitions, events and short-term workspace needs.</p>
+          <div class="pt-name">Outdoor Pods</div>
+          <div class="pt-meta" style="color:#16A34A">4 · 6 · 8 Person &mdash; Backyard, Terrace &amp; Courtyard</div>
+          <p class="pt-desc">Weather-resistant, air-conditioned soundproof booths engineered for outdoor use. Grade III waterproof, thermally insulated, E0 certified.</p>
         </div>
         <div class="pt-right">
           <div class="pt-pod-wrap">
-            <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT M 1.webp" alt="Rent a Pod" loading="lazy">
+            <img src="images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp" alt="Outdoor Pods" loading="lazy">
             <div class="pt-pod-shadow"></div>
           </div>
         </div>
-        <span class="pt-btn">View Rental Options <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="pt-btn" style="border-color:rgba(22,163,74,.3);color:#16A34A">Explore Outdoor Pods <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <!-- Rent a Pod -->
+      <a class="pt-card r d5" href="rental-pods.html" style="grid-column:1/-1">
+        <img src="images/sonichive-office-pods_silence-booth-3.webp" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none">
+        <div style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.45) 100%);z-index:1;pointer-events:none"></div>
+        <div class="pt-left" style="position:relative;z-index:2">
+          <div class="pt-series">
+            <div class="pt-series-meta">
+              <span class="pt-series-name" style="color:#FBBF24">Rental Service</span>
+              <div class="pt-series-line" style="background:#FBBF24"></div>
+            </div>
+          </div>
+          <div class="pt-name" style="color:#FFF">Rent a Pod</div>
+          <div class="pt-meta" style="color:#FBBF24">Events · Trade Shows · Temporary Office</div>
+          <p class="pt-desc" style="color:rgba(255,255,255,.72)">Flexible pod hire delivered and installed across Dubai & UAE. Ideal for exhibitions, events and short-term workspace needs.</p>
+        </div>
+        <span class="pt-btn" style="z-index:2;border-color:rgba(255,255,255,.28);color:#FFF">View Rental Options <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
 
     </div>
@@ -519,7 +527,7 @@
           <div class="stat-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
-          <div class="stat-num" data-target="500" data-suffix="+">0+</div>
+          <div class="stat-num" data-target="800" data-suffix="+">0+</div>
           <div class="stat-lab">Pod Installations</div>
           <div class="stat-dash"></div>
           <div class="stat-line stat-topl"></div>
@@ -536,7 +544,7 @@
           <div class="stat-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <div class="stat-num" data-target="100" data-suffix="+">0+</div>
+          <div class="stat-num" data-target="300" data-suffix="+">0+</div>
           <div class="stat-lab">Corporate Clients</div>
           <div class="stat-dash"></div>
           <div class="stat-line stat-topl"></div>
@@ -606,7 +614,7 @@
           </div>
         </div>
         <div class="vp-divider"></div>
-        <div class="vp-name">30dB Sound Reduction</div>
+        <div class="vp-name">30 ±5 dB Sound Reduction</div>
         <p class="vp-desc">Industry-leading acoustic performance backed by Asia's largest acoustic testing lab. Not a marketing claim — a measurable result.</p>
         <a href="features.html" class="vp-lnk">Learn more →</a>
       </div>
@@ -841,8 +849,8 @@ if (procSteps) lineObs.observe(procSteps);
 
 /* -- Ticker -- */
 const tItems = [
-  {n:'500+',l:'Pod Installations'},{n:'5',l:'Countries'},{n:'30dB',l:'Sound Reduction'},
-  {n:'100+',l:'Corporate Clients'},{n:'5?',l:'Customer Rating'}
+  {n:'800+',l:'Pod Installations'},{n:'5',l:'Countries'},{n:'30 ±5 dB',l:'Sound Reduction'},
+  {n:'300+',l:'Corporate Clients'},{n:'5?',l:'Customer Rating'}
 ];
 const mkTick = () => tItems.map(i =>
   `<div class="tick-i"><strong>${i.n}</strong> ${i.l} <span class="tick-sep">·</span></div>`).join('');
@@ -851,23 +859,22 @@ document.getElementById('tick').innerHTML = mkTick() + mkTick();
 /* -- Client banner -- */
 (function(){
   const row1 = [
-    {n:'Emirates Group',  url:'https://upload.wikimedia.org/wikipedia/commons/e/e3/Emirates_Group_Logo.svg'},
-    {n:'ADNOC',           url:'https://upload.wikimedia.org/wikipedia/commons/9/9f/Abu_Dhabi_National_Oil_Company_logo.webp'},
-    {n:'Emaar',           url:'https://upload.wikimedia.org/wikipedia/commons/f/fd/Emaar_logo.svg'},
-    {n:'Majid Al Futtaim',url:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Majid_Al_Futtaim_logo.svg'},
-    {n:'Mubadala',        url:'https://upload.wikimedia.org/wikipedia/commons/3/3b/Mubadala_Investment_logo.svg'},
-    {n:'DP World',        url:'https://upload.wikimedia.org/wikipedia/commons/2/2d/DP_World_2021_logo.svg'},
+    {n:'Apple',            url:'images/clients/apple.svg'},
+    {n:'Amazon',           url:'images/clients/amazon.svg'},
+    {n:'Tesla',            url:'images/clients/tesla.svg'},
+    {n:'Boeing',           url:'images/clients/boeing.svg'},
+    {n:'American Airlines',url:'images/clients/american-airlines.svg'},
+    {n:'Tencent',          url:'images/clients/tencent.svg'},
   ];
   const row2 = [
-    {n:'e&',              url:'https://upload.wikimedia.org/wikipedia/commons/d/d9/Eand_Logo_EN.svg'},
-    {n:'First Abu Dhabi Bank', url:'https://upload.wikimedia.org/wikipedia/commons/2/22/First_Abu_Dhabi_Bank_Logo.svg'},
-    {n:'DEWA',            url:'https://upload.wikimedia.org/wikipedia/commons/d/dd/Logo_of_DEWA.webp'},
-    {n:'Aldar',           url:'https://upload.wikimedia.org/wikipedia/commons/6/60/Aldar_Properties_Logo_2016.webp'},
-    {n:'Nakheel',         url:'https://upload.wikimedia.org/wikipedia/commons/6/67/Nakheel_logo.svg'},
-    {n:'Gulf Air',        url:'https://upload.wikimedia.org/wikipedia/commons/9/97/Gulf_Air_2018_wordmark.svg'},
+    {n:'Huawei',           url:'images/clients/huawei.svg'},
+    {n:'Bosch',            url:'images/clients/bosch.svg'},
+    {n:'Acer',             url:'images/clients/acer.svg'},
+    {n:'Pepsi',            url:'images/clients/pepsi.svg'},
+    {n:'Starbucks',        url:'images/clients/starbucks.svg'},
   ];
   const chip = c => `<span class="c-chip"><img src="${c.url}" alt="${c.n}" loading="lazy"></span>`;
-  const build = (el, clients) => { const h = clients.map(chip).join(''); el.innerHTML = h + h; };
+  const build = (el, clients) => { const h = clients.map(chip).join(''); el.innerHTML = h + h + h + h; };
   build(document.getElementById('mRow1'), row1);
   build(document.getElementById('mRow2'), row2);
 })();
@@ -878,7 +885,7 @@ observeAll();
 const testis = [
   {q:'Bought a Home Pod for my Dubai apartment - instant peace even with traffic outside. Totally transformed my remote setup.',n:'Sara A.',l:'Dubai, UAE',av:'https://i.pravatar.cc/60?img=47'},
   {q:'Installed a meeting pod in our Abu Dhabi office. Team uses it daily for client calls. Soundproofing is superb.',n:'Khaled M.',l:'Abu Dhabi, UAE',av:'https://i.pravatar.cc/60?img=12'},
-  {q:'We put pods in our co-working space. They are constantly booked. The 30 dB reduction is the real deal.',n:'Rayan G.',l:'Riyadh, KSA',av:'https://i.pravatar.cc/60?img=33'},
+  {q:'We put pods in our co-working space. They are constantly booked. The 30 ±5 dB reduction is the real deal.',n:'Rayan G.',l:'Riyadh, KSA',av:'https://i.pravatar.cc/60?img=33'},
   {q:'Our Business Bay office is one giant echo chamber. Three 4-seater pods later - life-savers for our weekly sprints.',n:'Amina R.',l:'Dubai, UAE',av:'https://i.pravatar.cc/60?img=5'},
   {q:'Ventilation is surprisingly good. Hour-long strategy sessions in the 6-seater and stayed perfectly cool.',n:'Fatima A.',l:'Doha, Qatar',av:'https://i.pravatar.cc/60?img=9'},
 ];
@@ -1036,23 +1043,6 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
     img.src = src(i);
     images[fi] = img;
   }
-})();
-
-/* nav dropdown */
-(function(){
-  var dd  = document.querySelector('.nav-dd');
-  var btn = document.querySelector('.nd-toggle');
-  if (!dd || !btn) return;
-  function setOpen(open) {
-    dd.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', String(open));
-  }
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    setOpen(!dd.classList.contains('open'));
-  });
-  document.addEventListener('click', function(e){ if(!dd.contains(e.target)) setOpen(false); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
 })();
 </script><script src="popup.js?v=3"></script>
 </body>

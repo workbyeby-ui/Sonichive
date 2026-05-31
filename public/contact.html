@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="/images/Faveicon-black.png">
+  <link rel="icon" type="image/webp" href="/images/Faveicon-black.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get a Quote, SonicHive Dubai</title>
   <meta name="description" content="Request a free quote for SonicHive acoustic office pods in Dubai, UAE. Soundproof solutions for any workspace. Serving UAE, Qatar, Saudi Arabia and Bahrain.">
@@ -181,16 +181,18 @@
 <nav id="nav" role="navigation" aria-label="Main navigation" data-nav="transparent">
   <div class="nav-i">
     <a href="/" class="logo">
-      <img src="/images/sonichive%20White%20logo.png" alt="SonicHive" class="logo-img">
+      <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" class="logo-img">
     </a>
     <div class="nav-links" id="nav-links">
       <div class="nav-dd">
         <button class="nd-toggle " aria-haspopup="true" aria-expanded="false">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="/vrt" class="mc mc-vrt"><div class="mc-img-w"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/pods/vr.html" class="mc mc-vr"><div class="mc-img-w"><img src="/pods/VR series/VR S/VR-3D-black0000.webp" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series, S, M, L and XL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/home-pod" class="mc mc-home"><div class="mc-img-w"><img src="/images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/rental-pods" class="mc mc-rental"><div class="mc-img-w"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT M 1.webp" alt="Rent a Pod" loading="lazy"></div><div class="mc-name">Rent a Pod</div><p class="mc-desc">Flexible pod hire for events, trade shows and temporary office setups across Dubai &amp; UAE.</p><span class="mc-link">View Options &#x2192;</span></a></div></div>
+        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="/vrt" class="mc mc-vrt"><div class="mc-img-w"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/vr" class="mc mc-vr"><div class="mc-img-w"><img src="/pods/VR series/VR S/VR-3D-black0000.webp" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series, S, M, L, XL and XXL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/home-pod" class="mc mc-home"><div class="mc-img-w"><img src="/images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/outdoor-pods" class="mc mc-outdoor"><div class="mc-img-w"><img src="/images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp" alt="Outdoor Pods" loading="lazy"></div><div class="mc-name">Outdoor Pods</div><p class="mc-desc">Weather-resistant, air-conditioned backyard silence booths for outdoor spaces.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="/rental-pods" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rent a Pod</a><a href="/contact" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div>
       </div>
+      <a href="/rental-pods" class="">Rent a Pod</a>
       <a href="/use-cases" class="">Use Cases</a>
       <a href="/features" class="">Features</a>
       <a href="/about" class="">About</a>
+      <a href="/blog" class="">Blog</a>
       <a href="/contact" class="cur">Contact</a>
     </div>
     <a href="/contact" class="nav-cta">Get a Quote →</a>
@@ -236,6 +238,20 @@
   links.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click',function(){if(window.innerWidth<=768)closeNav();});
   });
+  // Mega menu toggle
+  var btn=document.querySelector('.nd-toggle');
+  if(btn&&dd){
+    function setOpen(open){
+      dd.classList.toggle('open',open);
+      btn.setAttribute('aria-expanded',String(open));
+    }
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      setOpen(!dd.classList.contains('open'));
+    });
+    document.addEventListener('click',function(e){if(!dd.contains(e.target))setOpen(false);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+  }
 })();
 </script>
 
@@ -337,8 +353,8 @@
 <div class="trust-strip">
   <div class="trust-inner r">
     <div class="trust-item"><div class="trust-n">2 hrs</div><div class="trust-l">Average response time</div></div>
-    <div class="trust-item"><div class="trust-n" data-n="500" data-s="+">500+</div><div class="trust-l">Pods installed</div></div>
-    <div class="trust-item"><div class="trust-n" data-n="100" data-s="+">100+</div><div class="trust-l">Corporate clients</div></div>
+    <div class="trust-item"><div class="trust-n" data-n="800" data-s="+">800+</div><div class="trust-l">Pods installed</div></div>
+    <div class="trust-item"><div class="trust-n" data-n="300" data-s="+">300+</div><div class="trust-l">Corporate clients</div></div>
     <div class="trust-item"><div class="trust-n" data-n="5" data-s="">5</div><div class="trust-l">Countries served</div></div>
   </div>
 </div>
@@ -429,9 +445,10 @@
   /* Tagline strip */
   .foot-top {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.75rem;
     padding-bottom: 3.5rem;
     border-bottom: 1px solid rgba(255,255,255,.06);
     margin-bottom: 3.5rem;
@@ -637,7 +654,6 @@
   /* Responsive */
   @media (max-width: 1024px) {
     .foot-g { grid-template-columns: 1fr 1fr; }
-    .foot-top { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
   }
 
   @media (max-width: 640px) {
@@ -665,7 +681,7 @@
     <div class="foot-g">
       <div class="foot-brand">
         <a href="/index.html" class="logo" style="display:inline-flex">
-          <img src="/images/sonichive%20White%20logo.png" alt="SonicHive" style="height:72px;width:auto;display:block;filter:brightness(0) invert(1)">
+          <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" style="height:72px;width:auto;display:block;filter:brightness(0) invert(1)">
         </a>
         <p>Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the Middle East.</p>
         <div class="foot-soc">
@@ -680,8 +696,9 @@
       <div class="foot-col">
         <h4>Products</h4>
         <a href="/vrt.html">VRT</a>
-        <a href="/pods/vr.html">VR</a>
+        <a href="/vr">VR</a>
         <a href="/home-pod.html">Home Pod</a>
+        <a href="/outdoor-pods.html">Outdoor Pods</a>
         <a href="/rental-pods.html">Rental Pods</a>
       </div>
       <div class="foot-col">
@@ -690,7 +707,7 @@
         <a href="/features.html">Features</a>
         <a href="/about.html">About Us</a>
         <a href="/contact.html">Get a Quote</a>
-        <a href="https://thesonichive.com/blog/" target="_blank" rel="noopener">Blog</a>
+        <a href="/blog.html">Blog</a>
       </div>
       <div class="foot-col foot-contact">
         <h4>Contact Us</h4>
@@ -733,8 +750,8 @@ const faqs=[
   
   {q:'Can SonicHive pods be customized?',a:"Absolutely. You can customize size, layout, colors, and features. Whether you're a startup or a corporate HQ in Dubai, our pods adapt to your brand and functional needs."},
   {q:'Are the pods ventilated?',a:"Yes, every pod includes a built-in ventilation system that keeps air flowing and temperature balanced. Designed for hours of comfortable use without stuffiness."},
-  {q:'What is the noise reduction level?',a:'Our pods achieve up to 30dB of sound reduction, meeting professional standards for acoustic privacy. This effectively eliminates external distractions and prevents internal conversations from being heard outside.'},
-  {q:'Do you offer rental pods for events?',a:'Yes. We offer rental pods for trade shows, corporate events, and temporary office setups. Delivered, set up, and collected by our team. Contact us for rental pricing.'},
+  {q:'What is the noise reduction level?',a:'Our pods achieve up to 30 ±5 dB of sound reduction, meeting professional standards for acoustic privacy. This effectively eliminates external distractions and prevents internal conversations from being heard outside.'},
+  {q:'Do you offer rental pods for events?',a:'Yes. We offer rental pods for trade shows, corporate events, and temporary office setups. Delivered, set up, and collected by our team. Contact us to enquire.'},
   {q:'Which spaces are SonicHive pods suitable for?',a:"Corporate offices, co-working spaces, schools, hospitals, retail environments, home offices, airports, and more. Anywhere noise and lack of privacy are a problem, SonicHive is the solution."},
   {q:'Where is your showroom?',a:"Our main showroom is in Downtown Dubai, UAE. You're welcome to visit and experience the pods first-hand. We also have a presence in Qatar, Saudi Arabia, Bahrain, and New Zealand."},
 ];

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="images/Faveicon-black.png">
+  <link rel="icon" type="image/webp" href="images/Faveicon-black.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rental Pods, SonicHive | Acoustic Pod Hire Dubai | Events & Temporary Office</title>
   <meta name="description" content="Rent SonicHive acoustic pods for events, trade shows, and temporary office setups across Dubai and the UAE. Delivered, installed, and collected by our team.">
@@ -138,7 +138,7 @@
     <a href="https://wa.me/971585550099?text=Hi, I'm interested in renting SonicHive pods." target="_blank" class="btn-wh">Chat on WhatsApp</a>
   </div>
   <div class="hero-visual r d4">
-    <img src="images/Pods/All Pods Image/mceclip4_1752829250111.webp" alt="SonicHive Rental Pods" loading="eager">
+    <img src="images/Pods/VR/Office Pod - VR.webp" alt="SonicHive Rental Pods" loading="eager">
   </div>
 </div>
 
@@ -286,7 +286,7 @@
           </div>
           <div class="inc-item">
             <div class="inc-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z"/></svg></div>
-            <div><h4>Full Acoustic Performance</h4><p>Rental pods deliver the same 30dB noise reduction as purchased units. No compromise on performance.</p></div>
+            <div><h4>Full Acoustic Performance</h4><p>Rental pods deliver the same 30 ±5 dB noise reduction as purchased units. No compromise on performance.</p></div>
           </div>
           <div class="inc-item">
             <div class="inc-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:20px;height:20px"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg></div>
@@ -300,7 +300,7 @@
       </div>
       <div class="r d2">
         <div class="inc-img">
-          <img src="images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="Rental Pod" style="filter:grayscale(20%);background:#0A0A0A;padding:2rem">
+          <img src="images/Pods/All Pods Image/VRT Large Office Pods.webp" alt="VRT pods in a large corporate office workspace" loading="lazy">
         </div>
       </div>
     </div>
@@ -325,7 +325,7 @@
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q">Do rental pods have the same acoustic performance?<span class="faq-arrow">+</span></div>
-        <div class="faq-a">Yes. Every rental pod delivers the same 30dB noise reduction as our purchased units. There is no compromise on acoustic performance for rental deployments, same panels, same seals, same ventilation.</div>
+        <div class="faq-a">Yes. Every rental pod delivers the same 30 ±5 dB noise reduction as our purchased units. There is no compromise on acoustic performance for rental deployments, same panels, same seals, same ventilation.</div>
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q">How long does installation take at my venue?<span class="faq-arrow">+</span></div>
@@ -349,7 +349,7 @@
     <div class="pcta-in r">
       <p class="s-label" style="color:var(--red)">Ready to Rent?</p>
       <h2>Get a Rental Quote in 2 Hours.</h2>
-      <p>Tell us your event dates, location, and how many pods you need. Our team will confirm availability and pricing fast, no obligation.</p>
+      <p>Tell us your event dates, location, and how many pods you need. Our team will confirm availability fast, no obligation.</p>
       <div class="btn-row">
         <a href="contact.html" class="btn-red">Enquire About Rental</a>
         <a href="use-cases.html" class="btn-wh">Explore Use Cases</a>
@@ -364,22 +364,6 @@
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll('.r').forEach(el=>obs.observe(el));
 
-/* nav dropdown */
-(function(){
-  var dd  = document.querySelector('.nav-dd');
-  var btn = document.querySelector('.nd-toggle');
-  if (!dd || !btn) return;
-  function setOpen(open) {
-    dd.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', String(open));
-  }
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    setOpen(!dd.classList.contains('open'));
-  });
-  document.addEventListener('click', function(e){ if(!dd.contains(e.target)) setOpen(false); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
-})();
 </script>
 <script src="popup.js?v=3"></script>
 </body>

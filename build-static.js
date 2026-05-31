@@ -60,4 +60,38 @@ for (const file of files) {
     }
 }
 
+// Also build blog post pages from views/pages/blog/*.ejs
+const blogViewsDir = path.join(viewsDir, 'blog');
+if (fs.existsSync(blogViewsDir)) {
+    const blogPublicDir = path.join(publicDir, 'blog');
+    if (!fs.existsSync(blogPublicDir)) fs.mkdirSync(blogPublicDir, { recursive: true });
+
+    const blogFiles = fs.readdirSync(blogViewsDir).filter(f => f.endsWith('.ejs'));
+    for (const file of blogFiles) {
+        const slug = file.replace('.ejs', '');
+        const templatePath = path.join(blogViewsDir, file);
+        const template = fs.readFileSync(templatePath, 'utf-8');
+        try {
+            const html = ejs.render(template, { page: 'blog' }, {
+                filename: templatePath,
+                views: [path.join(__dirname, 'views')]
+            });
+            const fixedHtml = html
+                .replace(/(<script\b[^>]*\ssrc=")(?!\/|http)([^"]+)"/gi, '$1/$2"')
+                .replace(/src:\s*'(?!\/|http)((?:images|pods)[^']+)'/g, "src: '/$1'")
+                .replace(/href="(?!\/|http|#|mailto:|tel:)([^"]+\.html[^"]*)"/g, 'href="/$1"')
+                .replace(/(src|href)="(?!\/)((images|pods|css|js)\/[^"]+)"/g, '$1="/$2"')
+                .replace(/url\(['"]?(?!\/)((images|pods|css)\/[^'"\)]+)['"]?\)/g, "url('/$1')");
+
+            fs.writeFileSync(path.join(blogPublicDir, `${slug}.html`), fixedHtml);
+            const slugDir = path.join(blogPublicDir, slug);
+            if (!fs.existsSync(slugDir)) fs.mkdirSync(slugDir, { recursive: true });
+            fs.writeFileSync(path.join(slugDir, 'index.html'), fixedHtml);
+            console.log(`✓ Built: blog/${slug}`);
+        } catch (err) {
+            console.error(`✗ Error building blog/${slug}:`, err.message);
+        }
+    }
+}
+
 console.log('Static build complete!');

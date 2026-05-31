@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/webp" href="images/Faveicon-black.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert guides on office acoustics, soundproof pods, and workplace productivity from SonicHive — Dubai's leading acoustic pod provider. Browse pod comparison guides, acoustic science, and UAE office trends.">
+  <meta name="keywords" content="acoustic pods Dubai, soundproof office pods UAE, office acoustics, acoustic booth, meeting pods, VRT pods, VR pods, soundproof booth Dubai, office noise solutions, acoustic pod guide">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SonicHive">
+  <link rel="canonical" href="https://thesonichive.com/blog">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SonicHive Blog — Acoustic Pods, Office Silence & Productivity Guides">
+  <meta property="og:description" content="Expert insights on acoustic pods, office noise reduction, and workplace productivity from Dubai's leading pod provider.">
+  <meta property="og:url" content="https://thesonichive.com/blog">
+  <meta property="og:site_name" content="SonicHive">
+  <meta property="og:locale" content="en_AE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SonicHive Blog — Office Acoustics &amp; Pod Guides">
+  <meta name="twitter:description" content="Acoustic pod guides, noise reduction science, and workplace productivity tips from SonicHive Dubai.">
+
+  <title>Blog — SonicHive | Office Acoustics, Soundproof Pods &amp; Workplace Productivity</title>
+
+  <!-- Schema: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "SonicHive Blog",
+    "description": "Expert guides on office acoustic pods, soundproofing, and workplace productivity from Dubai's leading pod provider.",
+    "url": "https://thesonichive.com/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SonicHive",
+      "url": "https://thesonichive.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FFFFFF;--bg2:#F5F5F7;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#1D1D1F;--muted:#6E6E73;--border:rgba(0,0,0,.08);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+    .r{opacity:0;transform:translateY(28px);transition:opacity .85s ease,transform .85s cubic-bezier(.22,1,.36,1)}
+    .r.on{opacity:1;transform:none}
+    .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.40s}.d6{transition-delay:.48s}
+
+    /* ── HERO ── */
+    #blog-hero{padding:9rem 0 5rem;background:#FFF;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+    #blog-hero::before{content:'';position:absolute;top:-20%;right:-5%;width:700px;height:700px;background:radial-gradient(ellipse,rgba(212,32,32,.08) 0%,transparent 65%);pointer-events:none}
+    .bh-inner{position:relative;text-align:center;max-width:740px;margin:0 auto}
+    .bh-eyebrow{font-size:.65rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:.6rem}
+    .bh-eyebrow::before,.bh-eyebrow::after{content:'';width:20px;height:1px;background:var(--red)}
+    .bh-title{font-family:var(--fh);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:400;letter-spacing:-.04em;line-height:1.0;color:var(--text);margin-bottom:1.25rem}
+    .bh-title em{color:var(--red);font-style:normal}
+    .bh-sub{color:var(--muted);font-size:1.05rem;line-height:1.8;max-width:560px;margin:0 auto 2.5rem}
+    .bh-cats{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+    .bh-cat{font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.35rem 1rem;border-radius:100px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+    .bh-cat:hover,.bh-cat.act{background:var(--red-d);border-color:var(--red-b);color:var(--red)}
+
+    /* ── FEATURED POST ── */
+    #featured-post{padding:5rem 0 0;background:#FFF}
+    .fp-card{display:grid;grid-template-columns:1fr 1fr;border-radius:24px;overflow:hidden;border:1px solid var(--border);transition:box-shadow .3s,transform .3s;cursor:pointer}
+    .fp-card:hover{box-shadow:0 32px 64px rgba(0,0,0,.1);transform:translateY(-4px)}
+    .fp-img{position:relative;min-height:420px;background:#0A0A0F;display:flex;align-items:flex-end;overflow:hidden}
+    .fp-img-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:.45}
+    .fp-img::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,15,.85) 0%,rgba(10,10,15,.5) 60%,rgba(10,10,15,.35) 100%);z-index:1}
+    .fp-img-waves{display:none}
+    .fp-img-label{position:relative;padding:2rem;z-index:2}
+    .fp-featured-tag{font-size:.65rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:.3rem .9rem;display:inline-block;margin-bottom:1rem}
+    .fp-img-title{font-family:var(--fh);font-size:clamp(1.3rem,2.2vw,1.8rem);font-weight:400;color:#FFF;line-height:1.25;letter-spacing:-.02em;max-width:380px}
+    .fp-body{padding:3rem;display:flex;flex-direction:column;justify-content:center;background:#FFF}
+    .fp-cat{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.25rem .8rem;display:inline-block;margin-bottom:1.5rem;align-self:flex-start}
+    .fp-title{font-family:var(--fh);font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:400;letter-spacing:-.025em;line-height:1.2;margin-bottom:1rem;color:var(--text)}
+    .fp-excerpt{color:var(--muted);font-size:.95rem;line-height:1.8;margin-bottom:1.5rem}
+    .fp-meta{display:flex;align-items:center;gap:1rem;font-size:.78rem;color:var(--muted);flex-wrap:wrap}
+    .fp-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--border)}
+    .fp-read-link{margin-top:2rem;display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:500;color:var(--red);transition:gap .2s}
+    .fp-read-link:hover{gap:.85rem}
+
+    /* ── POSTS GRID ── */
+    #posts{padding:4rem 0 7rem;background:#FFF}
+    .posts-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem}
+    .posts-title{font-family:var(--fh);font-size:1.1rem;font-weight:500;color:var(--text)}
+    .posts-count{font-size:.78rem;color:var(--muted)}
+    .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .post-card{background:#FFF;border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s}
+    .post-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(0,0,0,.09)}
+    .pc-img{height:155px;position:relative;overflow:hidden;flex-shrink:0}
+    .pc-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform .5s ease}
+    .pc-img-inner img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+    .post-card:hover .pc-img-inner img{transform:scale(1.04)}
+    .pc-body{padding:1rem 1.1rem 1.1rem;flex:1;display:flex;flex-direction:column}
+    .pc-cat{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.18rem .65rem;display:inline-block;margin-bottom:.65rem;align-self:flex-start}
+    .pc-title{font-family:var(--fh);font-size:.9rem;font-weight:500;letter-spacing:-.015em;line-height:1.35;margin-bottom:.45rem;color:var(--text)}
+    .pc-excerpt{font-size:.8rem;color:var(--muted);line-height:1.65;margin-bottom:.85rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .pc-meta{display:flex;align-items:center;gap:.65rem;font-size:.7rem;color:var(--muted);padding-top:.75rem;border-top:1px solid var(--border)}
+    .pc-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--border)}
+
+    /* ── NEWSLETTER ── */
+    #blog-newsletter{padding:7rem 0;background:var(--bg2)}
+    .nl-inner{max-width:580px;margin:0 auto;text-align:center}
+    .nl-label{font-size:.65rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:1rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
+    .nl-label::before,.nl-label::after{content:'';width:16px;height:1px;background:var(--red)}
+    .nl-title{font-family:var(--fh);font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:400;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem}
+    .nl-sub{color:var(--muted);font-size:.95rem;line-height:1.75;margin-bottom:2rem}
+    .nl-form{display:flex;gap:.75rem;max-width:440px;margin:0 auto}
+    .nl-input{flex:1;padding:.8rem 1.25rem;border:1px solid var(--border);border-radius:100px;font-size:.9rem;font-family:var(--fb);color:var(--text);background:#FFF;outline:none;transition:border-color .2s}
+    .nl-input:focus{border-color:var(--red-b)}
+    .nl-btn{padding:.8rem 1.75rem;background:var(--red);color:#FFF;border:none;border-radius:100px;font-size:.875rem;font-weight:500;font-family:var(--fb);cursor:pointer;white-space:nowrap;transition:background .2s,transform .15s}
+    .nl-btn:hover{background:#b81c1c;transform:translateY(-1px)}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){.fp-card{grid-template-columns:1fr}.fp-img{min-height:280px}.posts-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){#blog-hero{padding:7rem 1.25rem 3.5rem}.bh-sub{font-size:.95rem;max-width:100%}.bh-cats{gap:.4rem}}
+    @media(max-width:640px){.posts-grid{grid-template-columns:1fr}.nl-form{flex-direction:column}.bh-title{font-size:clamp(2.2rem,8vw,3rem)}#blog-hero{padding:6rem 1rem 3rem}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+
+<%- include('../partials/header', { page: 'blog' }) %>
+<div id="main-content" tabindex="-1" style="outline:none;position:absolute"></div>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="blog-hero" aria-label="Blog hero">
+  <div class="bh-inner">
+    <p class="bh-eyebrow r">SonicHive Blog</p>
+    <h1 class="bh-title r d1">Acoustic Insights &amp;<br><em>Workplace Guides</em></h1>
+    <p class="bh-sub r d2">Expert advice on office soundproofing, acoustic pod selection, workplace productivity, and the science of silence — written by Dubai's leading acoustic pod team.</p>
+    <div class="bh-cats r d3" role="list" aria-label="Filter by category">
+      <span class="bh-cat act" role="listitem" tabindex="0">All Posts</span>
+      <span class="bh-cat" role="listitem" tabindex="0">Acoustics</span>
+      <span class="bh-cat" role="listitem" tabindex="0">Productivity</span>
+      <span class="bh-cat" role="listitem" tabindex="0">Pod Guides</span>
+      <span class="bh-cat" role="listitem" tabindex="0">Design</span>
+      <span class="bh-cat" role="listitem" tabindex="0">UAE &amp; Dubai</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FEATURED POST ══════════ -->
+<section id="featured-post" aria-label="Featured article">
+  <div class="wrap">
+    <a class="fp-card r" href="/blog/office-acoustics-guide-2026" aria-label="Read: The Complete Guide to Office Acoustics in 2026">
+      <div class="fp-img" role="img" aria-label="VRT acoustic pods in a modern Dubai office">
+        <img class="fp-img-photo" src="images/Pods/All Pods Image/VRT Large Office Pods.webp" alt="VRT acoustic pods in a large open-plan office" loading="eager">
+        <div class="fp-img-waves" aria-hidden="true"></div>
+        <div class="fp-img-label">
+          <span class="fp-featured-tag">Featured Article</span>
+          <h2 class="fp-img-title">The Complete Guide to Office Acoustics in 2026</h2>
+        </div>
+      </div>
+      <div class="fp-body">
+        <span class="fp-cat">Acoustics</span>
+        <h2 class="fp-title">The Complete Guide to Office Acoustics in 2026: Why Silence Is the New Competitive Advantage</h2>
+        <p class="fp-excerpt">Open-plan offices across Dubai and the UAE are facing a hidden productivity crisis — ambient noise. Research shows office workers lose up to 86 minutes per day to noise-related distractions. In this comprehensive guide, we break down the science of sound propagation, speech intelligibility ratings (STC &amp; RASTI), and why acoustic pods are the only solution that delivers measurable results without permanent structural change. Whether you manage a 10-person startup in Business Bay or a 500-seat corporate campus in DIFC, this guide helps you build an acoustic strategy that works.</p>
+        <div class="fp-meta">
+          <span>SonicHive Editorial Team</span>
+          <span class="fp-meta-dot"></span>
+          <span>May 2026</span>
+          <span class="fp-meta-dot"></span>
+          <span>8 min read</span>
+          <span class="fp-meta-dot"></span>
+          <span>Office Acoustics · Dubai</span>
+        </div>
+        <span class="fp-read-link" aria-label="Read full article">Read Full Guide <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════ POSTS GRID ══════════ -->
+<section id="posts" aria-label="Latest blog articles">
+  <div class="wrap">
+    <div class="posts-header">
+      <h2 class="posts-title">Latest Articles</h2>
+      <p class="posts-count">6 articles</p>
+    </div>
+    <div class="posts-grid">
+
+      <!-- Post 1 -->
+      <article class="post-card r d1" role="article" itemscope itemtype="https://schema.org/BlogPosting">
+        <a href="/blog/vrt-vs-vr-pods" aria-label="Read: VRT vs VR Series — Which Acoustic Pod Is Right for Your Office?">
+          <div class="pc-img">
+            <div class="pc-img-inner">
+              <img src="images/Pods/All Pods Image/VR all pods.webp" alt="VRT and VR acoustic pod series comparison" loading="lazy">
+            </div>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat" itemprop="articleSection">Pod Guides</span>
+            <h3 class="pc-title" itemprop="headline">VRT vs VR Series Acoustic Pods: Which Is Right for Your Dubai Office in 2026?</h3>
+            <p class="pc-excerpt" itemprop="description">Two premium acoustic pod series — very different results. The VRT offers plug-and-play simplicity for teams of 1 to 6, while the VR delivers a bespoke modular experience in five sizes from S to XXL. We compare noise reduction performance, installation time, footprint, and total cost so you can make the right decision for your UAE workspace without endless back-and-forth with sales teams.</p>
+            <div class="pc-meta">
+              <span itemprop="datePublished" content="2026-05-15">May 2026</span>
+              <span class="pc-meta-dot"></span>
+              <span>5 min read</span>
+              <span class="pc-meta-dot"></span>
+              <span itemprop="author">SonicHive Team</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="post-card r d2" role="article" itemscope itemtype="https://schema.org/BlogPosting">
+        <a href="/blog/outdoor-acoustic-pods-dubai" aria-label="Read: Outdoor Acoustic Pods in Dubai — The Complete Backyard Silence Booth Guide">
+          <div class="pc-img">
+            <div class="pc-img-inner">
+              <img src="images/Pods/OutDoor Pods/Outdoor pod - L.webp" alt="Outdoor acoustic pod in a Dubai garden setting" loading="lazy">
+            </div>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat" itemprop="articleSection">Design &amp; Engineering</span>
+            <h3 class="pc-title" itemprop="headline">Outdoor Acoustic Pods in Dubai: The Complete Guide to Backyard Silence Booths in the UAE</h3>
+            <p class="pc-excerpt" itemprop="description">Dubai's climate makes outdoor workspaces both appealing and acoustically challenging. SonicHive's Backyard Silence Booth is Grade III waterproof, thermally insulated, and air-conditioned — purpose-built to withstand 45°C summers while delivering 30 ±5 dB of acoustic isolation. We explain the engineering behind every panel, the installation process, and why hotels, villas, and commercial courtyards across the UAE are adding outdoor pods to their spaces.</p>
+            <div class="pc-meta">
+              <span itemprop="datePublished" content="2026-04-28">Apr 2026</span>
+              <span class="pc-meta-dot"></span>
+              <span>6 min read</span>
+              <span class="pc-meta-dot"></span>
+              <span itemprop="author">SonicHive Team</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="post-card r d3" role="article" itemscope itemtype="https://schema.org/BlogPosting">
+        <a href="/blog/open-plan-office-productivity" aria-label="Read: 5 Signs Your Open-Plan Office Is Destroying Team Productivity">
+          <div class="pc-img">
+            <div class="pc-img-inner">
+              <img src="images/Pods/All Pods Image/silent-cabin-corner-office_1766364913684.webp" alt="Acoustic pod in a corner office setting" loading="lazy">
+            </div>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat" itemprop="articleSection">Productivity</span>
+            <h3 class="pc-title" itemprop="headline">5 Signs Your Open-Plan Office Is Quietly Destroying Team Productivity (And the Fix)</h3>
+            <p class="pc-excerpt" itemprop="description">Missed deadlines, back-to-back calls taken in corridors, and employees wearing noise-cancelling headphones all day — these are not personality quirks, they are symptoms of a broken acoustic environment. Studies by the British Journal of Psychology show that irrelevant background speech reduces cognitive performance by up to 67%. Here are five warning signs your UAE office has an acoustic problem, and exactly how soundproof pods solve each one.</p>
+            <div class="pc-meta">
+              <span itemprop="datePublished" content="2026-04-10">Apr 2026</span>
+              <span class="pc-meta-dot"></span>
+              <span>4 min read</span>
+              <span class="pc-meta-dot"></span>
+              <span itemprop="author">SonicHive Team</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="post-card r d1" role="article" itemscope itemtype="https://schema.org/BlogPosting">
+        <a href="/blog/30db-noise-reduction-explained" aria-label="Read: What 30 dB Noise Reduction Really Means for Your Office">
+          <div class="pc-img">
+            <div class="pc-img-inner">
+              <img src="images/Pods/All Pods Image/VRT Silence Pod.webp" alt="VRT silence pod demonstrating noise reduction" loading="lazy">
+            </div>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat" itemprop="articleSection">Acoustics</span>
+            <h3 class="pc-title" itemprop="headline">What Does 30 ±5 dB Noise Reduction Actually Mean for Your Office Calls and Focus Sessions?</h3>
+            <p class="pc-excerpt" itemprop="description">Every acoustic pod spec sheet lists a dB figure — but what does it mean in practice? A 30 dB reduction cuts perceived loudness by 75%, turning a loud open office (75 dB) into the equivalent of a quiet library (45 dB). We translate ISO 23351 acoustic measurements into real-world scenarios — video calls, confidential HR conversations, and deep focus work — so you can evaluate soundproof pods in Dubai with confidence, not guesswork.</p>
+            <div class="pc-meta">
+              <span itemprop="datePublished" content="2026-03-22">Mar 2026</span>
+              <span class="pc-meta-dot"></span>
+              <span>5 min read</span>
+              <span class="pc-meta-dot"></span>
+              <span itemprop="author">SonicHive Team</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="post-card r d2" role="article" itemscope itemtype="https://schema.org/BlogPosting">
+        <a href="/blog/dubai-companies-acoustic-pods-2026" aria-label="Read: Why Dubai's Top Companies Are Installing Acoustic Pods in 2026">
+          <div class="pc-img">
+            <div class="pc-img-inner">
+              <img src="images/Pods/All Pods Image/Dubai Sonichive Showroom.webp" alt="SonicHive Dubai showroom with acoustic pods" loading="lazy">
+            </div>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat" itemprop="articleSection">UAE &amp; Dubai</span>
+            <h3 class="pc-title" itemprop="headline">Why Dubai's Leading Organisations Are Investing in Acoustic Pods in 2026</h3>
+            <p class="pc-excerpt" itemprop="description">From DIFC law firms requiring client confidentiality to tech scaleups in Dubai Internet City managing hybrid teams across time zones — acoustic pods have become standard workspace infrastructure across the UAE. We examine the business case: productivity ROI, talent retention, hybrid work compliance, and why pods are now a line item in fit-out budgets from Abu Dhabi to Riyadh. Includes real installation data from SonicHive projects across the Gulf.</p>
+            <div class="pc-meta">
+              <span itemprop="datePublished" content="2026-03-05">Mar 2026</span>
+              <span class="pc-meta-dot"></span>
+              <span>7 min read</span>
+              <span class="pc-meta-dot"></span>
+              <span itemprop="author">SonicHive Team</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Post 6 -->
+      <article class="post-card r d3" role="article" itemscope itemtype="https://schema.org/BlogPosting">
+        <a href="/blog/acoustic-pod-size-guide" aria-label="Read: How to Choose the Right Acoustic Pod Size for Your Team">
+          <div class="pc-img">
+            <div class="pc-img-inner">
+              <img src="images/Pods/All Pods Image/Modular Pods.webp" alt="Modular acoustic pod sizes S M L XL XXL" loading="lazy">
+            </div>
+          </div>
+          <div class="pc-body">
+            <span class="pc-cat" itemprop="articleSection">Pod Guides</span>
+            <h3 class="pc-title" itemprop="headline">Acoustic Pod Size Guide: How to Choose Between S, M, L, XL and XXL for Your Team in Dubai</h3>
+            <p class="pc-excerpt" itemprop="description">Ordering the wrong size acoustic pod is one of the most common — and costly — mistakes in office fit-out projects across the UAE. Too small and your team avoids the pod; too large and you've wasted floor space. This complete buyer's guide covers footprint dimensions, occupancy capacity, use case mapping (solo focus, team calls, boardroom), and budget considerations for every SonicHive pod size — so you get it right the first time.</p>
+            <div class="pc-meta">
+              <span itemprop="datePublished" content="2026-02-18">Feb 2026</span>
+              <span class="pc-meta-dot"></span>
+              <span>6 min read</span>
+              <span class="pc-meta-dot"></span>
+              <span itemprop="author">SonicHive Team</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ NEWSLETTER ══════════ -->
+<section id="blog-newsletter" aria-label="Newsletter signup">
+  <div class="wrap">
+    <div class="nl-inner r">
+      <p class="nl-label">Stay Informed</p>
+      <h2 class="nl-title">Acoustic Insights,<br>Straight to Your Inbox</h2>
+      <p class="nl-sub">One monthly digest — acoustic science updates, new pod releases, UAE office design trends, and exclusive SonicHive guides. No spam. Unsubscribe any time.</p>
+      <form class="nl-form" onsubmit="return false" aria-label="Newsletter subscription form">
+        <label for="nl-email" class="sr-only">Email address</label>
+        <input class="nl-input" id="nl-email" type="email" placeholder="your@company.com" aria-label="Email address" autocomplete="email">
+        <button class="nl-btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<%- include('../partials/footer-full', { page: 'blog' }) %>
+
+<script>
+const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on') }), {threshold:.1});
+document.querySelectorAll('.r').forEach(el => obs.observe(el));
+
+(function(){
+  var nav = document.getElementById('nav');
+  function update(){ nav.classList.toggle('s', window.scrollY > 80); }
+  window.addEventListener('scroll', update, {passive:true});
+  update();
+})();
+
+document.querySelectorAll('.bh-cat').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.bh-cat').forEach(b => b.classList.remove('act'));
+    btn.classList.add('act');
+  });
+});
+</script>
+</body>
+</html>

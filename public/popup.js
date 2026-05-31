@@ -61,7 +61,7 @@
         <div id="qp-top">
           <div id="qp-top-accent"></div>
           <div id="qp-logo">
-            <img src="/images/sonichive%20White%20logo.png" alt="SonicHive" style="height:48px;width:auto;display:block">
+            <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" style="height:48px;width:auto;display:block">
           </div>
           <div id="qp-title">Get a Free Quote</div>
           <div id="qp-sub">Our Dubai team responds within 2 business hours.</div>

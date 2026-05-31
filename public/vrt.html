@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="/images/Faveicon-black.png">
+  <link rel="icon" type="image/webp" href="/images/Faveicon-black.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VRT Series, SonicHive Acoustic Office Pods | Dubai</title>
   <meta name="description" content="SonicHive VRT Series, professional acoustic pods in Solo, Duo, Quartet and Hexa configurations. Up to 30&plusmn;5dB noise reduction. Dubai UAE.">
@@ -64,7 +64,7 @@
     .sc-spec{flex:1;text-align:center;padding:.65rem .5rem;border-right:1px solid var(--border)}
     .sc-spec:last-child{border-right:none}
     .sc-spec strong{font-family:var(--fh);font-size:1rem;font-weight:400;color:var(--text);display:block;line-height:1.1}
-    .sc-spec span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:2px;display:block}
+    .sc-spec span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:2px;display:block}
     .sc-cta{display:block;text-align:center;background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.7rem 1.5rem;font-size:.85rem;font-weight:400;color:var(--text);transition:all .2s}
     .size-card:hover .sc-cta{background:var(--red);color:#FFF;border-color:var(--red)}
 
@@ -88,15 +88,8 @@
     .btn-o:hover{border-color:var(--red-b);color:var(--red)}
 
     /* FOOTER */
-    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 0}
-    .foot-in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-    .foot-logo{display:flex;align-items:center;gap:8px;font-family:var(--fh);font-weight:400;letter-spacing:-.02em;font-size:1.1rem}
-    .foot-logo em{color:var(--red);font-style:normal}
-    .foot-copy{font-size:.78rem;color:var(--muted)}
-    .foot-links{display:flex;gap:1.5rem}
-    .foot-links a{font-size:.78rem;color:var(--muted);transition:color .2s}
-    .foot-links a:hover{color:var(--text)}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+
 
     /* VRT PLUS SECTION */
     .plus-section{padding:0 0 7rem}
@@ -119,18 +112,25 @@
     .vt-btn.active{background:#FFF;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.1)}
     .vt-btn.plus.active{background:linear-gradient(135deg,#2a1f0a,#3d2e10);color:#FFF;box-shadow:0 2px 12px rgba(184,134,11,.35)}
     .vt-pane{display:none}.vt-pane.active{display:block}
-    .plus-badge{background:linear-gradient(135deg,#D4A020,#B8860B);color:#FFF;font-size:.58rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.14rem .5rem;border-radius:100px;vertical-align:middle;margin-left:.35rem}
+    .plus-badge{background:linear-gradient(135deg,#D4A020,#B8860B);color:#FFF;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.14rem .5rem;border-radius:100px;vertical-align:middle;margin-left:.35rem}
     @media(max-width:480px){.variant-tabs{width:100%;justify-content:center}.vt-btn{padding:.55rem 1.1rem;font-size:.82rem}}
 
     /* COLOUR OPTIONS */
     .colors-sec{padding:4rem 0;background:#FFF;border-top:1px solid var(--border)}
-    .colors-grid{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:2rem}
-    .color-swatch{display:flex;flex-direction:column;align-items:center;gap:.65rem;cursor:pointer;transition:transform .2s}
-    .color-swatch:hover{transform:translateY(-4px)}
-    .color-img-w{width:80px;height:80px;border-radius:16px;overflow:hidden;border:2px solid var(--border);background:var(--bg2)}
-    .color-img-w img{width:100%;height:100%;object-fit:cover}
-    .color-lbl{font-size:.68rem;color:var(--muted);text-align:center;letter-spacing:.04em}
-    @media(max-width:480px){.color-img-w{width:68px;height:68px;border-radius:12px}.color-lbl{font-size:.62rem}}
+    /* ── Colour picker ── */
+    .cpick{background:var(--bg2);border:1px solid var(--border);border-radius:28px;overflow:hidden;margin-top:2.5rem}
+    .cpick-stage{position:relative;min-height:460px;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:background .55s ease;padding:2rem}
+    .cpick-main-img{max-height:400px;max-width:80%;width:auto;height:auto;object-fit:contain;display:block;position:relative;z-index:1;transition:opacity .18s ease,transform .4s cubic-bezier(.22,1,.36,1)}
+    .cpick-main-img.fading{opacity:0;transform:scale(.96) translateY(10px)}
+    .cpick-badge{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:.82rem;font-weight:500;color:var(--text);background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:100px;padding:.38rem 1.2rem;letter-spacing:.05em;white-space:nowrap;z-index:2;transition:opacity .18s}
+    .cpick-row{display:flex;align-items:flex-start;justify-content:center;gap:.75rem;padding:1.4rem 2rem 1.6rem;border-top:1px solid var(--border);background:#fff;flex-wrap:wrap}
+    .cpick-thumb{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:.5rem;cursor:pointer;background:none;border:none;padding:0;transition:transform .22s cubic-bezier(.22,1,.36,1)}
+    .cpick-thumb:hover{transform:translateY(-4px)}
+    .cpick-dot{display:block;width:38px;height:38px;border-radius:50%;transition:box-shadow .2s,transform .2s}
+    .cpick-thumb.active .cpick-dot{box-shadow:0 0 0 3px #fff,0 0 0 5.5px var(--red)}
+    .cpick-thumb-lbl{font-size:.68rem;color:var(--muted);text-align:center;letter-spacing:.03em;line-height:1.3}
+    .cpick-thumb.active .cpick-thumb-lbl{color:var(--red);font-weight:600}
+    @media(max-width:640px){.cpick-stage{min-height:320px;padding:1.5rem}.cpick-main-img{max-height:270px;max-width:88%}.cpick-dot{width:32px;height:32px}.cpick-row{gap:.6rem;padding:1rem 1rem 1.25rem}}
 
     /* FEATURE ICON GRID */
     .feat-grid-sec{padding:6rem 0;background:#fff}
@@ -143,7 +143,7 @@
     .fig-title{font-size:1rem;font-weight:500;color:var(--text);margin-bottom:.5rem;letter-spacing:-.01em}
     .fig-desc{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem}
     .fig-tags{display:flex;flex-wrap:wrap;gap:.4rem}
-    .fig-tag{font-size:.65rem;font-weight:400;letter-spacing:.06em;background:var(--red-d);color:var(--red);border:1px solid var(--red-b);border-radius:100px;padding:.2rem .65rem}
+    .fig-tag{font-size:.72rem;font-weight:400;letter-spacing:.06em;background:var(--red-d);color:var(--red);border:1px solid var(--red-b);border-radius:100px;padding:.2rem .65rem}
     @media(max-width:900px){.feat-icon-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:540px){.feat-icon-grid{grid-template-columns:1fr}}
 
@@ -173,19 +173,109 @@
     .smart-header{text-align:center;margin-bottom:4rem}
     .smart-eyebrow{font-size:.68rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
     .smart-title{font-size:clamp(1.8rem,3.5vw,3rem);font-weight:300;letter-spacing:-.04em;color:#fff;line-height:1.05;margin-bottom:.75rem}
-    .smart-sub{color:rgba(255,255,255,.45);font-size:.9rem;line-height:1.7;max-width:500px;margin:0 auto}
+    .smart-sub{color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.7;max-width:500px;margin:0 auto}
     .smart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:20px;overflow:hidden;margin-bottom:3rem}
     .smart-card{background:#0A0A0F;padding:2rem 1.75rem;transition:background .3s}
     .smart-card:hover{background:#111}
     .smart-ic{width:44px;height:44px;border-radius:12px;background:rgba(184,134,11,.12);border:1px solid rgba(184,134,11,.2);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:1.25rem}
     .smart-name{font-size:.95rem;font-weight:400;color:#fff;margin-bottom:.4rem;letter-spacing:-.01em}
-    .smart-desc{font-size:.78rem;color:rgba(255,255,255,.38);line-height:1.65}
+    .smart-desc{font-size:.78rem;color:rgba(255,255,255,.62);line-height:1.65}
     .smart-img-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:20px;overflow:hidden}
     .smart-img-panel{position:relative;min-height:320px;background:#111;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:rgba(255,255,255,.18)}
     .smart-img-panel img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
     .smart-img-label{position:absolute;bottom:1.25rem;left:1.25rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);background:rgba(0,0,0,.5);padding:.3rem .8rem;border-radius:100px}
     @media(max-width:900px){.smart-grid{grid-template-columns:repeat(2,1fr)}.smart-img-row{grid-template-columns:1fr}}
     @media(max-width:540px){.smart-grid{grid-template-columns:1fr}}
+    /* ── CERTIFICATIONS ── */
+    .cert-sec{padding:7rem 0;background:var(--bg2)}
+    .cert-hd{text-align:center;margin-bottom:4rem}
+    .cert-eyebrow{font-size:.68rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1rem}
+    .cert-title{font-family:var(--fh);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.035em;color:var(--text);line-height:1.05;margin-bottom:.75rem}
+    .cert-sub{color:var(--muted);font-size:.9rem;line-height:1.75;max-width:600px;margin:0 auto}
+    .cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .cert-card{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2rem 1.5rem 1.75rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s}
+    .cert-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.1)}
+    .cert-logo{height:76px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+    .cert-logo img{max-height:68px;max-width:130px;width:auto;object-fit:contain}
+    .cert-badge{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.22rem .8rem;display:inline-block;margin-bottom:.85rem;white-space:nowrap}
+    .cert-desc{font-size:.8rem;color:var(--muted);line-height:1.7}
+    @media(max-width:1024px){.cert-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:640px){.cert-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:380px){.cert-grid{grid-template-columns:1fr}}
+    .vfeat-sec{padding:5rem 0;background:var(--bg);border-top:1px solid var(--border)}
+    .vfeat-hd{margin-bottom:2.75rem}
+    .vfeat-title{font-family:var(--fh);font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:400;letter-spacing:-.03em;color:var(--text);margin-bottom:.4rem;line-height:1.1}
+    .vfeat-sub{font-size:.85rem;color:var(--muted);line-height:1.75;max-width:560px;margin-top:.5rem}
+    /* ── Bento grid ── */
+    .vfeat-bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem}
+    /* AI Panel — horizontal full-width top card */
+    .vfb-ai{grid-column:1/-1;background:#0B0B0F;border-radius:24px;overflow:hidden;display:flex;flex-direction:row;min-height:340px;transition:box-shadow .35s}
+    .vfb-ai:hover{box-shadow:0 24px 64px rgba(0,0,0,.22)}
+    .vfb-ai-img{flex:0 0 58%;overflow:hidden;background:#0B0B0F;position:relative}
+    .vfb-ai-img img{width:100%;height:100%;object-fit:contain;display:block;padding:1.5rem;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+    .vfb-ai:hover .vfb-ai-img img{transform:scale(1.03)}
+    .vfb-ai-body{flex:1;padding:2.5rem 2.5rem 2.5rem 2rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(255,255,255,.07)}
+    .vfb-ai-label{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(212,32,32,.9);margin-bottom:.65rem;display:flex;align-items:center;gap:.42rem}
+    .vfb-ai-label::before{content:'';width:5px;height:5px;border-radius:50%;background:#D42020;animation:blink 2s infinite;flex-shrink:0}
+    .vfb-ai-title{font-family:var(--fh);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:400;color:#fff;letter-spacing:-.03em;line-height:1.15;margin-bottom:.6rem}
+    .vfb-ai-desc{font-size:.84rem;color:rgba(255,255,255,.62);line-height:1.75;margin-bottom:1.25rem;max-width:380px}
+    .vfb-ai-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+    .vfb-ai-pill{font-size:.7rem;font-weight:500;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);color:rgba(255,255,255,.65);border-radius:100px;padding:.28rem .8rem;letter-spacing:.02em}
+    /* Regular cards */
+    .vfb-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;cursor:default;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s,border-color .25s}
+    .vfb-card:hover{transform:translateY(-4px);box-shadow:0 16px 44px rgba(0,0,0,.09);border-color:rgba(212,32,32,.18)}
+    .vfb-wide{grid-column:span 2}
+    .vfb-img{flex:1;overflow:hidden;background:var(--bg2);min-height:140px}
+    .vfb-wide .vfb-img{min-height:160px}
+    .vfb-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+    .vfb-card:hover .vfb-img img{transform:scale(1.07)}
+    .vfb-body{padding:.9rem 1.15rem 1.15rem;flex-shrink:0}
+    .vfb-title{font-size:.92rem;font-weight:600;color:var(--text);letter-spacing:-.015em;line-height:1.25;margin-bottom:.28rem}
+    .vfb-desc{font-size:.77rem;color:var(--muted);line-height:1.68}
+    /* Responsive */
+    @media(max-width:768px){.vfeat-bento{grid-template-columns:1fr 1fr}.vfb-ai{min-height:280px}.vfb-ai-img{flex:0 0 52%}.vfb-ai-img img{padding:1rem}.vfb-ai-body{padding:1.5rem 1.5rem 1.5rem 1.25rem}.vfb-ai-title{font-size:1.2rem}.vfb-ai-desc{font-size:.8rem;max-width:100%}.vfb-wide{grid-column:span 2}}
+    @media(max-width:540px){.vfeat-bento{grid-template-columns:1fr}.vfb-ai{flex-direction:column;min-height:auto}.vfb-ai-img{flex:0 0 260px;min-height:260px}.vfb-ai-img img{padding:.75rem}.vfb-ai-body{border-left:none;border-top:1px solid rgba(255,255,255,.07);padding:1.4rem 1.4rem 1.6rem}.vfb-wide{grid-column:1}}
+    .vfeat-mats{background:#fff;border:1px solid var(--border);border-radius:20px;padding:1.6rem 2rem}
+    .vfeat-mat-label{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red);padding-bottom:.9rem;border-bottom:1px solid var(--border);margin-bottom:1.4rem}
+    .vfeat-mat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    @media(max-width:900px){.vfeat-mat-row{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:500px){.vfeat-mat-row{grid-template-columns:1fr}}
+    .vfeat-mat-name{font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:.3rem}
+    .vfeat-mat-desc{font-size:.75rem;color:var(--muted);line-height:1.65}
+    /* VENTILATION SYSTEM */
+    .vent-sec{background:#0A0A0F;padding:6rem 0}
+    .vent-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .vent-img-wrap{position:relative;border-radius:20px;overflow:hidden}
+    .vent-main-img{width:100%;height:auto;display:block;border-radius:20px}
+    .vent-badge{position:absolute;bottom:1.5rem;right:1.5rem;background:rgba(255,255,255,.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:.85rem 1rem;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+    .vent-fan-img{width:130px;height:auto;border-radius:8px;display:block}
+    .vent-badge-label{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);white-space:nowrap}
+    .vent-eyebrow{font-size:.7rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1rem}
+    .vent-title{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;letter-spacing:-.03em;line-height:1.15;color:#fff;margin-bottom:1.25rem}
+    .vent-sub{font-size:.93rem;line-height:1.75;color:rgba(255,255,255,.52);margin-bottom:2.5rem;max-width:440px}
+    .vent-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .vent-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:1.35rem 1.25rem}
+    .vent-stat-n{font-family:var(--fh);font-size:2rem;font-weight:600;color:#fff;line-height:1}
+    .vent-stat-unit{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin:.3rem 0 .45rem;font-weight:500}
+    .vent-stat-l{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.45}
+    @media(max-width:900px){.vent-inner{grid-template-columns:1fr;gap:2.5rem}}
+    @media(max-width:600px){.vent-stats{grid-template-columns:1fr 1fr}}
+    /* PLACE ANYWHERE */
+    .place-sec{background:var(--bg);padding:6rem 0;border-top:1px solid var(--border)}
+    .place-eyebrow{font-size:.7rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem}
+    .place-title{font-family:var(--fh);font-size:clamp(2rem,4vw,3rem);font-weight:300;letter-spacing:-.04em;color:var(--text);line-height:1.1;margin-bottom:.75rem}
+    .place-sub{font-size:.93rem;color:var(--muted);line-height:1.7;max-width:520px}
+    .place-bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem;align-items:stretch}
+    .place-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;height:100%}
+    .place-card-img{width:100%;overflow:hidden;background:#fff;flex:1;min-height:200px}
+    .place-card-img img,.place-card-img video{width:100%;height:100%;object-fit:contain;display:block}
+    .place-card--vid .place-card-img{cursor:pointer}
+    .place-card-body{padding:1.25rem 1.5rem 1.5rem;flex-shrink:0;border-top:1px solid var(--border)}
+    .place-tag{display:inline-block;font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.22rem .75rem;margin-bottom:.65rem}
+    .place-card-title{font-family:var(--fh);font-size:1.1rem;font-weight:500;letter-spacing:-.02em;color:var(--text);margin-bottom:.4rem}
+    .place-card-desc{font-size:.84rem;color:var(--muted);line-height:1.6}
+    @media(max-width:900px){.place-bento{grid-template-columns:1fr 1fr}}
+    @media(max-width:540px){.place-bento{grid-template-columns:1fr}}
     </style>
 <style>
 /* Transparent nav over hero - VRT page only */
@@ -221,16 +311,18 @@
 <nav id="nav" role="navigation" aria-label="Main navigation" data-nav="transparent">
   <div class="nav-i">
     <a href="/" class="logo">
-      <img src="/images/sonichive%20White%20logo.png" alt="SonicHive" class="logo-img">
+      <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" class="logo-img">
     </a>
     <div class="nav-links" id="nav-links">
       <div class="nav-dd">
         <button class="nd-toggle cur" aria-haspopup="true" aria-expanded="false">Products <svg class="nd-chev" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="/vrt" class="mc mc-vrt"><div class="mc-img-w"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/pods/vr.html" class="mc mc-vr"><div class="mc-img-w"><img src="/pods/VR series/VR S/VR-3D-black0000.webp" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series, S, M, L and XL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/home-pod" class="mc mc-home"><div class="mc-img-w"><img src="/images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/rental-pods" class="mc mc-rental"><div class="mc-img-w"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT M 1.webp" alt="Rent a Pod" loading="lazy"></div><div class="mc-name">Rent a Pod</div><p class="mc-desc">Flexible pod hire for events, trade shows and temporary office setups across Dubai &amp; UAE.</p><span class="mc-link">View Options &#x2192;</span></a></div></div>
+        <div class="mega-wrap"><div class="mega-bg"></div><div class="mega-head"><span class="mega-eye">Product Series</span></div><div class="mega-divider"></div><div class="mega-grid"><a href="/vrt" class="mc mc-vrt"><div class="mc-img-w"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT" loading="lazy"></div><div class="mc-name">VRT</div><p class="mc-desc">Plug-and-play soundproofing for any team size. Installed in under 2 hours.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/vr" class="mc mc-vr"><div class="mc-img-w"><img src="/pods/VR series/VR S/VR-3D-black0000.webp" alt="VR" loading="lazy"></div><div class="mc-name">VR</div><p class="mc-desc">A distinct pod series, S, M, L, XL and XXL sizes with full colour customisation.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/home-pod" class="mc mc-home"><div class="mc-img-w"><img src="/images/Pods/Home-Pod/SF-1128-1.webp" alt="Home Pod" loading="lazy"></div><div class="mc-name">Home Pod</div><p class="mc-desc">Purpose-built for home offices, streaming studios and music practice.</p><span class="mc-link">Explore Series &#x2192;</span></a><a href="/outdoor-pods" class="mc mc-outdoor"><div class="mc-img-w"><img src="/images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp" alt="Outdoor Pods" loading="lazy"></div><div class="mc-name">Outdoor Pods</div><p class="mc-desc">Weather-resistant, air-conditioned backyard silence booths for outdoor spaces.</p><span class="mc-link">Explore Series &#x2192;</span></a></div><div class="mega-foot"><a href="/rental-pods" class="mf-link"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 4V3a1 1 0 011-1h4a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rent a Pod</a><a href="/contact" class="mf-link mf-cta" style="margin-left:auto">Get a Quote &#x2192;</a></div></div>
       </div>
+      <a href="/rental-pods" class="">Rent a Pod</a>
       <a href="/use-cases" class="">Use Cases</a>
       <a href="/features" class="">Features</a>
       <a href="/about" class="">About</a>
+      <a href="/blog" class="">Blog</a>
       <a href="/contact" class="">Contact</a>
     </div>
     <a href="/contact" class="nav-cta">Get a Quote →</a>
@@ -276,6 +368,20 @@
   links.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click',function(){if(window.innerWidth<=768)closeNav();});
   });
+  // Mega menu toggle
+  var btn=document.querySelector('.nd-toggle');
+  if(btn&&dd){
+    function setOpen(open){
+      dd.classList.toggle('open',open);
+      btn.setAttribute('aria-expanded',String(open));
+    }
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      setOpen(!dd.classList.contains('open'));
+    });
+    document.addEventListener('click',function(e){if(!dd.contains(e.target))setOpen(false);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+  }
 })();
 </script>
 
@@ -291,15 +397,15 @@
       <p class="s-sub">Each VRT is purpose-built for team size and acoustic performance. Select based on capacity and floor area.</p>
     </div>
 
-    <div class="variant-tabs r">
-      <button class="vt-btn active" data-tab="tab-vrt">VRT Standard</button>
-      <button class="vt-btn plus" data-tab="tab-plus">VRT+ <span class="plus-badge">PLUS</span></button>
+    <div class="variant-tabs r" role="tablist" aria-label="VRT Series variants">
+      <button class="vt-btn active" role="tab" aria-selected="true" aria-controls="tab-vrt" id="btn-vrt" data-tab="tab-vrt">VRT Standard</button>
+      <button class="vt-btn plus" role="tab" aria-selected="false" aria-controls="tab-plus" id="btn-plus" data-tab="tab-plus">VRT+ <span class="plus-badge">PLUS</span></button>
     </div>
 
-    <div id="tab-vrt" class="vt-pane active">
+    <div id="tab-vrt" class="vt-pane active" role="tabpanel" aria-labelledby="btn-vrt" tabindex="0">
     <div class="size-grid">
 
-      <a href="/vrt-solo.html" class="size-card r d1">
+      <a href="/vrt-solo" class="size-card r d1">
         <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT S 1.webp" alt="VRT S" style="width:100%;height:100%;object-fit:contain"></div>
         <div class="sc-body">
           <div class="sc-cap">1 Person</div>
@@ -314,7 +420,7 @@
         </div>
       </a>
 
-      <a href="/vrt-duo.html" class="size-card r d2">
+      <a href="/vrt-duo" class="size-card r d2">
         <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT SM 1.webp" alt="VRT SM" style="width:100%;height:100%;object-fit:contain"></div>
         <div class="sc-body">
           <div class="sc-cap">2 Persons</div>
@@ -329,15 +435,15 @@
         </div>
       </a>
 
-      <a href="/vrt-quartet.html" class="size-card r d3">
+      <a href="/vrt-m" class="size-card r d3">
         <div class="sc-img" style="padding:.5rem;overflow:hidden;flex-direction:row;gap:.5rem;align-items:stretch">
           <div style="flex:1;position:relative;overflow:hidden;border-radius:8px;background:var(--bg2)">
             <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT M 1.webp" alt="VRT M Standard" style="width:100%;height:100%;object-fit:contain">
-            <span style="position:absolute;bottom:.4rem;left:50%;transform:translateX(-50%);font-size:.62rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:.18rem .6rem;border-radius:100px;white-space:nowrap">Standard</span>
+            <span style="position:absolute;bottom:.4rem;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:.18rem .6rem;border-radius:100px;white-space:nowrap">Standard</span>
           </div>
           <div style="flex:1;position:relative;overflow:hidden;border-radius:8px;background:var(--bg2)">
-            <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT M 2.webp" alt="VRT M Sofa" style="width:100%;height:100%;object-fit:contain">
-            <span style="position:absolute;bottom:.4rem;left:50%;transform:translateX(-50%);font-size:.62rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:.18rem .6rem;border-radius:100px;white-space:nowrap">Sofa</span>
+            <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT M Sofa.webp" alt="VRT M Sofa" style="width:100%;height:100%;object-fit:contain">
+            <span style="position:absolute;bottom:.4rem;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:.18rem .6rem;border-radius:100px;white-space:nowrap">Sofa</span>
           </div>
         </div>
         <div class="sc-body">
@@ -353,7 +459,7 @@
         </div>
       </a>
 
-      <a href="/vrt-quartet.html" class="size-card r d1">
+      <a href="/vrt-quartet" class="size-card r d1">
         <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT ML 1.webp" alt="VRT ML" style="width:100%;height:100%;object-fit:contain"></div>
         <div class="sc-body">
           <div class="sc-cap">4 Persons</div>
@@ -368,7 +474,7 @@
         </div>
       </a>
 
-      <a href="/vrt-hexa.html" class="size-card r d2">
+      <a href="/vrt-hexa" class="size-card r d2">
         <div class="sc-img" style="padding:.5rem;overflow:hidden"><img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT  (with glass at back wall)/VRT L 1.webp" alt="VRT L" style="width:100%;height:100%;object-fit:contain"></div>
         <div class="sc-body">
           <div class="sc-cap">6 Persons</div>
@@ -386,13 +492,13 @@
     </div>
     </div>
 
-    <div id="tab-plus" class="vt-pane">
+    <div id="tab-plus" class="vt-pane" role="tabpanel" aria-labelledby="btn-plus" tabindex="0">
       <div style="text-align:center;margin-bottom:2.5rem">
         <p style="font-size:.95rem;color:var(--muted);line-height:1.7;max-width:560px;margin:0 auto">VRT+ takes the trusted VRT form further - thicker acoustic panels (+4dB), brushed aluminium trim, dual-zone lighting, and an extended 3-year warranty across all sizes.</p>
       </div>
       <div class="size-grid">
 
-        <a href="/vrt-plus-solo.html" class="size-card r d1" style="border-color:rgba(184,134,11,.2)">
+        <a href="/vrt-plus-solo" class="size-card r d1" style="border-color:rgba(184,134,11,.2)">
           <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
             <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ S 1.webp" alt="VRT+ S" style="width:100%;height:100%;object-fit:contain">
           </div>
@@ -405,11 +511,11 @@
               <div class="sc-spec"><strong>1000mm</strong><span>Width</span></div>
               <div class="sc-spec"><strong>236kg</strong><span>Weight</span></div>
             </div>
-            <span class="sc-cta" ">View Specifications &#x2192;</span>
+            <span class="sc-cta">View Specifications &#x2192;</span>
           </div>
         </a>
 
-        <a href="/vrt-plus-duo.html" class="size-card r d2" style="border-color:rgba(184,134,11,.2)">
+        <a href="/vrt-plus-duo" class="size-card r d2" style="border-color:rgba(184,134,11,.2)">
           <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
             <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ SM 1.webp" alt="VRT+ SM" style="width:100%;height:100%;object-fit:contain">
           </div>
@@ -422,19 +528,19 @@
               <div class="sc-spec"><strong>1100mm</strong><span>Width</span></div>
               <div class="sc-spec"><strong>303kg</strong><span>Weight</span></div>
             </div>
-            <span class="sc-cta" ">View Specifications &#x2192;</span>
+            <span class="sc-cta">View Specifications &#x2192;</span>
           </div>
         </a>
 
-        <a href="/vrt-plus-duo.html" class="size-card r d3" style="border-color:rgba(184,134,11,.2)">
+        <a href="/vrt-plus-quartet" class="size-card r d3" style="border-color:rgba(184,134,11,.2)">
           <div class="sc-img" style="padding:.5rem;overflow:hidden;flex-direction:row;gap:.5rem;align-items:stretch;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
             <div style="flex:1;position:relative;overflow:hidden;border-radius:8px;background:var(--bg2)">
               <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ M 1.webp" alt="VRT+ M Standard" style="width:100%;height:100%;object-fit:contain">
-              <span style="position:absolute;bottom:.4rem;left:50%;transform:translateX(-50%);font-size:.62rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:.18rem .6rem;border-radius:100px;white-space:nowrap">Standard</span>
+              <span style="position:absolute;bottom:.4rem;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:.18rem .6rem;border-radius:100px;white-space:nowrap">Standard</span>
             </div>
             <div style="flex:1;position:relative;overflow:hidden;border-radius:8px;background:var(--bg2)">
               <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ M 2.webp" alt="VRT+ M Sofa" style="width:100%;height:100%;object-fit:contain">
-              <span style="position:absolute;bottom:.4rem;left:50%;transform:translateX(-50%);font-size:.62rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:.18rem .6rem;border-radius:100px;white-space:nowrap">Sofa</span>
+              <span style="position:absolute;bottom:.4rem;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.9);padding:.18rem .6rem;border-radius:100px;white-space:nowrap">Sofa</span>
             </div>
           </div>
           <div class="sc-body">
@@ -446,11 +552,11 @@
               <div class="sc-spec"><strong>1600mm</strong><span>Width</span></div>
               <div class="sc-spec"><strong>447kg</strong><span>Weight</span></div>
             </div>
-            <span class="sc-cta" ">View Specifications &#x2192;</span>
+            <span class="sc-cta">View Specifications &#x2192;</span>
           </div>
         </a>
 
-        <a href="/vrt-plus-quartet.html" class="size-card r d1" style="border-color:rgba(184,134,11,.2)">
+        <a href="/vrt-plus-quartet" class="size-card r d1" style="border-color:rgba(184,134,11,.2)">
           <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
             <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ ML 1.webp" alt="VRT+ ML" style="width:100%;height:100%;object-fit:contain">
           </div>
@@ -463,11 +569,11 @@
               <div class="sc-spec"><strong>2200mm</strong><span>Width</span></div>
               <div class="sc-spec"><strong>470kg</strong><span>Weight</span></div>
             </div>
-            <span class="sc-cta" ">View Specifications &#x2192;</span>
+            <span class="sc-cta">View Specifications &#x2192;</span>
           </div>
         </a>
 
-        <a href="/vrt-plus-hexa.html" class="size-card r d2" style="border-color:rgba(184,134,11,.2)">
+        <a href="/vrt-plus-hexa" class="size-card r d2" style="border-color:rgba(184,134,11,.2)">
           <div class="sc-img" style="padding:.5rem;overflow:hidden;background:linear-gradient(135deg,#F9F7F0,var(--bg2))">
             <img src="/images/Pods/all Color and Size/Photos of ART and VRT pod/Photos of ART and VRT pod/VRT+/VRT+ L 1.webp" alt="VRT+ L" style="width:100%;height:100%;object-fit:contain">
           </div>
@@ -480,7 +586,7 @@
               <div class="sc-spec"><strong>2200mm</strong><span>Width</span></div>
               <div class="sc-spec"><strong>649kg</strong><span>Weight</span></div>
             </div>
-            <span class="sc-cta" ">View Specifications &#x2192;</span>
+            <span class="sc-cta">View Specifications &#x2192;</span>
           </div>
         </a>
 
@@ -489,6 +595,7 @@
   </div>
 </section>
 
+
 <section class="colors-sec">
   <div class="wrap">
     <div class="sec-header r" style="margin-bottom:0">
@@ -496,143 +603,201 @@
       <h2 class="s-title" style="font-size:clamp(1.6rem,3vw,2.2rem)">7 Standard Finishes Available</h2>
       <p class="s-sub">All VRT and VRT+ pods are available in 7 standard colour finishes.</p>
     </div>
-    <div class="colors-grid r">
-      <div class="color-swatch"><div class="color-img-w"><img src="/images/VRT Pod colors- hero/VRT POD-standard.webp" alt="Standard" loading="lazy"></div><span class="color-lbl">Standard</span></div>
-      <div class="color-swatch"><div class="color-img-w"><img src="/images/VRT Pod colors- hero/VRT POD-black.webp" alt="Black" loading="lazy"></div><span class="color-lbl">Black</span></div>
-      <div class="color-swatch"><div class="color-img-w"><img src="/images/VRT Pod colors- hero/VRT POD-white.webp" alt="White" loading="lazy"></div><span class="color-lbl">White</span></div>
-      <div class="color-swatch"><div class="color-img-w"><img src="/images/VRT Pod colors- hero/VRT POD-red.webp" alt="Red" loading="lazy"></div><span class="color-lbl">Red</span></div>
-      <div class="color-swatch"><div class="color-img-w"><img src="/images/VRT Pod colors- hero/VRT POD-orange.webp" alt="Orange" loading="lazy"></div><span class="color-lbl">Orange</span></div>
-      <div class="color-swatch"><div class="color-img-w"><img src="/images/VRT Pod colors- hero/VRT POD-light green.webp" alt="Light Green" loading="lazy"></div><span class="color-lbl">Light Green</span></div>
-      <div class="color-swatch"><div class="color-img-w"><img src="/images/VRT Pod colors- hero/VRT POD-olive green.webp" alt="Olive Green" loading="lazy"></div><span class="color-lbl">Olive Green</span></div>
+    <div class="cpick r d1">
+      <!-- Large featured image -->
+      <div class="cpick-stage" id="cpick-stage">
+        <img id="cpick-img"
+             src="/images/VRT Pod colors- hero/VRT POD-standard.webp"
+             alt="VRT Pod — Standard"
+             class="cpick-main-img">
+        <span class="cpick-badge" id="cpick-badge">Standard</span>
+      </div>
+      <!-- Colour circle selector row -->
+      <div class="cpick-row">
+        <button class="cpick-thumb active" data-src="/images/VRT Pod colors- hero/VRT POD-standard.webp" data-name="Standard" data-bg="#B5A99F" aria-pressed="true" aria-label="Standard finish">
+          <span class="cpick-dot" style="background:#B5A99F"></span>
+          <span class="cpick-thumb-lbl">Standard</span>
+        </button>
+        <button class="cpick-thumb" data-src="/images/VRT Pod colors- hero/VRT POD-black.webp" data-name="Charcoal" data-bg="#5A5961" aria-pressed="false" aria-label="Charcoal finish">
+          <span class="cpick-dot" style="background:#5A5961"></span>
+          <span class="cpick-thumb-lbl">Charcoal</span>
+        </button>
+        <button class="cpick-thumb" data-src="/images/VRT Pod colors- hero/VRT POD-white.webp" data-name="White" data-bg="#E5E5E5" aria-pressed="false" aria-label="White finish">
+          <span class="cpick-dot" style="background:#E5E5E5;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)"></span>
+          <span class="cpick-thumb-lbl">White</span>
+        </button>
+        <button class="cpick-thumb" data-src="/images/VRT Pod colors- hero/VRT POD-red.webp" data-name="Brick Red" data-bg="#B87268" aria-pressed="false" aria-label="Brick Red finish">
+          <span class="cpick-dot" style="background:#B87268"></span>
+          <span class="cpick-thumb-lbl">Brick Red</span>
+        </button>
+        <button class="cpick-thumb" data-src="/images/VRT Pod colors- hero/VRT POD-orange.webp" data-name="Terracotta" data-bg="#E0A584" aria-pressed="false" aria-label="Terracotta finish">
+          <span class="cpick-dot" style="background:#E0A584"></span>
+          <span class="cpick-thumb-lbl">Terracotta</span>
+        </button>
+        <button class="cpick-thumb" data-src="/images/VRT Pod colors- hero/VRT POD-light green.webp" data-name="Light Green" data-bg="#CFD19F" aria-pressed="false" aria-label="Light Green finish">
+          <span class="cpick-dot" style="background:#CFD19F"></span>
+          <span class="cpick-thumb-lbl">Light Green</span>
+        </button>
+        <button class="cpick-thumb" data-src="/images/VRT Pod colors- hero/VRT POD-olive green.webp" data-name="Olive Green" data-bg="#989E80" aria-pressed="false" aria-label="Olive Green finish">
+          <span class="cpick-dot" style="background:#989E80"></span>
+          <span class="cpick-thumb-lbl">Olive Green</span>
+        </button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURE ICON GRID -->
-<section class="feat-grid-sec">
+<!-- FEATURES WITH IMAGES -->
+<section class="vfeat-sec">
   <div class="wrap">
-    <div class="sec-header r" style="flex-direction:column;align-items:center;text-align:center">
-      <div class="s-label">What's Inside Every Pod</div>
-      <h2 class="s-title">Engineered in Six Dimensions</h2>
-      <p class="s-sub">Every VRT pod ships with six core systems working together to deliver professional-grade performance, day after day.</p>
+    <div class="vfeat-hd r">
+      <div class="s-label">Features &amp; Highlights</div>
+      <h2 class="vfeat-title">Built for the Modern Workplace</h2>
+      <p class="vfeat-sub">Six signature experiences — unique to the VRT platform — that go beyond specs to define how the pod actually feels to use every day.</p>
     </div>
-    <div class="feat-icon-grid">
-      <div class="fig-card r d1">
-        <div class="fig-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg></div>
-        <div class="fig-title">Acoustic Performance</div>
-        <p class="fig-desc">40mm carbon composite sound insulation board with double-layer laminated soundproof glass. ISO 23351 acoustic reference standard with 0.1s reverberation time.</p>
-        <div class="fig-tags"><span class="fig-tag">30&plusmn;5 dB</span><span class="fig-tag">ISO 23351</span><span class="fig-tag">0.1s Reverb</span></div>
+    <div class="vfeat-bento r d1">
+
+      <!-- AI Smart Panel — full-height left column -->
+      <div class="vfb-ai">
+        <div class="vfb-ai-img">
+          <img src="/images/Pods/VRT/VRT%20Spec%20Pictures/ai_panel.webp" alt="AI Smart Panel live interface" loading="lazy">
+        </div>
+        <div class="vfb-ai-body">
+          <div class="vfb-ai-label">AI Control Panel</div>
+          <h3 class="vfb-ai-title">Smart Panel — Always On</h3>
+          <p class="vfb-ai-desc">Rotary display shows real-time clock, temperature and air quality. USB-C 20W, USB-A QC 3.0, NFC and Wi-Fi / 4G / Bluetooth all built in.</p>
+          <div class="vfb-ai-pills">
+            <span class="vfb-ai-pill">NFC Access</span>
+            <span class="vfb-ai-pill">USB-C 20W</span>
+            <span class="vfb-ai-pill">Wi-Fi · 4G</span>
+            <span class="vfb-ai-pill">Bluetooth</span>
+          </div>
+        </div>
       </div>
-      <div class="fig-card r d2">
-        <div class="fig-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2 2 0 1 1 19 12H2"/></svg></div>
-        <div class="fig-title">Panasonic Ventilation</div>
-        <p class="fig-desc">Panasonic centrifugal fan with hidden labyrinth noise-reduction air duct. Top-mounted intake with pressure-relief exhaust for continuous fresh air.</p>
-        <div class="fig-tags"><span class="fig-tag">91-182 CBM/hr</span><span class="fig-tag">Low-Noise</span><span class="fig-tag">Panasonic</span></div>
+
+      <!-- Row 1 right -->
+      <div class="vfb-card">
+        <div class="vfb-img"><img src="/images/Pods/VRT/VRT%20Spec%20Pictures/fuild%20modern%20design.webp" alt="Fluid Modern Design" loading="lazy"></div>
+        <div class="vfb-body"><h3 class="vfb-title">Fluid Modern Design</h3><p class="vfb-desc">Extreme right-angle precision with compact Japanese-style spacing — built to belong in design-conscious offices.</p></div>
       </div>
-      <div class="fig-card r d3">
-        <div class="fig-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
-        <div class="fig-title">Premium LED Lighting</div>
-        <p class="fig-desc">LED strip and dedicated reading spotlight with adjustable colour temperature. 400 lux desktop illumination for comfortable long-session work.</p>
-        <div class="fig-tags"><span class="fig-tag">4000K-5000K</span><span class="fig-tag">400 lx</span><span class="fig-tag">100,000 hr Life</span></div>
+      <div class="vfb-card">
+        <div class="vfb-img"><img src="/images/Pods/VRT/VRT%20Spec%20Pictures/Touchless%20entry.webp" alt="Touchless NFC Entry" loading="lazy"></div>
+        <div class="vfb-body"><h3 class="vfb-title">Touchless NFC Entry</h3><p class="vfb-desc">Induction switch + NFC tap-to-enter for hygienic, keyless access — redefining how the workplace feels.</p></div>
       </div>
-      <div class="fig-card r d1">
-        <div class="fig-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L5 13h7l-3 7 10-11h-7l3-7z"/></svg></div>
-        <div class="fig-title">MEANWELL Power System</div>
-        <p class="fig-desc">Industrial-grade MEANWELL power supply with 5-hole socket, USB-A and USB-C charging ports, and integrated low-voltage interface for peripherals.</p>
-        <div class="fig-tags"><span class="fig-tag">MEANWELL</span><span class="fig-tag">USB-C</span><span class="fig-tag">5-Hole Socket</span></div>
+
+      <!-- Row 2 right -->
+      <div class="vfb-card">
+        <div class="vfb-img"><img src="/images/Pods/VRT/VRT%20Spec%20Pictures/remote-reservation.webp" alt="Smart Reservation" loading="lazy"></div>
+        <div class="vfb-body"><h3 class="vfb-title">Smart Reservation</h3><p class="vfb-desc">Book via web, app, QR or IC card. Real-time GPS pod locator and live occupancy analytics.</p></div>
       </div>
-      <div class="fig-card r d2">
-        <div class="fig-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-        <div class="fig-title">Premium Build Materials</div>
-        <p class="fig-desc">Integrated aluminum frame, carbon composite panels, 3+3 laminated tempered glass and magnetic dual-seal door system for airtight acoustic closure.</p>
-        <div class="fig-tags"><span class="fig-tag">Aluminum Frame</span><span class="fig-tag">3+3 Glass</span><span class="fig-tag">Magnetic Seal</span></div>
+      <div class="vfb-card">
+        <div class="vfb-img"><img src="/images/Pods/VRT/VRT%20Spec%20Pictures/Comfort%20Seating.webp" alt="Ergonomic Seating" loading="lazy"></div>
+        <div class="vfb-body"><h3 class="vfb-title">Ergonomic Seating</h3><p class="vfb-desc">Purpose-designed desks and chairs for extended sessions — physiological and psychological comfort.</p></div>
       </div>
-      <div class="fig-card r d3">
-        <div class="fig-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div>
-        <div class="fig-title">Fast Installation</div>
-        <p class="fig-desc">Built-in wheels and height-adjustable levelling feet. No drilling, no permits, no structural modifications required.</p>
-        <div class="fig-tags"><span class="fig-tag">No Drilling</span><span class="fig-tag">Relocatable</span></div>
+
+      <!-- Row 3: wide card spanning cols 2–3 -->
+      <div class="vfb-card vfb-wide">
+        <div class="vfb-img"><img src="/images/Pods/VRT/VRT%20Spec%20Pictures/Color%20Indiactor%20of%20Occupency.webp" alt="LED Occupancy Indicator" loading="lazy"></div>
+        <div class="vfb-body"><h3 class="vfb-title">Occupancy Indicator</h3><p class="vfb-desc">LED status ring signals availability instantly. Green: free. Red: in use — no interruptions, no guesswork, no wasted trips across the floor.</p></div>
+      </div>
+
+    </div>
+    <div class="vfeat-mats r d2">
+      <div class="vfeat-mat-label">Engineering Materials — E0 Grade · Screw-free · Glue-free · Flame Retardant</div>
+      <div class="vfeat-mat-row">
+        <div><div class="vfeat-mat-name">Aviation Aluminum</div><div class="vfeat-mat-desc">High precision · Corrosion resistant · Low expansion · High load-bearing</div></div>
+        <div><div class="vfeat-mat-name">Carbon-Plastic Composite</div><div class="vfeat-mat-desc">STC ≥ 30 ±5 dB · Waterproof · Zero formaldehyde · Antibacterial</div></div>
+        <div><div class="vfeat-mat-name">Customized Acoustic Board</div><div class="vfeat-mat-desc">Absorption ≥ 0.8 · Flame retardant · Zero formaldehyde · Mildew resistant</div></div>
+        <div><div class="vfeat-mat-name">Laminated Safety Glass</div><div class="vfeat-mat-desc">6.8mm double-layer · Train-grade tempered · 300°C rated</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ENGINEERING DEEP DIVE -->
-<section class="eng-sec">
-
-  <div class="eng-row">
-    <div class="eng-img r">
-      <div class="eng-img-placeholder">
-        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
-        <p>Acoustic Wall Cross-Section</p>
+<!-- VENTILATION SYSTEM -->
+<section class="vent-sec">
+  <div class="wrap">
+    <div class="vent-inner">
+      <div class="vent-img-wrap r">
+        <img src="/images/Pods/VRT/VRT%20Spec%20Pictures/adaptive-airflow.webp"
+             alt="VRT adaptive airflow ventilation diagram" class="vent-main-img" loading="lazy" width="640" height="480">
+        <div class="vent-badge r d3">
+          <img src="/images/Pods/VRT/VRT%20Spec%20Pictures/panasonic%20centrifugal%20Fan.webp"
+               alt="Panasonic centrifugal fan inside VRT pod" class="vent-fan-img" loading="lazy" width="260" height="180">
+          <span class="vent-badge-label">Panasonic Technology</span>
+        </div>
       </div>
-    </div>
-    <div class="eng-txt r d2">
-      <p class="eng-eyebrow">Acoustic Technology</p>
-      <h3 class="eng-title">Silence You Can<br>Measure</h3>
-      <p class="eng-desc">Every VRT pod is built around a 40mm carbon composite soundproofing core — the same technology used in professional recording studios and broadcast facilities worldwide.</p>
-      <div class="eng-stats">
-        <div><span class="eng-stat-n">30&plusmn;5</span><span class="eng-stat-l">dB Reduction</span></div>
-        <div><span class="eng-stat-n">0.1s</span><span class="eng-stat-l">Reverberation</span></div>
-        <div><span class="eng-stat-n">ISO</span><span class="eng-stat-l">23351 Certified</span></div>
-      </div>
-      <div class="eng-list">
-        <div class="eng-li"><span class="eng-li-dot"></span>40mm carbon composite sound insulation board</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>Double-layer laminated soundproof glass panels</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>Magnetic dual-seal door for airtight acoustic closure</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>Eco-friendly acoustic interior panels on all six surfaces</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="eng-row">
-    <div class="eng-txt r" style="order:1">
-      <p class="eng-eyebrow">Climate Control</p>
-      <h3 class="eng-title">Fresh Air,<br>Zero Noise</h3>
-      <p class="eng-desc">A hidden labyrinth air duct silences the ventilation system while the Panasonic centrifugal fan continuously cycles fresh air — even during the longest sessions.</p>
-      <div class="eng-stats">
-        <div><span class="eng-stat-n">91-182</span><span class="eng-stat-l">CBM/hr Fresh Air</span></div>
-        <div><span class="eng-stat-n">400 lx</span><span class="eng-stat-l">Desk Illumination</span></div>
-      </div>
-      <div class="eng-list">
-        <div class="eng-li"><span class="eng-li-dot"></span>Panasonic centrifugal ventilation fan</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>Hidden labyrinth noise-reduction air duct</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>LED lighting with 4000K-5000K adjustable colour temperature</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>100,000-hour rated LED lifespan</div>
-      </div>
-    </div>
-    <div class="eng-img r d2" style="order:2">
-      <div class="eng-img-placeholder">
-        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2 2 0 1 1 19 12H2"/></svg>
-        <p>Ventilation System Detail</p>
+      <div class="vent-content">
+        <p class="vent-eyebrow r">Ventilation System</p>
+        <h2 class="vent-title r d1">Continuous Fresh Air<br>to Keep Your Mind Clear</h2>
+        <p class="vent-sub r d2">Panasonic centrifugal technology delivers high airflow at low speed through a hidden labyrinth duct — so the air is always fresh, and the silence is always kept.</p>
+        <div class="vent-stats">
+          <div class="vent-stat r d2">
+            <div class="vent-stat-n">≈46</div>
+            <div class="vent-stat-unit">ACH</div>
+            <div class="vent-stat-l">Continuous Fresh Air</div>
+          </div>
+          <div class="vent-stat r d3">
+            <div class="vent-stat-n">&lt;40</div>
+            <div class="vent-stat-unit">dB</div>
+            <div class="vent-stat-l">Quieter Than a Library</div>
+          </div>
+          <div class="vent-stat r d4">
+            <div class="vent-stat-n" style="font-size:1.3rem;line-height:1.2">Panasonic</div>
+            <div class="vent-stat-unit">Fan</div>
+            <div class="vent-stat-l">Centrifugal Technology</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="eng-row">
-    <div class="eng-img r">
-      <div class="eng-img-placeholder">
-        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        <p>Materials and Build Quality</p>
-      </div>
+<!-- PLACE ANYWHERE -->
+<section class="place-sec">
+  <div class="wrap">
+    <div style="text-align:center">
+      <p class="place-eyebrow r">Flexibility by Design</p>
+      <h2 class="place-title r d1">Place Anywhere, Start Anytime</h2>
+      <p class="place-sub r d2" style="margin:0 auto">Everything the VRT needs to move freely and set up fast — built in from day one.</p>
     </div>
-    <div class="eng-txt r d2">
-      <p class="eng-eyebrow">Build Quality</p>
-      <h3 class="eng-title">Precision Built<br>to Last</h3>
-      <p class="eng-desc">From the integrated aluminum frame to the 3+3 laminated tempered glass panels — every component is selected for longevity, aesthetics, and structural performance.</p>
-      <div class="eng-stats">
-        <div><span class="eng-stat-n">3+3</span><span class="eng-stat-l">Laminated Glass</span></div>
-        
+    <div class="place-bento">
+      <div class="place-card place-card--vid r d1">
+        <div class="place-card-img place-vid-wrap">
+          <video muted playsinline preload="metadata">
+            <source src="/images/Pods/VRT/VRT%20Spec%20Pictures/easy%20Installation.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="place-card-body">
+          <span class="place-tag">Assembly</span>
+          <h3 class="place-card-title">Fewer Pieces</h3>
+          <p class="place-card-desc">Materials integrate into unified panels that come together quickly.</p>
+        </div>
       </div>
-      <div class="eng-list">
-        <div class="eng-li"><span class="eng-li-dot"></span>Integrated aluminum structural frame</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>Waterproof carbon-plastic flooring</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>Built-in wheels and height-adjustable levelling feet</div>
-        <div class="eng-li"><span class="eng-li-dot"></span>No tools, no contractors required</div>
+      <div class="place-card place-card--img r d2">
+        <div class="place-card-img">
+          <img src="/images/Pods/VRT/VRT%20Spec%20Pictures/Tool%20kit.webp"
+               alt="Complete installation toolkit included with every VRT pod" loading="lazy" width="560" height="420">
+        </div>
+        <div class="place-card-body">
+          <span class="place-tag">Setup</span>
+          <h3 class="place-card-title">Setup Made Simple</h3>
+          <p class="place-card-desc">A 100% complete tool kit for immediate use, so the space is ready without extra preparation.</p>
+        </div>
+      </div>
+      <div class="place-card place-card--img r d3">
+        <div class="place-card-img">
+          <img src="/images/Pods/VRT/VRT%20Spec%20Pictures/Built%20in%20Caster.webp"
+               alt="Built-in casters on VRT acoustic pod for easy mobility" loading="lazy" width="560" height="420">
+        </div>
+        <div class="place-card-body">
+          <span class="place-tag">Mobility</span>
+          <h3 class="place-card-title">Move Without Effort</h3>
+          <p class="place-card-desc">Built-in casters let you shift the space freely without effort to suit the moment.</p>
+        </div>
       </div>
     </div>
   </div>
-
 </section>
 
 <!-- VRT+ SMART FEATURES -->
@@ -677,15 +842,75 @@
     </div>
     <div class="smart-img-row r d2">
       <div class="smart-img-panel">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        <p style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase">App Interface</p>
+        <img src="/images/Pods/VRT/VRT%20Spec%20Pictures/smart-app.webp" alt="SonicHive Smart App interface" loading="lazy">
         <span class="smart-img-label">Smart App</span>
       </div>
       <div class="smart-img-panel">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        <p style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase">Dashboard View</p>
+        <img src="/images/Pods/VRT/VRT%20Spec%20Pictures/cloud-dashboard.webp" alt="SonicHive Cloud Dashboard" loading="lazy">
         <span class="smart-img-label">Cloud Dashboard</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="cert-sec">
+  <div class="wrap">
+    <div class="cert-hd r">
+      <p class="cert-eyebrow">Certified Quality</p>
+      <h2 class="cert-title">Benchmarks &amp; Certifications</h2>
+      <p class="cert-sub">Every VRT pod meets rigorous global standards for air quality, safety, sustainability, and system integrity — independently verified by leading certification bodies.</p>
+    </div>
+    <div class="cert-grid">
+
+      <div class="cert-card r d1">
+        <div class="cert-logo"><img src="/images/Pods/Certifications/GreenGuard.webp" alt="GREENGUARD Gold" loading="lazy"></div>
+        <span class="cert-badge">Air Quality</span>
+        <p class="cert-desc">The pod has earned GREENGUARD Gold certification for air quality standards.</p>
+      </div>
+
+      <div class="cert-card r d2">
+        <div class="cert-logo"><img src="/images/Pods/Certifications/RoHS.webp" alt="RoHS" loading="lazy"></div>
+        <span class="cert-badge">Hazardous Substance</span>
+        <p class="cert-desc">The centrifugal fan is RoHS certified for hazardous substance compliance.</p>
+      </div>
+
+      <div class="cert-card r d3">
+        <div class="cert-logo"><img src="/images/Pods/Certifications/CE.webp" alt="CE-EMC" loading="lazy"></div>
+        <span class="cert-badge">Electromagnetic</span>
+        <p class="cert-desc">The centrifugal fan, motion sensor, and fan speed controller are CE-EMC certified for electromagnetic compatibility.</p>
+      </div>
+
+      <div class="cert-card r d4">
+        <div class="cert-logo"><img src="/images/Pods/Certifications/FCC.webp" alt="FCC" loading="lazy"></div>
+        <span class="cert-badge">EMI Compliance</span>
+        <p class="cert-desc">The motion sensor is FCC certified for electromagnetic interference (Class B).</p>
+      </div>
+
+      <div class="cert-card r d1">
+        <div class="cert-logo"><img src="/images/Pods/Certifications/ANSI.webp" alt="ANSI/BIFMA" loading="lazy"></div>
+        <span class="cert-badge">Seating Standard</span>
+        <p class="cert-desc">The sofa is certified to ANSI/BIFMA X5.4-2020 public seating standard.</p>
+      </div>
+
+      <div class="cert-card r d2">
+        <div class="cert-logo"><img src="/images/Pods/Certifications/EESS.webp" alt="EESS" loading="lazy"></div>
+        <span class="cert-badge">Electrical Safety</span>
+        <p class="cert-desc">The ventilation system is registered under the Electrical Equipment Safety System (EESS).</p>
+      </div>
+
+      <div class="cert-card r d3">
+        <div class="cert-logo"><img src="/images/Pods/Certifications/SAA.webp" alt="SAA" loading="lazy"></div>
+        <span class="cert-badge">SAA Certified</span>
+        <p class="cert-desc">The motion sensor holds SAA electrical safety certification.</p>
+      </div>
+
+      <div class="cert-card r d4">
+        <div class="cert-logo"><img src="/images/Pods/Certifications/PSE.webp" alt="PSE Mark" loading="lazy"></div>
+        <span class="cert-badge">Product Safety</span>
+        <p class="cert-desc">PSE mark certifies the safety of electrical products to Japanese safety standards.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -704,18 +929,323 @@
   </div>
 </section>
 
+<style>
+  /* -- FOOTER (self-contained) -- */
+  footer .wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  footer {
+    background: #0A0A0A;
+    border-top: 1px solid rgba(255,255,255,.06);
+    padding: 5rem 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -60px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(212,32,32,.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* Tagline strip */
+  .foot-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.75rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    margin-bottom: 3.5rem;
+  }
+
+  .foot-top-tag {
+    font-family: var(--fh, 'Poppins', sans-serif);
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    font-weight: 400;
+    letter-spacing: -.04em;
+    color: rgba(255,255,255,.88);
+    line-height: 1.1;
+    max-width: 560px;
+  }
+
+  .foot-top-tag em {
+    color: #D42020;
+    font-style: normal;
+  }
+
+  .foot-top-cta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    background: rgba(212,32,32,.08);
+    border: 1px solid rgba(212,32,32,.22);
+    color: #D42020;
+    border-radius: 100px;
+    padding: .6rem 1.5rem;
+    font-size: .85rem;
+    font-weight: 500;
+    font-family: var(--fh, 'Poppins', sans-serif);
+    text-decoration: none;
+    transition: transform 160ms cubic-bezier(0.23,1,0.32,1),
+                background 160ms ease-out,
+                box-shadow 160ms ease-out,
+                border-color 160ms ease-out;
+    white-space: nowrap;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .foot-top-cta:hover {
+      background: rgba(212,32,32,.14);
+      border-color: rgba(212,32,32,.35);
+      box-shadow: 0 0 24px rgba(212,32,32,.14);
+    }
+  }
+
+  .foot-top-cta:active {
+    transform: scale(0.97);
+  }
+
+  /* Main grid */
+  .foot-g {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .foot-brand p {
+    color: rgba(255,255,255,.35);
+    font-size: .875rem;
+    line-height: 1.75;
+    margin-top: 1.25rem;
+    max-width: 260px;
+  }
+
+  /* Social links */
+  .foot-soc {
+    display: flex;
+    gap: .45rem;
+    margin-top: 1.75rem;
+    flex-wrap: wrap;
+  }
+
+  .soc-a {
+    width: 35px;
+    height: 35px;
+    border-radius: 9px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,.3);
+    transition: transform 150ms cubic-bezier(0.23,1,0.32,1),
+                background 150ms ease-out,
+                border-color 150ms ease-out,
+                color 150ms ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .soc-a:hover {
+      background: rgba(212,32,32,.1);
+      border-color: rgba(212,32,32,.25);
+      color: #D42020;
+    }
+  }
+
+  .soc-a:active {
+    transform: scale(0.88);
+  }
+
+  /* Nav columns */
+  .foot-col h4 {
+    font-family: var(--fh, 'Poppins', sans-serif);
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,.42);
+  }
+
+  .foot-col a {
+    display: block;
+    color: rgba(255,255,255,.3);
+    font-size: .875rem;
+    margin-bottom: .65rem;
+    transition: color 150ms ease-out,
+                transform 180ms cubic-bezier(0.23,1,0.32,1);
+    transform-origin: left;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .foot-col a:hover {
+      color: rgba(255,255,255,.88);
+      transform: translateX(5px);
+    }
+  }
+
+  /* Contact column */
+  .foot-contact p {
+    color: rgba(255,255,255,.35);
+    font-size: .875rem;
+    margin-bottom: .65rem;
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    line-height: 1.55;
+  }
+
+  .foot-contact a {
+    color: #D42020;
+    display: inline;
+    margin-bottom: 0;
+    transform: none !important;
+    transition: color 150ms ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .foot-contact a:hover {
+      color: #FF5252;
+    }
+  }
+
+  /* Bottom bar */
+  .foot-bot {
+    border-top: 1px solid rgba(255,255,255,.06);
+    padding: 1.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .foot-bot p {
+    color: rgba(255,255,255,.22);
+    font-size: .78rem;
+  }
+
+  .foot-locs {
+    display: flex;
+    gap: .35rem;
+    flex-wrap: wrap;
+  }
+
+  .foot-locs span {
+    font-size: .69rem;
+    color: rgba(255,255,255,.28);
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 100px;
+    padding: .18rem .6rem;
+    cursor: default;
+    letter-spacing: .04em;
+    transition: background 150ms ease-out,
+                color 150ms ease-out,
+                border-color 150ms ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .foot-locs span:hover {
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.55);
+      border-color: rgba(255,255,255,.12);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .foot-g { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    footer { padding-top: 3.5rem; }
+    .foot-g { grid-template-columns: 1fr; gap: 2rem; }
+    .foot-top { padding-bottom: 2.5rem; margin-bottom: 2.5rem; }
+    .foot-top-tag { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+  }
+</style>
+
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="foot-in">
-      <div class="foot-logo">
-        <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><polygon points="16,1 30,9 30,23 16,31 2,23 2,9" fill="#D42020"/><polygon points="16,8 24,12.5 24,21.5 16,26 8,21.5 8,12.5" fill="#FAFAFA"/><polygon points="16,12 20,14.3 20,18.7 16,21 12,18.7 12,14.3" fill="#D42020" opacity=".55"/></svg>
-        Sonic<em>Hive</em>
+
+    <!-- Tagline -->
+    <div class="foot-top">
+      <h2 class="foot-top-tag">Built for <em>silence.</em><br>Designed to perform.</h2>
+      <a href="/contact.html" class="foot-top-cta">
+        Get a Quote
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Columns -->
+    <div class="foot-g">
+      <div class="foot-brand">
+        <a href="/index.html" class="logo" style="display:inline-flex">
+          <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" style="height:72px;width:auto;display:block;filter:brightness(0) invert(1)">
+        </a>
+        <p>Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the Middle East.</p>
+        <div class="foot-soc">
+          <a class="soc-a" href="https://www.instagram.com/sonichive_?igsh=cWdjN3Ryd3N0ejdq" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a class="soc-a" href="https://www.facebook.com/share/1BwnMVP4BA/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a class="soc-a" href="https://www.linkedin.com/company/sonichive/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a class="soc-a" href="https://pin.it/5R68dXkTQ" target="_blank" rel="noopener" aria-label="Pinterest"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a class="soc-a" href="https://youtube.com/@sonichivepods?si=Y5jNiFN95m_dLkNk" target="_blank" rel="noopener" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc-a" href="https://www.tiktok.com/@sonichive?_r=1&amp;_t=ZS-92IlD1VKJmi" target="_blank" rel="noopener" aria-label="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9a8.19 8.19 0 0 0 4.79 1.52V7.07a4.85 4.85 0 0 1-1.02-.38z"/></svg></a>
+        </div>
       </div>
-      <p class="foot-copy">&copy; 2026 SonicHive. Premium Acoustic Pods, Dubai UAE.</p>
-      <div class="foot-links">
-        <a href="/contact.html">Contact</a>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <a href="/vrt.html">VRT</a>
+        <a href="/vr">VR</a>
+        <a href="/home-pod.html">Home Pod</a>
+        <a href="/outdoor-pods.html">Outdoor Pods</a>
+        <a href="/rental-pods.html">Rental Pods</a>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="/use-cases.html">Use Cases</a>
+        <a href="/features.html">Features</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Get a Quote</a>
+        <a href="/blog.html">Blog</a>
+      </div>
+      <div class="foot-col foot-contact">
+        <h4>Contact Us</h4>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0;margin-top:2px"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          Downtown Dubai, UAE
+        </p>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0;margin-top:2px"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+          <a href="tel:+971585550099">+971 58 555 0099</a>
+        </p>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:13px;height:13px;flex-shrink:0;margin-top:2px"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+          <a href="mailto:info@thesonichive.com">info@thesonichive.com</a>
+        </p>
       </div>
     </div>
+
+    <!-- Bottom bar -->
+    <div class="foot-bot">
+      <p>&copy; 2025 SonicHive. All rights reserved.</p>
+      <div class="foot-locs"><span>UAE</span><span>Qatar</span><span>Saudi Arabia</span><span>Bahrain</span><span>NZ</span></div>
+    </div>
+
   </div>
 </footer>
 
@@ -929,36 +1459,58 @@ const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting
 document.querySelectorAll('.r').forEach(el => obs.observe(el));
 </script>
 <script>
+document.querySelectorAll('.place-vid-wrap').forEach(function(wrap) {
+  var vid = wrap.querySelector('video');
+  if (!vid) return;
+  wrap.addEventListener('mouseenter', function() { vid.play(); });
+  wrap.addEventListener('mouseleave', function() { vid.pause(); vid.currentTime = 0; });
+});
+</script>
+<script>
 (function(){
   document.querySelectorAll('.vt-btn').forEach(function(btn){
     btn.addEventListener('click', function(){
       var id = this.dataset.tab;
-      document.querySelectorAll('.vt-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.vt-btn').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
       document.querySelectorAll('.vt-pane').forEach(function(p){ p.classList.remove('active'); });
       this.classList.add('active');
+      this.setAttribute('aria-selected','true');
       document.getElementById(id).classList.add('active');
     });
   });
 })();
 </script>
-
+<script src="/popup.js?v=3"></script>
 <script>
-/* nav dropdown */
+/* Colour picker */
 (function(){
-  var dd  = document.querySelector('.nav-dd');
-  var btn = document.querySelector('.nd-toggle');
-  if (!dd || !btn) return;
-  function setOpen(open) {
-    dd.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', String(open));
+  var img   = document.getElementById('cpick-img');
+  var stage = document.getElementById('cpick-stage');
+  var badge = document.getElementById('cpick-badge');
+  if(!img || !stage) return;
+  function hexRgba(hex,a){
+    var r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+    return 'rgba('+r+','+g+','+b+','+a+')';
   }
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    setOpen(!dd.classList.contains('open'));
+  var first=document.querySelector('.cpick-thumb.active');
+  if(first) stage.style.background=hexRgba(first.dataset.bg,.16);
+  document.querySelectorAll('.cpick-thumb').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var src=this.dataset.src, name=this.dataset.name, bg=this.dataset.bg;
+      document.querySelectorAll('.cpick-thumb').forEach(function(b){b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+      this.classList.add('active');
+      this.setAttribute('aria-pressed','true');
+      img.classList.add('fading');
+      stage.style.background=hexRgba(bg,.16);
+      setTimeout(function(){
+        img.src=src;
+        img.alt='VRT Pod — '+name;
+        if(badge) badge.textContent=name;
+        img.classList.remove('fading');
+      },190);
+    });
   });
-  document.addEventListener('click', function(e){ if(!dd.contains(e.target)) setOpen(false); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
 })();
-</script><script src="/popup.js?v=3"></script>
+</script>
 </body>
 </html>
