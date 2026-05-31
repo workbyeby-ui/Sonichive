@@ -1279,19 +1279,19 @@ document.getElementById('tick').innerHTML = mkTick() + mkTick();
 /* -- Client banner -- */
 (function(){
   const row1 = [
-    {n:'Apple',            url:'images/clients/apple.svg'},
-    {n:'Amazon',           url:'images/clients/amazon.svg'},
-    {n:'Tesla',            url:'images/clients/tesla.svg'},
-    {n:'Boeing',           url:'images/clients/boeing.svg'},
-    {n:'American Airlines',url:'images/clients/american-airlines.svg'},
-    {n:'Tencent',          url:'images/clients/tencent.svg'},
+    {n:'Apple',            url:'/images/clients/apple.svg'},
+    {n:'Amazon',           url:'/images/clients/amazon.svg'},
+    {n:'Tesla',            url:'/images/clients/tesla.svg'},
+    {n:'Boeing',           url:'/images/clients/boeing.svg'},
+    {n:'American Airlines',url:'/images/clients/american-airlines.svg'},
+    {n:'Tencent',          url:'/images/clients/tencent.svg'},
   ];
   const row2 = [
-    {n:'Huawei',           url:'images/clients/huawei.svg'},
-    {n:'Bosch',            url:'images/clients/bosch.svg'},
-    {n:'Acer',             url:'images/clients/acer.svg'},
-    {n:'Pepsi',            url:'images/clients/pepsi.svg'},
-    {n:'Starbucks',        url:'images/clients/starbucks.svg'},
+    {n:'Huawei',           url:'/images/clients/huawei.svg'},
+    {n:'Bosch',            url:'/images/clients/bosch.svg'},
+    {n:'Acer',             url:'/images/clients/acer.svg'},
+    {n:'Pepsi',            url:'/images/clients/pepsi.svg'},
+    {n:'Starbucks',        url:'/images/clients/starbucks.svg'},
   ];
   const chip = c => `<span class="c-chip"><img src="${c.url}" alt="${c.n}" loading="lazy"></span>`;
   const build = (el, clients) => { const h = clients.map(chip).join(''); el.innerHTML = h + h + h + h; };
@@ -1347,7 +1347,7 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
   const ANIM_FRAC = 7 / 9;
 
   const pad = n => String(n).padStart(3, '0');
-  const src = i => 'images/Scroll_animation_frames/ezgif-frame-' + pad(i) + '.webp';
+  const src = i => '/images/Scroll_animation_frames/ezgif-frame-' + pad(i) + '.webp';
 
   const section    = document.getElementById('sa-section');
   const canvas     = document.getElementById('sa-canvas');

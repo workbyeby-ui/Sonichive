@@ -38,7 +38,11 @@ for (const file of files) {
             // 4. Standard HTML src/href for asset directories (images/, pods/, css/, js/)
             .replace(/(src|href)="(?!\/)((images|pods|css|js)\/[^"]+)"/g, '$1="/$2"')
             // 5. CSS url() for asset paths
-            .replace(/url\(['"]?(?!\/)((images|pods|css)\/[^'"\)]+)['"]?\)/g, "url('/$1')");
+            .replace(/url\(['"]?(?!\/)((images|pods|css)\/[^'"\)]+)['"]?\)/g, "url('/$1')")
+            // 6. data-img / data-src attributes with relative image paths
+            .replace(/(data-(?:img|src))="(?!\/)((images|pods)\/[^"]+)"/g, '$1="/$2"')
+            // 7. Plain JS string literals containing image paths (e.g. in arrays/vars)
+            .replace(/'(?!\/|http)((?:images|pods)\/[^']+)'/g, "'/$1'");
 
         // Write explicit .html file
         if (page === 'index') {
@@ -81,7 +85,9 @@ if (fs.existsSync(blogViewsDir)) {
                 .replace(/src:\s*'(?!\/|http)((?:images|pods)[^']+)'/g, "src: '/$1'")
                 .replace(/href="(?!\/|http|#|mailto:|tel:)([^"]+\.html[^"]*)"/g, 'href="/$1"')
                 .replace(/(src|href)="(?!\/)((images|pods|css|js)\/[^"]+)"/g, '$1="/$2"')
-                .replace(/url\(['"]?(?!\/)((images|pods|css)\/[^'"\)]+)['"]?\)/g, "url('/$1')");
+                .replace(/url\(['"]?(?!\/)((images|pods|css)\/[^'"\)]+)['"]?\)/g, "url('/$1')")
+                .replace(/(data-(?:img|src))="(?!\/)((images|pods)\/[^"]+)"/g, '$1="/$2"')
+                .replace(/'(?!\/|http)((?:images|pods)\/[^']+)'/g, "'/$1'");
 
             fs.writeFileSync(path.join(blogPublicDir, `${slug}.html`), fixedHtml);
             const slugDir = path.join(blogPublicDir, slug);

@@ -946,7 +946,7 @@ function VRTHero() {
       ].join(', '),
       willChange: 'transform, filter, opacity',
     };
-    if (role === 'center') return { ...base, left: '50%', bottom: isMobile ? '4%' : '-2%', width: isMobile ? '88vw' : '78vw', transform: 'translateX(-50%) scale(1)', filter: 'drop-shadow(0 40px 60px rgba(0,0,0,0.24))', opacity: 1, zIndex: 20 };
+    if (role === 'center') return { ...base, left: '50%', bottom: isMobile ? '18%' : '-2%', width: isMobile ? '96vw' : '78vw', transform: 'translateX(-50%) scale(1)', filter: 'drop-shadow(0 40px 60px rgba(0,0,0,0.24))', opacity: 1, zIndex: 20 };
     if (role === 'left')   return { ...base, left: '14%', bottom: '14%', width: '22vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(2px)', opacity: isMobile ? 0 : 0.75, zIndex: 10, pointerEvents: 'none' };
     if (role === 'right')  return { ...base, left: '86%', bottom: '14%', width: '22vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(2px)', opacity: isMobile ? 0 : 0.75, zIndex: 10, pointerEvents: 'none' };
     if (role === 'back')   return { ...base, left: '50%', bottom: '22%', width: '28vw', transform: 'translateX(-50%) scale(1)', filter: 'blur(4px)', opacity: isMobile ? 0 : 0.55, zIndex: 5, pointerEvents: 'none' };
@@ -1022,7 +1022,7 @@ function VRTHero() {
 
         {/* Color dots - mobile only, centered bottom */}
         {isMobile && (
-          <div className="absolute flex items-center justify-center gap-2" style={{ bottom: '1.5rem', left: '50%', transform: 'translateX(-50%)', zIndex: 60 }}>
+          <div className="absolute flex items-center justify-center gap-2" style={{ bottom: '10%', left: '50%', transform: 'translateX(-50%)', zIndex: 60 }}>
             {IMAGES.map((it, i) => (
               <button key={i} type="button" aria-label={it.name}
                 onClick={() => { if (!isAnimating) { setIsAnimating(true); setActiveIndex(i); window.setTimeout(() => setIsAnimating(false), DURATION); } }}
