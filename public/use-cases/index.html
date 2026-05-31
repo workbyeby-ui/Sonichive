@@ -572,6 +572,7 @@ body.loaded .hero-scroll-hint{opacity:1}
 
 <style>
   /* -- FOOTER (self-contained) -- */
+  html { background: #0A0A0A; }
   footer .wrap {
     max-width: 1280px;
     margin: 0 auto;
@@ -582,6 +583,7 @@ body.loaded .hero-scroll-hint{opacity:1}
     background: #0A0A0A;
     border-top: 1px solid rgba(255,255,255,.06);
     padding: 5rem 0 0;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     position: relative;
     overflow: hidden;
   }
@@ -932,15 +934,6 @@ ucRows.forEach(row => rowObs.observe(row));
   }, { passive: true });
 })();
 
-/* -- Mega menu -- */
-(function(){
-  const dd  = document.querySelector('.nav-dd');
-  const btn = document.querySelector('.nd-toggle');
-  if (!dd || !btn) return;
-  btn.addEventListener('click', e => { e.stopPropagation(); dd.classList.toggle('open'); });
-  document.addEventListener('click', () => dd.classList.remove('open'));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') dd.classList.remove('open'); });
-})();
 </script>
 <script src="/popup.js?v=3"></script>
 </body>

@@ -477,6 +477,7 @@
 
 <style>
   /* -- FOOTER (self-contained) -- */
+  html { background: #0A0A0A; }
   footer .wrap {
     max-width: 1280px;
     margin: 0 auto;
@@ -487,6 +488,7 @@
     background: #0A0A0A;
     border-top: 1px solid rgba(255,255,255,.06);
     padding: 5rem 0 0;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     position: relative;
     overflow: hidden;
   }
@@ -832,14 +834,6 @@ document.querySelectorAll('.r').forEach(el=>obs.observe(el));
 })();
 </script>
 
-<script>
-(function(){
-  var dd=document.querySelector('.nav-dd'),btn=document.querySelector('.nd-toggle');
-  if(!dd||!btn)return;
-  btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
-  document.addEventListener('click',function(e){if(!dd.contains(e.target))dd.classList.remove('open');});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
-})();
-</script><script src="/popup.js?v=3"></script>
+<script src="/popup.js?v=3"></script>
 </body>
 </html>

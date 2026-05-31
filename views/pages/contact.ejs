@@ -396,14 +396,6 @@ document.getElementById('qform').onsubmit=async(e)=>{
 
 <script>
 (function(){
-  var dd=document.querySelector('.nav-dd'),btn=document.querySelector('.nd-toggle');
-  if(!dd||!btn)return;
-  btn.addEventListener('click',function(e){e.stopPropagation();dd.classList.toggle('open');});
-  document.addEventListener('click',function(e){if(!dd.contains(e.target))dd.classList.remove('open');});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});
-})();
-</script><script>
-(function(){
   var pr=document.querySelector('.scroll-prog');
   var glow=document.querySelector('.hero-glow');
   var _r=null;
