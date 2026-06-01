@@ -100,4 +100,19 @@ if (fs.existsSync(blogViewsDir)) {
     }
 }
 
+// Copy VR series pages from public/pods/ to clean URL locations
+// (Express serves these via custom routes; GitHub Pages needs static files)
+const vrPages = ['vr', 'vr-s', 'vr-m', 'vr-l', 'vr-xl', 'vr-xxl'];
+for (const name of vrPages) {
+    const src = path.join(publicDir, 'pods', name + '.html');
+    if (!fs.existsSync(src)) continue;
+    // Flat .html copy
+    fs.copyFileSync(src, path.join(publicDir, name + '.html'));
+    // Clean URL directory copy
+    const dir = path.join(publicDir, name);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.copyFileSync(src, path.join(dir, 'index.html'));
+    console.log(`✓ Copied: ${name}`);
+}
+
 console.log('Static build complete!');
