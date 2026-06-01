@@ -757,7 +757,7 @@
 
 <body>
 
-  <nav id="nav" data-nav="light">
+  <nav id="nav" data-nav="transparent">
     <div class="nav-i">
       <a href="/" class="logo">
         <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" class="logo-img">
@@ -1079,7 +1079,7 @@
     const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on') }), { threshold: .1 });
     document.querySelectorAll('.r').forEach(el => obs.observe(el));
   </script>
-  <script>(function(){var nav=document.getElementById('nav');function update(){nav.classList.toggle('s',window.scrollY>80);}window.addEventListener('scroll',update,{passive:true});update();})();</script>
+  <script>(function(){var nav=document.getElementById('nav');function update(){nav.classList.toggle('s',window.scrollY>60);}window.addEventListener('scroll',update,{passive:true});update();})();</script>
   <script>
     (function () {
       var dd = document.querySelector('.nav-dd');
