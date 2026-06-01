@@ -180,8 +180,49 @@
 
     /* RESPONSIVE */
     @media(max-width:1024px){.show-grid{grid-template-columns:1fr;gap:3rem}.prob-lay{grid-template-columns:1fr;gap:3rem}.rel-grid{grid-template-columns:1fr 1fr}.hero-inner{grid-template-columns:1fr}.stats-row{flex-wrap:wrap}}
-    @media(max-width:768px){.feat-grid{grid-template-columns:1fr 1fr}.rel-grid{grid-template-columns:1fr}.noise-grid{grid-template-columns:1fr}.hero-h1{font-size:clamp(2.2rem,8vw,3.5rem)}#hero{min-height:100svh}.hero-bg img{object-position:center center}.hero-text{padding-top:7rem}.hero-content{padding-bottom:4rem}#showcase,#problem,#features,#specs,#testimonial,#related,#cta-bottom{padding:5rem 0}.stat-item{border-right:none;border-bottom:1px solid var(--border)}.stat-item:last-child{border-bottom:none}.specs-row{flex-wrap:wrap}.ssp{flex:0 0 50%;border-right:none;border-bottom:1px solid var(--border)}.ssp:nth-child(odd){border-right:1px solid var(--border)}.ssp:last-child{border-bottom:none}}
-    @media(max-width:520px){.feat-grid{grid-template-columns:1fr}.hero-ctas{flex-direction:column}.btn-teal,.btn-ghost{text-align:center;width:100%}}
+    @media(max-width:768px){
+      .feat-grid{grid-template-columns:1fr 1fr}
+      .rel-grid{grid-template-columns:1fr}
+      .noise-grid{grid-template-columns:1fr}
+      .hero-h1{font-size:clamp(2.2rem,8vw,3.5rem)}
+      #hero{min-height:100svh}
+      .hero-bg img{object-position:center center}
+      .hero-text{padding-top:7rem}
+      .hero-content{padding-bottom:4rem}
+      .hero-stats{gap:1.5rem}
+      #showcase,#problem,#features,#specs,#testimonial,#related,#cta-bottom{padding:4rem 0}
+      .stat-item{border-right:none;border-bottom:1px solid var(--border)}
+      .stat-item:last-child{border-bottom:none}
+      .specs-row{flex-wrap:wrap}
+      .ssp{flex:0 0 50%;border-right:none;border-bottom:1px solid var(--border)}
+      .ssp:nth-child(odd){border-right:1px solid var(--border)}
+      .ssp:last-child{border-bottom:none}
+      /* Showcase image: cap height in single-column layout */
+      .show-main-img{max-height:340px;aspect-ratio:unset}
+      /* Showcase actions: stack buttons full-width */
+      .show-actions{flex-direction:column}
+      .show-actions .btn-red,.show-actions .btn-out{width:100%;text-align:center;padding:.85rem 1.5rem}
+      /* Feature cards: flip animation is hover-only; on mobile show content directly */
+      .feat-front{display:none}
+      .feat-card{height:auto;min-height:220px}
+      .feat-back{position:static;padding:1.5rem}
+      /* Problem section: shrink image, pull card out of absolute overlay */
+      .prob-img-frame img{height:240px;padding:1rem}
+      .prob-card{position:static;margin-top:.75rem;border-radius:12px}
+      /* Spec table: tighter padding on mobile */
+      .spec-table td,.spec-table th{padding:.75rem 1rem;font-size:.83rem}
+    }
+    @media(max-width:520px){
+      .feat-grid{grid-template-columns:1fr}
+      .hero-ctas{flex-direction:column}
+      .btn-teal,.btn-ghost{text-align:center;width:100%}
+      .hero-stats{gap:1rem}
+      .hero-sub{font-size:.95rem}
+      /* Stats strip: 2-per-row on small screens */
+      .stat-item{flex:0 0 50%;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+      .stat-item:nth-child(even){border-right:none}
+      .stat-item:nth-last-child(-n+2){border-bottom:none}
+    }
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
   </style>
 </head>
