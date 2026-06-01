@@ -274,6 +274,22 @@
   }
 })();
 </script>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  if(!nav)return;
+  var nt=nav.getAttribute('data-nav');
+  if(nt==='transparent'){
+    function onScroll(){nav.classList.toggle('s',window.scrollY>40);}
+    window.addEventListener('scroll',onScroll,{passive:true});
+    onScroll();
+  } else if(nt==='hero'){
+    function onScrollHero(){nav.classList.toggle('nav-solid',window.scrollY>60);}
+    window.addEventListener('scroll',onScrollHero,{passive:true});
+    onScrollHero();
+  }
+})();
+</script>
 
 <div id="main-content" tabindex="-1" style="outline:none;position:absolute"></div>
 

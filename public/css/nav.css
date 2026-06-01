@@ -189,6 +189,15 @@
 #nav[data-nav="hero"].nav-solid .nav-dd.open .nd-toggle,#nav[data-nav="hero"].nav-solid .nd-toggle:hover{color:#0A0A0A!important}
 #nav[data-nav="hero"].nav-solid .nav-ham{color:#0A0A0A!important;border-color:rgba(0,0,0,.2)!important}
 @media(max-width:768px){#nav[data-nav="hero"]:not(.nav-solid){background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-bottom-color:transparent!important}}
+/* Transparent nav on mobile — override the always-white rule above */
+@media(max-width:768px){
+  #nav[data-nav="transparent"]:not(.s){background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-bottom-color:transparent!important}
+  #nav[data-nav="transparent"]:not(.s) .logo-img{filter:brightness(0) invert(1) drop-shadow(0 1px 8px rgba(0,0,0,.5))!important}
+  #nav[data-nav="transparent"]:not(.s) .nav-ham{color:#fff!important;border-color:rgba(255,255,255,.4)!important}
+  #nav[data-nav="transparent"].s{background:#fafafa!important;border-bottom-color:rgba(0,0,0,.1)!important;box-shadow:0 1px 8px rgba(0,0,0,.08)!important}
+  #nav[data-nav="transparent"].s .logo-img{filter:brightness(0)!important}
+  #nav[data-nav="transparent"].s .nav-ham{color:#0A0A0F!important;border-color:rgba(0,0,0,.2)!important}
+}
 /* mega menu */
 .nav-dd{position:static;display:flex;align-items:center}
 .nd-toggle{display:flex;align-items:center;gap:5px;cursor:pointer;font-size:.875rem;border:none;background:none;font-family:'Poppins',sans-serif;padding:0;transition:color .2s;position:relative;padding-bottom:2px}
