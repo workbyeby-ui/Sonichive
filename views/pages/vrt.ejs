@@ -17,8 +17,8 @@
   <style>
     :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,.07);--red-b:rgba(212,32,32,.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,.09);--card:rgba(0,0,0,.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px;--gold:#B8860B;--gold-d:rgba(184,134,11,.08);--gold-b:rgba(184,134,11,.25)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    html{scroll-behavior:smooth;overflow-x:hidden;overscroll-behavior-x:none}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden;overscroll-behavior-x:none;max-width:100vw}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
@@ -965,17 +965,19 @@ function VRTHero() {
         backgroundColor: IMAGES[activeIndex].bg,
         transition: `background-color ${DURATION}ms ${EASE}`,
         fontFamily: 'Inter, sans-serif',
+        maxWidth: '100vw',
+        overflowX: 'hidden',
       }}
       className="relative w-full overflow-hidden"
     >
-      <div className="relative w-full" style={{ height: '100vh', overflow: 'hidden' }}>
+      <div className="relative w-full" style={{ height: '100vh', overflow: 'hidden', maxWidth: '100vw' }}>
 
         {/* Grain overlay */}
         <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 50, opacity: 0.4, backgroundImage: `url("${GRAIN_SVG}")`, backgroundSize: '200px 200px', backgroundRepeat: 'repeat' }} />
 
         {/* Ghost brand text */}
-        <div className="absolute inset-x-0 flex items-center justify-center pointer-events-none select-none" style={{ zIndex: 2, top: '18%' }}>
-          <span style={{ fontFamily: "'Anton', sans-serif", fontSize: 'clamp(60px, 20vw, 280px)', fontWeight: 900, color: '#ffffff', opacity: 1, lineHeight: 1, textTransform: 'uppercase', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
+        <div className="absolute inset-x-0 flex items-center justify-center pointer-events-none select-none" style={{ zIndex: 2, top: '18%', overflow: 'hidden', width: '100%' }}>
+          <span style={{ fontFamily: "'Anton', sans-serif", fontSize: isMobile ? 'clamp(48px, 14vw, 80px)' : 'clamp(80px, 20vw, 280px)', fontWeight: 900, color: '#ffffff', opacity: 1, lineHeight: 1, textTransform: 'uppercase', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
             SONICHIVE
           </span>
         </div>
