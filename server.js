@@ -163,25 +163,23 @@ app.post('/api/quote', async (req, res) => {
   res.status(200).json({ success: true, message: 'Quote request received successfully!' });
 });
 
-/* ── Page routes (EJS) ──────────────────────────────────────── */
-app.get('/', (_req, res) => res.render('pages/index', { page: 'index' }));
+/* ── Static assets + pre-built pages ───────────────────────── */
+// Serve the pre-built public/ folder first (absolute paths, safe on any URL depth)
+app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
-/* VR series pages live as static HTML under public/pods/ — serve at clean URLs */
-['vr', 'vr-s', 'vr-m', 'vr-l', 'vr-xl', 'vr-xxl'].forEach(p => {
-  app.get('/' + p, (_req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'pods', p + '.html'));
-  });
-});
-
+/* ── Fallback page routes — only if no static file matched ── */
 app.get('/:page', (req, res, next) => {
   const page = req.params.page.replace(/\.html$/, '');
+  // Try pre-built HTML (absolute paths, no breakage on trailing slash)
+  const staticDir  = path.join(__dirname, 'public', page, 'index.html');
+  const staticFile = path.join(__dirname, 'public', page + '.html');
+  if (fs.existsSync(staticDir))  return res.sendFile(staticDir);
+  if (fs.existsSync(staticFile)) return res.sendFile(staticFile);
+  // EJS fallback for any page not yet built
   const view = path.join(__dirname, 'views', 'pages', page + '.ejs');
   if (!fs.existsSync(view)) return next();
   res.render('pages/' + page, { page });
 });
-
-/* ── Static assets (images, JS, CSS) ───────────────────────── */
-app.use(express.static(path.join(__dirname, 'public')));
 
 /* ── Start ──────────────────────────────────────────────────── */
 app.listen(PORT, () => {
