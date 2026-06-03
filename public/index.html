@@ -1156,12 +1156,6 @@
     .foot-top { padding-bottom: 2.5rem; margin-bottom: 2.5rem; }
     .foot-top-tag { font-size: clamp(1.75rem, 7vw, 2.5rem); }
   }
-  /* Override nav.css mobile transparent rules: homepage has a light hero,
-     so logo and hamburger must be dark (not white) before scroll */
-  @media(max-width:768px){
-    #nav[data-nav="transparent"]:not(.s) .logo-img{filter:brightness(0)!important}
-    #nav[data-nav="transparent"]:not(.s) .nav-ham{color:#0A0A0F!important;border-color:rgba(0,0,0,.22)!important}
-  }
 </style>
 
 <!-- FOOTER -->
