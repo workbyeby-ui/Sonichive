@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/webp" href="/images/Faveicon-black.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SonicHive Home Pod — Acoustic Office Pod for Remote Workers | Dubai</title>
-  <meta name="description" content="The SonicHive Home Pod. Smart home integrated acoustic pod for remote workers. 25dB noise reduction for Dubai apartments.">
+  <title>SonicHive Home Pod — Acoustic Office Pod for Remote Workers | Middle East</title>
+  <meta name="description" content="The SonicHive Home Pod. Smart home integrated acoustic pod for remote workers. 25dB noise reduction across the Middle East.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -131,17 +131,32 @@
     .feat-card:hover .feat-front{height:52px}
     .feat-card:hover .feat-label{font-size:.85rem}
 
+    /* LIFESTYLE */
+    #lifestyle{padding:6rem 0;background:var(--bg)}
+    .life-head{text-align:center;margin-bottom:2.5rem}
+    .life-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .life-card{position:relative;overflow:hidden;border-radius:16px;cursor:default}
+    .life-card img{width:100%;height:340px;object-fit:cover;display:block;transition:transform .55s ease}
+    .life-card:hover img{transform:scale(1.04)}
+    .life-overlay{position:absolute;bottom:0;left:0;right:0;padding:1.75rem 1.25rem 1.25rem;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+    .life-title{font-family:var(--fh);font-size:1rem;font-weight:500;color:#fff;line-height:1.3}
+    .life-sub{font-size:.78rem;color:rgba(255,255,255,.78);margin-top:.3rem}
+    @media(max-width:768px){.life-grid{grid-template-columns:1fr}.life-card img{height:240px}}
+
     /* SPECS */
     #specs{padding:7rem 0;background:#fff}
-    .spec-inner{max-width:820px;margin:0 auto}
-    .spec-table{width:100%;border-collapse:collapse;border-radius:20px;overflow:hidden;border:1px solid var(--border)}
-    .spec-table th{background:var(--bg2);padding:1.1rem 1.5rem;text-align:left;font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border)}
-    .spec-table td{padding:1rem 1.5rem;border-bottom:1px solid var(--border);font-size:.9rem;background:#fff}
-    .spec-table tr:last-child td{border-bottom:none}
-    .spec-table tr:hover td{background:var(--bg2)}
-    .spec-table .sn{font-weight:400;color:var(--text)}
-    .spec-table .sv{color:var(--muted)}
-    .spec-table .chk{color:var(--teal);font-weight:400}
+    .spec-inner{max-width:960px;margin:0 auto}
+    .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+    .spec-box{background:#fff;border-radius:16px;border:1px solid var(--border);overflow:hidden}
+    .spec-box-head{padding:1.1rem 1.5rem;border-bottom:1px solid var(--border);background:var(--bg2)}
+    .spec-box-title{font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .spec-row{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.5rem;border-bottom:1px solid var(--border);font-size:.88rem;gap:1rem}
+    .spec-row:last-child{border-bottom:none}
+    .spec-row:hover{background:var(--bg2)}
+    .sn{color:var(--text);flex-shrink:0}
+    .sv{color:var(--muted);text-align:right}
+    .sv.chk{color:var(--teal)}
+    @media(max-width:640px){.spec-grid{grid-template-columns:1fr}}
 
     /* TESTIMONIAL */
     #testimonial{padding:7rem 0;background:linear-gradient(135deg,#f0fdf9 0%,#e6f7f4 100%);position:relative;overflow:hidden}
@@ -209,8 +224,8 @@
       /* Problem section: shrink image, pull card out of absolute overlay */
       .prob-img-frame img{height:240px;padding:1rem}
       .prob-card{position:static;margin-top:.75rem;border-radius:12px}
-      /* Spec table: tighter padding on mobile */
-      .spec-table td,.spec-table th{padding:.75rem 1rem;font-size:.83rem}
+      /* Spec boxes: tighter padding on mobile */
+      .spec-row{padding:.75rem 1.1rem;font-size:.83rem}
     }
     @media(max-width:520px){
       .feat-grid{grid-template-columns:1fr}
@@ -349,7 +364,7 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg">
-    <img src="/images/Home%20Pod%20-%20hero.webp" alt="SonicHive Home Pod in a Dubai apartment" loading="eager">
+    <img src="/images/Home%20Pod%20-%20hero.webp" alt="SonicHive Home Pod in a home office" loading="eager">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -360,7 +375,7 @@
           Home Office &mdash; Smart Integration
         </div>
         <h1 class="hero-h1">SonicHive<br><em>Home Pod</em></h1>
-        <p class="hero-sub">Your home. Your peace. Your office. Cancel out Dubai&rsquo;s noise and work with complete clarity &mdash; from any room in your apartment.</p>
+        <p class="hero-sub">Your home. Your peace. Your office. Cancel out the noise and work with complete clarity &mdash; from any room in your apartment.</p>
         <div class="hero-ctas">
           <a href="/contact" class="btn-teal">Get a Quote &rarr;</a>
           <a href="https://wa.me/971585550099?text=Hi, I'm interested in the SonicHive Home Pod." target="_blank" class="btn-ghost">Chat on WhatsApp</a>
@@ -371,8 +386,8 @@
             <div class="hs-lbl">Noise Reduction</div>
           </div>
           <div class="hs-item">
-            <div class="hs-val">1<span>&#8211;</span>2</div>
-            <div class="hs-lbl">Persons</div>
+            <div class="hs-val">1</div>
+            <div class="hs-lbl">Person</div>
           </div>
           <div class="hs-item">
             <div class="hs-val" style="font-size:1.4rem"><span>Smart</span></div>
@@ -419,10 +434,10 @@
           Home Office &mdash; Smart Integration
         </div>
         <h2 class="show-name">SonicHive<br>Home Pod</h2>
-        <p class="show-cap">Remote work, reimagined for Dubai apartments.</p>
+        <p class="show-cap">Remote work, reimagined for the modern home.</p>
         <p class="show-desc">Cancels traffic, neighbours, construction, and household sounds with advanced noise cancellation. Seamlessly integrates with your smart home. The only pod built specifically for remote workers who need genuine focus at home.</p>
         <div class="specs-row">
-          <div class="ssp"><strong>1&#8211;2</strong><span>Persons</span></div>
+          <div class="ssp"><strong>1</strong><span>Person</span></div>
           <div class="ssp"><strong>25dB</strong><span>Reduction</span></div>
           <div class="ssp"><strong>Smart</strong><span>Integration</span></div>
         </div>
@@ -468,14 +483,48 @@
   </div>
 </div>
 
+<!-- LIFESTYLE -->
+<section id="lifestyle">
+  <div class="wrap">
+    <div class="life-head r">
+      <p class="s-label">Where It Lives</p>
+      <h2 class="s-title">Made for Every Room.</h2>
+      <p style="color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:480px;margin:0 auto">The Home Pod fits naturally into any space in your home — from your living room to your bedroom.</p>
+    </div>
+    <div class="life-grid">
+      <div class="life-card r d1">
+        <img src="/images/Pods/Home-Pod/Home-pods-1-1-1024x512.webp" alt="Home Pod in a modern living room" loading="lazy">
+        <div class="life-overlay">
+          <div class="life-title">Living Room</div>
+          <div class="life-sub">Blends into modern interiors without compromise</div>
+        </div>
+      </div>
+      <div class="life-card r d2">
+        <img src="/images/Pods/Home-Pod/Home-pods-2-1-1024x768.webp" alt="Home Pod in a playroom" loading="lazy">
+        <div class="life-overlay">
+          <div class="life-title">Any Space</div>
+          <div class="life-sub">Compact enough to fit any corner of your home</div>
+        </div>
+      </div>
+      <div class="life-card r d3">
+        <img src="/images/Pods/Home-Pod/Home-pods-2-1-e1721388980107-1024x713.webp" alt="Home Pod in a bedroom at night" loading="lazy">
+        <div class="life-overlay">
+          <div class="life-title">Bedroom</div>
+          <div class="life-sub">Work late without disturbing anyone around you</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- THE PROBLEM -->
 <section id="problem">
   <div class="wrap">
     <div class="prob-lay">
       <div class="prob-txt r">
         <p class="s-label">The Problem</p>
-        <h2>Dubai is <em>Loud.</em><br>Your Work Calls Aren&rsquo;t.</h2>
-        <p>In Dubai&rsquo;s high-density residential environment, background noise is the number-one complaint of remote workers. Traffic on Sheikh Zayed Road, construction on the next block, neighbours above and below &mdash; they don&rsquo;t stop when your client calls start.</p>
+        <h2>Surrounding can be <em>Loud.</em><br>Your Work Calls Aren&rsquo;t.</h2>
+        <p>In the Middle East&rsquo;s high-density residential environment, background noise is the number-one complaint of remote workers. Traffic on Sheikh Zayed Road, construction on the next block, neighbours above and below &mdash; they don&rsquo;t stop when your client calls start.</p>
         <p>Noise-cancelling headphones are a bandaid. The SonicHive Home Pod is the cure &mdash; a fully enclosed acoustic environment inside your apartment that eliminates the problem entirely.</p>
         <div class="noise-grid">
           <div class="noise-card"><div class="nc-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:18px;height:18px"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg></div><div class="nc-body"><strong>Traffic noise</strong><span>eliminated</span></div></div>
@@ -554,7 +603,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
           </div>
           <div class="feat-name">Apartment-Sized Footprint</div>
-          <p class="feat-desc">Compact geometry optimised for Dubai apartments where every square metre counts.</p>
+          <p class="feat-desc">Compact geometry optimised for compact apartments where every square metre counts.</p>
         </div>
         <div class="feat-front" style="background:#fff;border:1px solid var(--border)">
           <span class="feat-label" style="color:var(--red)">Apartment-Sized Footprint</span>
@@ -596,23 +645,24 @@
         <p class="s-label">Specifications</p>
         <h2 class="s-title">Technical Details</h2>
       </div>
-      <div style="overflow-x:auto">
-        <table class="spec-table r">
-          <thead><tr><th>Specification</th><th>SonicHive Home Pod</th></tr></thead>
-          <tbody>
-            <tr><td class="sn">Capacity</td><td class="sv">1&#8211;2 persons</td></tr>
-            <tr><td class="sn">Noise Reduction</td><td class="sv">25 dB (enhanced residential spec)</td></tr>
-            <tr><td class="sn">Smart Home Integration</td><td class="sv chk">&#10003; Voice + app control</td></tr>
-            <tr><td class="sn">Ventilation</td><td class="sv chk">&#10003; Quiet residential active ventilation</td></tr>
-            <tr><td class="sn">LED Lighting</td><td class="sv chk">&#10003; Dimmable + video-call optimised</td></tr>
-            <tr><td class="sn">Power Outlets</td><td class="sv">2x standard + USB charging</td></tr>
-            <tr><td class="sn">Acoustic Glass</td><td class="sv chk">&#10003; Double-laminated</td></tr>
-            <tr><td class="sn">Custom Colours</td><td class="sv chk">&#10003; Home interior colourways available</td></tr>
-            <tr><td class="sn">Modular Design</td><td class="sv chk">&#10003; Fully disassembles for relocation</td></tr>
-            <tr><td class="sn">Permit Required</td><td class="sv">None &mdash; no drilling or modifications</td></tr>
-            <tr><td class="sn">Warranty</td><td class="sv">12 months full product warranty</td></tr>
-          </tbody>
-        </table>
+      <div class="spec-grid">
+        <div class="spec-box r d1">
+          <div class="spec-box-head"><div class="spec-box-title">Performance &amp; Features</div></div>
+          <div class="spec-row"><span class="sn">Capacity</span><span class="sv">1 Person</span></div>
+          <div class="spec-row"><span class="sn">Noise Reduction</span><span class="sv">25 dB residential spec</span></div>
+          <div class="spec-row"><span class="sn">Smart Home</span><span class="sv chk">&#10003; Voice + app control</span></div>
+          <div class="spec-row"><span class="sn">Ventilation</span><span class="sv chk">&#10003; Quiet active system</span></div>
+          <div class="spec-row"><span class="sn">LED Lighting</span><span class="sv chk">&#10003; Dimmable, call-optimised</span></div>
+          <div class="spec-row"><span class="sn">Power Outlets</span><span class="sv">2× standard + USB</span></div>
+        </div>
+        <div class="spec-box r d2">
+          <div class="spec-box-head"><div class="spec-box-title">Design &amp; Installation</div></div>
+          <div class="spec-row"><span class="sn">Acoustic Glass</span><span class="sv chk">&#10003; Double-laminated</span></div>
+          <div class="spec-row"><span class="sn">Custom Colours</span><span class="sv chk">&#10003; Home colourways</span></div>
+          <div class="spec-row"><span class="sn">Modular Design</span><span class="sv chk">&#10003; Fully disassembles</span></div>
+          <div class="spec-row"><span class="sn">Permit Required</span><span class="sv">None — no drilling</span></div>
+          <div class="spec-row"><span class="sn">Warranty</span><span class="sv">12 months full cover</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -673,7 +723,7 @@
     <div class="cta-in r">
       <p class="s-label">Ready to Order?</p>
       <h2>Transform Your Home Office Today.</h2>
-      <p>Our team will confirm sizing, delivery, and installation for your apartment. We respond within 2 business hours, and deliver across Dubai and the UAE.</p>
+      <p>Our team will confirm sizing, delivery, and installation for your apartment. We respond within 2 business hours, and deliver across the UAE and the wider Middle East.</p>
       <div class="btn-row">
         <a href="/contact" class="btn-teal">Request a Free Quote</a>
         <a href="/use-cases" class="btn-o">Explore Use Cases</a>
@@ -952,7 +1002,7 @@
         <a href="/index.html" class="logo" style="display:inline-flex">
           <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" style="height:72px;width:auto;display:block;filter:brightness(0) invert(1)">
         </a>
-        <p>Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the Middle East.</p>
+        <p>The Middle East's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the region.</p>
         <div class="foot-soc">
           <a class="soc-a" href="https://www.instagram.com/sonichive_?igsh=cWdjN3Ryd3N0ejdq" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
           <a class="soc-a" href="https://www.facebook.com/share/1BwnMVP4BA/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>

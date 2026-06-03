@@ -18,6 +18,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+function esc(str) {
+  return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
 function buildEmail(data) {
   const { name, company, email, phone, interest, country } = data;
 
@@ -70,40 +74,40 @@ function buildEmail(data) {
     <div class="row">
       <div class="field">
         <div class="field-label">Full Name</div>
-        <div class="field-value">${name || '—'}</div>
+        <div class="field-value">${esc(name) || '—'}</div>
       </div>
       <div class="field">
         <div class="field-label">Company</div>
-        <div class="field-value">${company || '—'}</div>
+        <div class="field-value">${esc(company) || '—'}</div>
       </div>
     </div>
 
     <div class="row">
       <div class="field">
         <div class="field-label">Email</div>
-        <div class="field-value"><a href="mailto:${email}">${email || '—'}</a></div>
+        <div class="field-value"><a href="mailto:${esc(email)}">${esc(email) || '—'}</a></div>
       </div>
       <div class="field">
         <div class="field-label">WhatsApp / Phone</div>
-        <div class="field-value"><a href="tel:${phone}">${phone || '—'}</a></div>
+        <div class="field-value"><a href="tel:${esc(phone)}">${esc(phone) || '—'}</a></div>
       </div>
     </div>
 
     <div class="row">
       <div class="field">
         <div class="field-label">Interested In</div>
-        <div class="field-value">${interest || '—'}</div>
+        <div class="field-value">${esc(interest) || '—'}</div>
       </div>
       <div class="field">
         <div class="field-label">Country</div>
-        <div class="field-value">${country || '—'}</div>
+        <div class="field-value">${esc(country) || '—'}</div>
       </div>
     </div>
 
     <div class="divider"></div>
 
     <div style="text-align:center">
-      <a href="mailto:${email}?subject=Re: Your SonicHive Quote Request" class="cta">Reply to ${name ? name.split(' ')[0] : 'Lead'} →</a>
+      <a href="mailto:${esc(email)}?subject=Re: Your SonicHive Quote Request" class="cta">Reply to ${esc(name ? name.split(' ')[0] : 'Lead')} →</a>
     </div>
   </div>
 

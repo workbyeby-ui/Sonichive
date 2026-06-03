@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VR L, 4-Person Acoustic Pod | SonicHive Dubai</title>
-  <meta name="description" content="VR L by SonicHive, 4-person acoustic pod with 30 ±5 dB noise reduction, 2000×1200mm footprint, and 5 standard colour options. Dubai UAE.">
+  <title>VR L, 4-Person Acoustic Pod | SonicHive</title>
+  <meta name="description" content="VR L by SonicHive, 4-person acoustic pod with 30 ±5 dB noise reduction, 2000×1200mm footprint, and 5 standard colour options. Middle East.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -108,7 +108,7 @@
     .s-label::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
     .s-title{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:400;letter-spacing:-.03em;margin-bottom:2.5rem}
     .spec-section{padding:3rem 0;background:var(--bg2)}
-    .spec-grid{display:grid;grid-template-columns:3fr 2fr;gap:1.5rem;align-items:start}
+    .spec-grid{display:grid;grid-template-columns:3fr 2fr;gap:1.5rem;align-items:stretch}
     @media(max-width:900px){.spec-grid{grid-template-columns:1fr}}
     .spec-card,.feat-card{background:#FFF;border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;box-shadow:0 2px 20px rgba(0,0,0,.06)}
     .spec-card-hd,.feat-card-hd{font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:1.25rem;padding-bottom:.85rem;border-bottom:1px solid var(--border)}
@@ -117,7 +117,8 @@
     .spec-row-l{display:flex;align-items:center;gap:.65rem;padding:.85rem 1rem .85rem 0;border-right:1px solid var(--border)}
     .spec-lbl{font-size:.85rem;font-weight:500;color:var(--text)}
     .spec-row-r{padding:.85rem 0 .85rem 1.2rem;font-size:.85rem;color:var(--text)}
-    .feat-row{display:flex;align-items:flex-start;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--border)}
+    .feat-card{display:flex;flex-direction:column}
+    .feat-row{display:flex;align-items:center;gap:1rem;flex:1;border-bottom:1px solid var(--border)}
     .feat-row:last-child{border-bottom:none}
     .feat-chk{width:24px;min-width:24px;height:24px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-top:.1rem}
     .feat-txt{font-size:.875rem;color:var(--text);line-height:1.6;padding-top:.2rem}
@@ -170,6 +171,20 @@
   .foot-locs span{font-size:.69rem;color:rgba(255,255,255,.28);background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:100px;padding:.18rem .6rem;letter-spacing:.04em}
   @media(max-width:1024px){.foot-g{grid-template-columns:1fr 1fr}.foot-top{gap:1.5rem}}
   @media(max-width:640px){footer{padding-top:3.5rem}.foot-g{grid-template-columns:1fr;gap:2rem}.foot-top{padding-bottom:2.5rem;margin-bottom:2.5rem}}
+  
+    .int-swatch{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:all .18s;outline:2.5px solid transparent;outline-offset:2px}
+    .int-swatch:hover{transform:scale(1.1)}
+    .int-swatch.act{outline-color:var(--blue)}
+    .int-swatch .cswatch-in{width:100%;height:100%;border-radius:50%;padding:3px;display:flex;align-items:center;justify-content:center}
+    .int-swatch .csw-body{width:100%;height:100%;border-radius:50%}
+  
+
+  
+    .int-swatch{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:all .18s;outline:2.5px solid transparent;outline-offset:2px}
+    .int-swatch:hover{transform:scale(1.1)}
+    .int-swatch.act{outline-color:var(--blue)}
+    .int-swatch .cswatch-in{width:100%;height:100%;border-radius:50%;padding:3px;display:flex;align-items:center;justify-content:center}
+    .int-swatch .csw-body{width:100%;height:100%;border-radius:50%}
   </style>
 <style id="mobile-nav-fix">
 .nav-ham{display:none;background:none;border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:7px 9px;cursor:pointer;color:#fff;transition:color .3s,border-color .3s;flex-shrink:0;line-height:0}
@@ -248,7 +263,7 @@
   <div class="ph-grid">
     <div class="ph-img-col r">
       <div class="ph-main" style="padding:2rem">
-        <img id="main-img" src="/pods/VR series/VR L/VR-3D-black0025.webp" alt="VR L" style="width:100%;height:100%;object-fit:contain;max-height:360px;transition:opacity .2s">
+        <img id="main-img" src="/images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-black0025.webp" alt="VR L" style="width:100%;height:100%;object-fit:contain;max-height:360px">
       </div>
     </div>
     <div class="ph-info r d1">
@@ -257,13 +272,21 @@
       <p class="ph-cap">Large Meeting Pod</p>
       <p class="ph-desc">The VR L accommodates up to 4 people for team meetings, workshops, and video conferences, 30 ±5 dB of acoustic isolation in a 2000mm wide form factor.</p>
       <div style="margin-bottom:1.75rem">
-        <p style="font-size:.8rem;color:var(--muted);margin-bottom:.6rem;font-weight:500">Colour: <span id="colour-label" style="color:var(--text);font-weight:600">White</span></p>
+        <p style="font-size:.8rem;color:var(--muted);margin-bottom:.6rem;font-weight:500">Colour: <span id="colour-label" style="color:var(--text);font-weight:600">Black</span></p>
         <div class="colour-grid" style="margin-top:.6rem">
-          <div class="cswatch act" data-key="White" data-label="White" onclick="setColour(this)" style="box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18)"><div class="cswatch-in"><div class="csw-body" style="background:#F5F5F5"></div></div></div>
-          <div class="cswatch" data-key="Black" data-label="Black" onclick="setColour(this)"><div class="cswatch-in"><div class="csw-body" style="background:#0A0A0F"></div></div></div>
-          <div class="cswatch" data-key="Grey" data-label="Grey" onclick="setColour(this)"><div class="cswatch-in"><div class="csw-body" style="background:#6B7280"></div></div></div>
-          <div class="cswatch" data-key="Olive-Green" data-label="Olive Green" onclick="setColour(this)"><div class="cswatch-in"><div class="csw-body" style="background:#7A8450"></div></div></div>
+          <div class="cswatch" data-key="White" data-label="White" onclick="setColour(this)" style="box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18)"><div class="cswatch-in"><div class="csw-body" style="background:#F5F5F5"></div></div></div>
+          <div class="cswatch act" data-key="black" data-label="Black" onclick="setColour(this)"><div class="cswatch-in"><div class="csw-body" style="background:#0A0A0F"></div></div></div>
+          <div class="cswatch" data-key="gray" data-label="Grey" onclick="setColour(this)"><div class="cswatch-in"><div class="csw-body" style="background:#6B7280"></div></div></div>
+          <div class="cswatch" data-key="green" data-label="Olive Green" onclick="setColour(this)"><div class="cswatch-in"><div class="csw-body" style="background:#7A8450"></div></div></div>
           <div class="cswatch" data-key="Orange" data-label="Orange" onclick="setColour(this)"><div class="cswatch-in"><div class="csw-body" style="background:#F97316"></div></div></div>
+        </div>
+      </div>
+      <div style="margin-bottom:1.75rem">
+        <p style="font-size:.8rem;color:var(--muted);margin-bottom:.6rem;font-weight:500">Interior: <span id="interior-label" style="color:var(--text);font-weight:600">Black</span></p>
+        <div class="colour-grid" style="margin-top:.6rem">
+          <div class="int-swatch act" data-int="" data-label="Black" onclick="setInterior(this)"><div class="cswatch-in"><div class="csw-body" style="background:#1a1a1a"></div></div></div>
+          <div class="int-swatch" data-int="-Yellow" data-label="Yellow" onclick="setInterior(this)"><div class="cswatch-in"><div class="csw-body" style="background:#facc15"></div></div></div>
+          <div class="int-swatch" data-int="-Blue" data-label="Dark Blue" onclick="setInterior(this)"><div class="cswatch-in"><div class="csw-body" style="background:#1e3a8a"></div></div></div>
         </div>
       </div>
       <div class="ph-specs-row">
@@ -326,15 +349,16 @@
       </div>
       <div class="feat-card r d2">
         <div class="feat-card-hd">Included Features</div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Multi-layer acoustic panels with mineral wool core</span></div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Double-glazed STC door with silent magnetic latch</span></div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Dual HVAC units for consistent airflow</span></div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Tunable-white LED lighting (3000–6500K)</span></div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">5 standard exterior colours (White, Black, Grey, Olive Green, Orange)</span></div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">4 power sockets + 4 USB-A charging ports</span></div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Acoustic ceiling tile with perforated finish</span></div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Freestanding, no floor fixings required</span></div>
-        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Display screen mount option available</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">2 ventilation fans · 500–1,200 RPM · 141 m³/h airflow</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Square LED ceiling light · 4000K / 879 LM</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">ST-05 table + SY-05 office sofa × 2</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Door closer, hinges & levelling feet included</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Human presence sensor (auto lighting control)</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Emergency safety hammer</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">Door lock included · Scan Lock upgrade optional</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">TV hanger (optional add-on)</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">No formaldehyde · Class Ⅰ certified materials</span></div>
+        <div class="feat-row"><div class="feat-chk"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-txt">ASTM E84 fire-rated · waterproof · anti-bacteria panels</span></div>
       </div>
     </div>
   </div>
@@ -380,7 +404,7 @@
   <div class="wrap">
     <div class="r">
       <h2 class="cta-title">Ready to Order the VR L?</h2>
-      <p class="cta-sub">Get a personalised quote and our team will arrange a free on-site assessment across Dubai and UAE.</p>
+      <p class="cta-sub">Get a personalised quote and our team will arrange a free on-site assessment across the UAE and Middle East.</p>
       <div class="cta-btns">
         <a href="/contact" class="btn-blue">Get a Quote →</a>
         <a href="/vr" class="btn-o">View All VR Sizes</a>
@@ -398,7 +422,7 @@
       <div class="foot-g">
         <div class="foot-brand">
           <a href="/" class="logo" style="display:inline-flex"><img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" style="height:72px;width:auto;display:block;filter:brightness(0) invert(1)"></a>
-          <p>Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the Middle East.</p>
+          <p>The Middle East's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the region.</p>
           <div class="foot-soc">
             <a class="soc-a" href="https://www.instagram.com/sonichive_?igsh=cWdjN3Ryd3N0ejdq" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
             <a class="soc-a" href="https://www.facebook.com/share/1BwnMVP4BA/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
@@ -439,32 +463,60 @@
   </footer>
 
 <script>
+var curAngle='0025';
 var curColour='black';
+var curInterior='';
 var colourMap={
-  'black':'VR series/VR L/VR-3D-black',
-  'black-Blue':'VR series/VR L/VR-3D-black-Blue',
-  'black-Yellow':'VR series/VR L/VR-3D-black-Yellow',
-  'gray':'VR series/VR L/VR-3D-gray',
-  'gray-Blue':'VR series/VR L/VR-3D-gray-Blue',
-  'gray-Yellow':'VR series/VR L/VR-3D-gray-Yellow',
-  'green':'VR series/VR L/VR-3D-green',
-  'green-Blue':'VR series/VR L/VR-3D-green-Blue',
-  'green-Yellow':'VR series/VR L/VR-3D-green-Yellow',
-  'Orange':'VR series/VR L/VR-3D-Orange',
-  'Orange-Blue':'VR series/VR L/VR-3D-Orange-Blue',
-  'Orange-Yellow':'VR series/VR L/VR-3D-Orange-Yellow',
-  'White':'VR series/VR L/VR-3D-White',
-  'White-Blue':'VR series/VR L/VR-3D-White-Blue',
-  'White-YELLOW':'VR series/VR L/VR-3D-White-YELLOW'
+  'black':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-black',
+  'black-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-black-Blue',
+  'black-Yellow':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-black-Yellow',
+  'gray':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-gray',
+  'gray-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-gray-Blue',
+  'gray-Yellow':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-gray-Yellow',
+  'green':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-green',
+  'green-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-green-Blue',
+  'green-Yellow':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-green-Yellow',
+  'Orange':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-Orange',
+  'Orange-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-Orange-Blue',
+  'Orange-Yellow':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-Orange-Yellow',
+  'White':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-White',
+  'White-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-White-Blue',
+  'White-YELLOW':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-L/VR-3D-White-YELLOW'
 };
+(function(){var f=['0025'];Object.keys(colourMap).forEach(function(k){f.forEach(function(fr){new Image().src='/'+colourMap[k]+fr+'.webp';});});})();
+function updateImg(){
+  var intKey=curInterior;
+  if(curColour==='White'&&curInterior==='-Yellow')intKey='-YELLOW';
+  var key=curColour+intKey;
+  var path=colourMap[key];if(!path)return;
+  var img=document.getElementById('main-img');
+  img.src='/'+path+curAngle+'.webp';
+  document.querySelectorAll('.ph-thumb').forEach(function(t){
+    var a=t.getAttribute('onclick').match(/'(\d+)'/);
+    if(a){t.querySelector('img').src='/'+path+a[1]+'.webp';}
+  });
+}
 function setColour(el){
   document.querySelectorAll('.cswatch').forEach(function(s){s.classList.remove('act')});
   el.classList.add('act');
   curColour=el.dataset.key;
   document.getElementById('colour-label').textContent=el.dataset.label;
-  var img=document.getElementById('main-img');
-  img.style.opacity='0';
-  setTimeout(function(){img.src='/pods/'+colourMap['black']+'0025.webp';img.style.opacity='1';},150);
+  updateImg();
+}
+
+function setInterior(el){
+  document.querySelectorAll('.int-swatch').forEach(function(s){s.classList.remove('act')});
+  el.classList.add('act');
+  curInterior=el.dataset.int;
+  document.getElementById('interior-label').textContent=el.dataset.label;
+  updateImg();
+}
+
+function setAngle(el,angle){
+  document.querySelectorAll('.ph-thumb').forEach(function(t){t.classList.remove('act')});
+  el.classList.add('act');
+  curAngle=angle;
+  updateImg();
 }
 </script>
 <script>

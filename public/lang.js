@@ -60,9 +60,9 @@
     'Explore': 'استكشف',
     'Contact Us': 'اتصل بنا',
     'All rights reserved.': 'جميع الحقوق محفوظة.',
-    "Dubai's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the Middle East.": 'المزود الرائد للكبائن الصوتية في دبي — نوفر الهدوء والخصوصية والإنتاجية للمساحات المكتبية في جميع أنحاء الشرق الأوسط.',
+    "The Middle East's leading acoustic pod provider — delivering silence, privacy, and productivity to workspaces across the region.": 'المزود الرائد للكبائن الصوتية في دبي — نوفر الهدوء والخصوصية والإنتاجية للمساحات المكتبية في جميع أنحاء الشرق الأوسط.',
     /* Contact form */
-    'Get a Quote — SonicHive Dubai': 'احصل على عرض سعر — SonicHive دبي',
+    'Get a Quote — SonicHive': 'احصل على عرض سعر — SonicHive دبي',
     'Send Quote Request →': 'إرسال طلب العرض →',
     'First Name': 'الاسم الأول',
     'Last Name': 'الاسم الأخير',
