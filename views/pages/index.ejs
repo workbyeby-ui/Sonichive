@@ -323,8 +323,6 @@
     @media(max-width:768px){.pt-grid{grid-template-columns:1fr;gap:1rem}.pt-card{flex-direction:column}.pt-left{padding-bottom:1.5rem!important}.pt-right{width:100%;padding:0 1.5rem 1rem;justify-content:center}.pt-pod-wrap img{max-height:160px}.pt-pod-shadow{display:none}.pt-btn{position:static!important;margin:0 1.5rem 1.5rem!important;align-self:flex-start}.vp-grid{grid-template-columns:1fr}.uc-grid{grid-template-columns:1fr}.uc-card.tall{grid-row:auto}#value-props{background-image:linear-gradient(rgba(242,243,245,.93),rgba(242,243,245,.93)),url('images/why-bg.webp')}.h-orb{display:none!important}.h-con,.h-vid{transform:none!important}#cg{display:none!important}#sec-dots{display:none!important}.h-badge,.h-h1,.h-sub,.h-ctas,.h-stats-row,.h-scroll{animation:none!important;opacity:1!important;transform:none!important}.h-dot,.h-bar{animation:none!important}.t-track,.marquee-row{will-change:auto!important}.r,.rl,.rr,.rs{opacity:1!important;transform:none!important;transition:none!important}.r.on,.rl.on,.rr.on,.rs.on{opacity:1!important;transform:none!important}}
     @media(max-width:480px){.h-h1{font-size:clamp(1.55rem,7.5vw,2rem)}.h-ctas{flex-direction:row;gap:.45rem}.btn-red,.btn-wh{flex:1;padding:.6rem .5rem;font-size:.75rem}.h-stats-row{margin-top:1.5rem}.hsr-num{font-size:1.2rem}.hsr-lab{font-size:.6rem}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
-  /* Homepage light hero — keep nav logo + hamburger dark on mobile */
-  @media(max-width:768px){#nav[data-nav="transparent"]:not(.s) .logo-img{filter:brightness(0)!important}#nav[data-nav="transparent"]:not(.s) .nav-ham{color:#0A0A0F!important;border-color:rgba(0,0,0,.22)!important}}
     </style>
 </head>
 <body>
@@ -1064,5 +1062,13 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
   }
 })();
 </script><script src="popup.js?v=3"></script>
+<style>
+  /* Last in document — overrides nav.css mobile transparent rule.
+     Homepage has a light hero so logo + hamburger must be dark on mobile. */
+  @media(max-width:768px){
+    #nav[data-nav="transparent"]:not(.s) .logo-img{filter:brightness(0)!important}
+    #nav[data-nav="transparent"]:not(.s) .nav-ham{color:#0A0A0F!important;border-color:rgba(0,0,0,.22)!important}
+  }
+</style>
 </body>
 </html>
