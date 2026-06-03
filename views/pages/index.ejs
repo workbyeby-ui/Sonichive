@@ -93,20 +93,19 @@
     @media(max-width:1024px){.h-left{width:65%}}
     @media(max-width:768px){
       #hero{height:100vh;height:100dvh}
-      /* White gradient from top keeps text readable; pod image visible below */
-      #hero::before{content:'';position:absolute;top:0;left:0;right:0;height:55%;background:linear-gradient(to bottom,rgba(250,250,250,.98) 0%,rgba(250,250,250,.65) 60%,transparent 100%);z-index:5;pointer-events:none}
-      .h-vid{object-fit:cover;object-position:center 35%}
+      /* Gradient from bottom — content pinned to bottom on readable background */
+      #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(250,250,250,.98) 0%,rgba(250,250,250,.88) 38%,rgba(250,250,250,.45) 60%,transparent 100%);z-index:5;pointer-events:none}
+      .h-vid{object-fit:cover;object-position:center 15%}
       .h-ov{display:none!important}
       .h-orb{display:none!important}
-      /* Text at top — centred, with clearance below fixed nav */
-      .h-con{padding:5.5rem 1.5rem 2rem;align-items:flex-start;position:relative;z-index:10}
+      .h-con{padding:0 1.25rem 2.75rem;align-items:flex-end;position:relative;z-index:10}
       .h-left{width:100%;align-items:center;text-align:center}
       .h-badge{display:none}
-      .h-h1{font-size:clamp(2rem,8vw,2.8rem);margin-bottom:1.25rem;line-height:1.05}
+      .h-h1{font-size:clamp(1.65rem,7vw,2.2rem);margin-bottom:1rem;line-height:1.05}
       .h-sub{display:none}
-      .h-ctas{flex-direction:column;width:100%;gap:.65rem}
-      .btn-red{width:100%;text-align:center;padding:.85rem;font-size:.95rem}
-      .btn-wh{display:none}
+      .h-ctas{flex-direction:row;width:100%;gap:.5rem;justify-content:center}
+      .btn-red{flex:1;text-align:center;padding:.65rem .75rem;font-size:.8rem}
+      .btn-wh{display:block;flex:1;text-align:center;padding:.62rem .75rem;font-size:.8rem;border-color:rgba(0,0,0,.18)}
       .h-stats-row{display:none}
       .h-scroll{display:none}
     }
@@ -322,8 +321,10 @@
 
     @media(max-width:1024px){.pt-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}.vp-grid{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}}
     @media(max-width:768px){.pt-grid{grid-template-columns:1fr;gap:1rem}.pt-card{flex-direction:column}.pt-left{padding-bottom:1.5rem!important}.pt-right{width:100%;padding:0 1.5rem 1rem;justify-content:center}.pt-pod-wrap img{max-height:160px}.pt-pod-shadow{display:none}.pt-btn{position:static!important;margin:0 1.5rem 1.5rem!important;align-self:flex-start}.vp-grid{grid-template-columns:1fr}.uc-grid{grid-template-columns:1fr}.uc-card.tall{grid-row:auto}#value-props{background-image:linear-gradient(rgba(242,243,245,.93),rgba(242,243,245,.93)),url('images/why-bg.webp')}.h-orb{display:none!important}.h-con,.h-vid{transform:none!important}#cg{display:none!important}#sec-dots{display:none!important}.h-badge,.h-h1,.h-sub,.h-ctas,.h-stats-row,.h-scroll{animation:none!important;opacity:1!important;transform:none!important}.h-dot,.h-bar{animation:none!important}.t-track,.marquee-row{will-change:auto!important}.r,.rl,.rr,.rs{opacity:1!important;transform:none!important;transition:none!important}.r.on,.rl.on,.rr.on,.rs.on{opacity:1!important;transform:none!important}}
-    @media(max-width:480px){.h-h1{font-size:clamp(2.2rem,8vw,3.5rem)}.btn-red,.btn-wh{padding:.75rem 1.75rem;font-size:.9rem}.h-stats-row{margin-top:1.5rem}.hsr-num{font-size:1.2rem}.hsr-lab{font-size:.6rem}}
+    @media(max-width:480px){.h-h1{font-size:clamp(1.55rem,7.5vw,2rem)}.h-ctas{flex-direction:row;gap:.45rem}.btn-red,.btn-wh{flex:1;padding:.6rem .5rem;font-size:.75rem}.h-stats-row{margin-top:1.5rem}.hsr-num{font-size:1.2rem}.hsr-lab{font-size:.6rem}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+  /* Homepage light hero — keep nav logo + hamburger dark on mobile */
+  @media(max-width:768px){#nav[data-nav="transparent"]:not(.s) .logo-img{filter:brightness(0)!important}#nav[data-nav="transparent"]:not(.s) .nav-ham{color:#0A0A0F!important;border-color:rgba(0,0,0,.22)!important}}
     </style>
 </head>
 <body>
