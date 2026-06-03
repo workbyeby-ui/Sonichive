@@ -93,20 +93,22 @@
     @media(max-width:1024px){.h-left{width:65%}}
     @media(max-width:768px){
       #hero{height:100vh;height:100dvh}
-      /* White gradient from top keeps text readable; pod image visible below */
-      #hero::before{content:'';position:absolute;top:0;left:0;right:0;height:55%;background:linear-gradient(to bottom,rgba(250,250,250,.98) 0%,rgba(250,250,250,.65) 60%,transparent 100%);z-index:5;pointer-events:none}
-      .h-vid{object-fit:cover;object-position:center 35%}
+      /* Gradient covers ~70% so text + buttons always sit on a light background */
+      #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(250,250,250,.97) 0%,rgba(250,250,250,.90) 50%,rgba(250,250,250,.55) 72%,transparent 100%);z-index:5;pointer-events:none}
+      .h-vid{object-fit:cover;object-position:center 30%}
       .h-ov{display:none!important}
       .h-orb{display:none!important}
-      /* Text at top — centred, with clearance below fixed nav */
-      .h-con{padding:5.5rem 1.5rem 2rem;align-items:flex-start;position:relative;z-index:10}
+      /* Content sits in the top ~60% of the hero; pod image peeks below */
+      .h-con{padding:5.5rem 1.5rem 2rem;align-items:flex-start;justify-content:center;position:relative;z-index:10}
       .h-left{width:100%;align-items:center;text-align:center}
       .h-badge{display:none}
-      .h-h1{font-size:clamp(2rem,8vw,2.8rem);margin-bottom:1.25rem;line-height:1.05}
-      .h-sub{display:none}
-      .h-ctas{flex-direction:column;width:100%;gap:.65rem}
-      .btn-red{width:100%;text-align:center;padding:.85rem;font-size:.95rem}
-      .btn-wh{display:none}
+      .h-h1{font-size:clamp(2.1rem,8vw,3rem);margin-bottom:.9rem;line-height:1.0}
+      /* Show subtitle — gives context and fills the hero properly */
+      .h-sub{display:block;font-size:.875rem;color:rgba(0,0,0,.6);line-height:1.65;margin-bottom:1.5rem;max-width:100%}
+      .h-ctas{flex-direction:column;width:100%;gap:.6rem}
+      .btn-red{width:100%;text-align:center;padding:.9rem 1rem;font-size:.95rem}
+      /* Show secondary button — stacked below primary */
+      .btn-wh{display:block;width:100%;text-align:center;padding:.85rem 1rem;font-size:.9rem;border-color:rgba(0,0,0,.2)}
       .h-stats-row{display:none}
       .h-scroll{display:none}
     }
@@ -322,7 +324,7 @@
 
     @media(max-width:1024px){.pt-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}.vp-grid{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}}
     @media(max-width:768px){.pt-grid{grid-template-columns:1fr;gap:1rem}.pt-card{flex-direction:column}.pt-left{padding-bottom:1.5rem!important}.pt-right{width:100%;padding:0 1.5rem 1rem;justify-content:center}.pt-pod-wrap img{max-height:160px}.pt-pod-shadow{display:none}.pt-btn{position:static!important;margin:0 1.5rem 1.5rem!important;align-self:flex-start}.vp-grid{grid-template-columns:1fr}.uc-grid{grid-template-columns:1fr}.uc-card.tall{grid-row:auto}#value-props{background-image:linear-gradient(rgba(242,243,245,.93),rgba(242,243,245,.93)),url('/images/why-bg.webp')}.h-orb{display:none!important}.h-con,.h-vid{transform:none!important}#cg{display:none!important}#sec-dots{display:none!important}.h-badge,.h-h1,.h-sub,.h-ctas,.h-stats-row,.h-scroll{animation:none!important;opacity:1!important;transform:none!important}.h-dot,.h-bar{animation:none!important}.t-track,.marquee-row{will-change:auto!important}.r,.rl,.rr,.rs{opacity:1!important;transform:none!important;transition:none!important}.r.on,.rl.on,.rr.on,.rs.on{opacity:1!important;transform:none!important}}
-    @media(max-width:480px){.h-h1{font-size:clamp(2.2rem,8vw,3.5rem)}.btn-red,.btn-wh{padding:.75rem 1.75rem;font-size:.9rem}.h-stats-row{margin-top:1.5rem}.hsr-num{font-size:1.2rem}.hsr-lab{font-size:.6rem}}
+    @media(max-width:480px){.h-h1{font-size:clamp(2rem,8.5vw,2.6rem)}.h-sub{font-size:.825rem}.btn-red,.btn-wh{width:100%;text-align:center;padding:.85rem 1rem;font-size:.9rem}.h-stats-row{margin-top:1.5rem}.hsr-num{font-size:1.2rem}.hsr-lab{font-size:.6rem}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
     </style>
 </head>
@@ -462,7 +464,7 @@
       <h1 class="h-h1">Work in Silence.<span class="ac">Lead in Clarity.</span></h1>
       <p class="h-sub">Premium soundproof office pods engineered for the Middle East's most demanding workspaces. No construction. No noise. Pure focus.</p>
       <div class="h-ctas">
-        <a href="/products.html" class="btn-red">Explore Pods</a>
+        <a href="/vrt" class="btn-red">Explore Pods</a>
         <a href="/contact.html" class="btn-wh">Get a Quote</a>
       </div>
       <div class="h-stats-row">
@@ -521,7 +523,7 @@
         <h2 class="s-title">Find Your Perfect Pod</h2>
         <p class="s-sub">Five distinct product lines — from standard acoustic pods to bespoke designer installations, residential retreats, outdoor booths, and flexible rentals.</p>
       </div>
-      <a href="/products.html" class="sec-link rr">View All Products →</a>
+      <a href="/vrt" class="sec-link rr">View All Products →</a>
     </div>
     <div class="pt-grid">
 
@@ -792,7 +794,7 @@
       <p class="proc-label">How It Works</p>
       <h2 class="proc-title">Silence in 4<br>Simple Steps.</h2>
       <p class="proc-desc">From first enquiry to working in perfect quiet - our process is built for zero disruption to your team.</p>
-      <a href="/products.html" class="btn-red">Explore Pods &rarr;</a>
+      <a href="/vrt" class="btn-red">Explore Pods &rarr;</a>
     </div>
     <div class="proc-right">
       <div class="ps-card r">
