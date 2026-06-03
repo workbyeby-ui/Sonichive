@@ -192,12 +192,6 @@
     .int-swatch .csw-body{width:100%;height:100%;border-radius:50%}
   
 
-  
-    .int-swatch{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:all .18s;outline:2.5px solid transparent;outline-offset:2px}
-    .int-swatch:hover{transform:scale(1.1)}
-    .int-swatch.act{outline-color:var(--blue)}
-    .int-swatch .cswatch-in{width:100%;height:100%;border-radius:50%;padding:3px;display:flex;align-items:center;justify-content:center}
-    .int-swatch .csw-body{width:100%;height:100%;border-radius:50%}
   </style>
 <style id="mobile-nav-fix">
 .nav-ham{display:none;background:none;border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:7px 9px;cursor:pointer;color:#fff;transition:color .3s,border-color .3s;flex-shrink:0;line-height:0}
@@ -306,7 +300,7 @@
           <div class="int-swatch" data-int="-Blue" data-label="Dark Blue" onclick="setInterior(this)"><div class="cswatch-in"><div class="csw-body" style="background:#1e3a8a"></div></div></div>
         </div>
       </div>
-      <div class="ph-specs-row">
+            <div class="ph-specs-row">
         <div class="ph-spec"><strong>30 ±5dB</strong><span>Noise Reduction</span></div>
         <div class="ph-spec"><strong>1000mm</strong><span>Ext. Width</span></div>
         <div class="ph-spec"><strong>2300mm</strong><span>Height</span></div>
@@ -527,6 +521,7 @@ function setInterior(el){
   document.getElementById('interior-label').textContent=el.dataset.label;
   updateImg();
 }
+
 function setAngle(el,angle){
   document.querySelectorAll('.ph-thumb').forEach(function(t){t.classList.remove('act')});
   el.classList.add('act');
