@@ -60,15 +60,6 @@
     .sidebar-cta a{display:inline-block;background:var(--red);color:#FFF;font-size:.85rem;font-weight:500;padding:.7rem 1.5rem;border-radius:100px;transition:background .2s}
     .sidebar-cta a:hover{background:#b81c1c}
     /* Related */
-    .art-related{padding:4rem 0 6rem;background:var(--bg2)}
-    .rel-title{font-size:1.1rem;font-weight:500;margin-bottom:2rem;color:var(--text)}
-    .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-    .rel-card{background:#FFF;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s}
-    .rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
-    .rel-card-img{height:140px;display:flex;align-items:center;justify-content:center}
-    .rel-card-body{padding:1.25rem}
-    .rel-card-cat{font-size:.63rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
-    .rel-card-title{font-size:.9rem;font-weight:500;letter-spacing:-.01em;line-height:1.35;color:var(--text)}
     @media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sidebar{position:static}.rel-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:768px){.art-hero{padding:6.5rem 1.25rem 3rem}.art-hero-inner{padding:0 1.25rem}.art-layout{padding:3rem 0 4rem}}
     @media(max-width:640px){.stat-box{grid-template-columns:1fr}.rel-grid{grid-template-columns:1fr}}
@@ -278,34 +269,61 @@
   </div>
 </section>
 
+
+<style>
+  .art-related{padding:4rem 0 6rem;background:var(--bg2)}
+  .rel-title{font-size:1.1rem;font-weight:500;margin-bottom:2rem;color:var(--text)}
+  .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .rel-card{background:#FFF;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;text-decoration:none;display:flex;flex-direction:column}
+  .rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+  .rel-card-img{height:160px;position:relative;overflow:hidden;flex-shrink:0;background:#0A0A0F}
+  .rel-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+  .rel-card:hover .rel-card-img img{transform:scale(1.06)}
+  .rel-card-body{padding:1.25rem;flex:1}
+  .rel-card-cat{font-size:.63rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem;display:block}
+  .rel-card-title{font-size:.9rem;font-weight:500;letter-spacing:-.01em;line-height:1.35;color:var(--text)}
+  @media(max-width:768px){.rel-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.rel-grid{grid-template-columns:1fr}}
+</style>
 <section class="art-related">
   <div class="wrap">
     <h2 class="rel-title">Related Articles</h2>
     <div class="rel-grid">
-      <a class="rel-card" href="/blog/30db-noise-reduction-explained">
-        <div class="rel-card-img" style="background:linear-gradient(135deg,#1e1b4b 0%,#6366f1 100%)"></div>
+      
+      <a class="rel-card" href="/blog/vrt-vs-vr-pods">
+        <div class="rel-card-img">
+          <img src="/images/Pods/All%20Pods%20Image/VR%20all%20pods.webp" alt="VRT vs VR Series: Which Acoustic Pod Is Right for Your Middle East Office?" loading="lazy">
+        </div>
         <div class="rel-card-body">
-          <p class="rel-card-cat">Acoustics</p>
-          <h3 class="rel-card-title">What Does 30 ±5 dB Noise Reduction Actually Mean?</h3>
+          <span class="rel-card-cat">Pod Comparison</span>
+          <h3 class="rel-card-title">VRT vs VR Series: Which Acoustic Pod Is Right for Your Middle East Office?</h3>
         </div>
       </a>
-      <a class="rel-card" href="/blog/open-plan-office-productivity">
-        <div class="rel-card-img" style="background:linear-gradient(135deg,#7c2d12 0%,#D42020 100%)"></div>
+      
+      <a class="rel-card" href="/blog/acoustic-pod-size-guide">
+        <div class="rel-card-img">
+          <img src="/images/Pods/All%20Pods%20Image/Modular%20Pods.webp" alt="Acoustic Pod Size Guide: How to Choose Between S, M, L, XL and XXL" loading="lazy">
+        </div>
         <div class="rel-card-body">
-          <p class="rel-card-cat">Productivity</p>
+          <span class="rel-card-cat">Pod Guides</span>
+          <h3 class="rel-card-title">Acoustic Pod Size Guide: How to Choose Between S, M, L, XL and XXL</h3>
+        </div>
+      </a>
+      
+      <a class="rel-card" href="/blog/open-plan-office-productivity">
+        <div class="rel-card-img">
+          <img src="/images/Pods/All%20Pods%20Image/silent-cabin-corner-office_1766364913684.webp" alt="5 Signs Your Open-Plan Office Is Destroying Productivity" loading="lazy">
+        </div>
+        <div class="rel-card-body">
+          <span class="rel-card-cat">Productivity</span>
           <h3 class="rel-card-title">5 Signs Your Open-Plan Office Is Destroying Productivity</h3>
         </div>
       </a>
-      <a class="rel-card" href="/blog/vrt-vs-vr-pods">
-        <div class="rel-card-img" style="background:linear-gradient(135deg,#1e3a5f 0%,#2563EB 100%)"></div>
-        <div class="rel-card-body">
-          <p class="rel-card-cat">Pod Guides</p>
-          <h3 class="rel-card-title">VRT vs VR Series: Which Pod Is Right for Your Office?</h3>
-        </div>
-      </a>
+      
     </div>
   </div>
 </section>
+
 
 <style>
   /* -- FOOTER (self-contained) -- */

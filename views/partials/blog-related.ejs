@@ -1,0 +1,73 @@
+<%
+/* Central blog post registry — single source of truth for all related cards */
+const BLOG_POSTS = {
+  'vrt-vs-vr-pods': {
+    title: 'VRT vs VR Series: Which Acoustic Pod Is Right for Your Middle East Office?',
+    img: '/images/Pods/All%20Pods%20Image/VR%20all%20pods.webp',
+    cat: 'Pod Comparison'
+  },
+  'outdoor-acoustic-pods-dubai': {
+    title: 'Outdoor Acoustic Pods in the Middle East: The Complete Guide',
+    img: '/images/Pods/OutDoor%20Pods/Outdoor%20pod%20-%20L.webp',
+    cat: 'Outdoor Pods'
+  },
+  'open-plan-office-productivity': {
+    title: '5 Signs Your Open-Plan Office Is Destroying Productivity',
+    img: '/images/Pods/All%20Pods%20Image/silent-cabin-corner-office_1766364913684.webp',
+    cat: 'Productivity'
+  },
+  '30db-noise-reduction-explained': {
+    title: 'What 30 dB Noise Reduction Really Means for Your Office',
+    img: '/images/Pods/All%20Pods%20Image/VRT%20Silence%20Pod.webp',
+    cat: 'Acoustic Science'
+  },
+  'dubai-companies-acoustic-pods-2026': {
+    title: "Why the Middle East's Leading Organisations Are Investing in Acoustic Pods in 2026",
+    img: '/images/Pods/All%20Pods%20Image/Dubai%20Sonichive%20Showroom.webp',
+    cat: 'Middle East'
+  },
+  'acoustic-pod-size-guide': {
+    title: 'Acoustic Pod Size Guide: How to Choose Between S, M, L, XL and XXL',
+    img: '/images/Pods/All%20Pods%20Image/Modular%20Pods.webp',
+    cat: 'Pod Guides'
+  },
+  'office-acoustics-guide-2026': {
+    title: 'The Complete Guide to Office Acoustics in 2026',
+    img: '/images/Pods/All%20Pods%20Image/VRT%20Large%20Office%20Pods.webp',
+    cat: 'Acoustics'
+  }
+};
+%>
+<style>
+  .art-related{padding:4rem 0 6rem;background:var(--bg2)}
+  .rel-title{font-size:1.1rem;font-weight:500;margin-bottom:2rem;color:var(--text)}
+  .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .rel-card{background:#FFF;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;text-decoration:none;display:flex;flex-direction:column}
+  .rel-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+  .rel-card-img{height:160px;position:relative;overflow:hidden;flex-shrink:0;background:#0A0A0F}
+  .rel-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+  .rel-card:hover .rel-card-img img{transform:scale(1.06)}
+  .rel-card-body{padding:1.25rem;flex:1}
+  .rel-card-cat{font-size:.63rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem;display:block}
+  .rel-card-title{font-size:.9rem;font-weight:500;letter-spacing:-.01em;line-height:1.35;color:var(--text)}
+  @media(max-width:768px){.rel-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.rel-grid{grid-template-columns:1fr}}
+</style>
+<section class="art-related">
+  <div class="wrap">
+    <h2 class="rel-title">Related Articles</h2>
+    <div class="rel-grid">
+      <% (related || []).forEach(function(slug){ var p = BLOG_POSTS[slug]; if(!p) return; %>
+      <a class="rel-card" href="/blog/<%= slug %>">
+        <div class="rel-card-img">
+          <img src="<%= p.img %>" alt="<%= p.title %>" loading="lazy">
+        </div>
+        <div class="rel-card-body">
+          <span class="rel-card-cat"><%= p.cat %></span>
+          <h3 class="rel-card-title"><%= p.title %></h3>
+        </div>
+      </a>
+      <% }); %>
+    </div>
+  </div>
+</section>
