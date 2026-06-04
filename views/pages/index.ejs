@@ -544,7 +544,7 @@
           <div class="stat-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
-          <div class="stat-num" data-target="800" data-suffix="+">0+</div>
+          <div class="stat-num" data-target="200" data-suffix="K+">0K+</div>
           <div class="stat-lab">Pod Installations</div>
           <div class="stat-dash"></div>
           <div class="stat-line stat-topl"></div>
@@ -561,7 +561,7 @@
           <div class="stat-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <div class="stat-num" data-target="300" data-suffix="+">0+</div>
+          <div class="stat-num" data-target="30" data-suffix="K+">0K+</div>
           <div class="stat-lab">Corporate Clients</div>
           <div class="stat-dash"></div>
           <div class="stat-line stat-topl"></div>
@@ -595,7 +595,7 @@
           <div class="stat-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D42020" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
-          <div class="stat-num" data-target="5" data-suffix="+">0+</div>
+          <div class="stat-num" data-target="175" data-suffix="+">0+</div>
           <div class="stat-lab">Countries Served</div>
           <div class="stat-dash"></div>
           <div class="stat-line stat-topl"></div>
@@ -866,8 +866,8 @@ if (procSteps) lineObs.observe(procSteps);
 
 /* -- Ticker -- */
 const tItems = [
-  {n:'800+',l:'Pod Installations'},{n:'5',l:'Countries'},{n:'30 ±5 dB',l:'Sound Reduction'},
-  {n:'300+',l:'Corporate Clients'},{n:'5?',l:'Customer Rating'}
+  {n:'200K+',l:'Pod Installations'},{n:'175+',l:'Countries'},{n:'30 ±5 dB',l:'Sound Reduction'},
+  {n:'30K+',l:'Corporate Clients'},{n:'5?',l:'Customer Rating'}
 ];
 const mkTick = () => tItems.map(i =>
   `<div class="tick-i"><strong>${i.n}</strong> ${i.l} <span class="tick-sep">·</span></div>`).join('');
