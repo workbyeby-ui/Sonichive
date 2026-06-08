@@ -137,15 +137,17 @@
 
     /* SPECS */
     #specs{padding:7rem 0;background:#fff}
-    .spec-inner{max-width:820px;margin:0 auto}
-    .spec-table{width:100%;border-collapse:collapse;border-radius:20px;overflow:hidden;border:1px solid var(--border)}
-    .spec-table th{background:var(--bg2);padding:1.1rem 1.5rem;text-align:left;font-family:var(--fh);font-size:.8rem;font-weight:400;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border)}
-    .spec-table td{padding:1rem 1.5rem;border-bottom:1px solid var(--border);font-size:.9rem;background:#fff}
-    .spec-table tr:last-child td{border-bottom:none}
-    .spec-table tr:hover td{background:var(--bg2)}
-    .spec-table .sn{font-weight:400;color:var(--text)}
-    .spec-table .sv{color:var(--muted)}
-    .spec-table .chk{color:var(--teal);font-weight:400}
+    .spec-inner{max-width:960px;margin:0 auto}
+    .spec-boxes{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .spec-box{border:1px solid var(--border);border-radius:20px;overflow:hidden}
+    .spec-box-head{background:var(--bg2);padding:.85rem 1.5rem;font-family:var(--fh);font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border)}
+    .spec-row{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.5rem;border-bottom:1px solid var(--border);gap:1rem}
+    .spec-row:last-child{border-bottom:none}
+    .spec-row:hover{background:var(--bg2)}
+    .sn{font-size:.88rem;font-weight:400;color:var(--text);white-space:nowrap}
+    .sv{font-size:.85rem;color:var(--muted);text-align:right}
+    .sv.chk{color:var(--teal)}
+    @media(max-width:640px){.spec-boxes{grid-template-columns:1fr}}
 
     /* TESTIMONIAL */
     #testimonial{padding:7rem 0;background:linear-gradient(135deg,#f0fdf9 0%,#e6f7f4 100%);position:relative;overflow:hidden}
@@ -213,8 +215,9 @@
       /* Problem section: shrink image, pull card out of absolute overlay */
       .prob-img-frame img{height:240px;padding:1rem}
       .prob-card{position:static;margin-top:.75rem;border-radius:12px}
-      /* Spec table: tighter padding on mobile */
-      .spec-table td,.spec-table th{padding:.75rem 1rem;font-size:.83rem}
+      /* Spec boxes: tighter padding on mobile */
+      .spec-row{padding:.75rem 1.1rem}
+      .spec-box-head{padding:.75rem 1.1rem}
     }
     @media(max-width:520px){
       .feat-grid{grid-template-columns:1fr}
@@ -489,23 +492,25 @@
         <p class="s-label">Specifications</p>
         <h2 class="s-title">Technical Details</h2>
       </div>
-      <div style="overflow-x:auto">
-        <table class="spec-table r">
-          <thead><tr><th>Specification</th><th>SonicHive Home Pod</th></tr></thead>
-          <tbody>
-            <tr><td class="sn">Capacity</td><td class="sv">1 person</td></tr>
-            <tr><td class="sn">Noise Reduction</td><td class="sv">25 dB (enhanced residential spec)</td></tr>
-            <tr><td class="sn">Smart Home Integration</td><td class="sv chk">&#10003; Voice + app control</td></tr>
-            <tr><td class="sn">Ventilation</td><td class="sv chk">&#10003; Quiet residential active ventilation</td></tr>
-            <tr><td class="sn">LED Lighting</td><td class="sv chk">&#10003; Dimmable + video-call optimised</td></tr>
-            <tr><td class="sn">Power Outlets</td><td class="sv">2x standard + USB charging</td></tr>
-            <tr><td class="sn">Acoustic Glass</td><td class="sv chk">&#10003; Double-laminated</td></tr>
-            <tr><td class="sn">Exterior Colours</td><td class="sv chk">&#10003; Mint, Southsea, Taffy, Storm, Cloud, Hazel</td></tr>
-            <tr><td class="sn">Modular Design</td><td class="sv chk">&#10003; Fully disassembles for relocation</td></tr>
-            <tr><td class="sn">Permit Required</td><td class="sv">None &mdash; no drilling or modifications</td></tr>
-            <tr><td class="sn">Warranty</td><td class="sv">12 months full product warranty</td></tr>
-          </tbody>
-        </table>
+      <div class="spec-boxes r">
+        <div class="spec-box">
+          <div class="spec-box-head">Performance</div>
+          <div class="spec-row"><span class="sn">Capacity</span><span class="sv">1 person</span></div>
+          <div class="spec-row"><span class="sn">Noise Reduction</span><span class="sv">25 dB</span></div>
+          <div class="spec-row"><span class="sn">Smart Home Integration</span><span class="sv chk">&#10003; Voice + app control</span></div>
+          <div class="spec-row"><span class="sn">Ventilation</span><span class="sv chk">&#10003; Active residential</span></div>
+          <div class="spec-row"><span class="sn">LED Lighting</span><span class="sv chk">&#10003; Dimmable, call-optimised</span></div>
+          <div class="spec-row"><span class="sn">Acoustic Glass</span><span class="sv chk">&#10003; Double-laminated</span></div>
+        </div>
+        <div class="spec-box">
+          <div class="spec-box-head">Build &amp; Details</div>
+          <div class="spec-row"><span class="sn">Power Outlets</span><span class="sv">2x standard + USB</span></div>
+          <div class="spec-row"><span class="sn">Exterior Colours</span><span class="sv chk">Mint · Southsea · Taffy · Storm · Cloud · Hazel</span></div>
+          <div class="spec-row"><span class="sn">Modular Design</span><span class="sv chk">&#10003; Fully disassembles</span></div>
+          <div class="spec-row"><span class="sn">Permit Required</span><span class="sv">None &mdash; no drilling</span></div>
+          <div class="spec-row"><span class="sn">Materials</span><span class="sv">Formaldehyde-free, recycled</span></div>
+          <div class="spec-row"><span class="sn">Warranty</span><span class="sv">12 months</span></div>
+        </div>
       </div>
     </div>
   </div>
