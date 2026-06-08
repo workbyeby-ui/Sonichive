@@ -107,7 +107,7 @@
     .nc-body span{font-size:.76rem;color:var(--muted)}
     .prob-visual{position:relative}
     .prob-img-frame{border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.1);background:linear-gradient(135deg,#f0fdf9,var(--bg2))}
-    .prob-img-frame img{width:100%;height:500px;object-fit:contain;transition:transform .6s;padding:2rem}
+    .prob-img-frame img{width:100%;height:500px;object-fit:cover;transition:transform .6s}
     .prob-img-frame:hover img{transform:scale(1.03)}
     .prob-card{position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:1.1rem 1.25rem;display:flex;align-items:center;gap:1rem;box-shadow:0 8px 32px rgba(0,0,0,.12)}
     .pc-icon{width:44px;height:44px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -126,10 +126,14 @@
     .feat-ic{width:46px;height:46px;border-radius:12px;background:var(--red-d);border:1px solid var(--red-b);display:flex;align-items:center;justify-content:center;color:var(--red);margin-bottom:.85rem;flex-shrink:0}
     .feat-name{font-family:var(--fh);font-size:1.2rem;font-weight:500;color:var(--text);margin-bottom:.6rem;line-height:1.3}
     .feat-desc{font-size:.85rem;color:var(--muted);line-height:1.7}
-    .feat-front{position:absolute;bottom:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;border-radius:15px;transition:.5s ease}
-    .feat-label{font-family:var(--fh);font-size:1.1rem;font-weight:400;transition:.5s ease;z-index:10;text-align:center;padding:0 1.5rem;line-height:1.3}
+    .feat-front{position:absolute;bottom:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;border-radius:15px;transition:.5s ease;overflow:hidden}
+    .feat-label{font-family:var(--fh);font-size:1.1rem;font-weight:400;transition:.5s ease;z-index:10;text-align:center;padding:0 1.5rem;line-height:1.3;position:relative}
     .feat-card:hover .feat-front{height:52px}
     .feat-card:hover .feat-label{font-size:.85rem}
+    .feat-front-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:15px;transition:.5s ease}
+    .feat-front-img::after{content:'';position:absolute;inset:0;background:rgba(5,10,12,.42);border-radius:15px;pointer-events:none;transition:.5s ease}
+    .feat-card:hover .feat-front-img img{height:52px;object-position:center bottom}
+    .feat-card:hover .feat-front-img::after{height:52px}
 
     /* SPECS */
     #specs{padding:7rem 0;background:#fff}
@@ -285,6 +289,7 @@
           <button class="ph-thumb" data-idx="3"><img src="images/Pods/Home-Pod/SF-1105-1.webp" alt=""><span class="ph-tlabel">Grey</span></button>
           <button class="ph-thumb" data-idx="4"><img src="images/Pods/Home-Pod/SF-1103-1.webp" alt=""><span class="ph-tlabel">White</span></button>
           <button class="ph-thumb" data-idx="5"><img src="images/Pods/Home-Pod/SF-1101-1.webp" alt=""><span class="ph-tlabel">Sage</span></button>
+          <button class="ph-thumb" data-idx="6"><img src="images/Pods/Home-Pod/home-isolation-booth-2.jpg" alt=""><span class="ph-tlabel">Design</span></button>
         </div>
         <div class="color-bar">
           <span class="cb-label">Interior Trim: <b id="pcname">Natural Oak</b></span>
@@ -373,7 +378,7 @@
       </div>
       <div class="prob-visual r d2">
         <div class="prob-img-frame">
-          <img src="images/Pods/Home-Pod/SF-1128-1.webp" alt="SonicHive Home Pod" loading="lazy">
+          <img src="images/Pods/Home-Pod/soundproof-booth-for-home.jpg" alt="SonicHive Home Pod in a living room" loading="lazy">
         </div>
         <div class="prob-card">
           <div class="pc-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" style="width:22px;height:22px"><path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.651a3.75 3.75 0 0 1 0-5.303m5.304-.001a3.75 3.75 0 0 1 0 5.304m-7.425 2.122a6.75 6.75 0 0 1 0-9.546m9.546.001a6.75 6.75 0 0 1 0 9.545M8.25 15.75l-1.5 1.5M6.75 17.25l-1.5 1.5M15.75 8.25l1.5-1.5M17.25 6.75l1.5-1.5M12 12h.008v.008H12V12Z"/></svg></div>
@@ -405,7 +410,8 @@
           <div class="feat-name">25 dB Noise Reduction</div>
           <p class="feat-desc">Enhanced acoustic performance with noise-cancelling panels tuned for urban residential environments and their specific frequency profiles.</p>
         </div>
-        <div class="feat-front" style="background:var(--red)">
+        <div class="feat-front feat-front-img">
+          <img src="images/Pods/Home-Pod/Sound%20insulation%20volume%2025dB.jpg" alt="25dB acoustic testing" loading="lazy">
           <span class="feat-label" style="color:#fff">25 dB Noise Reduction</span>
         </div>
       </div>
@@ -441,8 +447,9 @@
           <div class="feat-name">Apartment-Sized Footprint</div>
           <p class="feat-desc">Compact geometry optimised for Dubai apartments where every square metre counts.</p>
         </div>
-        <div class="feat-front" style="background:#fff;border:1px solid var(--border)">
-          <span class="feat-label" style="color:var(--red)">Apartment-Sized Footprint</span>
+        <div class="feat-front feat-front-img">
+          <img src="images/Pods/Home-Pod/Environmental.jpg" alt="Eco-friendly materials" loading="lazy">
+          <span class="feat-label" style="color:#fff">Apartment-Sized Footprint</span>
         </div>
       </div>
       <div class="feat-card r d2">
@@ -453,7 +460,8 @@
           <div class="feat-name">Video-Call Ready Lighting</div>
           <p class="feat-desc">Tunable LED panels designed for professional video call appearance. Look studio-quality from your apartment.</p>
         </div>
-        <div class="feat-front" style="background:var(--red)">
+        <div class="feat-front feat-front-img">
+          <img src="images/Pods/Home-Pod/Lighting.jpg" alt="Video-call lighting detail" loading="lazy">
           <span class="feat-label" style="color:#fff">Video-Call Ready Lighting</span>
         </div>
       </div>
@@ -465,8 +473,9 @@
           <div class="feat-name">No Permit Required</div>
           <p class="feat-desc">No drilling, no modifications. Disassembles completely when you move. One power connection only.</p>
         </div>
-        <div class="feat-front" style="background:#fff;border:1px solid var(--border)">
-          <span class="feat-label" style="color:var(--red)">No Permit Required</span>
+        <div class="feat-front feat-front-img">
+          <img src="images/Pods/Home-Pod/Ergonomic%20Curve.jpg" alt="Ergonomic interior view" loading="lazy">
+          <span class="feat-label" style="color:#fff">No Permit Required</span>
         </div>
       </div>
     </div>
