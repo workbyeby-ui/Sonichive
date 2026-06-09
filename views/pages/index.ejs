@@ -13,7 +13,7 @@
     :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,0.07);--red-b:rgba(212,32,32,0.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,0.09);--card:rgba(0,0,0,0.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
-    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100%}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;max-width:100%}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
@@ -95,7 +95,7 @@
       #hero{height:100vh;height:100dvh}
       /* Gradient from bottom — content pinned to bottom on readable background */
       #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(250,250,250,.98) 0%,rgba(250,250,250,.88) 38%,rgba(250,250,250,.45) 60%,transparent 100%);z-index:5;pointer-events:none}
-      .h-vid{object-fit:cover;object-position:center 15%}
+      .h-vid{object-fit:cover;object-position:center center}
       .h-ov{display:none!important}
       .h-orb{display:none!important}
       .h-con{padding:0 1.25rem 2.75rem;align-items:flex-end;position:relative;z-index:10}
