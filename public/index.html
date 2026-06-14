@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SonicHive - Premium Acoustic Office Pods | Dubai, UAE</title>
   <meta name="description" content="Premium soundproof office pods engineered for the Middle East's most demanding workspaces. Silence Booths in Dubai, Qatar, Saudi Arabia.">
-  <link rel="preload" as="image" href="/images/Meeting%20Pods%20-%20Hero.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
   <style>
     :root{--bg:#FAFAFA;--bg2:#F2F3F5;--bg3:#E8EAED;--red:#D42020;--red-d:rgba(212,32,32,0.07);--red-b:rgba(212,32,32,0.22);--text:#0A0A0F;--muted:#6B7280;--border:rgba(0,0,0,0.09);--card:rgba(0,0,0,0.03);--fh:'Poppins',sans-serif;--fb:'Poppins',sans-serif;--max:1280px}
@@ -453,7 +452,7 @@
 
 <!-- HERO -->
 <section id="hero">
-  <img class="h-vid" src="/images/Meeting Pods - Hero.webp" alt="" aria-hidden="true" fetchpriority="high">
+  <img class="h-vid" src="/images/Meeting Pods - Hero.webp" alt="" aria-hidden="true">
   <div class="h-ov"></div>
   <div class="h-orb h-orb1"></div>
   <div class="h-orb h-orb2"></div>
@@ -482,7 +481,7 @@
 <!-- SCROLL ANIMATION -->
 <section id="sa-section">
   <div id="sa-sticky">
-    <div id="sa-loader" style="display:none">
+    <div id="sa-loader">
       <div id="sa-loader-track"><div id="sa-loader-fill"></div></div>
       <p id="sa-loader-text">Loading…</p>
     </div>
@@ -1481,41 +1480,32 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
   document.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', () => { if (ready) requestAnimationFrame(tick); }, { passive: true });
 
-  /* start loading frames only when section is near viewport */
-  function startFrameLoad() {
-    loader.style.display = 'flex';
-    for (let i = 1; i <= TOTAL; i++) {
-      const img = new Image();
-      const fi  = i - 1;
-      img.onload = () => {
-        loaded++;
-        const pct = Math.round(loaded / TOTAL * 100);
-        loaderFill.style.width = pct + '%';
-        loaderTxt.textContent  = 'Loading ' + pct + '%';
+  /* preload all frames */
+  for (let i = 1; i <= TOTAL; i++) {
+    const img = new Image();
+    const fi  = i - 1;
+    img.onload = () => {
+      loaded++;
+      const pct = Math.round(loaded / TOTAL * 100);
+      loaderFill.style.width = pct + '%';
+      loaderTxt.textContent  = 'Loading ' + pct + '%';
 
-        if (loaded === 1) {
-          canvas.width  = img.naturalWidth;
-          canvas.height = img.naturalHeight;
-          draw(0);
-        }
-        if (loaded >= Math.ceil(TOTAL * 0.3) && !ready) {
-          ready = true;
-          loader.style.opacity = '0';
-          hud.classList.add('vis');
-          setTimeout(() => { loader.style.display = 'none'; }, 650);
-          tick();
-        }
-      };
-      img.src = src(i);
-      images[fi] = img;
-    }
+      if (loaded === 1) {
+        canvas.width  = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        draw(0);
+      }
+      if (loaded >= Math.ceil(TOTAL * 0.3) && !ready) {
+        ready = true;
+        loader.style.opacity = '0';
+        hud.classList.add('vis');
+        setTimeout(() => { loader.style.display = 'none'; }, 650);
+        tick();
+      }
+    };
+    img.src = src(i);
+    images[fi] = img;
   }
-
-  const frameObserver = new IntersectionObserver(
-    ([entry]) => { if (entry.isIntersecting) { frameObserver.disconnect(); startFrameLoad(); } },
-    { rootMargin: '600px' }
-  );
-  frameObserver.observe(section);
 })();
 </script><script src="/popup.js?v=3"></script>
 <style>
