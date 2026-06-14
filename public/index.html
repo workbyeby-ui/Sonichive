@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SonicHive - Premium Acoustic Office Pods | Dubai, UAE</title>
   <meta name="description" content="Premium soundproof office pods engineered for the Middle East's most demanding workspaces. Silence Booths in Dubai, Qatar, Saudi Arabia.">
+  <link rel="preload" as="image" href="/images/sonichive%20White%20logo.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/Meeting%20Pods%20-%20Hero.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -358,7 +360,7 @@
 <nav id="nav" role="navigation" aria-label="Main navigation" data-nav="transparent">
   <div class="nav-i">
     <a href="/" class="logo">
-      <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" class="logo-img">
+      <img src="/images/sonichive%20White%20logo.webp" alt="SonicHive" class="logo-img" fetchpriority="high" width="1080" height="438">
     </a>
     <div class="nav-links" id="nav-links">
       <div class="nav-dd">
@@ -481,7 +483,7 @@
 <!-- SCROLL ANIMATION -->
 <section id="sa-section">
   <div id="sa-sticky">
-    <div id="sa-loader">
+    <div id="sa-loader" style="display:none">
       <div id="sa-loader-track"><div id="sa-loader-fill"></div></div>
       <p id="sa-loader-text">Loading…</p>
     </div>
@@ -1480,34 +1482,42 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
   document.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', () => { if (ready) requestAnimationFrame(tick); }, { passive: true });
 
-  /* preload all frames */
-  for (let i = 1; i <= TOTAL; i++) {
-    const img = new Image();
-    const fi  = i - 1;
-    img.onload = () => {
-      loaded++;
-      const pct = Math.round(loaded / TOTAL * 100);
-      loaderFill.style.width = pct + '%';
-      loaderTxt.textContent  = 'Loading ' + pct + '%';
+  function startFrameLoad() {
+    loader.style.display = 'flex';
+    for (let i = 1; i <= TOTAL; i++) {
+      const img = new Image();
+      const fi  = i - 1;
+      img.onload = () => {
+        loaded++;
+        const pct = Math.round(loaded / TOTAL * 100);
+        loaderFill.style.width = pct + '%';
+        loaderTxt.textContent  = 'Loading ' + pct + '%';
 
-      if (loaded === 1) {
-        canvas.width  = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-        draw(0);
-      }
-      if (loaded >= Math.ceil(TOTAL * 0.3) && !ready) {
-        ready = true;
-        loader.style.opacity = '0';
-        hud.classList.add('vis');
-        setTimeout(() => { loader.style.display = 'none'; }, 650);
-        tick();
-      }
-    };
-    img.src = src(i);
-    images[fi] = img;
+        if (loaded === 1) {
+          canvas.width  = img.naturalWidth;
+          canvas.height = img.naturalHeight;
+          draw(0);
+        }
+        if (loaded >= Math.ceil(TOTAL * 0.3) && !ready) {
+          ready = true;
+          loader.style.opacity = '0';
+          hud.classList.add('vis');
+          setTimeout(() => { loader.style.display = 'none'; }, 650);
+          tick();
+        }
+      };
+      img.src = src(i);
+      images[fi] = img;
+    }
   }
+
+  const frameObserver = new IntersectionObserver(
+    ([entry]) => { if (entry.isIntersecting) { frameObserver.disconnect(); startFrameLoad(); } },
+    { rootMargin: '600px' }
+  );
+  frameObserver.observe(section);
 })();
-</script><script src="/popup.js?v=3"></script>
+</script><script src="/popup.js?v=3" defer></script>
 <style>
   /* Last in document — overrides nav.css mobile transparent rule.
      Homepage has a light hero so logo + hamburger must be dark on mobile. */
