@@ -1068,7 +1068,7 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
 
   const frameObserver = new IntersectionObserver(
     ([entry]) => { if (entry.isIntersecting) { frameObserver.disconnect(); startFrameLoad(); } },
-    { rootMargin: '600px' }
+    { rootMargin: '0px 0px -100px 0px' }
   );
   frameObserver.observe(section);
 })();
