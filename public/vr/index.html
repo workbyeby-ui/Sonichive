@@ -1147,7 +1147,6 @@
   <script>
   (function () {
     var podColor = 'black';
-    var interior = 'black';
     var base = '/images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel';
     var frames = { S: '0000', M: '0010', L: '0025', XL: '0030' };
     var imgs = {
@@ -1157,19 +1156,12 @@
       XL: document.getElementById('img-vr-xl')
     };
 
-    function interiorSuffix(pod, int) {
-      if (int === 'black') return '';
-      if (int === 'yellow') return pod === 'White' ? '-YELLOW' : '-Yellow';
-      if (int === 'blue') return '-Blue';
-      return '';
-    }
 
     function updateImages() {
-      var suf = interiorSuffix(podColor, interior);
       Object.keys(frames).forEach(function (size) {
         var img = imgs[size];
         if (!img) return;
-        img.src = base + '/VR-' + size + '/VR-3D-' + podColor + suf + frames[size] + '.webp';
+        img.src = base + '/VR-' + size + '/VR-3D-' + podColor + frames[size] + '.webp';
       });
     }
 
@@ -1182,14 +1174,6 @@
       });
     });
 
-    document.querySelectorAll('#vr-int-col .vcs-dot').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        document.querySelectorAll('#vr-int-col .vcs-dot').forEach(function (b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        interior = btn.dataset.int;
-        updateImages();
-      });
-    });
   })();
   </script>
   <script>

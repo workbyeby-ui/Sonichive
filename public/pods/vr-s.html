@@ -463,30 +463,16 @@
 <script>
 var curAngle = '0000';
 var curColour = 'black';
-var curInterior = '';
 var colourMap = {
   'black':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-black',
-  'black-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-black-Blue',
-  'black-Yellow':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-black-Yellow',
   'gray':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-gray',
-  'gray-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-gray-Blue',
-  'gray-Yellow':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-gray-Yellow',
   'green':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-green',
-  'green-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-green-Blue',
-  'green-Yellow':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-green-Yellow',
   'Orange':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-Orange',
-  'Orange-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-Orange-Blue',
-  'Orange-Yellow':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-Orange-Yellow',
-  'White':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-White',
-  'White-Blue':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-White-Blue',
-  'White-YELLOW':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-White-YELLOW'
+  'White':'images/Pods/VR/VR%20booth%20with%203D%20interior%20wall%20panel/VR-S/VR-3D-White'
 };
 (function(){var f=['0000','0005'];Object.keys(colourMap).forEach(function(k){f.forEach(function(fr){new Image().src='/'+colourMap[k]+fr+'.webp';});});})();
 function updateImg(){
-  var intKey=curInterior;
-  if(curColour==='White'&&curInterior==='-Yellow')intKey='-YELLOW';
-  var key=curColour+intKey;
-  var path=colourMap[key];if(!path)return;
+  var path=colourMap[curColour];if(!path)return;
   var img=document.getElementById('main-img');
   img.src='/'+path+curAngle+'.webp';
   document.querySelectorAll('.ph-thumb').forEach(function(t){
