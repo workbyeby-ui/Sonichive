@@ -5,7 +5,8 @@
     #qp-overlay.open{opacity:1;pointer-events:auto}
     #qp-backdrop{position:absolute;inset:0;background:rgba(10,10,15,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);pointer-events:none}
     #qp-overlay.open #qp-backdrop{pointer-events:auto}
-    #qp-modal{position:relative;z-index:1;background:#fff;border-radius:24px;width:100%;max-width:560px;max-height:calc(100dvh - 2rem);overflow-y:auto;box-shadow:0 32px 80px rgba(0,0,0,.22);transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.22,1,.36,1)}
+    #qp-modal{position:relative;z-index:1;background:#fff;border-radius:24px;width:100%;max-width:560px;max-height:calc(100dvh - 2rem);overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none;box-shadow:0 32px 80px rgba(0,0,0,.22);transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.22,1,.36,1)}
+    #qp-modal::-webkit-scrollbar{display:none}
     #qp-overlay.open #qp-modal{transform:none}
     #qp-top{background:#0A0A0F;padding:2rem 2rem 1.75rem;position:relative}
     #qp-top-accent{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(212,32,32,.18),transparent 65%);pointer-events:none}
@@ -99,6 +100,7 @@
                   <option>VRT+</option>
                   <option>VR</option>
                   <option>Home Pod</option>
+                  <option>Outdoor Pods</option>
                   <option>Rental Pods</option>
                 </select>
               </div>

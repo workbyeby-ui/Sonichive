@@ -29,7 +29,7 @@ for (const file of files) {
         // even when pages are served from a clean-URL subdirectory (e.g. /vrt/)
         const fixedHtml = html
             // 1. Any relative <script src="..."> that doesn't start with / or http
-            //    This catches popup.js?v=3, lang.js, etc.
+            //    This catches popup.js?v=5, lang.js, etc.
             .replace(/(<script\b[^>]*\ssrc=")(?!\/|http)([^"]+)"/gi, '$1/$2"')
             // 2. React/JS string literal image srcs: src: 'images/...'
             .replace(/src:\s*'(?!\/|http)((?:images|pods)[^']+)'/g, "src: '/$1'")

@@ -294,6 +294,34 @@
     .t-loc{font-size:.72rem;color:var(--muted);margin-top:.1rem}
     .t-bg-quote{position:absolute;bottom:-1.5rem;right:1rem;font-size:7rem;line-height:1;color:rgba(212,32,32,.07);font-family:Georgia,serif;pointer-events:none;user-select:none}
 
+    /* AWARD + CERTIFICATIONS */
+    .cert-sec{padding:7rem 0;background:var(--bg2)}
+    .award-banner{display:flex;align-items:center;gap:2.5rem;background:#FFF;border:1px solid var(--border);border-radius:24px;padding:2rem 2.5rem;margin-bottom:4.5rem;text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;position:relative;overflow:hidden}
+    .award-banner::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}
+    .award-banner:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.1)}
+    .award-banner-media{flex-shrink:0;width:160px;height:160px;border-radius:16px;background:var(--bg2);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:.75rem}
+    .award-banner-media img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+    .award-banner-body{flex:1}
+    .award-banner-tag{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.25rem .85rem;margin-bottom:.9rem}
+    .award-banner-title{font-family:var(--fh);font-size:clamp(1.25rem,2.4vw,1.7rem);font-weight:400;letter-spacing:-.025em;color:var(--text);line-height:1.2;margin-bottom:.75rem}
+    .award-banner-sub{color:var(--muted);font-size:.9rem;line-height:1.7;max-width:620px;margin-bottom:1rem}
+    .award-banner-link{font-size:.82rem;font-weight:500;color:var(--red)}
+    .cert-hd{text-align:center;margin-bottom:4rem}
+    .cert-eyebrow{font-size:.68rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1rem}
+    .cert-title{font-family:var(--fh);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;letter-spacing:-.035em;color:var(--text);line-height:1.05;margin-bottom:.75rem}
+    .cert-sub{color:var(--muted);font-size:.9rem;line-height:1.75;max-width:600px;margin:0 auto}
+    .cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .cert-card{background:#FFF;border:1px solid var(--border);border-radius:20px;padding:2rem 1.5rem 1.75rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s}
+    .cert-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.1)}
+    .cert-logo{height:76px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+    .cert-logo img{max-height:68px;max-width:130px;width:auto;object-fit:contain}
+    .cert-badge{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:var(--red-d);border:1px solid var(--red-b);border-radius:100px;padding:.22rem .8rem;display:inline-block;margin-bottom:.85rem;white-space:nowrap}
+    .cert-desc{font-size:.8rem;color:var(--muted);line-height:1.7}
+    @media(max-width:1024px){.cert-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:768px){.award-banner{flex-direction:column;text-align:center;padding:2rem 1.5rem}.award-banner-sub{margin-left:auto;margin-right:auto}}
+    @media(max-width:640px){.cert-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:380px){.cert-grid{grid-template-columns:1fr}}
+
     /* CTA STRIP */
     #cta-strip{padding:7rem 0;background:#0A0A0A;position:relative;overflow:hidden;background-image:url('images/sonichive-office-pods_silence-booth-3.webp');background-size:cover;background-position:center}
     #cta-strip::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.78),rgba(0,0,0,.88));z-index:0}
@@ -775,6 +803,80 @@
   <div class="t-track-w"><div class="t-track" id="ttrack"></div></div>
 </section>
 
+<!-- AWARD + CERTIFICATIONS -->
+<section class="cert-sec">
+  <div class="wrap">
+    <a href="blog/sonichive-wins-superbrands-2025-award.html" class="award-banner r">
+      <div class="award-banner-media">
+        <img src="images/Pods/superbrand%20award%20image.webp" alt="SonicHive Superbrands 2025 Award for Workplace Innovation" loading="lazy">
+      </div>
+      <div class="award-banner-body">
+        <span class="award-banner-tag">Award-Winning</span>
+        <h2 class="award-banner-title">Winner &mdash; Superbrands 2025 Award for Workplace Innovation</h2>
+        <p class="award-banner-sub">SonicHive has been honoured by Superbrands &mdash; the region's most respected independent brand authority &mdash; for transforming workplaces across the UAE and the wider Middle East.</p>
+        <span class="award-banner-link">Read the story &#x2192;</span>
+      </div>
+    </a>
+
+    <div class="cert-hd r">
+      <p class="cert-eyebrow">Certified Quality</p>
+      <h2 class="cert-title">Benchmarks &amp; Certifications</h2>
+      <p class="cert-sub">Every SonicHive pod meets rigorous global standards for air quality, safety, sustainability, and system integrity &mdash; independently verified by leading certification bodies.</p>
+    </div>
+    <div class="cert-grid">
+
+      <div class="cert-card r d1">
+        <div class="cert-logo"><img src="images/Pods/Certifications/GreenGuard.webp" alt="GREENGUARD Gold" loading="lazy"></div>
+        <span class="cert-badge">Air Quality</span>
+        <p class="cert-desc">The pod has earned GREENGUARD Gold certification for air quality standards.</p>
+      </div>
+
+      <div class="cert-card r d2">
+        <div class="cert-logo"><img src="images/Pods/Certifications/RoHS.webp" alt="RoHS" loading="lazy"></div>
+        <span class="cert-badge">Hazardous Substance</span>
+        <p class="cert-desc">The centrifugal fan is RoHS certified for hazardous substance compliance.</p>
+      </div>
+
+      <div class="cert-card r d3">
+        <div class="cert-logo"><img src="images/Pods/Certifications/CE.webp" alt="CE-EMC" loading="lazy"></div>
+        <span class="cert-badge">Electromagnetic</span>
+        <p class="cert-desc">The centrifugal fan, motion sensor, and fan speed controller are CE-EMC certified for electromagnetic compatibility.</p>
+      </div>
+
+      <div class="cert-card r d4">
+        <div class="cert-logo"><img src="images/Pods/Certifications/FCC.webp" alt="FCC" loading="lazy"></div>
+        <span class="cert-badge">EMI Compliance</span>
+        <p class="cert-desc">The motion sensor is FCC certified for electromagnetic interference (Class B).</p>
+      </div>
+
+      <div class="cert-card r d1">
+        <div class="cert-logo"><img src="images/Pods/Certifications/ANSI.webp" alt="ANSI/BIFMA" loading="lazy"></div>
+        <span class="cert-badge">Seating Standard</span>
+        <p class="cert-desc">The sofa is certified to ANSI/BIFMA X5.4-2020 public seating standard.</p>
+      </div>
+
+      <div class="cert-card r d2">
+        <div class="cert-logo"><img src="images/Pods/Certifications/EESS.webp" alt="EESS" loading="lazy"></div>
+        <span class="cert-badge">Electrical Safety</span>
+        <p class="cert-desc">The ventilation system is registered under the Electrical Equipment Safety System (EESS).</p>
+      </div>
+
+      <div class="cert-card r d3">
+        <div class="cert-logo"><img src="images/Pods/Certifications/SAA.webp" alt="SAA" loading="lazy"></div>
+        <span class="cert-badge">SAA Certified</span>
+        <p class="cert-desc">The motion sensor holds SAA electrical safety certification.</p>
+      </div>
+
+      <div class="cert-card r d4">
+        <div class="cert-logo"><img src="images/Pods/Certifications/PSE.webp" alt="PSE Mark" loading="lazy"></div>
+        <span class="cert-badge">Product Safety</span>
+        <p class="cert-desc">PSE mark certifies the safety of electrical products to Japanese safety standards.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CTA STRIP -->
 <section id="cta-strip">
   <div class="wrap">
@@ -1072,7 +1174,7 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
   );
   frameObserver.observe(section);
 })();
-</script><script src="popup.js?v=3" defer></script>
+</script><script src="popup.js?v=5" defer></script>
 <style>
   /* Last in document — overrides nav.css mobile transparent rule.
      Homepage has a light hero so logo + hamburger must be dark on mobile. */
