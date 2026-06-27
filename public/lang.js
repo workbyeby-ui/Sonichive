@@ -34,7 +34,7 @@
     'Chat on WhatsApp': 'تحدث عبر واتساب',
     'Get Started Today': 'ابدأ اليوم',
     'Transform Your Workspace.': 'حوّل مساحة عملك.',
-    'Visit our Downtown Dubai showroom, get a free consultation, or request a quote online. Our team responds within 2 business hours.': 'زر صالة العرض في وسط مدينة دبي، احصل على استشارة مجانية، أو اطلب عرض سعر عبر الإنترنت. يستجيب فريقنا خلال ساعتين عمل.',
+    'Visit our Al Wasl, Dubai showroom, get a free consultation, or request a quote online. Our team responds within 2 business hours.': 'زر صالة العرض في الوصل، دبي، احصل على استشارة مجانية، أو اطلب عرض سعر عبر الإنترنت. يستجيب فريقنا خلال ساعتين عمل.',
     /* Index hero */
     'Acoustic Pods for': 'كبائن صوتية لـ',
     'Modern Workspaces': 'بيئات العمل الحديثة',

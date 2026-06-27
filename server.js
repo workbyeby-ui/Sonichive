@@ -112,7 +112,7 @@ function buildEmail(data) {
   </div>
 
   <div class="footer">
-    SonicHive · Downtown Dubai, UAE<br>
+    SonicHive · Office No. 3-13, Owned by Sheikha Reesa Khalifa Bin Saeed Al Maktoum - Al Wasl, Dubai, UAE<br>
     <a href="mailto:info@thesonichive.com" style="color:#D42020;text-decoration:none">info@thesonichive.com</a> · +971 58 555 0099
   </div>
 </div>
