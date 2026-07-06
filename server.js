@@ -23,7 +23,7 @@ function esc(str) {
 }
 
 function buildEmail(data) {
-  const { name, company, email, phone, interest, country } = data;
+  const { name, company, email, phone, interest, country, source } = data;
 
   const html = `
 <!DOCTYPE html>
@@ -104,6 +104,11 @@ function buildEmail(data) {
       </div>
     </div>
 
+    ${source ? `<div class="field" style="margin-top:16px">
+      <div class="field-label">Source</div>
+      <div class="field-value">${esc(source)}</div>
+    </div>` : ''}
+
     <div class="divider"></div>
 
     <div style="text-align:center">
@@ -128,6 +133,7 @@ function buildEmail(data) {
     `Phone:    ${phone || '—'}`,
     `Interest: ${interest || '—'}`,
     `Country:  ${country || '—'}`,
+    `Source:   ${source || '—'}`,
     ``,
     `Submitted: ${new Date().toISOString()}`,
   ].join('\n');
@@ -144,24 +150,38 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* ── Quote endpoint ─────────────────────────────────────────── */
+const LEAD_TO    = process.env.LEAD_TO || 'info@thesonichive.com';
+const LEADS_FILE = path.join(__dirname, 'leads.jsonl');
+
 app.post('/api/quote', async (req, res) => {
-  const data = req.body;
+  const data = req.body || {};
   console.log('[quote]', new Date().toISOString(), data);
 
+  // 1) Persist every lead to disk FIRST — a paid lead must never be lost,
+  //    even if the mail server is unreachable.
+  try {
+    fs.appendFileSync(
+      LEADS_FILE,
+      JSON.stringify({ ...data, receivedAt: new Date().toISOString(), ip: req.ip }) + '\n'
+    );
+  } catch (e) {
+    console.error('[quote] Could not write leads.jsonl:', e.message);
+  }
+
+  // 2) Email the lead to info@thesonichive.com
   try {
     const { html, text } = buildEmail(data);
     await transporter.sendMail({
       from:    `"SonicHive Leads" <${process.env.SMTP_USER}>`,
-      to:      process.env.LEAD_TO || 'info@thesonichive.com',
+      to:      LEAD_TO,
       replyTo: data.email || undefined,
       subject: `New Quote Request — ${data.name || 'Unknown'} (${data.country || data.interest || 'thesonichive.com'})`,
       text,
       html,
     });
-    console.log('[quote] Email sent ✓');
+    console.log(`[quote] Email sent ✓ → ${LEAD_TO}`);
   } catch (err) {
-    console.error('[quote] Email failed:', err.message);
-    // Still return 200 so the popup shows success to the user
+    console.error('[quote] ⚠ EMAIL FAILED — lead is safe in leads.jsonl. Reason:', err.message);
   }
 
   res.status(200).json({ success: true, message: 'Quote request received successfully!' });
@@ -170,6 +190,9 @@ app.post('/api/quote', async (req, res) => {
 /* ── Static assets + pre-built pages ───────────────────────── */
 // Serve the pre-built public/ folder first (absolute paths, safe on any URL depth)
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
+
+// Standalone Google Ads landing pages (self-contained, served at /landing-pages/)
+app.use('/landing-pages', express.static(path.join(__dirname, 'landing-pages'), { extensions: ['html'] }));
 
 /* ── Fallback page routes — only if no static file matched ── */
 app.get('/:page', (req, res, next) => {
@@ -188,4 +211,8 @@ app.get('/:page', (req, res, next) => {
 /* ── Start ──────────────────────────────────────────────────── */
 app.listen(PORT, () => {
   console.log(`Server running → http://localhost:${PORT}`);
+  // Surface mail misconfiguration immediately instead of silently losing leads.
+  transporter.verify()
+    .then(() => console.log(`[mail] SMTP ready ✓ — leads will be delivered to ${LEAD_TO}`))
+    .catch(err => console.error(`[mail] ⚠ SMTP NOT working — set SMTP_PASS in .env. Reason: ${err.message}`));
 });
