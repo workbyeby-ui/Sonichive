@@ -168,23 +168,27 @@ app.post('/api/quote', async (req, res) => {
     console.error('[quote] Could not write leads.jsonl:', e.message);
   }
 
-  // 2) Email the lead to info@thesonichive.com
-  try {
-    const { html, text } = buildEmail(data);
-    await transporter.sendMail({
-      from:    `"SonicHive Leads" <${process.env.SMTP_USER}>`,
-      to:      LEAD_TO,
-      replyTo: data.email || undefined,
-      subject: `New Quote Request — ${data.name || 'Unknown'} (${data.country || data.interest || 'thesonichive.com'})`,
-      text,
-      html,
-    });
-    console.log(`[quote] Email sent ✓ → ${LEAD_TO}`);
-  } catch (err) {
-    console.error('[quote] ⚠ EMAIL FAILED — lead is safe in leads.jsonl. Reason:', err.message);
-  }
-
+  // 2) Confirm to the visitor immediately — the lead is already saved above,
+  //    so we don't make them wait on the mail server.
   res.status(200).json({ success: true, message: 'Quote request received successfully!' });
+
+  // 3) Email the lead to info@thesonichive.com in the background
+  (async () => {
+    try {
+      const { html, text } = buildEmail(data);
+      await transporter.sendMail({
+        from:    `"SonicHive Leads" <${process.env.SMTP_USER}>`,
+        to:      LEAD_TO,
+        replyTo: data.email || undefined,
+        subject: `New Quote Request — ${data.name || 'Unknown'} (${data.country || data.interest || 'thesonichive.com'})`,
+        text,
+        html,
+      });
+      console.log(`[quote] Email sent ✓ → ${LEAD_TO}`);
+    } catch (err) {
+      console.error('[quote] ⚠ EMAIL FAILED — lead is safe in leads.jsonl. Reason:', err.message);
+    }
+  })();
 });
 
 /* ── Static assets + pre-built pages ───────────────────────── */
