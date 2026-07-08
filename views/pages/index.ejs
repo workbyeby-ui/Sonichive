@@ -1163,7 +1163,7 @@ document.querySelectorAll('.sd').forEach(d => d.addEventListener('click', () =>
           canvas.height = img.naturalHeight;
           draw(0);
         }
-        if (loaded >= Math.ceil(TOTAL * 0.3) && !ready) {
+        if (loaded >= Math.ceil(TOTAL * 0.18) && !ready) {
           ready = true;
           loader.style.opacity = '0';
           hud.classList.add('vis');
