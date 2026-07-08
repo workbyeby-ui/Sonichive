@@ -390,6 +390,11 @@ document.getElementById('qform').onsubmit=async(e)=>{
   try{
     const res=await fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
     if(res.ok){
+      /* Google Ads — Submit lead form conversion */
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { send_to: 'AW-18286201731/u5gMCJmEt8scEIOXxY9E' });
+        gtag('event', 'generate_lead', { currency: 'AED', value: 1 });
+      }
       btn.innerHTML='<span>✓ Received, we\'ll contact you shortly!</span>';
       btn.style.background='#25D366';
       setTimeout(()=>{btn.innerHTML=ogHtml;btn.style.background='';btn.disabled=false;form.reset();},5000);

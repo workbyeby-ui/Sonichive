@@ -198,6 +198,11 @@
         body: JSON.stringify(payload),
       });
     } catch (_) { /* server offline in dev — still show success */ }
+    /* Google Ads — Submit lead form conversion */
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', { send_to: 'AW-18286201731/u5gMCJmEt8scEIOXxY9E' });
+      gtag('event', 'generate_lead', { currency: 'AED', value: 1 });
+    }
     body.style.display = 'none';
     success.style.display = 'block';
   });
