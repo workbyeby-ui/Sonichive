@@ -191,6 +191,53 @@ app.post('/api/quote', async (req, res) => {
   })();
 });
 
+/* ── Canonical URL redirects (SEO: www + legacy .html + old WP slugs) ──
+   Resolves host + path together and issues a single 301, so a request like
+   www.thesonichive.com/products.html doesn't chain through two redirects. */
+
+// Old WordPress-era slugs and retired URLs -> current pages
+const LEGACY_REDIRECTS = {
+  '/about-us': '/about/',
+  '/contact-us': '/contact/',
+  '/contact-us-uae': '/contact/',
+  '/contact_us-saudi_arabia': '/contact/',
+  '/solo-silence-booth-s': '/solo-booth/',
+  '/quartet-silence-booth-l': '/quartet-booth/',
+  '/hexa-silence-booth-xl': '/hexa-booth/',
+  '/acoustic-solutions': '/',
+  '/interactive-screen': '/',
+  '/privacy-policy': '/',
+  '/products.html': '/vrt/',
+  '/wp-content/uploads/2024/07/POD-CATALOGUE-2.pdf': '/',
+};
+
+app.use((req, res, next) => {
+  // GET/HEAD only — never redirect POST /api/quote, a 301 there can make
+  // clients drop the request body and silently lose a lead
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+
+  const host = req.headers.host || '';
+  const targetHost = host.startsWith('www.') ? host.slice(4) : null;
+
+  const legacyKey = req.path.length > 1 ? req.path.replace(/\/$/, '') : req.path;
+  let targetPath = null;
+  if (Object.prototype.hasOwnProperty.call(LEGACY_REDIRECTS, legacyKey)) {
+    targetPath = LEGACY_REDIRECTS[legacyKey];
+  } else if (/\.html$/.test(req.path)) {
+    const slug = req.path.replace(/\.html$/, '');
+    targetPath = slug === '/index' ? '/' : slug.replace(/\/?$/, '/');
+  }
+
+  if (targetHost === null && targetPath === null) return next();
+
+  const qs = targetPath && req.originalUrl.includes('?')
+    ? req.originalUrl.slice(req.originalUrl.indexOf('?'))
+    : '';
+  const path = (targetPath !== null ? targetPath + qs : req.originalUrl);
+  const base = targetHost !== null ? `https://${targetHost}` : '';
+  res.redirect(301, base + path);
+});
+
 /* ── Static assets + pre-built pages ───────────────────────── */
 // Serve the pre-built public/ folder first (absolute paths, safe on any URL depth)
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
