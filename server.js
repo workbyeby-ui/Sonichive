@@ -241,8 +241,9 @@ app.use((req, res, next) => {
 /* ── Static assets + pre-built pages ───────────────────────── */
 // Serve the pre-built public/ folder first (absolute paths, safe on any URL depth)
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
-// Note: the Google Ads landing page lives at public/landing-pages/index.html and
-// is served at /landing-pages/ by the static handler above (same as every other page).
+// Note: Google Ads landing pages live at public/landing-pages/index.html (UAE) and
+// public/saudi-arabia/index.html (KSA), served at /landing-pages/ and /saudi-arabia/
+// by the static handler above (same as every other page).
 
 /* ── Fallback page routes — only if no static file matched ── */
 app.get('/:page', (req, res, next) => {
